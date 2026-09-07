@@ -1,0 +1,103 @@
+{
+  "grants": [
+    {
+      "text": "NWO (Dutch Research Council) Open Mind (€100K, main applicant: Yizhuo Wu, co-applicant: Chang Gao, Video Link)",
+      "html": "<li><p><a href=\"https://www.nwo.nl/en/news/ten-potentially-groundbreaking-open-mind-research-ideas-received-a-grant\">NWO (Dutch Research Council) Open Mind</a> (€100K, main applicant: <a href=\"https://scholar.google.com/citations?user=ZIScikwAAAAJ&amp;hl=nl\">Yizhuo Wu</a>, co-applicant: <a href=\"https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&amp;hl=zh-CN\">Chang Gao</a>, <a href=\"https://www.youtube.com/watch?v=vNOvSQfOSRQ\">Video Link</a>)</p></li>",
+      "scope": "Led by EMI"
+    },
+    {
+      "text": "NWO (Dutch Research Council) Veni (€320K)",
+      "html": "<li><p><a href=\"https://www.nwo.nl/en/researchprogrammes/nwo-talent-programme/projects-veni/veni-2023\">NWO (Dutch Research Council) Veni</a> (€320K)</p></li>",
+      "scope": "Led by EMI"
+    },
+    {
+      "text": "Holland High Tech (TKI) - High Tech Systems and Materials (HTSM) (€670K)",
+      "html": "<li><p><a href=\"https://www.hollandhightech.nl/en/programmas-en-projecten/projecten/machine-learning-calibrated-adc\">Holland High Tech (TKI) - High Tech Systems and  Materials (HTSM)</a> (€670K)</p></li>",
+      "scope": "Led by EMI"
+    },
+    {
+      "text": "Future Network Services: 6G for and by the Netherlands (One fully-funded Industrial PhD)",
+      "html": "<li><p>Future Network Services: 6G for and by the Netherlands (One fully-funded Industrial PhD)</p></li>",
+      "scope": "Led by EMI"
+    },
+    {
+      "text": "GlobalFoundries 12LP+ University Partnership Program (free tapeout ~€500K)",
+      "html": "<li><p>GlobalFoundries 12LP+ University Partnership Program (free tapeout ~€500K)</p></li>",
+      "scope": "Led by EMI"
+    },
+    {
+      "text": "Marie Skłodowska-Curie Actions - Postdoctoral Fellowship (€203K)",
+      "html": "<li><p>Marie Skłodowska-Curie Actions - Postdoctoral Fellowship (€203K)</p></li>",
+      "scope": "Led by EMI"
+    },
+    {
+      "text": "ERC Synergy - DISTRUPT (€10M, led by Prof. Leo de Vreede)",
+      "html": "<li><p>ERC Synergy - DISTRUPT (€10M, led by <a href=\"https://microelectronics.tudelft.nl/People/bio.php?id=26\">Prof. Leo de Vreede</a>)</p></li>",
+      "scope": "EMI as a core member"
+    }
+  ],
+  "awards": [
+    {
+      "text": "Yizhuo Wu: NWO Open Mind Winner (2026)",
+      "html": "<li><p><strong>Yizhuo Wu:</strong> NWO Open Mind Winner (2026)</p></li>"
+    },
+    {
+      "text": "Yizhuo Wu: MTT-S Graduate Fellowship (2026)",
+      "html": "<li><p><strong>Yizhuo Wu:</strong> MTT-S Graduate Fellowship (2026)</p></li>"
+    },
+    {
+      "text": "Ang Li: IEEE CASS Student Travel Grant (2025)",
+      "html": "<li><p><strong>Ang Li: </strong>IEEE CASS Student Travel Grant (2025)</p></li>"
+    },
+    {
+      "text": "Best Paper - Honourable Mention Award @ IEEE ISCAS NSATC (2024)",
+      "html": "<li><p>Best Paper - Honourable Mention Award @ IEEE ISCAS NSATC (2024)</p></li>"
+    },
+    {
+      "text": "MIT Technology Review Innovators Under 35 Europe (2023)",
+      "html": "<li><p><a href=\"https://www.innovatorsunder35.com/the-list/chang-gao/\">MIT Technology Review Innovators Under 35 Europe</a> (2023)</p></li>"
+    },
+    {
+      "text": "Mahowald Early Career Award (2022)",
+      "html": "<li><p><a href=\"https://www.mahowaldprize.org/prize-awards/prizes-2022\">Mahowald Early Career Award</a> (2022)</p></li>"
+    },
+    {
+      "text": "Distinction of PhD Thesis @ Institute of Neuroinformatics, University of Zurich and ETH Zurich (2022)",
+      "html": "<li><p><a href=\"https://www.zora.uzh.ch/id/eprint/219686/7/Chang_Gao_Thesis_Pub_2.pdf\">Distinction of PhD Thesis</a> @ Institute of Neuroinformatics, University of Zurich and ETH Zurich (2022)</p></li>"
+    },
+    {
+      "text": "Best Paper Award @ IEEE AICAS (2020)",
+      "html": "<li><p><a href=\"https://ee.ethz.ch/news-and-events/d-itet-news-channel/2020/09/best-paper-award-for-institute-of-neuroinformatics.html\">Best Paper Award @ IEEE AICAS</a> (2020)</p></li>"
+    },
+    {
+      "text": "Outstanding Self-financed Students Abroad (2020)",
+      "html": "<li><p><a href=\"https://swiss.lxgz.org.cn/switzerland/tzgg/2021083115591264694/index.html\">Outstanding Self-financed Students Abroad</a> (2020)</p></li>"
+    },
+    {
+      "text": "MSc Outstanding Achievement @ Imperial College London (2016)",
+      "html": "<li><p><a href=\"https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/\">MSc Outstanding Achievement @ Imperial College London</a> (2016)</p></li>"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Dutch Research Council (NWO)",
+      "image": "/images/f7e8e94adc2bfb.webp"
+    },
+    {
+      "name": "European Commission (MSCA)",
+      "image": "/images/8810971f6f106b.webp"
+    },
+    {
+      "name": "NXP",
+      "image": "/images/627ca952a47e7a.webp"
+    },
+    {
+      "name": "Ampleon",
+      "image": "/images/13a790ceb10dd9.webp"
+    },
+    {
+      "name": "GlobalFoundries",
+      "image": "/images/cab3cbd96ad32f.webp"
+    }
+  ]
+}

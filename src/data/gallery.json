@@ -1,0 +1,272 @@
+[
+  {
+    "id": "photo-1",
+    "group": "Our Students",
+    "caption": "Yizhuo @ IMS 2024, Washington DC, USA",
+    "captionHtml": "<p><a href=\"https://microelectronics.tudelft.nl/Education/bio.php?id=1456\">Yizhuo</a> @ IMS 2024, Washington DC, USA</p>",
+    "image": "/images/46b9561fe1bc2b.webp",
+    "width": 768,
+    "height": 768
+  },
+  {
+    "id": "photo-2",
+    "group": "Our Students",
+    "caption": "Yizhuo @ IMS 2025, San Francisco, USA",
+    "captionHtml": "<p>Yizhuo @ IMS 2025, San Francisco, USA</p>",
+    "image": "/images/76bb272bcc3f67.webp",
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "id": "photo-3",
+    "group": "Our Students",
+    "caption": "Ang @ ISCAS 2025, London, UK",
+    "captionHtml": "<p><a href=\"https://microelectronics.tudelft.nl/People/bio.php?id=943\">Ang</a> @ ISCAS 2025, London, UK</p>",
+    "image": "/images/63a2ae5b4ae20d.webp",
+    "width": 1024,
+    "height": 575
+  },
+  {
+    "id": "photo-4",
+    "group": "Our Students",
+    "caption": "Sjoerd @ ISCAS 2025 in London, UK",
+    "captionHtml": "<p><a href=\"https://www.linkedin.com/in/sjoerd-groot-48aba018b/?originalSubdomain=nl\">Sjoerd</a> @ ISCAS 2025 in London, UK</p>",
+    "image": "/images/0d89c2b2aee0bf.webp",
+    "width": 804,
+    "height": 452
+  },
+  {
+    "id": "photo-5",
+    "group": "Our Students",
+    "caption": "Manno @ FPL 2025 in Leiden, Netherlands",
+    "captionHtml": "<p>Manno @ FPL 2025 in Leiden, Netherlands</p>",
+    "image": "/images/bbf3b79fb197d3.webp",
+    "width": 1024,
+    "height": 575
+  },
+  {
+    "id": "photo-6",
+    "group": "Our Students",
+    "caption": "Tao @ ASP-DAC 2026 in Hong Kong, China",
+    "captionHtml": "<p><a href=\"https://microelectronics.tudelft.nl/Education/bio.php?id=1736\">Tao</a> @ ASP-DAC 2026 in Hong Kong, China</p>",
+    "image": "/images/5e41c98b16f308.webp",
+    "width": 768,
+    "height": 768
+  },
+  {
+    "id": "photo-7",
+    "group": "Our Students",
+    "caption": "Siddharth @ Microelectronics Research Day 2026 in Delft, Netherlands",
+    "captionHtml": "<p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1892\">Siddharth</a> @ Microelectronics Research Day 2026 in Delft, Netherlands</p>",
+    "image": "/images/bb7b8f277a556d.webp",
+    "width": 768,
+    "height": 768
+  },
+  {
+    "id": "photo-8",
+    "group": "Our Students",
+    "caption": "Arne @ ISCAS 2026 in Shanghai, China",
+    "captionHtml": "<p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1759\">Arne</a> @ ISCAS 2026 in Shanghai, China</p>",
+    "image": "/images/4bba815315a9f2.webp",
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "id": "photo-9",
+    "group": "Moments",
+    "caption": "Chang and Chris in Delft",
+    "captionHtml": "<p>Chang and <a href=\"http://linkedin.com/in/chris-dick-bb18873\">Chris</a> in Delft</p>",
+    "image": "/images/368aa53ca24ce0.webp",
+    "width": 1268,
+    "height": 1268
+  },
+  {
+    "id": "photo-10",
+    "group": "Moments",
+    "caption": "Chris and Yizhuo discussing our DPD demo",
+    "captionHtml": "<p>Chris and Yizhuo discussing our DPD demo</p>",
+    "image": "/images/f72a45952f3b98.webp",
+    "width": 1006,
+    "height": 1006
+  },
+  {
+    "id": "photo-11",
+    "group": "Moments",
+    "caption": "Yizhuo showing our DPD demo to visitors from Hyundai Chungun High School",
+    "captionHtml": "<p>Yizhuo showing our DPD demo to visitors from Hyundai Chungun High School</p>",
+    "image": "/images/8bb9f2b1dbed9b.webp",
+    "width": 768,
+    "height": 768
+  },
+  {
+    "id": "photo-12",
+    "group": "Moments",
+    "caption": "With Arindam and Qinyu @ ASP-DAC, Hong Kong (2026)",
+    "captionHtml": "<p>With <a href=\"https://scholars.cityu.edu.hk/en/persons/arinbasu/\">Arindam </a>and <a href=\"http://universiteitleiden.nl/en/staffmembers/qinyu-chen\">Qinyu</a> @ ASP-DAC, Hong Kong (2026)</p>",
+    "image": "/images/a388efb56c1d8d.webp",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "photo-13",
+    "group": "Moments",
+    "caption": "With Glavine, Qinyu & Kwantae @ TSMC OIP Forum (2024)",
+    "captionHtml": "<p>With <a href=\"http://linkedin.com/in/glavine-yeh-32a50313a?originalSubdomain=nl\">Glavine</a>, Qinyu &amp; <a href=\"https://kwantaekim.github.io/\">Kwantae</a> @ TSMC OIP Forum (2024)</p>",
+    "image": "/images/87a8ae11e6e8e0.webp",
+    "width": 665,
+    "height": 374
+  },
+  {
+    "id": "photo-14",
+    "group": "Moments",
+    "caption": "With Tobi, Antonio and Kofi @ The Hangout (2025)",
+    "captionHtml": "<p>With <a href=\"https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzQ=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html\">Tobi</a>, <a href=\"https://www.us.es/trabaja-en-la-us/directorio/jose-antonio-rios-navarro\">Antonio</a> and <a href=\"https://microelectronics.tudelft.nl/People/bio.php?id=6\">Kofi</a> @ The Hangout (2025)</p>",
+    "image": "/images/8a17b3a966c18d.webp",
+    "width": 1280,
+    "height": 719
+  },
+  {
+    "id": "photo-15",
+    "group": "Moments",
+    "caption": "Anding, Yizhuo, Chang @ IMS 2024, Washington DC, USA",
+    "captionHtml": "<p><a href=\"https://www.linkedin.com/in/anding-zhu\">Anding</a>, <a href=\"https://microelectronics.tudelft.nl/Education/bio.php?id=1456\">Yizhuo</a>, Chang @ IMS 2024, Washington DC, USA</p>",
+    "image": "/images/ad328257567f5c.webp",
+    "width": 1024,
+    "height": 574
+  },
+  {
+    "id": "photo-16",
+    "group": "Moments",
+    "caption": "With Kun Qian @ MSc Graduate Ceremony (2025)",
+    "captionHtml": "<p>With Kun Qian @ ‎ MSc Graduate Ceremony (2025)</p>",
+    "image": "/images/5e13372b511a13.webp",
+    "width": 768,
+    "height": 768
+  },
+  {
+    "id": "photo-17",
+    "group": "Moments",
+    "caption": "Haolin Wu's Thesis Defense with Rajendra, Leo, me and Ang",
+    "captionHtml": "<p>Haolin Wu's Thesis Defense with <a href=\"https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering/sections/computer-engineering/staff/rajendra-bishnoi\">Rajendra</a>, <a href=\"https://microelectronics.tudelft.nl/People/bio.php?id=26\">Leo</a>, me and <a href=\"https://microelectronics.tudelft.nl/People/bio.php?id=943\">Ang</a></p>",
+    "image": "/images/cd6976c43ae487.webp",
+    "width": 1280,
+    "height": 611
+  },
+  {
+    "id": "photo-18",
+    "group": "Moments",
+    "caption": "Marco, Yizhuo, Chang @ IMS 2024, Washington DC, USA",
+    "captionHtml": "<p><a href=\"https://microelectronics.tudelft.nl/People/bio.php?id=264\">Marco</a>, Yizhuo, Chang @ IMS 2024, Washington DC, USA</p>",
+    "image": "/images/c5b2c2f9d60da3.webp",
+    "width": 686,
+    "height": 686
+  },
+  {
+    "id": "photo-19",
+    "group": "Photography",
+    "caption": "2025 @ Tromsø, Norway",
+    "captionHtml": "<p>2025 @ ‎⁨Tromsø, Norway⁩</p>",
+    "image": "/images/a8c4a1659da3d6.webp",
+    "width": 1280,
+    "height": 1707
+  },
+  {
+    "id": "photo-20",
+    "group": "Photography",
+    "caption": "2025 @ Lofoten, Norway",
+    "captionHtml": "<p>2025 @ Lofoten, Norway</p>",
+    "image": "/images/f9be46e5aa4129.webp",
+    "width": 1280,
+    "height": 719
+  },
+  {
+    "id": "photo-21",
+    "group": "Photography",
+    "caption": "2024 @ Rome, Italy",
+    "captionHtml": "<p>2024 @ ‎⁨⁨Rome⁩, ⁨⁩⁨Italy⁩</p>",
+    "image": "/images/053ce704ec103b.webp",
+    "width": 1024,
+    "height": 575
+  },
+  {
+    "id": "photo-22",
+    "group": "Photography",
+    "caption": "2024 @ Interlaken, Switzerland",
+    "captionHtml": "<p>2024 @ ‎⁨Interlaken, ⁨Switzerland</p>",
+    "image": "/images/c6099369ef00b9.webp",
+    "width": 1024,
+    "height": 575
+  },
+  {
+    "id": "photo-23",
+    "group": "Photography",
+    "caption": "2024 @ Iceland",
+    "captionHtml": "<p>2024 @ Iceland</p>",
+    "image": "/images/9f4d2aca669017.webp",
+    "width": 1280,
+    "height": 719
+  },
+  {
+    "id": "photo-24",
+    "group": "Photography",
+    "caption": "2025 @ Tromsø, Norway",
+    "captionHtml": "<p>2025 @ ‎⁨Tromsø, Norway⁩</p>",
+    "image": "/images/e8a3101c9c0aee.webp",
+    "width": 1280,
+    "height": 719
+  },
+  {
+    "id": "photo-25",
+    "group": "Photography",
+    "caption": "2024 @ Iceland",
+    "captionHtml": "<p>2024 @ Iceland</p>",
+    "image": "/images/0d50911e1d8103.webp",
+    "width": 665,
+    "height": 374
+  },
+  {
+    "id": "photo-26",
+    "group": "Photography",
+    "caption": "2024 @ València, Spain",
+    "captionHtml": "<p>2024 @ ‎⁨València⁩, ⁨Spain⁩</p>",
+    "image": "/images/925760e14a9afb.webp",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "id": "photo-27",
+    "group": "Photography",
+    "caption": "2022 @ Longyearbyen, Svalbard, Norway",
+    "captionHtml": "<p>2022 @ ‎⁨Longyearbyen⁩, ⁨Svalbard⁩, ⁨Norway⁩</p>",
+    "image": "/images/264f9d1f0b8b71.webp",
+    "width": 1024,
+    "height": 575
+  },
+  {
+    "id": "photo-28",
+    "group": "Photography",
+    "caption": "2022 @ Tromsø, Norway",
+    "captionHtml": "<p>2022 @ ‎⁨Tromsø, Norway⁩</p>",
+    "image": "/images/05c21bfac17dd1.webp",
+    "width": 1086,
+    "height": 610
+  },
+  {
+    "id": "photo-29",
+    "group": "Photography",
+    "caption": "2021 @ Zürich, Switzerland",
+    "captionHtml": "<p>2021 @ ‎⁨Zürich, Switzerland</p>",
+    "image": "/images/832952b979f218.webp",
+    "width": 1024,
+    "height": 768
+  },
+  {
+    "id": "photo-30",
+    "group": "Photography",
+    "caption": "2019 @ Telluride, Colorado, USA",
+    "captionHtml": "<p>2019 @ Telluride, Colorado, USA</p>",
+    "image": "/images/eee6ba24ee07d0.webp",
+    "width": 1084,
+    "height": 724
+  }
+]

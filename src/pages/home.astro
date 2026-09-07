@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import { href } from '../lib/site';
+const news = await getCollection('news');
+const anchors = Object.fromEntries(news.filter(n=>n.data.source).map(n=>[new URL(n.data.source!).hash,href(`/news/${n.id}/`)]));
+const destination = href('/');
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><title>EMI Lab — Home</title><link rel="canonical" href={new URL(destination, Astro.site)} /><meta http-equiv="refresh" content={`0;url=${destination}`} /><meta name="robots" content="noindex" /></head><body><p><a href={destination}>Continue to EMI Lab</a></p><script is:inline define:vars={{destination,anchors}}>location.replace(anchors[location.hash] || destination);</script></body></html>

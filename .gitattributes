@@ -1,0 +1,5 @@
+* text=auto
+# Keep the source website snapshots byte-for-byte intact.
+migration/raw/*.html -text -diff
+public/images/** binary
+public/fonts/*.woff2 binary

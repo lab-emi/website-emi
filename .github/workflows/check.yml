@@ -1,0 +1,27 @@
+name: Check website
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        base: ['/', '/website-emi']
+    env:
+      BASE_PATH: ${{ matrix.base }}
+      SITE_URL: https://lab-emi.github.io
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run validate

@@ -1,0 +1,27 @@
+{
+  "logo": "/images/fc3c1f20f8eedb.webp",
+  "homeIntroHtml": "<h1>Lab of Efficient Machine Intelligence</h1>\n<p>The <strong>E</strong>fficient <strong>M</strong>achine <strong>I</strong>ntelligence (<strong>EMI</strong>) research lab @ <strong>TU Delft</strong> focuses on <strong>neuromorphic algorithm-hardware co-design for </strong><strong>energy-efficient edge intelligence</strong>. </p>",
+  "demosHtml": "<h2>Robotic Prosthesis Control</h2>\n<p>Collaboration with the <a href=\"http://www.bipedalrobotics.com/\">AMBER Lab, Caltech</a></p>\n<h2>Spoken Digit Recogntion</h2>\n<p>Using the <a href=\"https://arxiv.org/abs/2012.13600\">EdgeDRNN</a> Accelerator</p>\n<h2>Neuromorphic Computing</h2>\n<p>Interfacing EdgeDRNN with a <a href=\"https://ieeexplore.ieee.org/abstract/document/5537164\">Silicon Cochlea</a></p>",
+  "videoEmbeds": [
+    "https://www.youtube.com/embed/mzMSEo2S_hg?embed_config=%7B%22enc%22:%22AXH1ezkoe1c1acWZwciiwtVkKXegNeNnxFCzVdMTDNRzcJnJDkhCEJyYo1Bi43rcRbO7qBTZ6bmCj9u-Ty-Bn30WDWSzJPiTdjozxIbQ8aj0jTQllSsJ5sMMsDWzsy3lvzottbCIMRMD0SaZl5Svz_VrS13lUNJMhzVygDbda3dZzynZhi8QFMu7WzZvE6Yu-WVQPlqtkCVnJZ-6X9TPYOkJVM2U3v5BBWXJ-5h5sw3OpzWaEYIwVygqEQtiBUO0UleL2OeOb1cFWjEziB7ktxz2H8B8PJEVbA0boKmDFNU-j_7aJq17fRDOjI-TVT9l6XxBqNbw1q0-dUIqrtl_1tAoEsy-RJHe_lxF4QLG13DZnXDFMQ%3D%3D%22%7D&enablejsapi=1&errorlinks=1&origin=https://www.tudemi.com&vl=1",
+    "https://www.youtube.com/embed/6pbVjSz8akY?embed_config=%7B%22enc%22:%22AXH1ezmwRZIY4tiBd63jkWHa17qdxKWCwpvJXz4cgH38F6y_I7aMjgqkqfLxvs6INxW_A9HoX6EP2k6is2WnW35yuNON_sUx-M3fEKh1rhy6S1pLuxrIfLg6LohK4zeLFJDfQnGIBhd1gfXh-gUQ75evi5waBBB6qMzoP0SnkowHJkFSbbum0kGEkiDy8Ud9cofo2b4m8n_plAOCiqzxhOMDQfxNPdAu3Z5Jzen_3wkMOyaunRb7Fbcp-pEswA-Si1yYcpLq_EaOrWl9xgakwVz4Q8j-WIy5QY4fvIZH44GIyVZoxVw2yjVnekfu3H4EVglzG_7WKpGaYRW11MvH24ouqjewwrpdmveo44KEsO7VEDAbbA%3D%3D%22%7D&enablejsapi=1&errorlinks=1&origin=https://www.tudemi.com&vl=1",
+    "https://www.youtube.com/embed/g38Up0QQEXs?embed_config=%7B%22enc%22:%22AXH1ezlocN3XqgWW6i0xTFRXmaJayUdINBdskK428bblXqY7DTtwIaGjKk97S9PhiYb-c14vS5cqLtP49CVuWyKRv4_JMglZI2sljZb3soZVobm3Uq-W7q1l5WiY9PaebY-XpWxYOrfmS1zhQpvu5-Y0xe6BPk2MWPqQtkjzPkfGRwdvJmeQ74QcFF18XY23n21Ows2dBS6o-WdjhWHATNmbHcdmBABIefp5YznurME45xAIpCzFqGzBNxcyyCWy1D4RreoJvYEwtfQRLznW9LpBsaLLzJ-5jSXr-q3pvwR1s-n4p4qOLG4xhcla3cr6YIAB-l9BzAWNBcVvwrtcG-B0N0fEP9TrI5ZxycT37Wjiopap8A%3D%3D%22%7D&enablejsapi=1&errorlinks=1&origin=https://www.tudemi.com&vl=1"
+  ],
+  "contactHtml": "<ul><li><p><strong>Address: </strong>Electronic Circuits and ArchitectureGroup<strong>, </strong>TU Delft, Fac. EEMCS, Mekelweg 4, 2628 CD Delft, Netherlands</p></li><li><p><strong>Email: </strong>chang.gao at tudelft.nl</p></li><li><p><strong>TU Delft Page:</strong> <a href=\"http://microelectronics.tudelft.nl/People/bio.php?id=840\">http://microelectronics.tudelft.nl/People/bio.php?id=840</a></p></li></ul>",
+  "contactEmbeds": [
+    "https://maps-api-ssl.google.com/maps?hl=en-US&ll=51.998699,4.373356&output=embed&q=Mekelweg+4,+2628+CD+Delft,+Netherlands+(TU+Delft+Faculty+of+Electrical+Engineering,+Mathematics+%26+Computer+Science)&z=16"
+  ],
+  "joinHtml": "<h1>Open PhD Position</h1>\n<p><strong>Stay tuned...</strong></p>",
+  "joinImages": [
+    {
+      "src": "/images/40be96f80e3e83.webp",
+      "thumb": "/images/thumbs/40be96f80e3e83.webp",
+      "width": 1280,
+      "height": 820,
+      "originalWidth": 1280,
+      "originalHeight": 820,
+      "sha256": "cbef6c9685a7060ae04823020162f4412e52384db0dcbc7a76d796022c216926",
+      "bytes": 224164
+    }
+  ]
+}

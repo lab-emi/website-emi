@@ -1,0 +1,54 @@
+name: Publish to GitHub Pages
+
+# Publishing is manual while the new site is under review.
+on:
+  workflow_dispatch:
+    inputs:
+      use_custom_domain:
+        description: 'Publish for www.tudemi.com (only after domain setup is ready)'
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ inputs.use_custom_domain && 'https://www.tudemi.com' || 'https://lab-emi.github.io' }}
+      BASE_PATH: ${{ inputs.use_custom_domain && '/' || '/website-emi' }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run validate
+      - name: Add custom-domain record
+        if: inputs.use_custom_domain
+        run: printf '%s\n' 'www.tudemi.com' > dist/CNAME
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

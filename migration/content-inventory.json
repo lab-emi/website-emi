@@ -1,0 +1,892 @@
+[
+  {
+    "page": "home",
+    "source": "https://www.tudemi.com/home",
+    "text": "Lab of Efficient Machine IntelligenceThe Efficient Machine Intelligence (EMI) research lab @ TU Delft focuses on neuromorphic algorithm-hardware co-design for energy-efficient edge intelligence.\n\nNews\n\nMSc Navya Agarwal’s Work Accepted at ICCAD 2026July 13, 2026Congratulations to EMI MSc student Navya Agarwal, whose internship research at imec has been accepted for presentation and publication at the 2026 IEEE/ACM International Conference on Computer-Aided Design (ICCAD 2026).Navya conducted the work during his MSc internship at imec, with Dr. Siva Satyendra Sahoo serving as his daily co-supervisor and collaborator. The work was carried out in collaboration with Moritz Brüning and Dawit Abdi. Congratulations to Navya and the entire team!\n\nPhD Student Yi Zhu Published in IEEE JSTEAPJuly 3, 2026Excited to share that our article by our industrial PhD student Yi Zhu, “Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers,” has been published in the IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation (JSTEAP).In this work, we explore how deep learning can be used to estimate the load impedance of power amplifiers directly from existing PA I/Q data, without requiring additional impedance-sensing hardware. This provides a hardware-efficient path toward load-aware modeling, adaptive DPD, and more robust RF transmitters for massive-MIMO base-station applications.This paper is also a great outcome of our enjoyable collaboration with Ampleon. Many thanks to John Gajadharsing, Fred van Rijs, and Leo de Vreede for their strong support throughout the project. We also gratefully acknowledge the support from the Future Network Services (FNS) project under the Dutch National Growth Fund.Looking forward to more exciting joint work on AI-enabled and adaptive RF transmitters!\n\n🏅Yizhuo Wu won €100k NWO Open Mind Grant for EMI LabJune 18, 2026Very happy to share that our proposal, “The Living Radio Chip,” has been awarded a €100,000 NWO Open Mind Grant for a one-year, high-risk, high-gain research project.This was an exciting journey. Out of around 140 submitted proposals, we were selected as one of the 20 finalists invited to pitch at TEKNOWLOGY 2026. Thanks to my PhD student Yizhuo Wu’s excellent performance in the pitch and Q&A, we were one of the 10 final teams awarded.I am especially proud that Yizhuo, the main applicant of this project, was the only PhD student among the selected applicants without a doctor title. This makes the achievement even more special.In this project, we will build The Living Radio Chip: a new type of wireless chip that can sense its own “vital signs,” learn what healthy operation looks like, detect drift caused by temperature, aging, interference, or changing environments, and adapt safely in real time.Instead of designing radio chips to remain frozen from the day they leave the factory, we want to explore a new paradigm: radio silicon that learns, adapts, and stays efficient over time.A huge congratulations to Yizhuo, and many thanks to NWO (Dutch Research Council) for supporting bold, outside-the-box ideas through the Open Mind program.We can’t wait to show you what we will build in one year.\n\n🏅Yizhuo Wu Awarded 2026 IEEE MTT-S Graduate Fellowship June 15, 2026We are thrilled to announce that PhD student Yizhuo Wu has been selected as a recipient of the 2026 IEEE Microwave Theory and Technology Society (MTT-S) Graduate Fellowship.This highly competitive fellowship is awarded to only 15 graduate students worldwide each year to recognize excellence in microwave engineering research. The award includes a $6,000 grant to support Yizhuo’s ongoing research and academic development.Congratulations, Yizhuo, on this well-deserved international recognition of your hard work and contribution to the field!\n\nDr. Chris Dick (NVIDIA) visited the EMI LabMay 6, 2026We were honored to host Dr. Chris Dick at our EMI lab at Delft University of Technology to share and discuss our recent work in radio-frequency digital predistortion (DPD) and to hear an insightful talk that provided an overview of NVIDIA platforms and tools for 5G Advanced and 6G research. We are also happy that our OpenDPDv2 work, conducted by my PhD students Yizhuo Wu and Ang Li, came up during his presentation and discussion. We thank Chris for taking the time to visit us despite his busy schedule and wish him a successful industry keynote speech at ICASSP 2026 on May 8.\n\nExciting Visit and Guest Lecture by Dr. Shintaro ShibaMarch 13, 2026We were honored to host Dr. Shintaro Shiba (Research Scientist and Technical Lead at Woven by Toyota) for an insightful talk titled \"Unlocking the potential of event cameras: From events to motion to 3D understanding.\" Dr. Shiba shared his expertise on how the high temporal resolution of neuromorphic cameras can recover optical flow and 3D scene structures through principled spatio-temporal analysis. He also discussed the industrial challenges and future of energy-efficient computing in robotics. A recognized leader in the event-based camera community and recipient of the JSPS Ikushi Prize, Dr. Shiba holds a Ph.D. from Keio University and TU Berlin. We are also excited to congratulate him on his upcoming appointment as a Junior Associate Professor at the University of Tokyo! We thank Dr. Shiba for an inspiring session and wish him the best in his new academic chapter.\n\nDr. Chang Gao speaks at ISSCC 2026 Forum 5Feb. 23, 2026On February 19, 2026, Chang Gao gave a featured talk at ISSCC titled \"Open-Source AI for Analog Correction: From RF Power Amplifiers to Energy-Efficient Silicon\". Speaking in the \"Analog for AI and AI for Analog\" forum, he discussed the OpenDPD framework and the role of open-source AI in bridging the gap between algorithm design and silicon deployment for analog/RF systems.View the presentation slides: ISSCC 2026 Forum Slides - Chang Gao\n\n📰 New Nature Communications Paper Explores Brain-Inspired AI for Energy EfficiencyNov. 11, 2025We are thrilled to announce the publication of our new Perspective article, \"Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception,\" in the latest issue of Nature Communications.As artificial intelligence models grow, their escalating computational costs and energy consumption have become a major barrier, especially for deployment on edge devices like mobile phones, wearables, and autonomous robots.In this article, we present a neuro-inspired vision to tackle this challenge. We advocate for leveraging dynamic sparsity, a principle the brain uses to operate with extreme energy efficiency. Instead of processing every piece of information densely, a system using dynamic sparsity selectively activates computations only when and where needed, based on the incoming data.This Perspective categorizes the different forms of dynamic sparsity and explores algorithm-hardware co-design strategies to fully unlock its potential for the next wave of energy-efficient AI.This work is a proud collaboration between:Sheng Zhou (Institute of Neuroinformatics, University of Zurich and ETH Zurich)Dr. Chang Gao (Delft University of Technology)Prof. Tobi Delbruck (Institute of Neuroinformatics, University of Zurich and ETH Zurich)Prof. Marian Verhelst (KU Leuven & imec)Prof. Shih-Chii Liu (Institute of Neuroinformatics, University of Zurich and ETH Zurich)The article is Open Access and can be read in full at the journal website.[Link to the full paper: https://doi.org/10.1038/s41467-025-65387-7]\n\n📰 New Nature Communications Paper Explores Brain-Inspired AI for Energy EfficiencyNov. 11, 2025We are thrilled to announce the successful completion of the AIRHAR (An Energy-Efficient AI-Powered Portable Radar System for Human Activity Recognition) project in collaboration with Dr. Francesco Fioranelli and Prof. Alexander Yarovoy. Funded by a Horizon Europe MSCA Postdoctoral Fellowship, this 24-month project aimed to address a significant challenge: making advanced AI for radar-based human activity recognition (HAR) efficient enough to run on low-power, portable edge devices. We are proud to report that the project has exceeded its core objectives, delivering two major breakthroughs in hardware-software co-design.The Challenge: \"Heavy\" AI on \"Light\" HardwareRadar-based HAR is a powerful technology that can monitor well-being and activity while preserving privacy. However, the most accurate AI models, like Transformers or complex recurrent networks, are too computationally \"heavy\" for the small, battery-powered devices needed for in-home or portable use. Our goal was to bridge this gap.Key Outcome 1: RadMamba — A New SOTA for Radar AIInstead of just shrinking existing models, we developed a new, radar-specific architecture from the ground up: RadMamba. This model, based on efficient state-space models (SSM), is tailored specifically for micro-Doppler signatures.The results were outstanding. RadMamba achieves state-of-the-art accuracy on multiple public datasets while being 100x to 400x more parameter-efficient than previous Transformer-based methods, with orders of magnitude fewer FLOPs.Read the full paper (preprint): \"RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model\"Link: https://arxiv.org/abs/2504.12039Key Outcome 2: Neural-HAR — Proving Real-Time, Ultra-Low-Power InferenceTo prove the hardware-software co-design concept, we ran a parallel track to develop an ultra-efficient CNN model (GateCNN) and its dedicated hardware accelerator, Neural-HAR.By co-designing the algorithm and the hardware, we achieved real-time inference on a low-cost Xilinx Z-7007S FPGA. The accelerator demonstrated:Real-Time Speed: ~107.5 µs latency per inference (far faster than the 20 ms real-time requirement).Ultra-Low Power: Approximately 15 mW of dynamic power, making it suitable for battery-powered devices.Extreme Efficiency: The design used 0% of the FPGA's dedicated DSP blocks and 0% BRAM, proving that complex AI can run on minimal, low-cost hardware.Read the full accelerator paper (preprint): \"Neural-HAR: A Dimension-Gated CNN Accelerator for Real-Time Radar Human Activity Recognition\"Link: https://arxiv.org/abs/2510.22772Open Science and Future ImpactIn line with our commitment to Open Science, all code, models, and scripts to reproduce our results are publicly available.Visit our Open-Source Repository: https://github.com/lab-emi/AIRHARThe principles developed in AIRHAR are already being applied to new challenges, including efficient Digital Pre-Distortion (DPD) for 5G and 6G transmitters. The project was also instrumental in helping Dr. Chang Gao secure a tenure-track position and a new NWO Veni grant, as well as an industrial collaboration with NXP, to continue this line of research.We are grateful to the European Commission and the MSCA program for their support, and we look forward to building on the success of this project to create the next generation of efficient, intelligent sensors.\n\nEMI Master Students Shine in Flagship Conferences ✨Sept. 5, 2025Proud moment for our Lab of Efficient Machine Intelligence (EMI) at TU Delft: three of our MSc students have their work accepted to flagship international conferences in circuits, systems, and computing:Tao Han (daily supervisor: Ang Li) — ASP-DAC 2026, Hong Kong“JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator”Manno Versluis (daily supervisor: Yizhuo Wu) — FPL 2025, Leiden“SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization”Chen Bao — IEEE BioCAS 2025, Abu Dhabi“AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition”Big congratulations to Tao, Manno, and Chen 👏.Also grateful to Ang and Yizhuo for their dedicated supervision, and to Dr. Qinyu Chen from LIACS, Leiden University, for co-advising these projects.Exciting to see EMI students contributing cutting-edge work in Edge AI algorithm-hardware co-design at such prestigious venues! 🚀\n\nYizhuo Wu won second place in IMS DPD ContestJune 20, 2025Congratulations to our PhD student Yizhuo Wu, who won second place in the DPD competition at the 2025 IEEE MTT-S International Microwave Symposium (IMS).\n\nSpartus US Patent Granted. After 4 Years, It’s Official!May 23, 2025We’re thrilled to announce that our patent “Neural Network-Based Inference Method and Apparatus” (US12299576B2) has officially been granted by the USPTO! This work started in early 2021, back when ChatGPT didn’t exist and “compressing a matrix” still meant something non-psychological. After four years of perseverance, revisions, and enough back-and-forth to qualify as a long-distance relationship with the patent office, the finish line is finally crossed.The invention focuses on making neural network computation faster by compressing matrices, balancing workloads, and pruning like a very picky digital gardener. All for faster, leaner, and greener AI.Check it out here: USPTO Link: https://patents.google.com/patent/US12299576B2/en\n\nPhD Student Ang Li Receives the 2025 IEEE Circuits and Systems Student Travel GrantApril 30, 2025Congratulations to our PhD student, Ang Li, who received the 2025 IEEE Circuits and Systems Student Travel Grant for his oral presentation: \"DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion\" at ISCAS 2025.\n\nTwo New PhD Job VacanciesMarch 21, 20251️⃣ Full-Custom Digital ASIC Design for Edge AI ComputingDevelop energy-efficient AI chips for healthcare (e.g., next-gen hearing aids) and IoT devices. Ideal candidates have experience in full-custom ASIC design (Verilog/SystemVerilog, Cadence/Synopsys tools) and an interest in digital in-memory computing or non-von Neumann architectures.2️⃣ Algorithm-Hardware Co-Design for AI-Enhanced TransceiversRevolutionize wireless systems (5G/6G, automotive) using AI for power amplifier linearization and interference cancellation. Collaborate with NXP Semiconductors (Robert van Veldhoven & Maarten Molendijk). Requires knowledge of neural networks, signal processing (Python/MATLAB), and RF systems.We offer:4-year full funding (€2,901–€3,707/month)Access to TU Delft/NXP facilities and industry networksMentorship in a dynamic, interdisciplinary teamApply by April 25, 2025Submit your CV, transcripts, thesis, and references to Dr. Chang Gao: chang.gao@tudelft.nl\n\nCollaboration with NXP to Advance Machine Learning in Analog-to-Digital ConvertersMarch 10, 2025We are thrilled to announce our new collaboration with NXP Semiconductors to tackle the future of high-performance Analog-to-Digital Converters (ADCs) by harnessing machine learning to calibrate impairments and boost efficiency. Backed by €681,434 and running through October 31, 2028, this Holland High Tech-supported project reflects our mission to accelerate microelectronics innovation. Expect exciting progress as we redefine what’s possible in ADC design.Read more about this project: https://hollandhightech.nl/en/programmes-and-projects/projects/machine-learning-calibrated-adc\n\nEMI Students Got Papers Accepted to Flagship ConferencesFeb 15, 2025We are thrilled to announce that our EMI Research Group’s brilliant students have achieved remarkable success at this year’s flagship IEEE conferences!A huge congratulations to our PhD students, Ang Li, Yizhuo Wu, Yi Zhu (Ampleon), and MSc students Sjoerd Groot, Huanqiang Duan, Haolin Wu, Manno Versluis, and Kun Qian for their exceptional work.DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion (Y. Wu, Y. Zhu, K. Qian) was accepted to the 2025 IEEE MTT-S International Microwave Symposium (IMS) and recognized as one of the IMS Top 50 Papers, with an invitation to present at IEEE MWTL. This work is a collaboration between EMI and Ampleon Netherlands B.V.TCN-DPD: Parameter-Efficient Temporal Convolutional Networks for Wideband Digital Predistortion (by H. Duan) also earned acceptance at IMS 2025.At the 2025 IEEE International Symposium on Circuits and Systems (ISCAS), our team’s DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm² Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion (by A. Li, H. Wu with equal contribution), supported by GlobalFoundries and CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning (by S. Groot) were accepted.These achievements underscore the innovation, dedication, and impact of our research. Join us in congratulating our students for advancing the state-of-the-art in digital predistortion and speech denoising. We are immensely proud of your hard work and success!\n\nAsst. Prof. Chang Gao Awarded NWO Veni GrantJuly 18, 2024Dr. Chang Gao has been awarded a prestigious Veni grant of €320,000 from the Dutch Research Council (NWO) for the project \"Energy-Efficient Real-Time Edge Intelligence for Wearable Healthcare Devices.\" This innovative research aims to develop new software and hardware technology to enhance the intelligence and efficiency of wearable healthcare devices like eye movement trackers, hearing aids, and heart rate monitors. By processing data and running AI algorithms directly on these devices using specialized hardware accelerators, the project seeks to enable instant health monitoring, improve privacy, and reduce energy consumption. This work could transform personal health monitoring, making it faster, more secure, and widely accessible while contributing to the development of smarter, more sustainable wearable devices.\n\nIEEE NSATC Best Paper Honourable MentionMay 29, 2024Congratulations to Qinyu Chen (Assistant Prof. @ Leiden Univ.) and Chang Gao (Assistant Prof. @ TU Delft) for their paper at ISCAS 2024. The paper is titled \"Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer.\" The paper won the Best Paper - Honourable Mention Award from the IEEE ISCAS Neural Systems and Application Technical Committee (NSATC).\n\nGlobalFoundries 12LP+ University Partnership ProgramApril 17, 2024We're thrilled to announce our collaboration with GlobalFoundries in the GF 12LP+ University Partnership Program to support our research on Low-Power AI Hardware Accelerators using the cutting-edge 12 nm technology for enabling energy-efficient signal processing in transmitters for future wireless communications technologies and potentially useful for many other applications such as augmented reality and wearable healthcare.\n\nMP-DPD accepted to IMS 2024Feb 2, 2024The premier International Microwave Symposium (IMS) has accepted our paper \"MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers,\" mainly done by our PhD students Yizhuo Wu and Ang Li. The paper was ranked in the Top 50 and invited to the IEEE Microwave and Wireless Technology Letters. This paper proposes a novel DPD with Fixed-Point-Floating-Point Mixed-Precision parameters and intermediate states, which can reduce DPD inference power consumption by 2.6X on 160MHz 1024-QAM OFDM signals without losing linearization performance (-38dB EVM).MP-DPD is trained using our recently released OpenDPD framework, available at https://github.com/lab-emi/OpenDPD.\n\nOpenDPD accepted to ISCAS 2024Jan 19, 2024We are thrilled to release OpenDPD: An Open-Source PyTorch-based End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion (DPD). Authored by Yizhuo Wu, Gagan Deep Singh, Mohammad Reza Beikmirza, Leo de Vreede, Morteza Alavi, and Chang Gao (https://arxiv.org/abs/2401.08318). DPD enhances signal quality in wideband RF power amplifiers (PAs) and is a critical module in future 6G or Wi-Fi 7 wireless communication systems. OpenDPD comes with a free digital power amplifier I/Q dataset for you to train and benchmark machine learning (ML)/artificial intelligence (AI)-based DPDs and fairly compare them with other works. We will collaborate closely with our industrial partners to update this infrastructure periodically. OpenDPDv2 will come later this year with also free analog PA datasets.OpenDPD code, datasets, and documentation are publicly available at https://github.com/lab-emi/OpenDPD. This work will be presented as a lecture at the 2024 IEEE International Symposium on Circuits and Systems (ISCAS), Singapore, in the Special Session: RFIC & AI: Pioneering New Wireless Communications.\n\nResearch Demonstrations\n\nRobotic Prosthesis ControlCollaboration with the AMBER Lab, CaltechSpoken Digit RecogntionUsing the EdgeDRNN AcceleratorNeuromorphic ComputingInterfacing EdgeDRNN with a Silicon Cochlea\n\nHow to Find Us\n\nAddress: Electronic Circuits and Architecture Group, TU Delft, Fac. EEMCS, Mekelweg 4, 2628 CD Delft, NetherlandsEmail: chang.gao at tudelft.nlTU Delft Page: http://microelectronics.tudelft.nl/People/bio.php?id=840\n\nNews\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/fc3c1f20f8eedb.webp",
+      "/images/05351cfa05b4c5.webp",
+      "/images/074c36bee031d8.webp",
+      "/images/54033dc41c377c.webp",
+      "/images/710ab54022fed9.webp",
+      "/images/5d936bccdb9b07.webp",
+      "/images/df5dc4a29a30e4.webp",
+      "/images/25ed1c15319e00.webp",
+      "/images/977409aa02541e.webp",
+      "/images/6c8bc0123b86d4.webp",
+      "/images/ea41f09197e3af.webp",
+      "/images/f3659b666ea997.webp",
+      "/images/5c99bd46ec2f7b.webp",
+      "/images/1092993b49f7f8.webp",
+      "/images/7a584c283358e5.webp",
+      "/images/8f80a953342515.webp",
+      "/images/0d976175330052.webp",
+      "/images/ada28ef5b5c271.webp",
+      "/images/52e75389332dfc.webp",
+      "/images/59f66dbffb4dad.webp",
+      "/images/fbbdb18fa3ea7d.webp",
+      "/images/d86586ab32648a.webp",
+      "/images/2638a2f8c9288e.webp",
+      "/images/c08578c042ce91.webp",
+      "/images/346993622ddd7b.webp",
+      "/images/93e0128c73e688.webp"
+    ],
+    "links": [
+      {
+        "label": "Yi Zhu",
+        "url": "https://www.linkedin.com/in/yi-zhu-956a7514/"
+      },
+      {
+        "label": "Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11554336/"
+      },
+      {
+        "label": "OpenDPDv2",
+        "url": "https://arxiv.org/abs/2507.06849"
+      },
+      {
+        "label": "ISSCC 2026 Forum Slides - Chang Gao",
+        "url": "https://doi.org/10.5281/zenodo.20402931"
+      },
+      {
+        "label": "https://doi.org/10.1038/s41467-025-65387-7",
+        "url": "https://doi.org/10.1038/s41467-025-65387-7"
+      },
+      {
+        "label": "https://arxiv.org/abs/2504.12039",
+        "url": "https://arxiv.org/abs/2504.12039"
+      },
+      {
+        "label": "https://arxiv.org/abs/2510.22772",
+        "url": "https://arxiv.org/abs/2510.22772"
+      },
+      {
+        "label": "https://github.com/lab-emi/AIRHAR",
+        "url": "https://github.com/lab-emi/AIRHAR"
+      },
+      {
+        "label": "https://patents.google.com/patent/US12299576B2/en",
+        "url": "https://patents.google.com/patent/US12299576B2/en"
+      },
+      {
+        "label": "DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion",
+        "url": "https://arxiv.org/abs/2410.11766"
+      },
+      {
+        "label": "Full-Custom Digital ASIC Design for Edge AI Computing",
+        "url": "https://careers.tudelft.nl/job/Delft-PhD-Position-Full-Custom-Digital-ASIC-Design-for-Edge-AI-Computing-2628-CD/816395202/"
+      },
+      {
+        "label": "Algorithm-Hardware Co-Design for AI-Enhanced Transceivers",
+        "url": "https://careers.tudelft.nl/job/Delft-PhD-Position-Algorithm-Hardware-Co-Design-for-AI-Enhanced-Transceivers-2628-CD/816394402/"
+      },
+      {
+        "label": "Robert van Veldhoven",
+        "url": "https://www.linkedin.com/in/robert-van-veldhoven-7306366b/"
+      },
+      {
+        "label": "Maarten Molendijk",
+        "url": "https://www.linkedin.com/in/maarten-molendijk/"
+      },
+      {
+        "label": "chang.gao@tudelft.nl",
+        "url": "mailto:chang.gao@tudelft.nl"
+      },
+      {
+        "label": "https://hollandhightech.nl/en/programmes-and-projects/projects/machine-learning-calibrated-adc",
+        "url": "https://hollandhightech.nl/en/programmes-and-projects/projects/machine-learning-calibrated-adc"
+      },
+      {
+        "label": "Ampleon Netherlands B.V.",
+        "url": "https://www.ampleon.com/"
+      },
+      {
+        "label": "GlobalFoundries",
+        "url": "https://gf.com/"
+      },
+      {
+        "label": "GlobalFoundries 12LP+ University Partnership Program",
+        "url": "https://microelectronics.tudelft.nl/News/indexitem.php?mi=635"
+      },
+      {
+        "label": "Yizhuo Wu",
+        "url": "https://www.linkedin.com/in/yizhuo-wu-984979239/"
+      },
+      {
+        "label": "Ang Li",
+        "url": "https://elca.tudelft.nl/People/bio.php?id=943"
+      },
+      {
+        "label": "https://github.com/lab-emi/OpenDPD",
+        "url": "https://github.com/lab-emi/OpenDPD"
+      },
+      {
+        "label": "OpenDPD: An Open-Source PyTorch-based End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion (DPD)",
+        "url": "https://arxiv.org/abs/2401.08318"
+      },
+      {
+        "label": "Yizhuo Wu",
+        "url": "https://www.linkedin.com/in/yizhuo-wu-984979239/"
+      },
+      {
+        "label": "Chang Gao",
+        "url": "https://www.linkedin.com/in/gaochangw/"
+      },
+      {
+        "label": "https://arxiv.org/abs/2401.08318",
+        "url": "https://arxiv.org/abs/2401.08318"
+      },
+      {
+        "label": "https://github.com/lab-emi/OpenDPD",
+        "url": "https://github.com/lab-emi/OpenDPD"
+      },
+      {
+        "label": "AMBER Lab, Caltech",
+        "url": "http://www.bipedalrobotics.com/"
+      },
+      {
+        "label": "EdgeDRNN",
+        "url": "https://arxiv.org/abs/2012.13600"
+      },
+      {
+        "label": "Silicon Cochlea",
+        "url": "https://ieeexplore.ieee.org/abstract/document/5537164"
+      },
+      {
+        "label": "http://microelectronics.tudelft.nl/People/bio.php?id=840",
+        "url": "http://microelectronics.tudelft.nl/People/bio.php?id=840"
+      }
+    ]
+  },
+  {
+    "page": "people",
+    "source": "https://www.tudemi.com/people",
+    "text": "Group Leader\n\nDr. Chang GaoAssistant Professor of Edge AI @ TU DelftDepartment of Microelectronics, Faculty of EEMCSEmail: Chang.Gao@tudelft.nlGoogle Scholar: https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&hl=enLinkedIn: https://www.linkedin.com/in/gaochangwPersonal Website: https://gaochangw.github.io\n\nPhD StudentsWrite me an email to chang.gao@tudelft.nl if you are interested in any vacancy.\n\nWu, YizhuoLi, AngZhu, YiLiang, Zitao\n\nKremers, PepijnShen, Jiaqi (Co-supervised with Dr. Qinwen Fan)Rosi, Nicole (Co-supervised with Dr. Marco Zuniga)Liu, Yifan (Staring on Oct 1)\n\nMaster Students\n\nHamster, Casper (2026)Gluckmann, Gauthier (2027)Yu, Hai (2027)Menon, Keerthana (2027)\n\nTang, Enxuan (2027)Hu, Yaonan (2027)Lin, Shanghong (2027)Liu, Mingwu (2027)\n\nTyukov, Daniel (2027)Dong, Yuting (2027)\n\nVisitors\n\nLu, Guorui (Visiting PhD, Leiden University)Seyed Shahab Bozorgzadeh (Visiting MSc, Università di Bologna)\n\nAlumni\n\nMSc AlumniWang, Xinling (2026)Agarwal, Navya (2026)Patil, Siddharth (2026)de Beer, Arne (2025, now @ AME, Eindhoven, The Netherlands)Chen, Bao (2025)Qian, Kun (2025)Versluis, Manno (2025)Han, Tao (2025, now @ SmartSens, Shanghai, China)Yang, Ruishen (2025, now @ Huawei, Shanghai, China)Huanqiang Duan (2025, now @ Sandisk, Shanghai, China)Sjoerd Groot (2024, now @ TEST-OK, Rotterdam, The Netherlands)Liao, Xinyu (2024)Wu, Haolin (2024)Jian, Yuhang (2023)Fu, Peng (2023)Wu, Yizhuo (2023, now a PhD in EMI)\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/24f427b3eb9474.webp",
+      "/images/b5334890e6bfd8.webp",
+      "/images/b722851b018e16.webp",
+      "/images/ab9dc1a1ae4620.webp",
+      "/images/f1144439056158.webp",
+      "/images/7b854ed20bf534.webp",
+      "/images/5b639cb1d6a144.webp",
+      "/images/d65c2a0382b4fb.webp",
+      "/images/38bafaa0ab0cbc.webp",
+      "/images/9cbe02df0e22c2.webp",
+      "/images/adf044f983d908.webp",
+      "/images/38a7e07c665782.webp",
+      "/images/9e78178da2f356.webp",
+      "/images/ea89a6180b411c.webp",
+      "/images/6ff3e7c9e4d6b0.webp",
+      "/images/fc2960401b2c46.webp",
+      "/images/82a722a445446e.webp",
+      "/images/bb8780aa34c7b5.webp",
+      "/images/cb7a2a9c3faccc.webp",
+      "/images/b83897d6f6b79d.webp",
+      "/images/f1fe2beaccff69.webp",
+      "/images/d2845bf1674e02.webp"
+    ],
+    "links": [
+      {
+        "label": "https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&hl=en",
+        "url": "https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&hl=en"
+      },
+      {
+        "label": "https://www.linkedin.com/in/gaochangw",
+        "url": "https://www.linkedin.com/in/gaochangw"
+      },
+      {
+        "label": "https://gaochangw.github.io",
+        "url": "https://gaochangw.github.io"
+      },
+      {
+        "label": "chang.gao@tudelft.nl",
+        "url": "mailto:chang.gao@tudelft.nl"
+      },
+      {
+        "label": "Wu, Yizhuo",
+        "url": "https://scholar.google.com/citations?user=ZIScikwAAAAJ&hl=nl&oi=ao"
+      },
+      {
+        "label": "Li, Ang",
+        "url": "https://angme.org"
+      },
+      {
+        "label": "Zhu, Yi",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1050"
+      },
+      {
+        "label": "Liang, Zitao",
+        "url": "/zitao-liang/"
+      },
+      {
+        "label": "Kremers, Pepijn",
+        "url": "/pepijn-kremers/"
+      },
+      {
+        "label": "Shen, Jiaqi (",
+        "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
+      },
+      {
+        "label": "Qinwen Fan",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=856"
+      },
+      {
+        "label": ")",
+        "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
+      },
+      {
+        "label": "Rosi, Nicole",
+        "url": "https://www.tudelft.nl/staff/n.rosi/"
+      },
+      {
+        "label": "Marco Zuniga",
+        "url": "https://www.tudelft.nl/en/staff/m.a.zunigazamalloa/"
+      },
+      {
+        "label": "Liu, Yifan",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1174"
+      },
+      {
+        "label": "Hamster, Casper",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2019"
+      },
+      {
+        "label": "Gluckmann, Gauthier",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2049"
+      },
+      {
+        "label": "Yu, Hai",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2053"
+      },
+      {
+        "label": "Menon, Keerthana",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2054"
+      },
+      {
+        "label": "Tang, Enxuan",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2063"
+      },
+      {
+        "label": "Hu, Yaonan",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2062"
+      },
+      {
+        "label": "Lin, Shanghong",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2064"
+      },
+      {
+        "label": "Liu, Mingwu",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2099"
+      },
+      {
+        "label": "Tyukov, Daniel",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2101"
+      },
+      {
+        "label": "Dong, Yuting",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2102"
+      },
+      {
+        "label": "Lu, Guorui",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1121"
+      },
+      {
+        "label": ")",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1121"
+      },
+      {
+        "label": "Seyed Shahab Bozorgzadeh",
+        "url": "https://www.linkedin.com/in/shahab-bzg/"
+      },
+      {
+        "label": "Wang, Xinling",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=2017"
+      },
+      {
+        "label": "Agarwal, Navya",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1899"
+      },
+      {
+        "label": "Patil, Siddharth",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1892"
+      },
+      {
+        "label": "de Beer, Arne",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1759"
+      },
+      {
+        "label": "Chen, Bao",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1743"
+      },
+      {
+        "label": "Qian, Kun",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1747"
+      },
+      {
+        "label": "Versluis, Manno",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1760"
+      },
+      {
+        "label": "Han, Tao",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1736"
+      },
+      {
+        "label": "Yang, Ruishen",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1864"
+      },
+      {
+        "label": "Sjoerd Groot",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1673"
+      },
+      {
+        "label": "Liao, Xinyu",
+        "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1477"
+      },
+      {
+        "label": "Wu, Haolin",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1698"
+      },
+      {
+        "label": "Jian, Yuhang",
+        "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1457"
+      },
+      {
+        "label": "Fu, Peng",
+        "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1458"
+      },
+      {
+        "label": "Wu, Yizhuo",
+        "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1456"
+      }
+    ]
+  },
+  {
+    "page": "publications",
+    "source": "https://www.tudemi.com/publications",
+    "text": "PublicationsPlease track our latest publications on Chang Gao's Google Scholar page.\n\n* Co-first AuthorsOur MSc and PhD Students are highlighted in colors.2026Y. Wu, A. Li, C. Gao, “OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion,” Preprint, accepted to the 2026 IEEE Global Communications Conference (GLOBECOM), 2026 (Code: https://github.com/lab-emi/OpenDPD)A. Li and C. Gao, \"BitFair: A 12nm Bit-Serial CNN Accelerator with Learnable Early Termination and Adaptive Bit Ordering for Ultra-Low-Power XR Vision,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2026Y. Zhu, F. V. Rijs, L. C. N. d. Vreede, J. Gajadharsing and C. Gao, \"Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers,\" in IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation (JSTEAP), 2026.T. Han, A. Li, Q. Chen and C. Gao, \"JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator,\" 2026 31st Asia and South Pacific Design Automation Conference (ASP-DAC), Lantau, Hong Kong, 2026, pp. 170-176, 2026A. de Beer and C. Gao, \"SlimTTS: Parameter- and Compute-Efficient Neural Text-to-Speech Synthesis for Real-Time Inference,\" 2026 IEEE International Symposium on Circuits and Systems (ISCAS), Shanghai, China, 2026.2025C. Gao, S.-C. Liu, T. Delbruck, and X. Chen, “Neural network-based inference method and apparatus,” U.S. Patent 12,299,576, May 13, 2025.Y. Wu, F. Fioranelli, C. Gao, “RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model,” in IEEE Transactions on Radar Systems (T-RS), vol. 4, pp. 261-272, 2026 (Code: https://github.com/lab-emi/AIRHAR)Y. Wu, Y. Zhu, K. Qian, Q. Chen, A. Zhu, J. Gajadharsing, L. C. N. de Vreede, C. Gao, “DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion,” in 2025 IEEE MTT-S International Microwave Symposium (IMS). (IMS 2025 Top 50 Paper, invited to IEEE MWTL)S. Zhou, C. Gao, T. Delbruck, M. Verhelst, S.-C. Liu, \"Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception,\" in Nature Communications, 2025T. Han, A. Li, Q. Chen, C. Gao, “JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator,” accepted to 30th Asia and South Pacific Design Automation Conference (ASP-DAC), Hong Kong, China, 2026M. Versluis, Y. Wu, C. Gao, “SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization,” accepted to 35th International Conference on Field-Programmable Logic and Applications (FPL), Leiden, The Netherlands, 2025.C. Bao, C. Huo, Q. Chen, C. Gao, “AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition,” accepted to 2025 IEEE Biomedical Circuits and Systems (BioCAS) Conference, Abu Dhabi, United Arab Emirates, 2025H. Duan, M. Versluis, Q. Chen, L. C. N. de Vreede, C. Gao, “TCN-DPD: Parameter-Efficient Temporal Convolutional Networks for Wideband Digital Predistortion,” accepted to 2025 IEEE MTT-S International Microwave Symposium (IMS), 2025.A. Li*, H. Wu*, Y. Wu, Q. Chen, L. C. N. de Vreede, C. Gao, “DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).S. Groot, Q. Chen, J. C. van Gemert, C. Gao, “CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).Y. Zhu, M. Schmitdt-Szalowski, P. Hammes, R. Ouhachi, V. Cuoco, C. Gao, Q. Tao, J. Gajadharsing, \"Automatic I–V Parameter Extraction for GaN Devices With Image-Based Machine Learning Method,\" in IEEE Microwave and Wireless Technology Letters (MWTL)S. Zhou, Z. Li, L. Cheng, J. Hadorn, C. Gao, Q. Chen, T. Delbruck, K. Kim, S.-C. Liu, \"An 8.62-μW 75-dB DRSoC Fully Integrated SoC for Spoken Language Understanding,\" in IEEE Journal of Solid-State Circuits (JSSC)J. Qi, C. Gao, Z. Ren, Q. Chen, “DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference,” preprint, 2025.Z. Xu, G. Lu, C. Gao, Q. Chen, “EvHand-FPV: Efficient Event-Based 3D Hand Tracking from First-Person View,” preprint, 2025.Q. Chen*, K. Kim*, C. Gao*, S. Zhou, T. Jang, T. Delbruck, et al., \"DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM,\" in IEEE Transactions on Circuits and Systems for Artificial Intelligence (TCASAI), 2025J. Ding, Z. Wang, C. Gao, M. Liu, Q. Chen, \"FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality,\" accepted to IEEE International Conference on Robotics and Automation (ICRA), 2025G. Lu, J. Peng, B. Huang, C. Gao, T. Stefanov, Y. Hao, Q. Chen, “SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).2024Y. Wu, G. Singh, M. Beikmirza, L. de Vreede, M. Alavi, C. Gao, \"OpenDPD: An Open-Source End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion,\" accepted to 2024 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Invited to the RFIC & AI Special Session, Code: https://github.com/lab-emi/OpenDPD)Y. Wu*, A. Li*, M. Beikmirza, G. Singh, Q. Chen, L. de Vreede, M. Alavi, C. Gao, \"MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers,\" accepted to 2024 IEEE International Microwave Symposium (IMS), 2024 (Ranked in Top 50, Code: https://github.com/lab-emi/OpenDPD)S. -C. Liu, S. Zhou, Z. Li, C. Gao, K. Kim, and T. Delbruck, \"Bringing Dynamic Sparsity to the Forefront for Low-Power Audio Edge Computing: Brain-inspired approach for sparsifying network updates,\" in IEEE Solid-State Circuits Magazine (SSC-M), vol. 16, no. 4, pp. 62-69, Fall 2024Z. Wang, C. Gao, Z. Wu, M. V. Conde, R. Timofte, S.-C. Liu, Q. Chen, et al., \"Event-Based Eye Tracking. AIS 2024 Challenge Survey,\" Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2024, pp. 5810-5825Q. Chen, C. Sun, C. Gao, S.-C. Liu, \"Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer,\" accepted to 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Best Paper Award – Honorary Mention by the Neural Systems and Applications Technical Committee)C. Gao, T. Delbruck, and S. -C. Liu, \"Spartus: A 9.4 TOp/s FPGA-Based LSTM Accelerator Exploiting Spatio-Temporal Sparsity,\" in IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2024X. Chen, C. Gao, Z. Wang, L. Cheng, S. Zhou, S.-C. Liu and T. Delbruck, \"Exploiting Symmetric Temporally Sparse BPTT for Efficient RNN Training,\" accepted to the 38th Annual AAAI Conference on Artificial Intelligence (AAAI), 2024S. Li et al., \"HAS-RL: A Hierarchical Approximate Scheme Optimized With Reinforcement Learning for NoC-Based NN Accelerators,\" in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), 20242023Q. Chen, Z. Wang, S.-C. Liu, C. Gao, \"3ET: Efficient Event-based Eye Tracking using a Change-Based ConvLSTM Network,\" in 2023 IEEE Biomedical Circuits and Systems (BioCAS) Conference, 2023F, Ottati, C. Gao, Q. Chen, G. Brignone, M. R. Casu, J. K. Eshraghian, L. Lavagno, \"To Spike or Not To Spike: A Digital Hardware Perspective on Deep Learning Acceleration,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2023 (JETCAS Spotlight Article 2023)Q. Chen, Y. Chang, K. Kim, C. Gao, S.-C. Liu, \"An Area-Efficient Ultra-Low-Power Time-Domain Feature Extractor for Edge Keyword Spotting,\" in 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2023Q. Chen, C. Sun, C. Gao, X. Fang and H. Luan, \"FrameFire: Enabling Efficient Spiking Neural Network Inference for Video Segmentation,\" in 2023 IEEE 5th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 20232022S. -C. Liu, C. Gao, K. Kim, T. Delbruck, \"Energy-Efficient Activity-Driven Computing Architectures for Edge Intelligence,\" in 2022 IEEE International Electron Devices Meeting (IEDM), 2022K. Kim*, C. Gao*, et al., \"A 23μW Solar-Powered Keyword-Spotting ASIC with Ring-Oscillator-Based Time-Domain Feature Extraction,\" 2022 IEEE International Solid-State Circuits Conference (ISSCC), 2022, pp. 1-3.K. Kim, C. Gao, R. Graça, I. Kiselev, H.-J. Yoo, T. Delbruck and S. -C. Liu, \"A 23 μW Keyword Spotting IC with Ring-Oscillator-Based Time-Domain Feature Extraction,\" in IEEE Journal of Solid-State Circuits (JSSC), 2022.Q. Chen*, C. Gao* and Y. Fu, \"Cerebron: A Reconfigurable Architecture for Spatio-Temporal Sparse Spiking Neural Networks,\" in IEEE Transactions on Very Large Scale Integration Systems (TVLSI), 2022.Q. Chen*, C. Gao*, X. Fang and H. Luan, \"Skydiver: A Spiking Neural Network Accelerator Exploiting Spatio-Temporal Workload Balance,\" in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).I. Kiselev, C. Gao and S. -C. Liu, \"Spiking Cochlea with System-Level Local Automatic Gain Control,\" in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), vol. 69, no. 5, pp. 2156-2166, May 2022.Q. Chen, C. Sun, Z. Lu and C. Gao, \"Enabling Energy-Efficient Inference for Self-Attention Mechanisms in Neural Networks,\" 2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 25-28J. H. Lindmar, C. Gao and S. -C. Liu, \"Intrinsic Sparse LSTM using Structured Targeted Dropout for Efficient Hardware Inference,\" 2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 126-1292021X. Chen, C. Gao, T. Delbruck and S. -C. Liu, \"EILE: Efficient Incremental Learning on the Edge,\" 2021 IEEE 3rd International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2021, pp. 1-4.2020C. Gao, A. Rios-Navarro, X. Chen, S. -C. Liu and T. Delbruck, \"EdgeDRNN: Recurrent Neural Network Accelerator for Edge Inference,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), vol. 10, no. 4, pp. 419-432, Dec. 2020.C. Gao*, R. Gehlhar*, A. D. Ames, S. -C. Liu and T. Delbruck, \"Recurrent Neural Network Control of a Hybrid Dynamical Transfemoral Prosthesis with EdgeDRNN Accelerator,\" 2020 IEEE International Conference on Robotics and Automation (ICRA), 2020, pp. 5460-5466.C. Gao, A. Rios-Navarro, X. Chen, T. Delbruck and S. -C. Liu, \"EdgeDRNN: Enabling Low-latency Recurrent Neural Network Edge Inference,\" 2020 2nd IEEE International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2020, pp. 41-45. (Best Paper Award)2019C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"Real-Time Speech Recognition for IoT Purpose using a Delta Recurrent Neural Network Accelerator,\" 2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-5.C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"Live Demonstration: Real-Time Spoken Digit Recognition using the DeltaRNN Accelerator,\" 2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-1.2018C. Gao, D. Neil, E. Ceolini, S.-C. Liu, and T. Delbruck, \"DeltaRNN: A Power-efficient Recurrent Neural Network Accelerator,\" In Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA '18). Association for Computing Machinery, New York, NY, USA, 21–30.2017C. Gao, S. Ghoreishizadeh, Y. Liu and T. Constandinou, \"On-chip ID generation for multi-node implantable devices using SA-PUF,\" 2017 IEEE International Symposium on Circuits and Systems (ISCAS), 2017, pp. 1-4.\n\nChang Gao gaochangw at outlook.com",
+    "images": [],
+    "links": [
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=sQ9N7dsAAAAJ&hl=en"
+      },
+      {
+        "label": "OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion",
+        "url": "https://arxiv.org/abs/2507.06849"
+      },
+      {
+        "label": "https://github.com/lab-emi/OpenDPD",
+        "url": "https://github.com/lab-emi/OpenDPD"
+      },
+      {
+        "label": "BitFair: A 12nm Bit-Serial CNN Accelerator with Learnable Early Termination and Adaptive Bit Ordering for Ultra-Low-Power XR Vision",
+        "url": "https://arxiv.org/abs/2607.05445"
+      },
+      {
+        "label": "Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11554336"
+      },
+      {
+        "label": "JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11420815"
+      },
+      {
+        "label": "SlimTTS: Parameter- and Compute-Efficient Neural Text-to-Speech Synthesis for Real-Time Inference",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11561979/"
+      },
+      {
+        "label": "Neural network-based inference method and apparatus",
+        "url": "https://patents.google.com/patent/US12299576B2/en"
+      },
+      {
+        "label": "Fioranelli",
+        "url": "https://arxiv.org/search/cs?searchtype=author&query=Fioranelli,+F"
+      },
+      {
+        "label": "RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model",
+        "url": "https://ieeexplore.ieee.org/document/11316534"
+      },
+      {
+        "label": "Code: https://github.com/lab-emi/AIRHAR",
+        "url": "https://github.com/lab-emi/AIRHAR"
+      },
+      {
+        "label": "DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion",
+        "url": "https://arxiv.org/abs/2505.06250"
+      },
+      {
+        "label": "Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception,",
+        "url": "https://www.nature.com/articles/s41467-025-65387-7"
+      },
+      {
+        "label": "SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization",
+        "url": "https://arxiv.org/abs/2506.16591"
+      },
+      {
+        "label": "AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition",
+        "url": "https://arxiv.org/abs/2506.06566"
+      },
+      {
+        "label": "DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion",
+        "url": "https://arxiv.org/abs/2410.11766"
+      },
+      {
+        "label": "CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning",
+        "url": "https://arxiv.org/abs/2410.11062"
+      },
+      {
+        "label": "Automatic I–V Parameter Extraction for GaN Devices With Image-Based Machine Learning Method",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11133586/"
+      },
+      {
+        "label": "An 8.62-μW 75-dB DRSoC Fully Integrated SoC for Spoken Language Understanding",
+        "url": "https://ieeexplore.ieee.org/document/11159176"
+      },
+      {
+        "label": "DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference",
+        "url": "https://arxiv.org/abs/2507.19608"
+      },
+      {
+        "label": "EvHand-FPV: Efficient Event-Based 3D Hand Tracking from First-Person View",
+        "url": "https://arxiv.org/abs/2509.13883"
+      },
+      {
+        "label": "DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM",
+        "url": "https://ieeexplore.ieee.org/iel8/10495160/10595405/10771601.pdf"
+      },
+      {
+        "label": "FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality",
+        "url": "https://arxiv.org/abs/2409.15584"
+      },
+      {
+        "label": "SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network",
+        "url": "https://arxiv.org/abs/2410.09998"
+      },
+      {
+        "label": "OpenDPD: An Open-Source End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion",
+        "url": "https://arxiv.org/abs/2401.08318"
+      },
+      {
+        "label": "Bringing Dynamic Sparsity to the Forefront for Low-Power Audio Edge Computing: Brain-inspired approach for sparsifying network updates",
+        "url": "https://ieeexplore.ieee.org/document/10752808"
+      },
+      {
+        "label": "Event-Based Eye Tracking. AIS 2024 Challenge Survey",
+        "url": "https://openaccess.thecvf.com/content/CVPR2024W/AI4Streaming/html/Wang_Event-Based_Eye_Tracking._AIS_2024_Challenge_Survey_CVPRW_2024_paper.html"
+      },
+      {
+        "label": "Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer",
+        "url": "https://arxiv.org/abs/2402.09424"
+      },
+      {
+        "label": "Spartus: A 9.4 TOp/s FPGA-Based LSTM Accelerator Exploiting Spatio-Temporal Sparsity",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9794448"
+      },
+      {
+        "label": "Exploiting Symmetric Temporally Sparse BPTT for Efficient RNN Training",
+        "url": "https://arxiv.org/abs/2312.09391"
+      },
+      {
+        "label": "HAS-RL: A Hierarchical Approximate Scheme Optimized With Reinforcement Learning for NoC-Based NN Accelerators",
+        "url": "https://ieeexplore.ieee.org/document/10431799"
+      },
+      {
+        "label": "3ET: Efficient Event-based Eye Tracking using a Change-Based ConvLSTM Network",
+        "url": "https://arxiv.org/abs/2308.11771"
+      },
+      {
+        "label": "To Spike or Not To Spike: A Digital Hardware Perspective on Deep Learning Acceleration",
+        "url": "https://arxiv.org/abs/2306.15749"
+      },
+      {
+        "label": "JETCAS Spotlight Article 2023",
+        "url": "https://ieee-cas.org/post/news/jetcas-spotlight-articles-2023"
+      },
+      {
+        "label": "An Area-Efficient Ultra-Low-Power Time-Domain Feature Extractor for Edge Keyword Spotting",
+        "url": "https://www.zora.uzh.ch/id/eprint/234155/1/ISCAS_2023_IIR_KWS_uzh.pdf"
+      },
+      {
+        "label": "FrameFire: Enabling Efficient Spiking Neural Network Inference for Video Segmentation",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10168660"
+      },
+      {
+        "label": "Energy-Efficient Activity-Driven Computing Architectures for Edge Intelligence",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10019443"
+      },
+      {
+        "label": "A 23μW Solar-Powered Keyword-Spotting ASIC with Ring-Oscillator-Based Time-Domain Feature Extraction",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9731708"
+      },
+      {
+        "label": "A 23 μW Keyword Spotting IC with Ring-Oscillator-Based Time-Domain Feature Extraction",
+        "url": "https://ieeexplore.ieee.org/document/9858110"
+      },
+      {
+        "label": "Cerebron: A Reconfigurable Architecture for Spatio-Temporal Sparse Spiking Neural Networks",
+        "url": "https://ieeexplore.ieee.org/document/9855834"
+      },
+      {
+        "label": "Skydiver: A Spiking Neural Network Accelerator Exploiting Spatio-Temporal Workload Balance",
+        "url": "https://ieeexplore.ieee.org/document/9733037"
+      },
+      {
+        "label": "Spiking Cochlea with System-Level Local Automatic Gain Control",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9715730"
+      },
+      {
+        "label": "Enabling Energy-Efficient Inference for Self-Attention Mechanisms in Neural Networks",
+        "url": "https://ieeexplore.ieee.org/document/9869924"
+      },
+      {
+        "label": "Intrinsic Sparse LSTM using Structured Targeted Dropout for Efficient Hardware Inference",
+        "url": "https://ieeexplore.ieee.org/document/9869988"
+      },
+      {
+        "label": "EILE: Efficient Incremental Learning on the Edge",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9458554"
+      },
+      {
+        "label": "EdgeDRNN: Recurrent Neural Network Accelerator for Edge Inference",
+        "url": "https://ieeexplore.ieee.org/document/9268992"
+      },
+      {
+        "label": "Recurrent Neural Network Control of a Hybrid Dynamical Transfemoral Prosthesis with EdgeDRNN Accelerator",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9196984"
+      },
+      {
+        "label": "EdgeDRNN: Enabling Low-latency Recurrent Neural Network Edge Inference",
+        "url": "https://ieeexplore.ieee.org/document/9074001"
+      },
+      {
+        "label": "Real-Time Speech Recognition for IoT Purpose using a Delta Recurrent Neural Network Accelerator",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8702290"
+      },
+      {
+        "label": "Live Demonstration: Real-Time Spoken Digit Recognition using the DeltaRNN Accelerator,",
+        "url": "https://ieeexplore.ieee.org/document/8702212"
+      },
+      {
+        "label": "DeltaRNN: A Power-efficient Recurrent Neural Network Accelerator",
+        "url": "https://dl.acm.org/doi/10.1145/3174243.3174261"
+      },
+      {
+        "label": "On-chip ID generation for multi-node implantable devices using SA-PUF",
+        "url": "https://ieeexplore.ieee.org/document/8050422"
+      }
+    ]
+  },
+  {
+    "page": "grants-awards",
+    "source": "https://www.tudemi.com/grants-awards",
+    "text": "Our Research Grants\n\nProjects led by EMI:NWO (Dutch Research Council) Open Mind (€100K, main applicant: Yizhuo Wu, co-applicant: Chang Gao, Video Link)NWO (Dutch Research Council) Veni (€320K)Holland High Tech (TKI) - High Tech Systems and Materials (HTSM) (€670K)Future Network Services: 6G for and by the Netherlands (One fully-funded Industrial PhD)GlobalFoundries 12LP+ University Partnership Program (free tapeout ~€500K)Marie Skłodowska-Curie Actions - Postdoctoral Fellowship (€203K)Projects where EMI act as a core member:ERC Synergy - DISTRUPT (€10M, led by Prof. Leo de Vreede)\n\nAwardsOur PhD Students are highlighted in colors.\n\nYizhuo Wu: NWO Open Mind Winner (2026)Yizhuo Wu: MTT-S Graduate Fellowship (2026)Ang Li: IEEE CASS Student Travel Grant (2025)Best Paper - Honourable Mention Award @ IEEE ISCAS NSATC (2024)MIT Technology Review Innovators Under 35 Europe (2023)Mahowald Early Career Award (2022)Distinction of PhD Thesis @ Institute of Neuroinformatics, University of Zurich and ETH Zurich (2022)Best Paper Award @ IEEE AICAS (2020)Outstanding Self-financed Students Abroad (2020)MSc Outstanding Achievement @ Imperial College London (2016)\n\nSponsors\n\nDutch Research Council (NWO)European Commision(under MSCA)NXPAmpleonGlobalFoundries\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/f7e8e94adc2bfb.webp",
+      "/images/8810971f6f106b.webp",
+      "/images/627ca952a47e7a.webp",
+      "/images/13a790ceb10dd9.webp",
+      "/images/cab3cbd96ad32f.webp"
+    ],
+    "links": [
+      {
+        "label": "NWO (Dutch Research Council) Open Mind",
+        "url": "https://www.nwo.nl/en/news/ten-potentially-groundbreaking-open-mind-research-ideas-received-a-grant"
+      },
+      {
+        "label": "Yizhuo Wu",
+        "url": "https://scholar.google.com/citations?user=ZIScikwAAAAJ&hl=nl"
+      },
+      {
+        "label": "Chang Gao",
+        "url": "https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&hl=zh-CN"
+      },
+      {
+        "label": "Video Link",
+        "url": "https://www.youtube.com/watch?v=vNOvSQfOSRQ"
+      },
+      {
+        "label": "NWO (Dutch Research Council) Veni",
+        "url": "https://www.nwo.nl/en/researchprogrammes/nwo-talent-programme/projects-veni/veni-2023"
+      },
+      {
+        "label": "Holland High Tech (TKI) - High Tech Systems and Materials (HTSM)",
+        "url": "https://www.hollandhightech.nl/en/programmas-en-projecten/projecten/machine-learning-calibrated-adc"
+      },
+      {
+        "label": "Prof. Leo de Vreede",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=26"
+      },
+      {
+        "label": "MIT Technology Review Innovators Under 35 Europe",
+        "url": "https://www.innovatorsunder35.com/the-list/chang-gao/"
+      },
+      {
+        "label": "Mahowald Early Career Award",
+        "url": "https://www.mahowaldprize.org/prize-awards/prizes-2022"
+      },
+      {
+        "label": "Distinction of PhD Thesis",
+        "url": "https://www.zora.uzh.ch/id/eprint/219686/7/Chang_Gao_Thesis_Pub_2.pdf"
+      },
+      {
+        "label": "Best Paper Award @ IEEE AICAS",
+        "url": "https://ee.ethz.ch/news-and-events/d-itet-news-channel/2020/09/best-paper-award-for-institute-of-neuroinformatics.html"
+      },
+      {
+        "label": "Outstanding Self-financed Students Abroad",
+        "url": "https://swiss.lxgz.org.cn/switzerland/tzgg/2021083115591264694/index.html"
+      },
+      {
+        "label": "MSc Outstanding Achievement @ Imperial College London",
+        "url": "https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/"
+      }
+    ]
+  },
+  {
+    "page": "msc-projects_1",
+    "source": "https://www.tudemi.com/msc-projects_1",
+    "text": "Open Projects for Master StudentsIf you are interested in any project, send me your CV and transcripts to chang.gao@tudelft.nl to schedule a chat.\n\nMachine Learning Accelerator for ADC Calibration on FPGAProject Description:This project aims to design a machine learning accelerator on an FPGA for the calibration of analog-to-digital converters (ADCs). Most FPGAs provide an internal calibration algorithm for their onboard ADC. However, such conventional algorithms target a single non-ideality, whereas data-driven techniques have the potential to target all non-idealities present. Through this master thesis project, the student will gain experience in hardware/software co-design of an accelerator and in performing hands-on measurements in our laboratory with state-of-the-art equipment. The deliverable is an open-source, FPGA-specific ADC calibration accelerator implementation.Preferred Skills: PyTorch, SystemVerilog/VHDL, FPGA design flow (Vivado)Contact Person: Pepijn Kremers, MSc. (p.kremers@tudelft.nl) and Dr. Chang Gao (Chang.Gao@tudelft.nl)\n\nEfficient FPGA Accelerator for Generative Voice AIProject Description: This project builds an energy-efficient FPGA-based accelerator for real-time voice cloning. We will start from the open-source pipeline Real-Time-Voice-Cloning (GitHub; YouTube demo) and replace the backbone TTS model with EfficientSpeech (paper) to reduce compute and memory costs while preserving naturalness. The student will co-design the model and hardware: apply quantization, pruning, and sparsity/weight-sharing to the encoder/decoder blocks, then map the kernels (mel-spectrogram, attention/FFN, vocoder) to an FPGA data path. We will prototype on the Avnet MiniZed board (MiniZed), targeting end-to-end latency, intelligibility (WER), MOS-style quality metrics, and performance-per-watt. Ethics & consent: all cloning experiments must use voices with explicit written consent and include a “cloned audio” watermark.Preferred Skills:FPGA design (Verilog/SystemVerilog), toolflows (Vivado/Vitis)Python & PyTorchDeliverables:Compressed EfficientSpeech-based TTS model integrated into the Real-Time-Voice-Cloning pipelineFPGA accelerator on MiniZed with real-time inference (encoder/decoder + vocoder offload)Reference Material:Real-Time-Voice-Cloning: https://github.com/CorentinJ/Real-Time-Voice-CloningDemo video: https://www.youtube.com/watch?v=-O_hYhToKoAEfficientSpeech paper: https://arxiv.org/abs/2305.13905Avnet MiniZed board: https://www.avnet.com/americas/products/avnet-boards/avnet-board-families/minizedContact Person: Dr. Chang Gao (Chang.Gao@tudelft.nl)\n\nNeural Networks for Enhanced Analog-to-Digital Converter (ADC)This project investigates the integration of neural networks into the signal acquisition pipeline to enhance the performance of low-resolution, low-power analog-to-digital converters (ADCs). Traditional ADCs are designed to maximize signal fidelity across a wide range of applications, but this project takes a domain-adaptive approach by pairing simplified ADC front-ends with task-specific neural post-processing to reconstruct or enhance the acquired signals.The student will work on a prototype system built around a commercial off-the-shelf ADC (e.g., from Texas Instruments) on a PCB, and implement neural enhancement models in PyTorch to process the raw ADC outputs. The project will include hardware-in-the-loop training and inference, with optional deployment on embedded platforms such as Raspberry Pi or FPGAs. Emphasis will be placed on evaluating power, latency, and accuracy trade-offs in an end-to-end pipeline.Preferred Skills: PyTorch, Signal Processing Fundamentals, Embedded Systems, PCB Prototyping, Verilog (optional for hardware acceleration)Contact Person: Dr. Chang Gao (Chang.Gao@tudelft.nl)\n\nAI-based Phase-Locked Loop (PLL) CalibrationThis project aims to develop an AI-driven calibration system for phase-locked loop (PLL) non-idealities, such as jitter, phase noise, and locking instability, by adapting the OpenDPD framework, traditionally used for power amplifier linearization. Leveraging MATLAB for system-level PLL modeling and PyTorch for training neural networks, the project will automate the identification and compensation of non-linear behaviors in mixed-signal circuits. The deliverable: An open-source simulation package enabling AI-calibrated PLLs for high-precision communication systems.Preferred Skills: MATLAB/Simulink, PyTorch, RF system fundamentals.Contact Person: Dr. Masoud Babaie (M.Babaie@tudelft.nl) and Dr. Chang Gao (Chang.Gao@tudelft.nl)\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/efd2fefae77744.webp",
+      "/images/c31ef1b376e92e.webp",
+      "/images/fa0be63d1300af.webp"
+    ],
+    "links": [
+      {
+        "label": "chang.gao@tudelft.nl",
+        "url": "mailto:chang.gao@tudelft.nl"
+      },
+      {
+        "label": "Pepijn Kremers, MSc.",
+        "url": "/pepijn-kremers/"
+      },
+      {
+        "label": "p.kremers@tudelft.nl",
+        "url": "mailto:p.kremers@tudelft.nl"
+      },
+      {
+        "label": "Dr. Chang Gao",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=840"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/CorentinJ/Real-Time-Voice-Cloning"
+      },
+      {
+        "label": "YouTube demo",
+        "url": "https://www.youtube.com/watch?v=-O_hYhToKoA"
+      },
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/2305.13905"
+      },
+      {
+        "label": "MiniZed",
+        "url": "https://www.avnet.com/americas/products/avnet-boards/avnet-board-families/minized"
+      },
+      {
+        "label": "https://github.com/CorentinJ/Real-Time-Voice-Cloning",
+        "url": "https://github.com/CorentinJ/Real-Time-Voice-Cloning"
+      },
+      {
+        "label": "https://www.youtube.com/watch?v=-O_hYhToKoA",
+        "url": "https://www.youtube.com/watch?v=-O_hYhToKoA"
+      },
+      {
+        "label": "https://arxiv.org/abs/2305.13905",
+        "url": "https://arxiv.org/abs/2305.13905"
+      },
+      {
+        "label": "https://www.avnet.com/americas/products/avnet-boards/avnet-board-families/minized",
+        "url": "https://www.avnet.com/americas/products/avnet-boards/avnet-board-families/minized"
+      },
+      {
+        "label": "Dr. Chang Gao",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=840"
+      },
+      {
+        "label": "OpenDPD",
+        "url": "http://opendpd.com"
+      },
+      {
+        "label": "Dr. Masoud Babaie",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=277"
+      },
+      {
+        "label": "Dr. Chang Gao",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=840"
+      }
+    ]
+  },
+  {
+    "page": "gallery",
+    "source": "https://www.tudemi.com/gallery",
+    "text": "Our Students\n\nYizhuo @ IMS 2024, Washington DC, USAYizhuo @ IMS 2025, San Francisco, USAAng @ ISCAS 2025, London, UK\n\nSjoerd @ ISCAS 2025 in London, UKManno @ FPL 2025 in Leiden, Netherlands\n\nTao @ ASP-DAC 2026 in Hong Kong, ChinaSiddharth @ Microelectronics Research Day 2026 in Delft, NetherlandsArne @ ISCAS 2026 in Shanghai, China\n\nMoments\n\nChang and Chris in DelftChris and Yizhuo discussing our DPD demoYizhuo showing our DPD demo to visitors from Hyundai Chungun High School\n\nWith Arindam and Qinyu @ ASP-DAC, Hong Kong (2026)With Glavine, Qinyu & Kwantae @ TSMC OIP Forum (2024)With Tobi, Antonio and Kofi @ The Hangout (2025)Anding, Yizhuo, Chang @ IMS 2024, Washington DC, USA\n\nWith Kun Qian @ MSc Graduate Ceremony (2025)Haolin Wu's Thesis Defense with Rajendra, Leo, me and AngMarco, Yizhuo, Chang @ IMS 2024, Washington DC, USA\n\nPhotography\n\n2025 @ Tromsø, Norway2025 @ Lofoten, Norway2024 @ Rome, Italy\n\n2024 @ Interlaken, Switzerland2024 @ Iceland\n\n2025 @ Tromsø, Norway2024 @ Iceland2024 @ València, Spain\n\n2022 @ Longyearbyen, Svalbard, Norway2022 @ Tromsø, Norway\n\n2021 @ Zürich, Switzerland2019 @ Telluride, Colorado, USA\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/46b9561fe1bc2b.webp",
+      "/images/76bb272bcc3f67.webp",
+      "/images/63a2ae5b4ae20d.webp",
+      "/images/0d89c2b2aee0bf.webp",
+      "/images/bbf3b79fb197d3.webp",
+      "/images/5e41c98b16f308.webp",
+      "/images/bb7b8f277a556d.webp",
+      "/images/4bba815315a9f2.webp",
+      "/images/368aa53ca24ce0.webp",
+      "/images/f72a45952f3b98.webp",
+      "/images/8bb9f2b1dbed9b.webp",
+      "/images/a388efb56c1d8d.webp",
+      "/images/87a8ae11e6e8e0.webp",
+      "/images/8a17b3a966c18d.webp",
+      "/images/ad328257567f5c.webp",
+      "/images/5e13372b511a13.webp",
+      "/images/cd6976c43ae487.webp",
+      "/images/c5b2c2f9d60da3.webp",
+      "/images/a8c4a1659da3d6.webp",
+      "/images/f9be46e5aa4129.webp",
+      "/images/053ce704ec103b.webp",
+      "/images/c6099369ef00b9.webp",
+      "/images/9f4d2aca669017.webp",
+      "/images/e8a3101c9c0aee.webp",
+      "/images/0d50911e1d8103.webp",
+      "/images/925760e14a9afb.webp",
+      "/images/264f9d1f0b8b71.webp",
+      "/images/05c21bfac17dd1.webp",
+      "/images/832952b979f218.webp",
+      "/images/eee6ba24ee07d0.webp"
+    ],
+    "links": [
+      {
+        "label": "Yizhuo",
+        "url": "https://microelectronics.tudelft.nl/Education/bio.php?id=1456"
+      },
+      {
+        "label": "Ang",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=943"
+      },
+      {
+        "label": "Sjoerd",
+        "url": "https://www.linkedin.com/in/sjoerd-groot-48aba018b/?originalSubdomain=nl"
+      },
+      {
+        "label": "Tao",
+        "url": "https://microelectronics.tudelft.nl/Education/bio.php?id=1736"
+      },
+      {
+        "label": "Siddharth",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1892"
+      },
+      {
+        "label": "Arne",
+        "url": "https://elca.tudelft.nl/Education/bio.php?id=1759"
+      },
+      {
+        "label": "Chris",
+        "url": "http://linkedin.com/in/chris-dick-bb18873"
+      },
+      {
+        "label": "Arindam",
+        "url": "https://scholars.cityu.edu.hk/en/persons/arinbasu/"
+      },
+      {
+        "label": "Qinyu",
+        "url": "http://universiteitleiden.nl/en/staffmembers/qinyu-chen"
+      },
+      {
+        "label": "Glavine",
+        "url": "http://linkedin.com/in/glavine-yeh-32a50313a?originalSubdomain=nl"
+      },
+      {
+        "label": "Kwantae",
+        "url": "https://kwantaekim.github.io/"
+      },
+      {
+        "label": "Tobi",
+        "url": "https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzQ=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html"
+      },
+      {
+        "label": "Antonio",
+        "url": "https://www.us.es/trabaja-en-la-us/directorio/jose-antonio-rios-navarro"
+      },
+      {
+        "label": "Kofi",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=6"
+      },
+      {
+        "label": "Anding",
+        "url": "https://www.linkedin.com/in/anding-zhu"
+      },
+      {
+        "label": "Yizhuo",
+        "url": "https://microelectronics.tudelft.nl/Education/bio.php?id=1456"
+      },
+      {
+        "label": "Rajendra",
+        "url": "https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering/sections/computer-engineering/staff/rajendra-bishnoi"
+      },
+      {
+        "label": "Leo",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=26"
+      },
+      {
+        "label": "Ang",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=943"
+      },
+      {
+        "label": "Marco",
+        "url": "https://microelectronics.tudelft.nl/People/bio.php?id=264"
+      }
+    ]
+  },
+  {
+    "page": "join-us",
+    "source": "https://www.tudemi.com/join-us",
+    "text": "Open PhD PositionStay tuned...\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/40be96f80e3e83.webp"
+    ],
+    "links": []
+  },
+  {
+    "page": "zitao-liang",
+    "source": "https://www.tudemi.com/zitao-liang",
+    "text": "EMI Group Member\n\nZitao Liang PhD Candidate @ TU Delft Department of Microelectronics, Faculty of EEMCS🌟 THIS IS MEFrom my MSc study at the Institute of Microelectronics, Chinese Academy of Sciences in Beijing to my current PhD journey with the ELCA group at TU Delft, I have gradually discovered the kind of life I truly want to live — one where I can turn creative ideas in embedded AI into real applications, allowing more people to benefit from the convenience and services that AI brings.I feel incredibly fortunate that my sense of purpose in life aligns so closely with my career, which fills me with deep passion for what I do.It’s my honor that you’re reading this. I hope you, too, can find that same sense of fulfillment — and I wish you a wonderful day.🎓 MORE FORMAL BIOZitao Liang is a PhD candidate in the ELCA group at Delft University of Technology (TU Delft). He was born in Guangdong, China, in 1999.He received his B.Sc. degree from the South China University of Technology (SCUT) in 2022 and his M.Sc. degree from the Institute of Microelectronics, Chinese Academy of Sciences (CAS) in 2025. His master’s research focused on circuit-level error detection and correction techniques for ultra-low-power processors.He is currently pursuing his PhD at TU Delft — and, as he likes to say, he’s ready to begin a brand-new adventure!\n\n\n\nZitao's first 22nm TapoutZitao's calligraphy\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/7d187b50de3488.webp",
+      "/images/aea85dd8fce627.webp",
+      "/images/afebe9707f487c.webp",
+      "/images/1fbafaddaf5047.webp",
+      "/images/17d13e3eb9aa0c.webp",
+      "/images/35b2c094804f64.webp",
+      "/images/c8bc5a4e137236.webp",
+      "/images/3f48445204ab82.webp",
+      "/images/80fc2d26537771.webp",
+      "/images/b3a93300e52a72.webp",
+      "/images/05c86af9d1856a.webp",
+      "/images/82929bc33f898b.webp",
+      "/images/3b75da45b88182.webp",
+      "/images/48928c90ca32fe.webp",
+      "/images/2db8dca7eb7ae9.webp",
+      "/images/e43c8d5dd388d7.webp"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/zitao-liang-1a5918309/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/ZitaoLiang"
+      }
+    ]
+  },
+  {
+    "page": "pepijn-kremers",
+    "source": "https://www.tudemi.com/pepijn-kremers",
+    "text": "EMI Group Member\n\nPepijn KremersPhD Candidate @ TU Delft Pepijn Kremers received his Bachelor's degree in Electrical Engineering from Delft University of Technology in 2023. In 2025, he received his Master's degree in Computer & Embedded Systems Engineering, also from Delft University of Technology. During his studies, he worked as a teaching assistant for courses, from these programs, covering telecommunications, signal processing, systems engineering, and software engineering.Currently, he is a PhD candidate at the microelectronics department of Delft University of Technology. More specifically, he works both in the Lab of Efficient Machine Intelligence (EMI) within the ELCA research group, and at NXP Semiconductors in Eindhoven. His research interests include low-power computing, analog circuit calibration, AI accelerators, hardware/software co-design, and signal processing.\n\nChang Gao gaochangw at outlook.com",
+    "images": [
+      "/images/8676208c950576.webp"
+    ],
+    "links": []
+  }
+]

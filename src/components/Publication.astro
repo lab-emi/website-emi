@@ -1,0 +1,18 @@
+---
+import publications from '../data/publications.json';
+import Arrow from './Arrow.astro';
+import { href, escapeXml } from '../lib/site';
+interface Props { publication: typeof publications[number]; compact?: boolean; }
+const { publication: p, compact = false } = Astro.props;
+const authors = escapeXml(p.authors).replace(/\b(C\. Gao|Y\. Wu|A\. Li|Y\. Zhu|T\. Han|A\. de Beer|M\. Versluis|C\. Bao|H\. Duan|H\. Wu|K\. Qian|S\. Groot|G\. Lu)\b/g,'<strong>$1</strong>');
+const extraLinks=p.links.filter(l=>l.url!==p.url&&l.url!==p.code);
+---
+<article class:list={['publication', { compact }]} id={p.id} data-publication data-year={p.year} data-topic={p.topic} data-search={`${p.title} ${p.authors} ${p.venue} ${p.topic} ${p.type}`.toLowerCase()}>
+  <div class="pub-meta"><span>{p.topic}</span>{p.type==='Patent'&&<span class="patent-tag">Patent</span>}</div>
+  <h3>{p.url ? <a href={href(p.url)}>{p.title}</a> : p.title}</h3>
+  <p class="pub-authors" set:html={authors} />
+  <p class="pub-venue">{p.venue}</p>
+  <div class="pub-actions">{p.url && <a href={href(p.url)}>{p.type==='Patent'?'View patent':p.url.includes('arxiv.org')?'arXiv':'Read publication'}<Arrow diagonal size={13} /></a>}{p.code&&<a href={p.code}>Code <Arrow diagonal size={13} /></a>}{!compact&&<button type="button" data-copy-citation={p.citation}>Copy citation</button>}</div>
+  {!compact&&<details class="citation-details"><summary>Citation{p.sourceVersions.length>1?' & publication history':extraLinks.length?' & related links':''}</summary><p class="citation-text">{p.citation}</p>{p.sourceVersions.length>1&&<><p class="history-label">Earlier acceptance announcement</p>{p.sourceVersions.slice(1).map(v=><p class="citation-text">{v.citation}</p>)}</>}{extraLinks.length>0&&<ul>{extraLinks.map(l=><li><a href={href(l.url)}>{l.label}<Arrow diagonal size={12} /></a></li>)}</ul>}</details>}
+</article>
+<style>.publication{border-top:1px solid var(--line);padding:26px 0;break-inside:avoid}.pub-meta{display:flex;gap:12px;align-items:center;font-size:.75rem;letter-spacing:.03em;color:var(--blue);font-weight:650;margin-bottom:10px}.patent-tag{color:var(--muted);border:1px solid var(--line);padding:1px 6px;border-radius:2px}.publication h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.55;margin-bottom:9px}.publication h3 a:hover{color:var(--blue)}.pub-authors{font-size:.82rem;line-height:1.8;color:var(--muted);margin-bottom:7px}.pub-authors :global(strong){font-weight:700;color:var(--ink)}.pub-venue{font-size:.78rem;line-height:1.8;color:var(--muted);margin-bottom:13px}.pub-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.pub-actions a,.pub-actions button{display:inline-flex;gap:6px;align-items:center;background:none;border:0;padding:0;color:var(--blue);font-size:.75rem;font-weight:650}.pub-actions a:hover,.pub-actions button:hover{text-decoration:underline}.citation-details{margin-top:13px;font-size:.75rem;color:var(--muted)}.citation-details summary{cursor:pointer;display:list-item;max-width:fit-content}.citation-text{margin-top:14px;background:var(--pale);padding:15px;line-height:1.8;user-select:all}.citation-details ul{padding-left:18px;margin-bottom:0}.citation-details li{margin-bottom:7px}.citation-details a{display:inline;overflow-wrap:anywhere;color:var(--blue)}.citation-details svg{vertical-align:middle;margin-left:5px}.history-label{margin-top:13px;margin-bottom:0}.compact h3{font-size:1.06rem}.compact .pub-venue{font-size:.75rem}@media(max-width:600px){.publication h3{font-size:1.03rem;line-height:1.55}.pub-authors{font-size:.79rem}.publication{padding:22px 0}}</style>

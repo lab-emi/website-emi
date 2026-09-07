@@ -1,0 +1,1296 @@
+[
+  {
+    "id": "opendpdv2-a-unified-learning-and-optimization-framework-for-neural-network-digital-predis",
+    "title": "OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion",
+    "authors": "Y. Wu, A. Li, C. Gao",
+    "venue": "Preprint, accepted to the 2026 IEEE Global Communications Conference (GLOBECOM), 2026",
+    "year": 2026,
+    "sourceYear": 2026,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://arxiv.org/abs/2507.06849",
+    "code": "https://github.com/lab-emi/OpenDPD",
+    "links": [
+      {
+        "label": "OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion",
+        "url": "https://arxiv.org/abs/2507.06849"
+      },
+      {
+        "label": "https://github.com/lab-emi/OpenDPD",
+        "url": "https://github.com/lab-emi/OpenDPD"
+      }
+    ],
+    "citation": "Y. Wu, A. Li, C. Gao, “OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion,” Preprint, accepted to the 2026 IEEE Global Communications Conference (GLOBECOM), 2026 (Code: https://github.com/lab-emi/OpenDPD)",
+    "sourceVersions": [
+      {
+        "year": 2026,
+        "citation": "Y. Wu, A. Li, C. Gao, “OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion,” Preprint, accepted to the 2026 IEEE Global Communications Conference (GLOBECOM), 2026 (Code: https://github.com/lab-emi/OpenDPD)",
+        "html": "<li><p><strong>Y. Wu,</strong> <strong>A. Li</strong>, <strong>C. Gao</strong>, “<a href=\"https://arxiv.org/abs/2507.06849\">OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion</a>,” Preprint, accepted to the 2026 IEEE Global Communications Conference (<strong>GLOBECOM</strong>), 2026 (<strong>Code: </strong><a href=\"https://github.com/lab-emi/OpenDPD\"><strong>https://github.com/lab-emi/OpenDPD</strong></a>)</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "bitfair-a-12nm-bit-serial-cnn-accelerator-with-learnable-early-termination-and-adaptive-b",
+    "title": "BitFair: A 12nm Bit-Serial CNN Accelerator with Learnable Early Termination and Adaptive Bit Ordering for Ultra-Low-Power XR Vision",
+    "authors": "A. Li and C. Gao",
+    "venue": "in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2026",
+    "year": 2026,
+    "sourceYear": 2026,
+    "type": "Publication",
+    "topic": "Event-based vision",
+    "url": "https://arxiv.org/abs/2607.05445",
+    "code": null,
+    "links": [
+      {
+        "label": "BitFair: A 12nm Bit-Serial CNN Accelerator with Learnable Early Termination and Adaptive Bit Ordering for Ultra-Low-Power XR Vision",
+        "url": "https://arxiv.org/abs/2607.05445"
+      }
+    ],
+    "citation": "A. Li and C. Gao, \"BitFair: A 12nm Bit-Serial CNN Accelerator with Learnable Early Termination and Adaptive Bit Ordering for Ultra-Low-Power XR Vision,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2026",
+    "sourceVersions": [
+      {
+        "year": 2026,
+        "citation": "A. Li and C. Gao, \"BitFair: A 12nm Bit-Serial CNN Accelerator with Learnable Early Termination and Adaptive Bit Ordering for Ultra-Low-Power XR Vision,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2026",
+        "html": "<li><p><strong>A. Li </strong>and <strong>C. Gao</strong>, \"<a href=\"https://arxiv.org/abs/2607.05445\">BitFair: A 12nm Bit-Serial CNN Accelerator with Learnable Early Termination and Adaptive Bit Ordering for Ultra-Low-Power XR Vision</a>,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (<strong>JETCAS</strong>), 2026</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "deep-learning-based-hardware-efficient-load-identification-for-power-amplifiers",
+    "title": "Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers",
+    "authors": "Y. Zhu, F. V. Rijs, L. C. N. d. Vreede, J. Gajadharsing and C. Gao",
+    "venue": "in IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation (JSTEAP), 2026.",
+    "year": 2026,
+    "sourceYear": 2026,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11554336",
+    "code": null,
+    "links": [
+      {
+        "label": "Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11554336"
+      }
+    ],
+    "citation": "Y. Zhu, F. V. Rijs, L. C. N. d. Vreede, J. Gajadharsing and C. Gao, \"Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers,\" in IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation (JSTEAP), 2026.",
+    "sourceVersions": [
+      {
+        "year": 2026,
+        "citation": "Y. Zhu, F. V. Rijs, L. C. N. d. Vreede, J. Gajadharsing and C. Gao, \"Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers,\" in IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation (JSTEAP), 2026.",
+        "html": "<li><p><strong>Y. Zhu</strong>, F. V. Rijs, L. C. N. d. Vreede, J. Gajadharsing and <strong>C. Gao</strong>, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/11554336\">Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers</a>,\" in IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation (<strong>JSTEAP</strong>), 2026.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "janeeye-a-12-nm-2k-fps-18-9-j-frame-event-based-eye-tracking-accelerator",
+    "title": "JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator",
+    "authors": "T. Han, A. Li, Q. Chen and C. Gao",
+    "venue": "2026 31st Asia and South Pacific Design Automation Conference (ASP-DAC), Lantau, Hong Kong, 2026, pp. 170-176, 2026",
+    "year": 2026,
+    "sourceYear": 2026,
+    "type": "Publication",
+    "topic": "Event-based vision",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11420815",
+    "code": null,
+    "links": [
+      {
+        "label": "JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11420815"
+      }
+    ],
+    "citation": "T. Han, A. Li, Q. Chen and C. Gao, \"JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator,\" 2026 31st Asia and South Pacific Design Automation Conference (ASP-DAC), Lantau, Hong Kong, 2026, pp. 170-176, 2026",
+    "sourceVersions": [
+      {
+        "year": 2026,
+        "citation": "T. Han, A. Li, Q. Chen and C. Gao, \"JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator,\" 2026 31st Asia and South Pacific Design Automation Conference (ASP-DAC), Lantau, Hong Kong, 2026, pp. 170-176, 2026",
+        "html": "<li><p><strong>T. Han</strong>, <strong>A. Li</strong>, Q. Chen and <strong>C. Gao</strong>, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/11420815\">JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator</a>,\" 2026 31st Asia and South Pacific Design Automation Conference (<strong>ASP-DAC</strong>), Lantau, Hong Kong, 2026, pp. 170-176, 2026</p></li>"
+      },
+      {
+        "year": 2025,
+        "citation": "T. Han, A. Li, Q. Chen, C. Gao, “JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator,” accepted to 30th Asia and South Pacific Design Automation Conference (ASP-DAC), Hong Kong, China, 2026",
+        "html": "<li><p><strong>T</strong><strong>. </strong><strong>Han</strong>, <strong>A</strong><strong>. </strong><strong>Li</strong>, Q. Chen, <strong>C. Gao</strong>, “JaneEye: A 12-nm 2K-FPS 18.9-μJ/Frame Event-based Eye Tracking Accelerator,” accepted to 30th Asia and South Pacific Design Automation Conference (<strong>ASP-DAC</strong>), Hong Kong, China, 2026</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "slimtts-parameter-and-compute-efficient-neural-text-to-speech-synthesis-for-real-time-in",
+    "title": "SlimTTS: Parameter- and Compute-Efficient Neural Text-to-Speech Synthesis for Real-Time Inference",
+    "authors": "A. de Beer and C. Gao",
+    "venue": "2026 IEEE International Symposium on Circuits and Systems (ISCAS), Shanghai, China, 2026.",
+    "year": 2026,
+    "sourceYear": 2026,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11561979/",
+    "code": null,
+    "links": [
+      {
+        "label": "SlimTTS: Parameter- and Compute-Efficient Neural Text-to-Speech Synthesis for Real-Time Inference",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11561979/"
+      }
+    ],
+    "citation": "A. de Beer and C. Gao, \"SlimTTS: Parameter- and Compute-Efficient Neural Text-to-Speech Synthesis for Real-Time Inference,\" 2026 IEEE International Symposium on Circuits and Systems (ISCAS), Shanghai, China, 2026.",
+    "sourceVersions": [
+      {
+        "year": 2026,
+        "citation": "A. de Beer and C. Gao, \"SlimTTS: Parameter- and Compute-Efficient Neural Text-to-Speech Synthesis for Real-Time Inference,\" 2026 IEEE International Symposium on Circuits and Systems (ISCAS), Shanghai, China, 2026.",
+        "html": "<li><p><strong>A. de Beer</strong> and <strong>C. Gao</strong>, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/11561979/\">SlimTTS: Parameter- and Compute-Efficient Neural Text-to-Speech Synthesis for Real-Time Inference</a>,\" 2026 IEEE International Symposium on Circuits and Systems (<strong>ISCAS</strong>), Shanghai, China, 2026.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "neural-network-based-inference-method-and-apparatus",
+    "title": "Neural network-based inference method and apparatus",
+    "authors": "C. Gao, S.-C. Liu, T. Delbruck, and X. Chen",
+    "venue": "U.S. Patent 12,299,576, May 13, 2025.",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Patent",
+    "topic": "Sparse computing",
+    "url": "https://patents.google.com/patent/US12299576B2/en",
+    "code": null,
+    "links": [
+      {
+        "label": "Neural network-based inference method and apparatus",
+        "url": "https://patents.google.com/patent/US12299576B2/en"
+      }
+    ],
+    "citation": "C. Gao, S.-C. Liu, T. Delbruck, and X. Chen, “Neural network-based inference method and apparatus,” U.S. Patent 12,299,576, May 13, 2025.",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "C. Gao, S.-C. Liu, T. Delbruck, and X. Chen, “Neural network-based inference method and apparatus,” U.S. Patent 12,299,576, May 13, 2025.",
+        "html": "<li><p><strong>C. Gao</strong>, S.-C. Liu, T. Delbruck, and X. Chen, “<a href=\"https://patents.google.com/patent/US12299576B2/en\">Neural network-based inference method and apparatus</a>,” <em>U.S. Patent</em> 12,299,576, May 13, <strong>2025.</strong></p></li>"
+      }
+    ]
+  },
+  {
+    "id": "radmamba-efficient-human-activity-recognition-through-radar-based-micro-doppler-oriented",
+    "title": "RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model",
+    "authors": "Y. Wu, F. Fioranelli, C. Gao",
+    "venue": "in IEEE Transactions on Radar Systems (T-RS), vol. 4, pp. 261-272, 2026",
+    "year": 2026,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/document/11316534",
+    "code": "https://github.com/lab-emi/AIRHAR",
+    "links": [
+      {
+        "label": "Fioranelli",
+        "url": "https://arxiv.org/search/cs?searchtype=author&query=Fioranelli,+F"
+      },
+      {
+        "label": "RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model",
+        "url": "https://ieeexplore.ieee.org/document/11316534"
+      },
+      {
+        "label": "Code: https://github.com/lab-emi/AIRHAR",
+        "url": "https://github.com/lab-emi/AIRHAR"
+      }
+    ],
+    "citation": "Y. Wu, F. Fioranelli, C. Gao, “RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model,” in IEEE Transactions on Radar Systems (T-RS), vol. 4, pp. 261-272, 2026 (Code: https://github.com/lab-emi/AIRHAR)",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "Y. Wu, F. Fioranelli, C. Gao, “RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model,” in IEEE Transactions on Radar Systems (T-RS), vol. 4, pp. 261-272, 2026 (Code: https://github.com/lab-emi/AIRHAR)",
+        "html": "<li><p><strong>Y. Wu,</strong> F.<a href=\"https://arxiv.org/search/cs?searchtype=author&amp;query=Fioranelli,+F\"> Fioranelli</a>, <strong>C. Gao</strong>, “<a href=\"https://ieeexplore.ieee.org/document/11316534\">RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model</a>,” in IEEE Transactions on Radar Systems (<strong>T-RS</strong>), vol. 4, pp. 261-272, 2026 (<a href=\"https://github.com/lab-emi/AIRHAR\"><strong>Code: </strong><strong>https://github.com/lab-emi/AIRHAR</strong></a>)</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "deltadpd-exploiting-dynamic-temporal-sparsity-in-recurrent-neural-networks-for-energy-eff",
+    "title": "DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion",
+    "authors": "Y. Wu, Y. Zhu, K. Qian, Q. Chen, A. Zhu, J. Gajadharsing, L. C. N. de Vreede, C. Gao",
+    "venue": "in 2025 IEEE MTT-S International Microwave Symposium (IMS). (IMS 2025 Top 50 Paper, invited to IEEE MWTL)",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://arxiv.org/abs/2505.06250",
+    "code": null,
+    "links": [
+      {
+        "label": "DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion",
+        "url": "https://arxiv.org/abs/2505.06250"
+      }
+    ],
+    "citation": "Y. Wu, Y. Zhu, K. Qian, Q. Chen, A. Zhu, J. Gajadharsing, L. C. N. de Vreede, C. Gao, “DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion,” in 2025 IEEE MTT-S International Microwave Symposium (IMS). (IMS 2025 Top 50 Paper, invited to IEEE MWTL)",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "Y. Wu, Y. Zhu, K. Qian, Q. Chen, A. Zhu, J. Gajadharsing, L. C. N. de Vreede, C. Gao, “DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion,” in 2025 IEEE MTT-S International Microwave Symposium (IMS). (IMS 2025 Top 50 Paper, invited to IEEE MWTL)",
+        "html": "<li><p><strong>Y. Wu,</strong> Y. Zhu, <strong>K. Qian</strong>, Q. Chen, A. Zhu, J. Gajadharsing, L. C. N. de Vreede, <strong>C. Gao</strong>, “<a href=\"https://arxiv.org/abs/2505.06250\">DeltaDPD: Exploiting Dynamic Temporal Sparsity in Recurrent Neural Networks for Energy-Efficient Wideband Digital Predistortion</a>,” in 2025 IEEE MTT-S International Microwave Symposium (<strong>IMS</strong>). (<strong>IMS 2025 Top 50 Paper, invited to IEEE MWTL</strong>)</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "exploiting-neuro-inspired-dynamic-sparsity-for-energy-efficient-intelligent-perception",
+    "title": "Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception",
+    "authors": "S. Zhou, C. Gao, T. Delbruck, M. Verhelst, S.-C. Liu",
+    "venue": "in Nature Communications, 2025",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://www.nature.com/articles/s41467-025-65387-7",
+    "code": null,
+    "links": [
+      {
+        "label": "Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception,",
+        "url": "https://www.nature.com/articles/s41467-025-65387-7"
+      }
+    ],
+    "citation": "S. Zhou, C. Gao, T. Delbruck, M. Verhelst, S.-C. Liu, \"Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception,\" in Nature Communications, 2025",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "S. Zhou, C. Gao, T. Delbruck, M. Verhelst, S.-C. Liu, \"Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception,\" in Nature Communications, 2025",
+        "html": "<li><p>S. Zhou, <strong>C. Gao</strong>, T. Delbruck, M. Verhelst, S.-C. Liu, \"<a href=\"https://www.nature.com/articles/s41467-025-65387-7\">Exploiting neuro-inspired dynamic sparsity for energy-efficient intelligent perception,</a>\" in Nature Communications, 2025</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "sparsedpd-a-sparse-neural-network-based-digital-predistortion-fpga-accelerator-for-rf-pow",
+    "title": "SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization",
+    "authors": "M. Versluis, Y. Wu, C. Gao",
+    "venue": "accepted to 35th International Conference on Field-Programmable Logic and Applications (FPL), Leiden, The Netherlands, 2025.",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://arxiv.org/abs/2506.16591",
+    "code": null,
+    "links": [
+      {
+        "label": "SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization",
+        "url": "https://arxiv.org/abs/2506.16591"
+      }
+    ],
+    "citation": "M. Versluis, Y. Wu, C. Gao, “SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization,” accepted to 35th International Conference on Field-Programmable Logic and Applications (FPL), Leiden, The Netherlands, 2025.",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "M. Versluis, Y. Wu, C. Gao, “SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization,” accepted to 35th International Conference on Field-Programmable Logic and Applications (FPL), Leiden, The Netherlands, 2025.",
+        "html": "<li><p><strong>M. Versluis</strong>, <strong>Y. Wu</strong>, <strong>C. Gao</strong>, “<a href=\"https://arxiv.org/abs/2506.16591\">SparseDPD: A Sparse Neural Network-based Digital Predistortion FPGA Accelerator for RF Power Amplifier Linearization</a>,” accepted to 35th International Conference on Field-Programmable Logic and Applications (<strong>FPL</strong>), Leiden, The Netherlands, 2025.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "as-asr-a-lightweight-framework-for-aphasia-specific-automatic-speech-recognition",
+    "title": "AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition",
+    "authors": "C. Bao, C. Huo, Q. Chen, C. Gao",
+    "venue": "accepted to 2025 IEEE Biomedical Circuits and Systems (BioCAS) Conference, Abu Dhabi, United Arab Emirates, 2025",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://arxiv.org/abs/2506.06566",
+    "code": null,
+    "links": [
+      {
+        "label": "AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition",
+        "url": "https://arxiv.org/abs/2506.06566"
+      }
+    ],
+    "citation": "C. Bao, C. Huo, Q. Chen, C. Gao, “AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition,” accepted to 2025 IEEE Biomedical Circuits and Systems (BioCAS) Conference, Abu Dhabi, United Arab Emirates, 2025",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "C. Bao, C. Huo, Q. Chen, C. Gao, “AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition,” accepted to 2025 IEEE Biomedical Circuits and Systems (BioCAS) Conference, Abu Dhabi, United Arab Emirates, 2025",
+        "html": "<li><p><strong>C.</strong><strong>Bao</strong>, C. Huo, Q. Chen, <strong>C. Gao</strong>, “<a href=\"https://arxiv.org/abs/2506.06566\">AS-ASR: A Lightweight Framework for Aphasia-Specific Automatic Speech Recognition</a>,” accepted to <em>2025</em><em> IEEE Biomedical Circuits and Systems (</em><strong>BioCAS</strong><em>) Conference,</em> Abu Dhabi, United Arab Emirates, 2025</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "tcn-dpd-parameter-efficient-temporal-convolutional-networks-for-wideband-digital-predisto",
+    "title": "TCN-DPD: Parameter-Efficient Temporal Convolutional Networks for Wideband Digital Predistortion",
+    "authors": "H. Duan, M. Versluis, Q. Chen, L. C. N. de Vreede, C. Gao",
+    "venue": "accepted to 2025 IEEE MTT-S International Microwave Symposium (IMS), 2025.",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "",
+    "code": null,
+    "links": [],
+    "citation": "H. Duan, M. Versluis, Q. Chen, L. C. N. de Vreede, C. Gao, “TCN-DPD: Parameter-Efficient Temporal Convolutional Networks for Wideband Digital Predistortion,” accepted to 2025 IEEE MTT-S International Microwave Symposium (IMS), 2025.",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "H. Duan, M. Versluis, Q. Chen, L. C. N. de Vreede, C. Gao, “TCN-DPD: Parameter-Efficient Temporal Convolutional Networks for Wideband Digital Predistortion,” accepted to 2025 IEEE MTT-S International Microwave Symposium (IMS), 2025.",
+        "html": "<li><p><strong>H. Duan</strong>, <strong>M. Versluis</strong>, Q. Chen, L. C. N. de Vreede, <strong>C. Gao</strong>, “TCN-DPD: Parameter-Efficient Temporal Convolutional Networks for Wideband Digital Predistortion,” accepted to 2025 IEEE MTT-S International Microwave Symposium (<strong>IMS</strong>), 2025.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "dpd-neuralengine-a-22-nm-6-6-tops-w-mm2-recurrent-neural-network-accelerator-for-wideband",
+    "title": "DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion",
+    "authors": "A. Li*, H. Wu*, Y. Wu, Q. Chen, L. C. N. de Vreede, C. Gao",
+    "venue": "accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://arxiv.org/abs/2410.11766",
+    "code": null,
+    "links": [
+      {
+        "label": "DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion",
+        "url": "https://arxiv.org/abs/2410.11766"
+      }
+    ],
+    "citation": "A. Li*, H. Wu*, Y. Wu, Q. Chen, L. C. N. de Vreede, C. Gao, “DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "A. Li*, H. Wu*, Y. Wu, Q. Chen, L. C. N. de Vreede, C. Gao, “DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+        "html": "<li><p><strong>A. Li*</strong>, <strong>H. Wu*</strong>, Y. Wu, Q. Chen, L. C. N. de Vreede, <strong>C. Gao</strong>, “<a href=\"https://arxiv.org/abs/2410.11766\">DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network Accelerator for Wideband Power Amplifier Digital Pre-Distortion</a>,” accepted to <em>2025 IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "cleanumamba-a-compact-mamba-network-for-speech-denoising-using-channel-pruning",
+    "title": "CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning",
+    "authors": "S. Groot, Q. Chen, J. C. van Gemert, C. Gao",
+    "venue": "accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://arxiv.org/abs/2410.11062",
+    "code": null,
+    "links": [
+      {
+        "label": "CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning",
+        "url": "https://arxiv.org/abs/2410.11062"
+      }
+    ],
+    "citation": "S. Groot, Q. Chen, J. C. van Gemert, C. Gao, “CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "S. Groot, Q. Chen, J. C. van Gemert, C. Gao, “CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+        "html": "<li><p><strong>S. Groot</strong>, Q. Chen, J. C. van Gemert, <strong>C. Gao</strong>, “<a href=\"https://arxiv.org/abs/2410.11062\">CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning</a>,” accepted to <em>2025 IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "automatic-iv-parameter-extraction-for-gan-devices-with-image-based-machine-learning-metho",
+    "title": "Automatic I–V Parameter Extraction for GaN Devices With Image-Based Machine Learning Method",
+    "authors": "Y. Zhu, M. Schmitdt-Szalowski, P. Hammes, R. Ouhachi, V. Cuoco, C. Gao, Q. Tao, J. Gajadharsing",
+    "venue": "in IEEE Microwave and Wireless Technology Letters (MWTL)",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11133586/",
+    "code": null,
+    "links": [
+      {
+        "label": "Automatic I–V Parameter Extraction for GaN Devices With Image-Based Machine Learning Method",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11133586/"
+      }
+    ],
+    "citation": "Y. Zhu, M. Schmitdt-Szalowski, P. Hammes, R. Ouhachi, V. Cuoco, C. Gao, Q. Tao, J. Gajadharsing, \"Automatic I–V Parameter Extraction for GaN Devices With Image-Based Machine Learning Method,\" in IEEE Microwave and Wireless Technology Letters (MWTL)",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "Y. Zhu, M. Schmitdt-Szalowski, P. Hammes, R. Ouhachi, V. Cuoco, C. Gao, Q. Tao, J. Gajadharsing, \"Automatic I–V Parameter Extraction for GaN Devices With Image-Based Machine Learning Method,\" in IEEE Microwave and Wireless Technology Letters (MWTL)",
+        "html": "<li><p><strong>Y. Zhu</strong>, M. Schmitdt-Szalowski, P. Hammes, R. Ouhachi, V. Cuoco, <strong>C. Gao</strong>, Q. Tao, J. Gajadharsing, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/11133586/\">Automatic I–V Parameter Extraction for GaN Devices With Image-Based Machine Learning Method</a>,\" in <em>IEEE Microwave and Wireless Technology Letters (MWTL)</em></p></li>"
+      }
+    ]
+  },
+  {
+    "id": "an-8-62-w-75-db-drsoc-fully-integrated-soc-for-spoken-language-understanding",
+    "title": "An 8.62-μW 75-dB DRSoC Fully Integrated SoC for Spoken Language Understanding",
+    "authors": "S. Zhou, Z. Li, L. Cheng, J. Hadorn, C. Gao, Q. Chen, T. Delbruck, K. Kim, S.-C. Liu",
+    "venue": "in IEEE Journal of Solid-State Circuits (JSSC)",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/document/11159176",
+    "code": null,
+    "links": [
+      {
+        "label": "An 8.62-μW 75-dB DRSoC Fully Integrated SoC for Spoken Language Understanding",
+        "url": "https://ieeexplore.ieee.org/document/11159176"
+      }
+    ],
+    "citation": "S. Zhou, Z. Li, L. Cheng, J. Hadorn, C. Gao, Q. Chen, T. Delbruck, K. Kim, S.-C. Liu, \"An 8.62-μW 75-dB DRSoC Fully Integrated SoC for Spoken Language Understanding,\" in IEEE Journal of Solid-State Circuits (JSSC)",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "S. Zhou, Z. Li, L. Cheng, J. Hadorn, C. Gao, Q. Chen, T. Delbruck, K. Kim, S.-C. Liu, \"An 8.62-μW 75-dB DRSoC Fully Integrated SoC for Spoken Language Understanding,\" in IEEE Journal of Solid-State Circuits (JSSC)",
+        "html": "<li><p>S. Zhou, Z. Li, L. Cheng, J. Hadorn, <strong>C. Gao</strong>, Q. Chen, T. Delbruck, K. Kim, S.-C. Liu, \"<a href=\"https://ieeexplore.ieee.org/document/11159176\">An 8.62-μW 75-dB DRSoC Fully Integrated SoC for Spoken Language Understanding</a>,\" in <em>IEEE Journal of Solid-State Circuits (</em><strong>JSSC</strong><em>)</em></p></li>"
+      }
+    ]
+  },
+  {
+    "id": "deltallm-a-training-free-framework-exploiting-temporal-sparsity-for-efficient-edge-llm-in",
+    "title": "DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference",
+    "authors": "J. Qi, C. Gao, Z. Ren, Q. Chen",
+    "venue": "preprint, 2025.",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://arxiv.org/abs/2507.19608",
+    "code": null,
+    "links": [
+      {
+        "label": "DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference",
+        "url": "https://arxiv.org/abs/2507.19608"
+      }
+    ],
+    "citation": "J. Qi, C. Gao, Z. Ren, Q. Chen, “DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference,” preprint, 2025.",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "J. Qi, C. Gao, Z. Ren, Q. Chen, “DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference,” preprint, 2025.",
+        "html": "<li><p>J. Qi,<strong>C. Gao</strong>, Z. Ren, Q. Chen, “<a href=\"https://arxiv.org/abs/2507.19608\">DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference</a>,” preprint, 2025.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "evhand-fpv-efficient-event-based-3d-hand-tracking-from-first-person-view",
+    "title": "EvHand-FPV: Efficient Event-Based 3D Hand Tracking from First-Person View",
+    "authors": "Z. Xu, G. Lu, C. Gao, Q. Chen",
+    "venue": "preprint, 2025.",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Event-based vision",
+    "url": "https://arxiv.org/abs/2509.13883",
+    "code": null,
+    "links": [
+      {
+        "label": "EvHand-FPV: Efficient Event-Based 3D Hand Tracking from First-Person View",
+        "url": "https://arxiv.org/abs/2509.13883"
+      }
+    ],
+    "citation": "Z. Xu, G. Lu, C. Gao, Q. Chen, “EvHand-FPV: Efficient Event-Based 3D Hand Tracking from First-Person View,” preprint, 2025.",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "Z. Xu, G. Lu, C. Gao, Q. Chen, “EvHand-FPV: Efficient Event-Based 3D Hand Tracking from First-Person View,” preprint, 2025.",
+        "html": "<li><p>Z. Xu, G. Lu,<strong>C. Gao</strong>, Q. Chen, “<a href=\"https://arxiv.org/abs/2509.13883\">EvHand-FPV: Efficient Event-Based 3D Hand Tracking from First-Person View</a>,” preprint, 2025.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "deltakws-a-65nm-36nj-decision-bio-inspired-temporal-sparsity-aware-digital-keyword-spotti",
+    "title": "DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM",
+    "authors": "Q. Chen*, K. Kim*, C. Gao*, S. Zhou, T. Jang, T. Delbruck, et al.",
+    "venue": "in IEEE Transactions on Circuits and Systems for Artificial Intelligence (TCASAI), 2025",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/iel8/10495160/10595405/10771601.pdf",
+    "code": null,
+    "links": [
+      {
+        "label": "DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM",
+        "url": "https://ieeexplore.ieee.org/iel8/10495160/10595405/10771601.pdf"
+      }
+    ],
+    "citation": "Q. Chen*, K. Kim*, C. Gao*, S. Zhou, T. Jang, T. Delbruck, et al., \"DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM,\" in IEEE Transactions on Circuits and Systems for Artificial Intelligence (TCASAI), 2025",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "Q. Chen*, K. Kim*, C. Gao*, S. Zhou, T. Jang, T. Delbruck, et al., \"DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM,\" in IEEE Transactions on Circuits and Systems for Artificial Intelligence (TCASAI), 2025",
+        "html": "<li><p>Q. Chen*, K. Kim*, <strong>C. Gao*</strong>, S. Zhou, T. Jang, T. Delbruck, et al., \"<a href=\"https://ieeexplore.ieee.org/iel8/10495160/10595405/10771601.pdf\">DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM</a>,\" in IEEE Transactions on Circuits and Systems for Artificial Intelligence (<strong>TCASAI</strong>), 2025</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "facet-fast-and-accurate-event-based-eye-tracking-using-ellipse-modeling-for-extended-real",
+    "title": "FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality",
+    "authors": "J. Ding, Z. Wang, C. Gao, M. Liu, Q. Chen",
+    "venue": "accepted to IEEE International Conference on Robotics and Automation (ICRA), 2025",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Event-based vision",
+    "url": "https://arxiv.org/abs/2409.15584",
+    "code": null,
+    "links": [
+      {
+        "label": "FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality",
+        "url": "https://arxiv.org/abs/2409.15584"
+      }
+    ],
+    "citation": "J. Ding, Z. Wang, C. Gao, M. Liu, Q. Chen, \"FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality,\" accepted to IEEE International Conference on Robotics and Automation (ICRA), 2025",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "J. Ding, Z. Wang, C. Gao, M. Liu, Q. Chen, \"FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality,\" accepted to IEEE International Conference on Robotics and Automation (ICRA), 2025",
+        "html": "<li><p>J. Ding, Z. Wang, <strong>C. Gao</strong>, M. Liu, Q. Chen, \"<a href=\"https://arxiv.org/abs/2409.15584\">FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality</a>,\" accepted to IEEE International Conference on Robotics and Automation (<strong>ICRA</strong>), 2025</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "slimseiz-efficient-channel-adaptive-seizure-prediction-using-a-mamba-enhanced-network",
+    "title": "SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network",
+    "authors": "G. Lu, J. Peng, B. Huang, C. Gao, T. Stefanov, Y. Hao, Q. Chen",
+    "venue": "accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+    "year": 2025,
+    "sourceYear": 2025,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://arxiv.org/abs/2410.09998",
+    "code": null,
+    "links": [
+      {
+        "label": "SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network",
+        "url": "https://arxiv.org/abs/2410.09998"
+      }
+    ],
+    "citation": "G. Lu, J. Peng, B. Huang, C. Gao, T. Stefanov, Y. Hao, Q. Chen, “SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+    "sourceVersions": [
+      {
+        "year": 2025,
+        "citation": "G. Lu, J. Peng, B. Huang, C. Gao, T. Stefanov, Y. Hao, Q. Chen, “SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network,” accepted to 2025 IEEE International Symposium on Circuits and Systems (ISCAS).",
+        "html": "<li><p>G. Lu, J. Peng, B. Huang, <strong>C. Gao</strong>, T. Stefanov, Y. Hao, Q. Chen, “<a href=\"https://arxiv.org/abs/2410.09998\">SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network</a>,” accepted to 2025 IEEE International Symposium on Circuits and Systems (<strong>ISCAS</strong>).</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "opendpd-an-open-source-end-to-end-learning-benchmarking-framework-for-wideband-power-am",
+    "title": "OpenDPD: An Open-Source End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion",
+    "authors": "Y. Wu, G. Singh, M. Beikmirza, L. de Vreede, M. Alavi, C. Gao",
+    "venue": "accepted to 2024 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Invited to the RFIC & AI Special Session,",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://arxiv.org/abs/2401.08318",
+    "code": "https://github.com/lab-emi/OpenDPD",
+    "links": [
+      {
+        "label": "OpenDPD: An Open-Source End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion",
+        "url": "https://arxiv.org/abs/2401.08318"
+      },
+      {
+        "label": "https://github.com/lab-emi/OpenDPD",
+        "url": "https://github.com/lab-emi/OpenDPD"
+      }
+    ],
+    "citation": "Y. Wu, G. Singh, M. Beikmirza, L. de Vreede, M. Alavi, C. Gao, \"OpenDPD: An Open-Source End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion,\" accepted to 2024 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Invited to the RFIC & AI Special Session, Code: https://github.com/lab-emi/OpenDPD)",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "Y. Wu, G. Singh, M. Beikmirza, L. de Vreede, M. Alavi, C. Gao, \"OpenDPD: An Open-Source End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion,\" accepted to 2024 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Invited to the RFIC & AI Special Session, Code: https://github.com/lab-emi/OpenDPD)",
+        "html": "<li><p><strong>Y. Wu</strong><strong>, </strong>G. Singh, M. Beikmirza, L. de Vreede, M. Alavi,<strong>C. Gao</strong>, \"<a href=\"https://arxiv.org/abs/2401.08318\">OpenDPD: An Open-Source End-to-End Learning &amp; Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion</a>,\" accepted to <em>202</em><em>4</em><em> IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>, 2024 (<strong>Invited to the RFIC &amp; AI Special Session,</strong><strong> Code: </strong><a href=\"https://github.com/lab-emi/OpenDPD\"><strong>https://github.com/lab-emi/OpenDPD</strong></a>)</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "mp-dpd-low-complexity-mixed-precision-neural-networks-for-energy-efficient-digital-pre-di",
+    "title": "MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers",
+    "authors": "Y. Wu*, A. Li*, M. Beikmirza, G. Singh, Q. Chen, L. de Vreede, M. Alavi, C. Gao",
+    "venue": "accepted to 2024 IEEE International Microwave Symposium (IMS), 2024 (Ranked in Top 50,",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "RF & mixed-signal AI",
+    "url": "https://github.com/lab-emi/OpenDPD",
+    "code": "https://github.com/lab-emi/OpenDPD",
+    "links": [
+      {
+        "label": "https://github.com/lab-emi/OpenDPD",
+        "url": "https://github.com/lab-emi/OpenDPD"
+      }
+    ],
+    "citation": "Y. Wu*, A. Li*, M. Beikmirza, G. Singh, Q. Chen, L. de Vreede, M. Alavi, C. Gao, \"MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers,\" accepted to 2024 IEEE International Microwave Symposium (IMS), 2024 (Ranked in Top 50, Code: https://github.com/lab-emi/OpenDPD)",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "Y. Wu*, A. Li*, M. Beikmirza, G. Singh, Q. Chen, L. de Vreede, M. Alavi, C. Gao, \"MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers,\" accepted to 2024 IEEE International Microwave Symposium (IMS), 2024 (Ranked in Top 50, Code: https://github.com/lab-emi/OpenDPD)",
+        "html": "<li><p><strong>Y. Wu*</strong><strong>, </strong><strong>A</strong><strong>. Li*</strong><strong>,</strong>M. Beikmirza, G. Singh, Q. Chen, L. de Vreede, M. Alavi,<strong>C. Gao</strong>, \"MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers,\" accepted to <em>202</em><em>4 IEEE International Microwave Symposium</em><em> (</em><strong>IMS</strong><em>)</em>, 2024 (<strong>Ranked in </strong><strong>Top 50</strong><strong>,</strong><strong> Code: </strong><a href=\"https://github.com/lab-emi/OpenDPD\"><strong>https://github.com/lab-emi/OpenDPD</strong></a>)</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "bringing-dynamic-sparsity-to-the-forefront-for-low-power-audio-edge-computing-brain-inspi",
+    "title": "Bringing Dynamic Sparsity to the Forefront for Low-Power Audio Edge Computing: Brain-inspired approach for sparsifying network updates",
+    "authors": "S. -C. Liu, S. Zhou, Z. Li, C. Gao, K. Kim, and T. Delbruck",
+    "venue": "in IEEE Solid-State Circuits Magazine (SSC-M), vol. 16, no. 4, pp. 62-69, Fall 2024",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/document/10752808",
+    "code": null,
+    "links": [
+      {
+        "label": "Bringing Dynamic Sparsity to the Forefront for Low-Power Audio Edge Computing: Brain-inspired approach for sparsifying network updates",
+        "url": "https://ieeexplore.ieee.org/document/10752808"
+      }
+    ],
+    "citation": "S. -C. Liu, S. Zhou, Z. Li, C. Gao, K. Kim, and T. Delbruck, \"Bringing Dynamic Sparsity to the Forefront for Low-Power Audio Edge Computing: Brain-inspired approach for sparsifying network updates,\" in IEEE Solid-State Circuits Magazine (SSC-M), vol. 16, no. 4, pp. 62-69, Fall 2024",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "S. -C. Liu, S. Zhou, Z. Li, C. Gao, K. Kim, and T. Delbruck, \"Bringing Dynamic Sparsity to the Forefront for Low-Power Audio Edge Computing: Brain-inspired approach for sparsifying network updates,\" in IEEE Solid-State Circuits Magazine (SSC-M), vol. 16, no. 4, pp. 62-69, Fall 2024",
+        "html": "<li><p>S. -C. Liu, S. Zhou, Z. Li, <strong>C. Gao</strong>, K. Kim, and T. Delbruck, \"<a href=\"https://ieeexplore.ieee.org/document/10752808\">Bringing Dynamic Sparsity to the Forefront for Low-Power Audio Edge Computing: Brain-inspired approach for sparsifying network updates</a>,\" in IEEE Solid-State Circuits Magazine (<strong>SSC-M</strong>), vol. 16, no. 4, pp. 62-69, Fall 2024</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "event-based-eye-tracking-ais-2024-challenge-survey",
+    "title": "Event-Based Eye Tracking. AIS 2024 Challenge Survey",
+    "authors": "Z. Wang, C. Gao, Z. Wu, M. V. Conde, R. Timofte, S.-C. Liu, Q. Chen, et al.",
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2024, pp. 5810-5825",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "Event-based vision",
+    "url": "https://openaccess.thecvf.com/content/CVPR2024W/AI4Streaming/html/Wang_Event-Based_Eye_Tracking._AIS_2024_Challenge_Survey_CVPRW_2024_paper.html",
+    "code": null,
+    "links": [
+      {
+        "label": "Event-Based Eye Tracking. AIS 2024 Challenge Survey",
+        "url": "https://openaccess.thecvf.com/content/CVPR2024W/AI4Streaming/html/Wang_Event-Based_Eye_Tracking._AIS_2024_Challenge_Survey_CVPRW_2024_paper.html"
+      }
+    ],
+    "citation": "Z. Wang, C. Gao, Z. Wu, M. V. Conde, R. Timofte, S.-C. Liu, Q. Chen, et al., \"Event-Based Eye Tracking. AIS 2024 Challenge Survey,\" Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2024, pp. 5810-5825",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "Z. Wang, C. Gao, Z. Wu, M. V. Conde, R. Timofte, S.-C. Liu, Q. Chen, et al., \"Event-Based Eye Tracking. AIS 2024 Challenge Survey,\" Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2024, pp. 5810-5825",
+        "html": "<li><p>Z. Wang, <strong>C. Gao</strong>, Z. Wu, M. V. Conde, R. Timofte, S.-C. Liu, Q. Chen, et al., \"<a href=\"https://openaccess.thecvf.com/content/CVPR2024W/AI4Streaming/html/Wang_Event-Based_Eye_Tracking._AIS_2024_Challenge_Survey_CVPRW_2024_paper.html\">Event-Based Eye Tracking. AIS 2024 Challenge Survey</a>,\" Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) Workshops, 2024, pp. 5810-5825</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "epilepsy-seizure-detection-and-prediction-using-an-approximate-spiking-convolutional-trans",
+    "title": "Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer",
+    "authors": "Q. Chen, C. Sun, C. Gao, S.-C. Liu",
+    "venue": "accepted to 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Best Paper Award – Honorary Mention by the Neural Systems and Applications Technical Committee)",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://arxiv.org/abs/2402.09424",
+    "code": null,
+    "links": [
+      {
+        "label": "Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer",
+        "url": "https://arxiv.org/abs/2402.09424"
+      }
+    ],
+    "citation": "Q. Chen, C. Sun, C. Gao, S.-C. Liu, \"Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer,\" accepted to 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Best Paper Award – Honorary Mention by the Neural Systems and Applications Technical Committee)",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "Q. Chen, C. Sun, C. Gao, S.-C. Liu, \"Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer,\" accepted to 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2024 (Best Paper Award – Honorary Mention by the Neural Systems and Applications Technical Committee)",
+        "html": "<li><p>Q. Chen, C. Sun,<strong>C. Gao</strong>, S.-C. Liu, \"<a href=\"https://arxiv.org/abs/2402.09424\">Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer</a>,\" accepted to <em>2023 IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>, 2024 (<strong>Best Paper Award – Honorary Mention by the Neural Systems and Applications Technical Committee</strong>)</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "spartus-a-9-4-top-s-fpga-based-lstm-accelerator-exploiting-spatio-temporal-sparsity",
+    "title": "Spartus: A 9.4 TOp/s FPGA-Based LSTM Accelerator Exploiting Spatio-Temporal Sparsity",
+    "authors": "C. Gao, T. Delbruck, and S. -C. Liu",
+    "venue": "in IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2024",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9794448",
+    "code": null,
+    "links": [
+      {
+        "label": "Spartus: A 9.4 TOp/s FPGA-Based LSTM Accelerator Exploiting Spatio-Temporal Sparsity",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9794448"
+      }
+    ],
+    "citation": "C. Gao, T. Delbruck, and S. -C. Liu, \"Spartus: A 9.4 TOp/s FPGA-Based LSTM Accelerator Exploiting Spatio-Temporal Sparsity,\" in IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2024",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "C. Gao, T. Delbruck, and S. -C. Liu, \"Spartus: A 9.4 TOp/s FPGA-Based LSTM Accelerator Exploiting Spatio-Temporal Sparsity,\" in IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2024",
+        "html": "<li><p><strong>C. Gao</strong>, T. Delbruck, and S. -C. Liu, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/9794448\">Spartus: A 9.4 TOp/s FPGA-Based LSTM Accelerator Exploiting Spatio-Temporal Sparsity</a>,\" in <em>IEEE Transactions on Neural Networks and Learning Systems</em><strong> (TNNLS)</strong>, 2024</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "exploiting-symmetric-temporally-sparse-bptt-for-efficient-rnn-training",
+    "title": "Exploiting Symmetric Temporally Sparse BPTT for Efficient RNN Training",
+    "authors": "X. Chen, C. Gao, Z. Wang, L. Cheng, S. Zhou, S.-C. Liu and T. Delbruck",
+    "venue": "accepted to the 38th Annual AAAI Conference on Artificial Intelligence (AAAI), 2024",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://arxiv.org/abs/2312.09391",
+    "code": null,
+    "links": [
+      {
+        "label": "Exploiting Symmetric Temporally Sparse BPTT for Efficient RNN Training",
+        "url": "https://arxiv.org/abs/2312.09391"
+      }
+    ],
+    "citation": "X. Chen, C. Gao, Z. Wang, L. Cheng, S. Zhou, S.-C. Liu and T. Delbruck, \"Exploiting Symmetric Temporally Sparse BPTT for Efficient RNN Training,\" accepted to the 38th Annual AAAI Conference on Artificial Intelligence (AAAI), 2024",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "X. Chen, C. Gao, Z. Wang, L. Cheng, S. Zhou, S.-C. Liu and T. Delbruck, \"Exploiting Symmetric Temporally Sparse BPTT for Efficient RNN Training,\" accepted to the 38th Annual AAAI Conference on Artificial Intelligence (AAAI), 2024",
+        "html": "<li><p>X. Chen, <strong>C. Gao</strong>, Z. Wang, L. Cheng, S. Zhou, S.-C. Liu and T. Delbruck, \"<a href=\"https://arxiv.org/abs/2312.09391\">Exploiting Symmetric Temporally Sparse BPTT for Efficient RNN Training</a>,\" accepted to the <em>38th Annual AAAI Conference on Artificial Intelligence (</em><strong>AAAI</strong><em>), 2024</em></p></li>"
+      }
+    ]
+  },
+  {
+    "id": "has-rl-a-hierarchical-approximate-scheme-optimized-with-reinforcement-learning-for-noc-ba",
+    "title": "HAS-RL: A Hierarchical Approximate Scheme Optimized With Reinforcement Learning for NoC-Based NN Accelerators",
+    "authors": "S. Li et al.",
+    "venue": "in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), 2024",
+    "year": 2024,
+    "sourceYear": 2024,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/document/10431799",
+    "code": null,
+    "links": [
+      {
+        "label": "HAS-RL: A Hierarchical Approximate Scheme Optimized With Reinforcement Learning for NoC-Based NN Accelerators",
+        "url": "https://ieeexplore.ieee.org/document/10431799"
+      }
+    ],
+    "citation": "S. Li et al., \"HAS-RL: A Hierarchical Approximate Scheme Optimized With Reinforcement Learning for NoC-Based NN Accelerators,\" in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), 2024",
+    "sourceVersions": [
+      {
+        "year": 2024,
+        "citation": "S. Li et al., \"HAS-RL: A Hierarchical Approximate Scheme Optimized With Reinforcement Learning for NoC-Based NN Accelerators,\" in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), 2024",
+        "html": "<li><p><em>S. Li et al., \"</em><a href=\"https://ieeexplore.ieee.org/document/10431799\"><em>HAS-RL: A Hierarchical Approximate Scheme Optimized With Reinforcement Learning for NoC-Based NN Accelerators</em></a><em>,\" in IEEE Transactions on Circuits and Systems I: Regular Papers (</em><strong>TCAS-I</strong><em>), 2024</em></p></li>"
+      }
+    ]
+  },
+  {
+    "id": "3et-efficient-event-based-eye-tracking-using-a-change-based-convlstm-network",
+    "title": "3ET: Efficient Event-based Eye Tracking using a Change-Based ConvLSTM Network",
+    "authors": "Q. Chen, Z. Wang, S.-C. Liu, C. Gao",
+    "venue": "in 2023 IEEE Biomedical Circuits and Systems (BioCAS) Conference, 2023",
+    "year": 2023,
+    "sourceYear": 2023,
+    "type": "Publication",
+    "topic": "Event-based vision",
+    "url": "https://arxiv.org/abs/2308.11771",
+    "code": null,
+    "links": [
+      {
+        "label": "3ET: Efficient Event-based Eye Tracking using a Change-Based ConvLSTM Network",
+        "url": "https://arxiv.org/abs/2308.11771"
+      }
+    ],
+    "citation": "Q. Chen, Z. Wang, S.-C. Liu, C. Gao, \"3ET: Efficient Event-based Eye Tracking using a Change-Based ConvLSTM Network,\" in 2023 IEEE Biomedical Circuits and Systems (BioCAS) Conference, 2023",
+    "sourceVersions": [
+      {
+        "year": 2023,
+        "citation": "Q. Chen, Z. Wang, S.-C. Liu, C. Gao, \"3ET: Efficient Event-based Eye Tracking using a Change-Based ConvLSTM Network,\" in 2023 IEEE Biomedical Circuits and Systems (BioCAS) Conference, 2023",
+        "html": "<li><p>Q. Chen, Z. Wang, S.-C. Liu, <strong>C. Gao</strong>, \"<a href=\"https://arxiv.org/abs/2308.11771\">3ET: Efficient Event-based Eye Tracking using a Change-Based ConvLSTM Network</a>,\" in <em>2023 IEEE Biomedical Circuits and Systems (</em><strong>BioCAS</strong><em>) Conference, 2023</em></p></li>"
+      }
+    ]
+  },
+  {
+    "id": "to-spike-or-not-to-spike-a-digital-hardware-perspective-on-deep-learning-acceleration",
+    "title": "To Spike or Not To Spike: A Digital Hardware Perspective on Deep Learning Acceleration",
+    "authors": "F, Ottati, C. Gao, Q. Chen, G. Brignone, M. R. Casu, J. K. Eshraghian, L. Lavagno",
+    "venue": "in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2023 (JETCAS Spotlight Article 2023)",
+    "year": 2023,
+    "sourceYear": 2023,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://arxiv.org/abs/2306.15749",
+    "code": null,
+    "links": [
+      {
+        "label": "To Spike or Not To Spike: A Digital Hardware Perspective on Deep Learning Acceleration",
+        "url": "https://arxiv.org/abs/2306.15749"
+      },
+      {
+        "label": "JETCAS Spotlight Article 2023",
+        "url": "https://ieee-cas.org/post/news/jetcas-spotlight-articles-2023"
+      }
+    ],
+    "citation": "F, Ottati, C. Gao, Q. Chen, G. Brignone, M. R. Casu, J. K. Eshraghian, L. Lavagno, \"To Spike or Not To Spike: A Digital Hardware Perspective on Deep Learning Acceleration,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2023 (JETCAS Spotlight Article 2023)",
+    "sourceVersions": [
+      {
+        "year": 2023,
+        "citation": "F, Ottati, C. Gao, Q. Chen, G. Brignone, M. R. Casu, J. K. Eshraghian, L. Lavagno, \"To Spike or Not To Spike: A Digital Hardware Perspective on Deep Learning Acceleration,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), 2023 (JETCAS Spotlight Article 2023)",
+        "html": "<li><p>F, Ottati, <strong>C. Gao</strong>, Q. Chen, G. Brignone, M. R. Casu, J. K. Eshraghian, L. Lavagno, \"<a href=\"https://arxiv.org/abs/2306.15749\">To Spike or Not To Spike: A Digital Hardware Perspective on Deep Learning Acceleration</a>,\" in <em>IEEE Journal on Emerging and Selected Topics in Circuits and Systems (</em><strong>JETCAS</strong><em>)</em>, 2023 (<a href=\"https://ieee-cas.org/post/news/jetcas-spotlight-articles-2023\"><strong>JETCAS Spotlight Article 2023</strong></a>)</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "an-area-efficient-ultra-low-power-time-domain-feature-extractor-for-edge-keyword-spotting",
+    "title": "An Area-Efficient Ultra-Low-Power Time-Domain Feature Extractor for Edge Keyword Spotting",
+    "authors": "Q. Chen, Y. Chang, K. Kim, C. Gao, S.-C. Liu",
+    "venue": "in 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2023",
+    "year": 2023,
+    "sourceYear": 2023,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://www.zora.uzh.ch/id/eprint/234155/1/ISCAS_2023_IIR_KWS_uzh.pdf",
+    "code": null,
+    "links": [
+      {
+        "label": "An Area-Efficient Ultra-Low-Power Time-Domain Feature Extractor for Edge Keyword Spotting",
+        "url": "https://www.zora.uzh.ch/id/eprint/234155/1/ISCAS_2023_IIR_KWS_uzh.pdf"
+      }
+    ],
+    "citation": "Q. Chen, Y. Chang, K. Kim, C. Gao, S.-C. Liu, \"An Area-Efficient Ultra-Low-Power Time-Domain Feature Extractor for Edge Keyword Spotting,\" in 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2023",
+    "sourceVersions": [
+      {
+        "year": 2023,
+        "citation": "Q. Chen, Y. Chang, K. Kim, C. Gao, S.-C. Liu, \"An Area-Efficient Ultra-Low-Power Time-Domain Feature Extractor for Edge Keyword Spotting,\" in 2023 IEEE International Symposium on Circuits and Systems (ISCAS), 2023",
+        "html": "<li><p>Q. Chen, Y. Chang, K. Kim, <strong>C. Gao</strong>, S.-C. Liu, \"<a href=\"https://www.zora.uzh.ch/id/eprint/234155/1/ISCAS_2023_IIR_KWS_uzh.pdf\">An Area-Efficient Ultra-Low-Power Time-Domain Feature Extractor for Edge Keyword Spotting</a>,\" in <em>2023 IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>, 2023</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "framefire-enabling-efficient-spiking-neural-network-inference-for-video-segmentation",
+    "title": "FrameFire: Enabling Efficient Spiking Neural Network Inference for Video Segmentation",
+    "authors": "Q. Chen, C. Sun, C. Gao, X. Fang and H. Luan",
+    "venue": "in 2023 IEEE 5th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2023",
+    "year": 2023,
+    "sourceYear": 2023,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10168660",
+    "code": null,
+    "links": [
+      {
+        "label": "FrameFire: Enabling Efficient Spiking Neural Network Inference for Video Segmentation",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10168660"
+      }
+    ],
+    "citation": "Q. Chen, C. Sun, C. Gao, X. Fang and H. Luan, \"FrameFire: Enabling Efficient Spiking Neural Network Inference for Video Segmentation,\" in 2023 IEEE 5th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2023",
+    "sourceVersions": [
+      {
+        "year": 2023,
+        "citation": "Q. Chen, C. Sun, C. Gao, X. Fang and H. Luan, \"FrameFire: Enabling Efficient Spiking Neural Network Inference for Video Segmentation,\" in 2023 IEEE 5th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2023",
+        "html": "<li><p>Q. Chen, C. Sun, <strong>C. Gao</strong>, X. Fang and H. Luan, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/10168660\">FrameFire: Enabling Efficient Spiking Neural Network Inference for Video Segmentation</a>,\" in <em>2023 IEEE 5th International Conference on Artificial Intelligence Circuits and Systems (</em><strong>AICAS</strong><em>)</em>, 2023</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "energy-efficient-activity-driven-computing-architectures-for-edge-intelligence",
+    "title": "Energy-Efficient Activity-Driven Computing Architectures for Edge Intelligence",
+    "authors": "S. -C. Liu, C. Gao, K. Kim, T. Delbruck",
+    "venue": "in 2022 IEEE International Electron Devices Meeting (IEDM), 2022",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10019443",
+    "code": null,
+    "links": [
+      {
+        "label": "Energy-Efficient Activity-Driven Computing Architectures for Edge Intelligence",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10019443"
+      }
+    ],
+    "citation": "S. -C. Liu, C. Gao, K. Kim, T. Delbruck, \"Energy-Efficient Activity-Driven Computing Architectures for Edge Intelligence,\" in 2022 IEEE International Electron Devices Meeting (IEDM), 2022",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "S. -C. Liu, C. Gao, K. Kim, T. Delbruck, \"Energy-Efficient Activity-Driven Computing Architectures for Edge Intelligence,\" in 2022 IEEE International Electron Devices Meeting (IEDM), 2022",
+        "html": "<li><p>S. -C. Liu, <strong>C.</strong><strong> Gao</strong>, K. Kim, T. Delbruck, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/10019443\">Energy-Efficient Activity-Driven Computing Architectures for Edge Intelligence</a>,\" in <em>2022 IEEE International Electron Devices Meeting (</em><strong>IEDM</strong><em>)</em>, 2022</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "a-23w-solar-powered-keyword-spotting-asic-with-ring-oscillator-based-time-domain-feature",
+    "title": "A 23μW Solar-Powered Keyword-Spotting ASIC with Ring-Oscillator-Based Time-Domain Feature Extraction",
+    "authors": "K. Kim*, C. Gao*, et al.",
+    "venue": "2022 IEEE International Solid-State Circuits Conference (ISSCC), 2022, pp. 1-3.",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9731708",
+    "code": null,
+    "links": [
+      {
+        "label": "A 23μW Solar-Powered Keyword-Spotting ASIC with Ring-Oscillator-Based Time-Domain Feature Extraction",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9731708"
+      }
+    ],
+    "citation": "K. Kim*, C. Gao*, et al., \"A 23μW Solar-Powered Keyword-Spotting ASIC with Ring-Oscillator-Based Time-Domain Feature Extraction,\" 2022 IEEE International Solid-State Circuits Conference (ISSCC), 2022, pp. 1-3.",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "K. Kim*, C. Gao*, et al., \"A 23μW Solar-Powered Keyword-Spotting ASIC with Ring-Oscillator-Based Time-Domain Feature Extraction,\" 2022 IEEE International Solid-State Circuits Conference (ISSCC), 2022, pp. 1-3.",
+        "html": "<li><p>K. Kim*, <strong>C. Gao</strong>*, et al., \"<a href=\"https://ieeexplore.ieee.org/abstract/document/9731708\">A 23μW Solar-Powered Keyword-Spotting ASIC with Ring-Oscillator-Based Time-Domain Feature Extraction</a>,\" 2022 <em>IEEE International Solid-State Circuits Conference (</em><strong>ISSCC</strong><em>)</em>, 2022, pp. 1-3.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "a-23-w-keyword-spotting-ic-with-ring-oscillator-based-time-domain-feature-extraction",
+    "title": "A 23 μW Keyword Spotting IC with Ring-Oscillator-Based Time-Domain Feature Extraction",
+    "authors": "K. Kim, C. Gao, R. Graça, I. Kiselev, H.-J. Yoo, T. Delbruck and S. -C. Liu",
+    "venue": "in IEEE Journal of Solid-State Circuits (JSSC), 2022.",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/document/9858110",
+    "code": null,
+    "links": [
+      {
+        "label": "A 23 μW Keyword Spotting IC with Ring-Oscillator-Based Time-Domain Feature Extraction",
+        "url": "https://ieeexplore.ieee.org/document/9858110"
+      }
+    ],
+    "citation": "K. Kim, C. Gao, R. Graça, I. Kiselev, H.-J. Yoo, T. Delbruck and S. -C. Liu, \"A 23 μW Keyword Spotting IC with Ring-Oscillator-Based Time-Domain Feature Extraction,\" in IEEE Journal of Solid-State Circuits (JSSC), 2022.",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "K. Kim, C. Gao, R. Graça, I. Kiselev, H.-J. Yoo, T. Delbruck and S. -C. Liu, \"A 23 μW Keyword Spotting IC with Ring-Oscillator-Based Time-Domain Feature Extraction,\" in IEEE Journal of Solid-State Circuits (JSSC), 2022.",
+        "html": "<li><p>K. Kim, <strong>C. Gao</strong>, R. Graça, I. Kiselev, H.-J. Yoo, T. Delbruck and S. -C. Liu, \"<a href=\"https://ieeexplore.ieee.org/document/9858110\">A 23 μW Keyword Spotting IC with Ring-Oscillator-Based Time-Domain Feature Extraction</a>,\" in <em>IEEE Journal of Solid-State Circuits (</em><strong>JSSC</strong><em>)</em>, 2022.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "cerebron-a-reconfigurable-architecture-for-spatio-temporal-sparse-spiking-neural-networks",
+    "title": "Cerebron: A Reconfigurable Architecture for Spatio-Temporal Sparse Spiking Neural Networks",
+    "authors": "Q. Chen*, C. Gao* and Y. Fu",
+    "venue": "in IEEE Transactions on Very Large Scale Integration Systems (TVLSI), 2022.",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/document/9855834",
+    "code": null,
+    "links": [
+      {
+        "label": "Cerebron: A Reconfigurable Architecture for Spatio-Temporal Sparse Spiking Neural Networks",
+        "url": "https://ieeexplore.ieee.org/document/9855834"
+      }
+    ],
+    "citation": "Q. Chen*, C. Gao* and Y. Fu, \"Cerebron: A Reconfigurable Architecture for Spatio-Temporal Sparse Spiking Neural Networks,\" in IEEE Transactions on Very Large Scale Integration Systems (TVLSI), 2022.",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "Q. Chen*, C. Gao* and Y. Fu, \"Cerebron: A Reconfigurable Architecture for Spatio-Temporal Sparse Spiking Neural Networks,\" in IEEE Transactions on Very Large Scale Integration Systems (TVLSI), 2022.",
+        "html": "<li><p>Q. Chen*, <strong>C. Gao</strong>* and Y. Fu, \"<a href=\"https://ieeexplore.ieee.org/document/9855834\">Cerebron: A Reconfigurable Architecture for Spatio-Temporal Sparse Spiking Neural Networks</a>,\" in <em>IEEE Transactions on Very Large Scale Integration Systems (</em><strong>TVLSI</strong><em>)</em>, 2022.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "skydiver-a-spiking-neural-network-accelerator-exploiting-spatio-temporal-workload-balance",
+    "title": "Skydiver: A Spiking Neural Network Accelerator Exploiting Spatio-Temporal Workload Balance",
+    "authors": "Q. Chen*, C. Gao*, X. Fang and H. Luan",
+    "venue": "in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/document/9733037",
+    "code": null,
+    "links": [
+      {
+        "label": "Skydiver: A Spiking Neural Network Accelerator Exploiting Spatio-Temporal Workload Balance",
+        "url": "https://ieeexplore.ieee.org/document/9733037"
+      }
+    ],
+    "citation": "Q. Chen*, C. Gao*, X. Fang and H. Luan, \"Skydiver: A Spiking Neural Network Accelerator Exploiting Spatio-Temporal Workload Balance,\" in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "Q. Chen*, C. Gao*, X. Fang and H. Luan, \"Skydiver: A Spiking Neural Network Accelerator Exploiting Spatio-Temporal Workload Balance,\" in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).",
+        "html": "<li><p>Q. Chen*, <strong>C. Gao</strong>*, X. Fang and H. Luan, \"<a href=\"https://ieeexplore.ieee.org/document/9733037\">Skydiver: A Spiking Neural Network Accelerator Exploiting Spatio-Temporal Workload Balance</a>,\" in <em>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (</em><strong>TCAD</strong><em>)</em>.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "spiking-cochlea-with-system-level-local-automatic-gain-control",
+    "title": "Spiking Cochlea with System-Level Local Automatic Gain Control",
+    "authors": "I. Kiselev, C. Gao and S. -C. Liu",
+    "venue": "in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), vol. 69, no. 5, pp. 2156-2166, May 2022.",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9715730",
+    "code": null,
+    "links": [
+      {
+        "label": "Spiking Cochlea with System-Level Local Automatic Gain Control",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9715730"
+      }
+    ],
+    "citation": "I. Kiselev, C. Gao and S. -C. Liu, \"Spiking Cochlea with System-Level Local Automatic Gain Control,\" in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), vol. 69, no. 5, pp. 2156-2166, May 2022.",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "I. Kiselev, C. Gao and S. -C. Liu, \"Spiking Cochlea with System-Level Local Automatic Gain Control,\" in IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I), vol. 69, no. 5, pp. 2156-2166, May 2022.",
+        "html": "<li><p>I. Kiselev, <strong>C. Gao</strong> and S. -C. Liu, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/9715730\">Spiking Cochlea with System-Level Local Automatic Gain Control</a>,\" in <em>IEEE Transactions on Circuits and Systems I: Regular Papers (</em><strong>TCAS-I</strong><em>)</em>, vol. 69, no. 5, pp. 2156-2166, May 2022.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "enabling-energy-efficient-inference-for-self-attention-mechanisms-in-neural-networks",
+    "title": "Enabling Energy-Efficient Inference for Self-Attention Mechanisms in Neural Networks",
+    "authors": "Q. Chen, C. Sun, Z. Lu and C. Gao",
+    "venue": "2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 25-28",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/document/9869924",
+    "code": null,
+    "links": [
+      {
+        "label": "Enabling Energy-Efficient Inference for Self-Attention Mechanisms in Neural Networks",
+        "url": "https://ieeexplore.ieee.org/document/9869924"
+      }
+    ],
+    "citation": "Q. Chen, C. Sun, Z. Lu and C. Gao, \"Enabling Energy-Efficient Inference for Self-Attention Mechanisms in Neural Networks,\" 2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 25-28",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "Q. Chen, C. Sun, Z. Lu and C. Gao, \"Enabling Energy-Efficient Inference for Self-Attention Mechanisms in Neural Networks,\" 2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 25-28",
+        "html": "<li><p>Q. Chen, C. Sun, Z. Lu and <strong>C. Gao</strong>, \"<a href=\"https://ieeexplore.ieee.org/document/9869924\">Enabling Energy-Efficient Inference for Self-Attention Mechanisms in Neural Networks</a>,\" <em>2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (</em><strong>AICAS</strong><em>)</em>, 2022, pp. 25-28</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "intrinsic-sparse-lstm-using-structured-targeted-dropout-for-efficient-hardware-inference",
+    "title": "Intrinsic Sparse LSTM using Structured Targeted Dropout for Efficient Hardware Inference",
+    "authors": "J. H. Lindmar, C. Gao and S. -C. Liu",
+    "venue": "2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 126-129",
+    "year": 2022,
+    "sourceYear": 2022,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/document/9869988",
+    "code": null,
+    "links": [
+      {
+        "label": "Intrinsic Sparse LSTM using Structured Targeted Dropout for Efficient Hardware Inference",
+        "url": "https://ieeexplore.ieee.org/document/9869988"
+      }
+    ],
+    "citation": "J. H. Lindmar, C. Gao and S. -C. Liu, \"Intrinsic Sparse LSTM using Structured Targeted Dropout for Efficient Hardware Inference,\" 2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 126-129",
+    "sourceVersions": [
+      {
+        "year": 2022,
+        "citation": "J. H. Lindmar, C. Gao and S. -C. Liu, \"Intrinsic Sparse LSTM using Structured Targeted Dropout for Efficient Hardware Inference,\" 2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2022, pp. 126-129",
+        "html": "<li><p>J. H. Lindmar, <strong>C. Gao</strong> and S. -C. Liu, \"<a href=\"https://ieeexplore.ieee.org/document/9869988\">Intrinsic Sparse LSTM using Structured Targeted Dropout for Efficient Hardware Inference</a>,\" <em>2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (</em><strong>AICAS</strong><em>)</em>, 2022, pp. 126-129</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "eile-efficient-incremental-learning-on-the-edge",
+    "title": "EILE: Efficient Incremental Learning on the Edge",
+    "authors": "X. Chen, C. Gao, T. Delbruck and S. -C. Liu",
+    "venue": "2021 IEEE 3rd International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2021, pp. 1-4.",
+    "year": 2021,
+    "sourceYear": 2021,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9458554",
+    "code": null,
+    "links": [
+      {
+        "label": "EILE: Efficient Incremental Learning on the Edge",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9458554"
+      }
+    ],
+    "citation": "X. Chen, C. Gao, T. Delbruck and S. -C. Liu, \"EILE: Efficient Incremental Learning on the Edge,\" 2021 IEEE 3rd International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2021, pp. 1-4.",
+    "sourceVersions": [
+      {
+        "year": 2021,
+        "citation": "X. Chen, C. Gao, T. Delbruck and S. -C. Liu, \"EILE: Efficient Incremental Learning on the Edge,\" 2021 IEEE 3rd International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2021, pp. 1-4.",
+        "html": "<li><p>X. Chen, <strong>C. Gao</strong>, T. Delbruck and S. -C. Liu, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/9458554\">EILE: Efficient Incremental Learning on the Edge</a>,\" <em>2021 IEEE 3rd International Conference on Artificial Intelligence Circuits and Systems (</em><strong>AICAS</strong><em>)</em>, 2021, pp. 1-4.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "edgedrnn-recurrent-neural-network-accelerator-for-edge-inference",
+    "title": "EdgeDRNN: Recurrent Neural Network Accelerator for Edge Inference",
+    "authors": "C. Gao, A. Rios-Navarro, X. Chen, S. -C. Liu and T. Delbruck",
+    "venue": "in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), vol. 10, no. 4, pp. 419-432, Dec. 2020.",
+    "year": 2020,
+    "sourceYear": 2020,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/document/9268992",
+    "code": null,
+    "links": [
+      {
+        "label": "EdgeDRNN: Recurrent Neural Network Accelerator for Edge Inference",
+        "url": "https://ieeexplore.ieee.org/document/9268992"
+      }
+    ],
+    "citation": "C. Gao, A. Rios-Navarro, X. Chen, S. -C. Liu and T. Delbruck, \"EdgeDRNN: Recurrent Neural Network Accelerator for Edge Inference,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), vol. 10, no. 4, pp. 419-432, Dec. 2020.",
+    "sourceVersions": [
+      {
+        "year": 2020,
+        "citation": "C. Gao, A. Rios-Navarro, X. Chen, S. -C. Liu and T. Delbruck, \"EdgeDRNN: Recurrent Neural Network Accelerator for Edge Inference,\" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems (JETCAS), vol. 10, no. 4, pp. 419-432, Dec. 2020.",
+        "html": "<li><p><strong>C. Gao</strong>, A. Rios-Navarro, X. Chen, S. -C. Liu and T. Delbruck, \"<a href=\"https://ieeexplore.ieee.org/document/9268992\">EdgeDRNN: Recurrent Neural Network Accelerator for Edge Inference</a>,\" in <em>IEEE Journal on Emerging and Selected Topics in Circuits and Systems (</em><strong>JETCAS</strong><em>)</em>, vol. 10, no. 4, pp. 419-432, Dec. 2020.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "recurrent-neural-network-control-of-a-hybrid-dynamical-transfemoral-prosthesis-with-edgedr",
+    "title": "Recurrent Neural Network Control of a Hybrid Dynamical Transfemoral Prosthesis with EdgeDRNN Accelerator",
+    "authors": "C. Gao*, R. Gehlhar*, A. D. Ames, S. -C. Liu and T. Delbruck",
+    "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA), 2020, pp. 5460-5466.",
+    "year": 2020,
+    "sourceYear": 2020,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9196984",
+    "code": null,
+    "links": [
+      {
+        "label": "Recurrent Neural Network Control of a Hybrid Dynamical Transfemoral Prosthesis with EdgeDRNN Accelerator",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9196984"
+      }
+    ],
+    "citation": "C. Gao*, R. Gehlhar*, A. D. Ames, S. -C. Liu and T. Delbruck, \"Recurrent Neural Network Control of a Hybrid Dynamical Transfemoral Prosthesis with EdgeDRNN Accelerator,\" 2020 IEEE International Conference on Robotics and Automation (ICRA), 2020, pp. 5460-5466.",
+    "sourceVersions": [
+      {
+        "year": 2020,
+        "citation": "C. Gao*, R. Gehlhar*, A. D. Ames, S. -C. Liu and T. Delbruck, \"Recurrent Neural Network Control of a Hybrid Dynamical Transfemoral Prosthesis with EdgeDRNN Accelerator,\" 2020 IEEE International Conference on Robotics and Automation (ICRA), 2020, pp. 5460-5466.",
+        "html": "<li><p><strong>C. Gao</strong>*, R. Gehlhar*, A. D. Ames, S. -C. Liu and T. Delbruck, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/9196984\">Recurrent Neural Network Control of a Hybrid Dynamical Transfemoral Prosthesis with EdgeDRNN Accelerator</a>,\" <em>2020 IEEE International Conference on Robotics and Automation (</em><strong>ICRA</strong><em>)</em>, 2020, pp. 5460-5466.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "edgedrnn-enabling-low-latency-recurrent-neural-network-edge-inference",
+    "title": "EdgeDRNN: Enabling Low-latency Recurrent Neural Network Edge Inference",
+    "authors": "C. Gao, A. Rios-Navarro, X. Chen, T. Delbruck and S. -C. Liu",
+    "venue": "2020 2nd IEEE International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2020, pp. 41-45. (Best Paper Award)",
+    "year": 2020,
+    "sourceYear": 2020,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://ieeexplore.ieee.org/document/9074001",
+    "code": null,
+    "links": [
+      {
+        "label": "EdgeDRNN: Enabling Low-latency Recurrent Neural Network Edge Inference",
+        "url": "https://ieeexplore.ieee.org/document/9074001"
+      }
+    ],
+    "citation": "C. Gao, A. Rios-Navarro, X. Chen, T. Delbruck and S. -C. Liu, \"EdgeDRNN: Enabling Low-latency Recurrent Neural Network Edge Inference,\" 2020 2nd IEEE International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2020, pp. 41-45. (Best Paper Award)",
+    "sourceVersions": [
+      {
+        "year": 2020,
+        "citation": "C. Gao, A. Rios-Navarro, X. Chen, T. Delbruck and S. -C. Liu, \"EdgeDRNN: Enabling Low-latency Recurrent Neural Network Edge Inference,\" 2020 2nd IEEE International Conference on Artificial Intelligence Circuits and Systems (AICAS), 2020, pp. 41-45. (Best Paper Award)",
+        "html": "<li><p><strong>C. Gao</strong>, A. Rios-Navarro, X. Chen, T. Delbruck and S. -C. Liu, \"<a href=\"https://ieeexplore.ieee.org/document/9074001\">EdgeDRNN: Enabling Low-latency Recurrent Neural Network Edge Inference</a>,\" <em>2020 2nd IEEE International Conference on Artificial Intelligence Circuits and Systems (</em><strong>AICAS</strong><em>)</em>, 2020, pp. 41-45. <strong>(Best Paper Award)</strong></p></li>"
+      }
+    ]
+  },
+  {
+    "id": "real-time-speech-recognition-for-iot-purpose-using-a-delta-recurrent-neural-network-accele",
+    "title": "Real-Time Speech Recognition for IoT Purpose using a Delta Recurrent Neural Network Accelerator",
+    "authors": "C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu",
+    "venue": "2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-5.",
+    "year": 2019,
+    "sourceYear": 2019,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/abstract/document/8702290",
+    "code": null,
+    "links": [
+      {
+        "label": "Real-Time Speech Recognition for IoT Purpose using a Delta Recurrent Neural Network Accelerator",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8702290"
+      }
+    ],
+    "citation": "C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"Real-Time Speech Recognition for IoT Purpose using a Delta Recurrent Neural Network Accelerator,\" 2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-5.",
+    "sourceVersions": [
+      {
+        "year": 2019,
+        "citation": "C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"Real-Time Speech Recognition for IoT Purpose using a Delta Recurrent Neural Network Accelerator,\" 2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-5.",
+        "html": "<li><p><strong>C. Gao</strong>, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"<a href=\"https://ieeexplore.ieee.org/abstract/document/8702290\">Real-Time Speech Recognition for IoT Purpose using a Delta Recurrent Neural Network Accelerator</a>,\" <em>2019 IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>, 2019, pp. 1-5.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "live-demonstration-real-time-spoken-digit-recognition-using-the-deltarnn-accelerator",
+    "title": "Live Demonstration: Real-Time Spoken Digit Recognition using the DeltaRNN Accelerator",
+    "authors": "C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu",
+    "venue": "2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-1.",
+    "year": 2019,
+    "sourceYear": 2019,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/document/8702212",
+    "code": null,
+    "links": [
+      {
+        "label": "Live Demonstration: Real-Time Spoken Digit Recognition using the DeltaRNN Accelerator,",
+        "url": "https://ieeexplore.ieee.org/document/8702212"
+      }
+    ],
+    "citation": "C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"Live Demonstration: Real-Time Spoken Digit Recognition using the DeltaRNN Accelerator,\" 2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-1.",
+    "sourceVersions": [
+      {
+        "year": 2019,
+        "citation": "C. Gao, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"Live Demonstration: Real-Time Spoken Digit Recognition using the DeltaRNN Accelerator,\" 2019 IEEE International Symposium on Circuits and Systems (ISCAS), 2019, pp. 1-1.",
+        "html": "<li><p><strong>C. Gao</strong>, S. Braun, I. Kiselev, J. Anumula, T. Delbruck, and S. Liu, \"<a href=\"https://ieeexplore.ieee.org/document/8702212\">Live Demonstration: Real-Time Spoken Digit Recognition using the DeltaRNN Accelerator,</a>\" <em>2019 IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>, 2019, pp. 1-1.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "deltarnn-a-power-efficient-recurrent-neural-network-accelerator",
+    "title": "DeltaRNN: A Power-efficient Recurrent Neural Network Accelerator",
+    "authors": "C. Gao, D. Neil, E. Ceolini, S.-C. Liu, and T. Delbruck",
+    "venue": "In Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA '18). Association for Computing Machinery, New York, NY, USA, 21–30.",
+    "year": 2018,
+    "sourceYear": 2018,
+    "type": "Publication",
+    "topic": "Sparse computing",
+    "url": "https://dl.acm.org/doi/10.1145/3174243.3174261",
+    "code": null,
+    "links": [
+      {
+        "label": "DeltaRNN: A Power-efficient Recurrent Neural Network Accelerator",
+        "url": "https://dl.acm.org/doi/10.1145/3174243.3174261"
+      }
+    ],
+    "citation": "C. Gao, D. Neil, E. Ceolini, S.-C. Liu, and T. Delbruck, \"DeltaRNN: A Power-efficient Recurrent Neural Network Accelerator,\" In Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA '18). Association for Computing Machinery, New York, NY, USA, 21–30.",
+    "sourceVersions": [
+      {
+        "year": 2018,
+        "citation": "C. Gao, D. Neil, E. Ceolini, S.-C. Liu, and T. Delbruck, \"DeltaRNN: A Power-efficient Recurrent Neural Network Accelerator,\" In Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA '18). Association for Computing Machinery, New York, NY, USA, 21–30.",
+        "html": "<li><p><strong>C. Gao</strong>, D. Neil, E. Ceolini, S.-C. Liu, and T. Delbruck, \"<a href=\"https://dl.acm.org/doi/10.1145/3174243.3174261\">DeltaRNN: A Power-efficient Recurrent Neural Network Accelerator</a>,\" In <em>Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (</em><strong>FPGA '18</strong><em>)</em>. Association for Computing Machinery, New York, NY, USA, 21–30.</p></li>"
+      }
+    ]
+  },
+  {
+    "id": "on-chip-id-generation-for-multi-node-implantable-devices-using-sa-puf",
+    "title": "On-chip ID generation for multi-node implantable devices using SA-PUF",
+    "authors": "C. Gao, S. Ghoreishizadeh, Y. Liu and T. Constandinou",
+    "venue": "2017 IEEE International Symposium on Circuits and Systems (ISCAS), 2017, pp. 1-4.",
+    "year": 2017,
+    "sourceYear": 2017,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://ieeexplore.ieee.org/document/8050422",
+    "code": null,
+    "links": [
+      {
+        "label": "On-chip ID generation for multi-node implantable devices using SA-PUF",
+        "url": "https://ieeexplore.ieee.org/document/8050422"
+      }
+    ],
+    "citation": "C. Gao, S. Ghoreishizadeh, Y. Liu and T. Constandinou, \"On-chip ID generation for multi-node implantable devices using SA-PUF,\" 2017 IEEE International Symposium on Circuits and Systems (ISCAS), 2017, pp. 1-4.",
+    "sourceVersions": [
+      {
+        "year": 2017,
+        "citation": "C. Gao, S. Ghoreishizadeh, Y. Liu and T. Constandinou, \"On-chip ID generation for multi-node implantable devices using SA-PUF,\" 2017 IEEE International Symposium on Circuits and Systems (ISCAS), 2017, pp. 1-4.",
+        "html": "<li><p><strong>C. Gao</strong>, S. Ghoreishizadeh, Y. Liu and T. Constandinou, \"<a href=\"https://ieeexplore.ieee.org/document/8050422\">On-chip ID generation for multi-node implantable devices using SA-PUF</a>,\" <em>2017 IEEE International Symposium on Circuits and Systems (</em><strong>ISCAS</strong><em>)</em>, 2017, pp. 1-4.</p></li>"
+      }
+    ]
+  }
+]

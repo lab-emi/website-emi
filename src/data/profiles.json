@@ -1,0 +1,204 @@
+[
+  {
+    "id": "zitao-liang",
+    "name": "Zitao Liang",
+    "html": "<h1>Zitao Liang </h1>\n<p><strong>PhD Candidate</strong><strong> @ TU Delft </strong></p><p>Department of Microelectronics, Faculty of EEMCS</p><p>🌟 <strong>THIS IS ME</strong></p><p>From my MSc study at the Institute of Microelectronics, Chinese Academy of Sciences in Beijing to my current PhD journey with the ELCA group at TU Delft, I have gradually discovered the kind of life I truly want to live — one where I can turn creative ideas in embedded AI into real applications, allowing more people to benefit from the convenience and services that AI brings.</p><p>I feel incredibly fortunate that my sense of purpose in life aligns so closely with my career, which fills me with deep passion for what I do.<br/>It’s my honor that you’re reading this. I hope you, too, can find that same sense of fulfillment — and I wish you a wonderful day.</p><p>🎓 <strong>MORE FORMAL BIO</strong>Zitao Liang is a PhD candidate in the ELCA group at Delft University of Technology (TU Delft). He was born in Guangdong, China, in 1999.</p><p>He received his B.Sc. degree from the South China University of Technology (SCUT) in 2022 and his M.Sc. degree from the Institute of Microelectronics, Chinese Academy of Sciences (CAS) in 2025. His master’s research focused on circuit-level error detection and correction techniques for ultra-low-power processors.</p><p>He is currently pursuing his PhD at TU Delft — and, as he likes to say, he’s ready to begin a brand-new adventure!</p>\n\n",
+    "images": [
+      {
+        "src": "/images/7d187b50de3488.webp",
+        "thumb": "/images/thumbs/7d187b50de3488.webp",
+        "width": 2048,
+        "height": 2021,
+        "originalWidth": 2048,
+        "originalHeight": 2021,
+        "sha256": "d8b30b9f86fe30656f44dd013cd0212554fab2ec440ec8fe73ee9962a54ca367",
+        "bytes": 200068
+      },
+      {
+        "src": "/images/aea85dd8fce627.webp",
+        "thumb": "/images/thumbs/aea85dd8fce627.webp",
+        "width": 1280,
+        "height": 1280,
+        "originalWidth": 1280,
+        "originalHeight": 1280,
+        "sha256": "7d3d50051cc67206a45b2ce8a90a77cffb2c93122663c97252525e969eec52bc",
+        "bytes": 98810
+      },
+      {
+        "src": "/images/afebe9707f487c.webp",
+        "thumb": "/images/thumbs/afebe9707f487c.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "10bb3cef9af33e120f30c6ae4333962123fa620ca675171274a35b523419e71f",
+        "bytes": 171952
+      },
+      {
+        "src": "/images/1fbafaddaf5047.webp",
+        "thumb": "/images/thumbs/1fbafaddaf5047.webp",
+        "width": 1152,
+        "height": 2048,
+        "originalWidth": 1152,
+        "originalHeight": 2048,
+        "sha256": "416d977bbe38633b97ae736dd12e008389db37ce4dcdf80fa1774df0eb305848",
+        "bytes": 326354
+      },
+      {
+        "src": "/images/17d13e3eb9aa0c.webp",
+        "thumb": "/images/thumbs/17d13e3eb9aa0c.webp",
+        "width": 2048,
+        "height": 1152,
+        "originalWidth": 2048,
+        "originalHeight": 1152,
+        "sha256": "cd9dde362a88db63e6aed4f379e7ea7bdf4f008851caf8ba759e3feff29d89ff",
+        "bytes": 222750
+      },
+      {
+        "src": "/images/35b2c094804f64.webp",
+        "thumb": "/images/thumbs/35b2c094804f64.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "de335ef05514d1cd0dd76daf103294ad7f4bd19f28bda623df0a89563d6b132e",
+        "bytes": 308302
+      },
+      {
+        "src": "/images/c8bc5a4e137236.webp",
+        "thumb": "/images/thumbs/c8bc5a4e137236.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "b6f1ca75a644ee4aebe8e4d78ad1ab8ad47cad31a6fd9f8016c790cfed16d2b5",
+        "bytes": 496808
+      },
+      {
+        "src": "/images/3f48445204ab82.webp",
+        "thumb": "/images/thumbs/3f48445204ab82.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "6908c7208cac0f963c25701662631c9e3d69476c9bb669938db68356beac5ec0",
+        "bytes": 695376
+      },
+      {
+        "src": "/images/80fc2d26537771.webp",
+        "thumb": "/images/thumbs/80fc2d26537771.webp",
+        "width": 2048,
+        "height": 1365,
+        "originalWidth": 2048,
+        "originalHeight": 1365,
+        "sha256": "fb71909a9a5002538ee6c33854f126baf9e8b33b37a62107fa03b69a1a38197c",
+        "bytes": 170366
+      },
+      {
+        "src": "/images/b3a93300e52a72.webp",
+        "thumb": "/images/thumbs/b3a93300e52a72.webp",
+        "width": 2048,
+        "height": 1536,
+        "originalWidth": 2048,
+        "originalHeight": 1536,
+        "sha256": "764b7b6d072cad6b521bca965a0e8cc426662c68ff3dfb46cc9324c32ff9aa29",
+        "bytes": 381978
+      },
+      {
+        "src": "/images/05c86af9d1856a.webp",
+        "thumb": "/images/thumbs/05c86af9d1856a.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "8135d545000155b6d62baf064c8dd0b5f7a443739a47f3cd5120bb23301d05e2",
+        "bytes": 676348
+      },
+      {
+        "src": "/images/82929bc33f898b.webp",
+        "thumb": "/images/thumbs/82929bc33f898b.webp",
+        "width": 1365,
+        "height": 2048,
+        "originalWidth": 1365,
+        "originalHeight": 2048,
+        "sha256": "a921a1a86aa36cd66a75cd7199be637998a17eea7ba005e23394d9c59249daef",
+        "bytes": 247170
+      },
+      {
+        "src": "/images/3b75da45b88182.webp",
+        "thumb": "/images/thumbs/3b75da45b88182.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "8cd23dede9b11cf6848f319edd1ff604530edeca7b6b7b52dbe3dffb31151394",
+        "bytes": 375744
+      },
+      {
+        "src": "/images/48928c90ca32fe.webp",
+        "thumb": "/images/thumbs/48928c90ca32fe.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "f20a863584153b3b98f15e212ee7380260db1e5b8a1d0ef92dda4ef4bc16dc40",
+        "bytes": 279670
+      },
+      {
+        "src": "/images/2db8dca7eb7ae9.webp",
+        "thumb": "/images/thumbs/2db8dca7eb7ae9.webp",
+        "width": 1536,
+        "height": 2048,
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "sha256": "1caa6d8a50cc80aea1a927598dd1fd3cae9e803878cff286149b9318e706c83c",
+        "bytes": 267392
+      },
+      {
+        "src": "/images/e43c8d5dd388d7.webp",
+        "thumb": "/images/thumbs/e43c8d5dd388d7.webp",
+        "width": 2048,
+        "height": 1536,
+        "originalWidth": 2048,
+        "originalHeight": 1536,
+        "sha256": "bfa4293f14f48e5e2673c7c90c04e37591355e1f43ce56428c25ef2c78c8c50b",
+        "bytes": 415210
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/zitao-liang-1a5918309/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/ZitaoLiang"
+      }
+    ],
+    "carouselCaptions": [
+      "Zitao's first 22nm Tapout",
+      "Zitao's calligraphy"
+    ],
+    "source": "https://www.tudemi.com/zitao-liang"
+  },
+  {
+    "id": "pepijn-kremers",
+    "name": "Pepijn Kremers",
+    "html": "<h1>Pepijn Kremers</h1>\n<p><strong>PhD Candidate @ TU Delft </strong></p><p>Pepijn Kremers received his Bachelor's degree in Electrical Engineering from Delft University of Technology in 2023. In 2025, he received his Master's degree in Computer &amp; Embedded Systems Engineering, also from Delft University of Technology. During his studies, he worked as a teaching assistant for courses, from these programs, covering telecommunications, signal processing, systems engineering, and software engineering.</p><p>Currently, he is a PhD candidate at the microelectronics department of Delft University of Technology. More specifically, he works both in the Lab of Efficient Machine Intelligence (EMI) within the ELCA research group, and at NXP Semiconductors in Eindhoven. His research interests include low-power computing, analog circuit calibration, AI accelerators, hardware/software co-design, and signal processing.</p><br/><br/>",
+    "images": [
+      {
+        "src": "/images/8676208c950576.webp",
+        "thumb": "/images/thumbs/8676208c950576.webp",
+        "width": 1280,
+        "height": 1280,
+        "originalWidth": 1280,
+        "originalHeight": 1280,
+        "sha256": "a106359ff5c445ee78e187165be9378cd8b10a3a7e219d23b23c597f49120de4",
+        "bytes": 133028
+      }
+    ],
+    "links": [],
+    "carouselCaptions": [],
+    "source": "https://www.tudemi.com/pepijn-kremers"
+  }
+]

@@ -1,0 +1,430 @@
+{
+  "members": [
+    {
+      "id": "chang-gao",
+      "name": "Chang Gao",
+      "role": "Group leader",
+      "detail": "Assistant Professor of Edge AI",
+      "image": "/images/24f427b3eb9474.webp",
+      "url": "https://gaochangw.github.io",
+      "links": [
+        {
+          "label": "https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&hl=en",
+          "url": "https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&hl=en"
+        },
+        {
+          "label": "https://www.linkedin.com/in/gaochangw",
+          "url": "https://www.linkedin.com/in/gaochangw"
+        },
+        {
+          "label": "https://gaochangw.github.io",
+          "url": "https://gaochangw.github.io"
+        }
+      ],
+      "bioHtml": "<h1>Dr. Chang Gao</h1>\n<p><strong>Assistant Professor of Edge AI @  TU Delft</strong></p><p>Department of Microelectronics, Faculty of EEMCS</p><p><strong>Email:</strong> Chang.Gao@tudelft.nl</p><p><strong>Google Scholar: </strong><a href=\"https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&amp;hl=en\">https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&amp;hl=en</a></p><p><strong>LinkedIn:</strong> <a href=\"https://www.linkedin.com/in/gaochangw\">https://www.linkedin.com/in/gaochangw</a></p><p><strong>Personal Website: </strong><a href=\"https://gaochangw.github.io\">https://gaochangw.github.io</a></p>"
+    },
+    {
+      "id": "yizhuo-wu",
+      "name": "Yizhuo Wu",
+      "role": "PhD researcher",
+      "detail": "",
+      "image": "/images/b5334890e6bfd8.webp",
+      "url": "https://scholar.google.com/citations?user=ZIScikwAAAAJ&hl=nl&oi=ao",
+      "links": [
+        {
+          "label": "Wu, Yizhuo",
+          "url": "https://scholar.google.com/citations?user=ZIScikwAAAAJ&hl=nl&oi=ao"
+        }
+      ],
+      "sourceText": "Wu, Yizhuo"
+    },
+    {
+      "id": "ang-li",
+      "name": "Ang Li",
+      "role": "PhD researcher",
+      "detail": "",
+      "image": "/images/b722851b018e16.webp",
+      "url": "https://angme.org",
+      "links": [
+        {
+          "label": "Li, Ang",
+          "url": "https://angme.org"
+        }
+      ],
+      "sourceText": "Li, Ang"
+    },
+    {
+      "id": "yi-zhu",
+      "name": "Yi Zhu",
+      "role": "PhD researcher",
+      "detail": "",
+      "image": "/images/ab9dc1a1ae4620.webp",
+      "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1050",
+      "links": [
+        {
+          "label": "Zhu, Yi",
+          "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1050"
+        }
+      ],
+      "sourceText": "Zhu, Yi"
+    },
+    {
+      "id": "zitao-liang",
+      "name": "Zitao Liang",
+      "role": "PhD researcher",
+      "detail": "",
+      "image": "/images/f1144439056158.webp",
+      "url": "/zitao-liang/",
+      "links": [
+        {
+          "label": "Liang, Zitao",
+          "url": "/zitao-liang/"
+        }
+      ],
+      "sourceText": "Liang, Zitao"
+    },
+    {
+      "id": "pepijn-kremers",
+      "name": "Pepijn Kremers",
+      "role": "PhD researcher",
+      "detail": "",
+      "image": "/images/7b854ed20bf534.webp",
+      "url": "/pepijn-kremers/",
+      "links": [
+        {
+          "label": "Kremers, Pepijn",
+          "url": "/pepijn-kremers/"
+        }
+      ],
+      "sourceText": "Kremers, Pepijn"
+    },
+    {
+      "id": "jiaqi-shen",
+      "name": "Jiaqi Shen",
+      "role": "PhD researcher",
+      "detail": "Co-supervised with Dr. Qinwen Fan",
+      "image": "/images/5b639cb1d6a144.webp",
+      "url": "https://ectm.tudelft.nl/People/bio.php?id=1072",
+      "links": [
+        {
+          "label": "Shen, Jiaqi (",
+          "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
+        },
+        {
+          "label": "Qinwen Fan",
+          "url": "https://microelectronics.tudelft.nl/People/bio.php?id=856"
+        },
+        {
+          "label": ")",
+          "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
+        }
+      ],
+      "sourceText": "Shen, Jiaqi (Co-supervised with Dr. Qinwen Fan)"
+    },
+    {
+      "id": "nicole-rosi",
+      "name": "Nicole Rosi",
+      "role": "PhD researcher",
+      "detail": "Co-supervised with Dr. Marco Zuniga",
+      "image": "/images/d65c2a0382b4fb.webp",
+      "url": "https://www.tudelft.nl/staff/n.rosi/",
+      "links": [
+        {
+          "label": "Rosi, Nicole",
+          "url": "https://www.tudelft.nl/staff/n.rosi/"
+        },
+        {
+          "label": "Marco Zuniga",
+          "url": "https://www.tudelft.nl/en/staff/m.a.zunigazamalloa/"
+        },
+        {
+          "label": ")",
+          "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
+        }
+      ],
+      "sourceText": "Rosi, Nicole (Co-supervised with Dr. Marco Zuniga)"
+    },
+    {
+      "id": "yifan-liu",
+      "name": "Yifan Liu",
+      "role": "PhD researcher",
+      "detail": "Starting on Oct 1",
+      "image": "/images/38bafaa0ab0cbc.webp",
+      "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1174",
+      "links": [
+        {
+          "label": "Liu, Yifan",
+          "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1174"
+        }
+      ],
+      "sourceText": "Liu, Yifan (Staring on Oct 1)"
+    },
+    {
+      "id": "casper-hamster",
+      "name": "Casper Hamster",
+      "role": "MSc student",
+      "detail": "2026",
+      "image": "/images/9cbe02df0e22c2.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2019",
+      "links": [
+        {
+          "label": "Hamster, Casper",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2019"
+        }
+      ],
+      "sourceText": "Hamster, Casper (2026)"
+    },
+    {
+      "id": "gauthier-gluckmann",
+      "name": "Gauthier Gluckmann",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/adf044f983d908.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2049",
+      "links": [
+        {
+          "label": "Gluckmann, Gauthier",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2049"
+        }
+      ],
+      "sourceText": "Gluckmann, Gauthier (2027)"
+    },
+    {
+      "id": "hai-yu",
+      "name": "Hai Yu",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/38a7e07c665782.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2053",
+      "links": [
+        {
+          "label": "Yu, Hai",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2053"
+        }
+      ],
+      "sourceText": "Yu, Hai (2027)"
+    },
+    {
+      "id": "keerthana-menon",
+      "name": "Keerthana Menon",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/9e78178da2f356.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2054",
+      "links": [
+        {
+          "label": "Menon, Keerthana",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2054"
+        }
+      ],
+      "sourceText": "Menon, Keerthana (2027)"
+    },
+    {
+      "id": "enxuan-tang",
+      "name": "Enxuan Tang",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/ea89a6180b411c.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2063",
+      "links": [
+        {
+          "label": "Tang, Enxuan",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2063"
+        }
+      ],
+      "sourceText": "Tang, Enxuan (2027)"
+    },
+    {
+      "id": "yaonan-hu",
+      "name": "Yaonan Hu",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/6ff3e7c9e4d6b0.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2062",
+      "links": [
+        {
+          "label": "Hu, Yaonan",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2062"
+        }
+      ],
+      "sourceText": "Hu, Yaonan (2027)"
+    },
+    {
+      "id": "shanghong-lin",
+      "name": "Shanghong Lin",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/fc2960401b2c46.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2064",
+      "links": [
+        {
+          "label": "Lin, Shanghong",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2064"
+        }
+      ],
+      "sourceText": "Lin, Shanghong (2027)"
+    },
+    {
+      "id": "mingwu-liu",
+      "name": "Mingwu Liu",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/82a722a445446e.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2099",
+      "links": [
+        {
+          "label": "Liu, Mingwu",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2099"
+        }
+      ],
+      "sourceText": "Liu, Mingwu (2027)"
+    },
+    {
+      "id": "daniel-tyukov",
+      "name": "Daniel Tyukov",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/bb8780aa34c7b5.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2101",
+      "links": [
+        {
+          "label": "Tyukov, Daniel",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2101"
+        }
+      ],
+      "sourceText": "Tyukov, Daniel (2027)"
+    },
+    {
+      "id": "yuting-dong",
+      "name": "Yuting Dong",
+      "role": "MSc student",
+      "detail": "2027",
+      "image": "/images/cb7a2a9c3faccc.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2102",
+      "links": [
+        {
+          "label": "Dong, Yuting",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2102"
+        }
+      ],
+      "sourceText": "Dong, Yuting (2027)"
+    },
+    {
+      "id": "guorui-lu",
+      "name": "Guorui Lu",
+      "role": "Visitor",
+      "detail": "Visiting PhD, Leiden University",
+      "image": "/images/b83897d6f6b79d.webp",
+      "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1121",
+      "links": [
+        {
+          "label": "Lu, Guorui",
+          "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1121"
+        },
+        {
+          "label": ")",
+          "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1121"
+        }
+      ],
+      "sourceText": "Lu, Guorui (Visiting PhD, Leiden University)"
+    },
+    {
+      "id": "seyed-shahab-bozorgzadeh",
+      "name": "Seyed Shahab Bozorgzadeh",
+      "role": "Visitor",
+      "detail": "Visiting MSc, Università di Bologna",
+      "image": "/images/f1fe2beaccff69.webp",
+      "url": "https://www.linkedin.com/in/shahab-bzg/",
+      "links": [
+        {
+          "label": "Seyed Shahab Bozorgzadeh",
+          "url": "https://www.linkedin.com/in/shahab-bzg/"
+        }
+      ],
+      "sourceText": "Seyed Shahab Bozorgzadeh (Visiting MSc, Università di Bologna)"
+    }
+  ],
+  "alumni": [
+    {
+      "text": "Wang, Xinling (2026)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=2017\">Wang, Xinling</a> (2026)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2017"
+    },
+    {
+      "text": "Agarwal, Navya (2026)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1899\">Agarwal, Navya</a> (2026)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1899"
+    },
+    {
+      "text": "Patil, Siddharth (2026)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1892\">Patil, Siddharth</a> (2026)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1892"
+    },
+    {
+      "text": "de Beer, Arne (2025, now @ AME, Eindhoven, The Netherlands)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1759\">de Beer, Arne</a> (2025, now @ AME, Eindhoven, The Netherlands)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1759"
+    },
+    {
+      "text": "Chen, Bao (2025)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1743\">Chen, Bao</a> (2025)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1743"
+    },
+    {
+      "text": "Qian, Kun (2025)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1747\">Qian, Kun</a> (2025)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1747"
+    },
+    {
+      "text": "Versluis, Manno (2025)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1760\">Versluis, Manno</a> (2025)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1760"
+    },
+    {
+      "text": "Han, Tao (2025, now @ SmartSens, Shanghai, China)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1736\">Han, Tao</a> (2025, now @ SmartSens, Shanghai, China)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1736"
+    },
+    {
+      "text": "Yang, Ruishen (2025, now @ Huawei, Shanghai, China)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1864\">Yang, Ruishen</a> (2025, now @ Huawei, Shanghai, China)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1864"
+    },
+    {
+      "text": "Huanqiang Duan (2025, now @ Sandisk, Shanghai, China)",
+      "html": "<li><p>Huanqiang Duan (2025, now @ Sandisk, Shanghai, China)</p></li>",
+      "url": ""
+    },
+    {
+      "text": "Sjoerd Groot (2024, now @ TEST-OK, Rotterdam, The Netherlands)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1673\">Sjoerd Groot</a> (2024, now @ TEST-OK, Rotterdam, The Netherlands)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1673"
+    },
+    {
+      "text": "Liao, Xinyu (2024)",
+      "html": "<li><p><a href=\"http://microelectronics.tudelft.nl/Education/bio.php?id=1477\">Liao, Xinyu</a> (2024)</p></li>",
+      "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1477"
+    },
+    {
+      "text": "Wu, Haolin (2024)",
+      "html": "<li><p><a href=\"https://elca.tudelft.nl/Education/bio.php?id=1698\">Wu, Haolin</a> (2024)</p></li>",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=1698"
+    },
+    {
+      "text": "Jian, Yuhang (2023)",
+      "html": "<li><p><a href=\"http://microelectronics.tudelft.nl/Education/bio.php?id=1457\">Jian, Yuhang</a> (2023)</p></li>",
+      "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1457"
+    },
+    {
+      "text": "Fu, Peng (2023)",
+      "html": "<li><p><a href=\"http://microelectronics.tudelft.nl/Education/bio.php?id=1458\">Fu, Peng</a> (2023)</p></li>",
+      "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1458"
+    },
+    {
+      "text": "Wu, Yizhuo (2023, now a PhD in EMI)",
+      "html": "<li><p><a href=\"http://microelectronics.tudelft.nl/Education/bio.php?id=1456\">Wu, Yizhuo</a> (2023, now a PhD in EMI)</p></li>",
+      "url": "http://microelectronics.tudelft.nl/Education/bio.php?id=1456"
+    }
+  ],
+  "alumniImage": "/images/d2845bf1674e02.webp"
+}

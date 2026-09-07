@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+import { site, href } from '../lib/site';
+import Arrow from '../components/Arrow.astro';
+import legacy from '../data/legacy.json';
+interface Props { title?: string; description?: string; active?: string; }
+const { title, description = site.description, active = '' } = Astro.props;
+const pageTitle = title ? `${title} — EMI Lab · TU Delft` : 'EMI Lab — Efficient Machine Intelligence at TU Delft';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const navigation = [['Research','/research/'],['People','/people/'],['Publications','/publications/'],['News','/news/'],['Gallery','/gallery/']];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title><meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#101f31" />
+    <meta property="og:title" content={pageTitle} /><meta property="og:description" content={description} />
+    <meta property="og:type" content="website" /><meta property="og:url" content={canonical} />
+    <link rel="icon" href={href('/favicon.svg')} type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="EMI Lab news" href={href('/feed.xml')} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner wrap">
+        <a href={href('/')} class="wordmark" aria-label="EMI Lab home"><img class="emi-logo" src={href(legacy.logo)} alt="EMI" width="132" height="48" /><span class="brand-divider"></span><span class="brand-caption">Efficient Machine<br />Intelligence <b>TU Delft</b></span></a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          {navigation.map(([label,path]) => <a href={href(path)} aria-current={active === label ? 'page' : undefined}>{label}</a>)}
+          <a class="nav-join" href={href('/join-us/')} aria-current={active === 'Join us' ? 'page' : undefined}>Join us <Arrow diagonal size={15} /></a>
+        </nav>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+      </div>
+      <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden>
+        {[...navigation,['MSc projects','/msc-projects/'],['Grants & awards','/grants-awards/'],['Join us','/join-us/']].map(([label,path]) => <a href={href(path)}>{label}<Arrow /></a>)}
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap footer-top">
+        <div class="footer-about"><a class="footer-logo" href={href('/')}>EMI<span>.</span></a><p>Lab of Efficient Machine Intelligence<br />Delft University of Technology</p><p class="footer-address">Department of Microelectronics · EEMCS<br />Mekelweg 4, 2628 CD Delft<br />The Netherlands</p></div>
+        <div><p class="footer-label">Explore</p><a href={href('/research/')}>Research</a><a href={href('/publications/')}>Publications</a><a href={href('/people/')}>Our people</a><a href={href('/grants-awards/')}>Grants & awards</a></div>
+        <div><p class="footer-label">The lab</p><a href={href('/news/')}>News & updates</a><a href={href('/gallery/')}>Life at EMI</a><a href={href('/msc-projects/')}>MSc projects</a><a href={href('/join-us/')}>Join us</a></div>
+        <div><p class="footer-label">Connect</p><a href={`mailto:${site.email}`}>Email the lab <Arrow diagonal size={14} /></a><a href={site.github}>GitHub <Arrow diagonal size={14} /></a><a href={site.scholar}>Google Scholar <Arrow diagonal size={14} /></a><a href="https://microelectronics.tudelft.nl/People/bio.php?id=840">TU Delft profile <Arrow diagonal size={14} /></a></div>
+      </div>
+      <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} EMI Lab · Chang Gao</span><a href="mailto:gaochangw@outlook.com">Website contact: gaochangw@outlook.com</a><a href={href('/feed.xml')}>RSS feed <Arrow diagonal size={13} /></a></div>
+    </footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const menu = document.querySelector<HTMLElement>('#mobile-nav');
+      function closeMenu() { if (!toggle || !menu) return; toggle.setAttribute('aria-expanded','false'); toggle.setAttribute('aria-label','Open navigation'); menu.hidden = true; }
+      toggle?.addEventListener('click', () => { if (!menu) return; const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded',String(open)); toggle.setAttribute('aria-label',open ? 'Close navigation' : 'Open navigation'); menu.hidden = !open; });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
+      matchMedia('(min-width: 1025px)').addEventListener('change', e => { if(e.matches) closeMenu(); });
+    </script>
+  </body>
+</html>

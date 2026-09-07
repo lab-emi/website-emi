@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import Arrow from '../../components/Arrow.astro';
+import { href } from '../../lib/site';
+const entries = (await getCollection('news')).sort((a,b)=>b.data.date.getTime()-a.data.date.getTime());
+const categories = ['All',...new Set(entries.map(n=>n.data.category))];
+---
+<Layout title="News" active="News" description="Research results, awards, visitors and news from the Efficient Machine Intelligence lab at TU Delft.">
+  <PageIntro eyebrow="Updates & perspectives" title="News from EMI." description="New results, new conversations, and milestones along the way."><a class="text-link" href={href('/feed.xml')}>Follow via RSS <Arrow diagonal /></a></PageIntro>
+  <section class="wrap news-section"><div class="filter-bar" role="group" aria-label="News categories">{categories.map(c=><button class="filter-tab" data-category={c} aria-pressed={c==='All'}>{c}</button>)}</div><p class="filter-summary" aria-live="polite" id="news-count">{entries.length} stories · 2024–2026</p><div class="news-grid">{entries.map(entry=><div data-news-category={entry.data.category}><NewsCard entry={entry} /></div>)}</div></section>
+  <script>
+    const controls=[...document.querySelectorAll<HTMLButtonElement>('[data-category]')];
+    const items=[...document.querySelectorAll<HTMLElement>('[data-news-category]')];
+    controls.forEach(button=>button.addEventListener('click',()=>{ controls.forEach(b=>b.setAttribute('aria-pressed',String(b===button))); let count=0; items.forEach(i=>{i.hidden=button.dataset.category!=='All' && i.dataset.newsCategory!==button.dataset.category;if(!i.hidden) count++;}); document.querySelector('#news-count')!.textContent=`${count} ${count===1?'story':'stories'}`; }));
+  </script>
+</Layout>
+<style>.news-section{padding-bottom:90px}.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:45px 30px;margin-top:27px}@media(max-width:900px){.news-grid{grid-template-columns:1fr 1fr;gap:35px 23px}}@media(max-width:600px){.news-grid{grid-template-columns:1fr;gap:35px}.filter-tab{padding:7px 11px;font-size:.76rem}}</style>
