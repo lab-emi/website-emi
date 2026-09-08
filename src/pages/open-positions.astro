@@ -1,24 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageIntro from '../components/PageIntro.astro';
+import { href } from '../lib/site';
+const destination = href('/join-us/#jobs');
 ---
-<Layout title="Open Positions" active="Open Positions" description="PhD and postdoctoral opportunities at the EMI lab, TU Delft. Stay tuned for future openings.">
-  <PageIntro eyebrow="Research careers at EMI" title="Open Positions" />
-  <section class="wrap positions-section" aria-labelledby="openings-title">
-    <div class="openings-panel">
-      <h2 id="openings-title">PhD &amp; Postdoc<br />Openings</h2>
-      <div class="openings-message">
-        <p class="stay-tuned">Stay tuned.</p>
-        <p>Future PhD and postdoctoral openings at EMI will be posted here.</p>
-      </div>
-    </div>
-  </section>
-</Layout>
-<style>
-  .positions-section{padding-bottom:100px}
-  .openings-panel{display:grid;grid-template-columns:1fr 1.35fr;gap:50px;align-items:start;background:var(--pale);border-top:2px solid var(--blue);padding:48px 52px 54px}
-  .openings-panel h2{font-size:1.65rem;line-height:1.4;letter-spacing:-.025em;margin:4px 0 0}
-  .stay-tuned{font-family:var(--serif);font-size:3rem;line-height:1.15;color:var(--blue);margin-bottom:18px}
-  .openings-message p:last-child{max-width:390px;color:var(--muted);font-size:1rem;line-height:1.8;margin:0}
-  @media(max-width:700px){.positions-section{padding-bottom:65px}.openings-panel{grid-template-columns:1fr;gap:28px;padding:30px 26px 36px}.openings-panel h2{font-size:1.4rem}.openings-panel h2 br{display:none}.stay-tuned{font-size:2.6rem}}
-</style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job opportunities — EMI Lab</title>
+    <link rel="canonical" href={new URL(href('/join-us/'), Astro.site)} />
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body><p><a href={destination}>Continue to job opportunities at EMI</a></p></body>
+</html>

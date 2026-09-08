@@ -8,6 +8,62 @@ import legacy from '../data/legacy.json';
 import { getCollection } from 'astro:content';
 const openProjects=(await getCollection('projects')).filter(p=>p.data.status==='Open');
 ---
-<Layout title="Join us" active="Join us" description="Explore MSc thesis projects, PhD opportunities and research collaborations with the EMI lab at TU Delft."><PageIntro eyebrow="Your next chapter" title="Bring your curiosity." description="Interested in efficient AI, neuromorphic computing or algorithm–hardware co-design? Explore ways to work with the EMI lab." /><section class="wrap opportunities"><article class="opportunity"><div class="opportunity-label">01 / Master's students<span class="pill">{openProjects.length} open projects</span></div><h2>A thesis with<br />something to build.</h2><p>Work on learning-based calibration, FPGA accelerators and efficient embedded intelligence. Each project includes a description, preferred skills and a contact person.</p><p>Send your CV and transcripts to <a href={`mailto:${site.email}`}>{site.email}</a> to schedule a conversation.</p><a class="button" href={href('/msc-projects/')}>Explore MSc projects <Arrow /></a></article><article class="opportunity"><div class="opportunity-label">02 / PhD & postdoctoral researchers</div><h2>Grow your<br />research direction.</h2><p>PhD and postdoctoral openings will be announced on our Open Positions page. Stay tuned for new opportunities in our research areas.</p><p>For enquiries about vacancies and potential research interests, contact Dr. Chang Gao.</p><a class="text-link" href={href('/open-positions/')}>PhD &amp; postdoc openings <Arrow /></a><img class="opportunity-image" src={thumb(legacy.joinImages[0].src)} alt="Microchip illustration from the EMI opportunities page" width="800" height="450" loading="lazy" /></article></section><section class="section-soft section"><div class="wrap collaborate"><img src={thumb(gallery[10].image)} alt={gallery[10].caption} width="800" height="650" loading="lazy" /><div><p class="eyebrow">Academic & industry collaboration</p><h2>Different perspectives.<br /><em>Shared questions.</em></h2><p>Our research connects machine learning with circuits, hardware architectures and real-world sensing systems. If your work intersects with ours, we would be glad to hear from you.</p><a class="text-link" href={`mailto:${site.email}?subject=Research%20collaboration%20with%20EMI`}>Start a conversation <Arrow diagonal /></a><a class="text-link" href={href('/research/')}>Explore our research <Arrow /></a></div></div></section><section class="section wrap" id="contact"><div class="section-title"><div><p class="eyebrow">Find us</p><h2>At home in Delft.</h2></div></div><div class="contact-layout"><div><h3>Lab of Efficient Machine Intelligence</h3><p>Electronic Circuits and Architecture Group<br />Department of Microelectronics<br />Faculty of EEMCS, TU Delft</p><p>Mekelweg 4<br />2628 CD Delft<br />The Netherlands</p><a class="text-link" href={`mailto:${site.email}`}>{site.email} <Arrow diagonal size={15} /></a><a class="text-link" href="https://microelectronics.tudelft.nl/People/bio.php?id=840">TU Delft profile <Arrow diagonal size={15} /></a></div><iframe title="Map: TU Delft Faculty of EEMCS, Mekelweg 4" src={legacy.contactEmbeds[0]} loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></section></Layout>
-<style>.opportunities{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding-bottom:75px}.opportunity{padding-top:26px;border-top:1px solid var(--line)}.opportunity-label{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--blue);font-weight:650;margin-bottom:29px;gap:15px}.opportunity-label .pill{font-size:.75rem;font-weight:500}.opportunity h2{font-size:2.65rem;line-height:1.2;margin-bottom:25px}.opportunity p{color:var(--muted);font-size:.92rem;line-height:1.9;max-width:510px}.opportunity p a{color:var(--blue)}.opportunity .button{margin-top:12px}.opportunity .text-link{font-size:.8rem}.opportunity-image{width:100%;height:130px;object-fit:cover;object-position:50% 55%;margin-top:25px;border-radius:3px}.collaborate{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.collaborate img{width:100%;height:380px;object-fit:cover;border-radius:3px}.collaborate h2{font-size:2.45rem;line-height:1.2}.collaborate h2 em{font-family:var(--serif);font-weight:400;color:var(--blue)}.collaborate p:not(.eyebrow){font-size:.92rem;color:var(--muted);line-height:1.85}.collaborate .text-link{font-size:.81rem;display:flex;justify-content:space-between;max-width:260px;margin-top:10px}.contact-layout{display:grid;grid-template-columns:1fr 1.35fr;gap:75px}.contact-layout h3{font-size:1.13rem;line-height:1.5}.contact-layout p{font-size:.9rem;line-height:1.9;color:var(--muted)}.contact-layout .text-link{display:flex;justify-content:space-between;max-width:280px;font-size:.8rem;margin-top:5px}.contact-layout iframe{width:100%;height:350px;border:0;border-radius:3px;background:var(--pale)}@media(max-width:850px){.opportunities{gap:35px}.opportunity h2{font-size:2.2rem}.opportunity-label{flex-wrap:wrap}.collaborate{gap:35px}.collaborate h2{font-size:2rem}.contact-layout{gap:40px}}@media(max-width:600px){.opportunities{grid-template-columns:1fr;gap:40px;padding-bottom:50px}.opportunity h2 br{display:none}.opportunity h2{font-size:2rem}.collaborate{grid-template-columns:1fr}.collaborate img{height:300px}.contact-layout{grid-template-columns:1fr;gap:30px}.contact-layout iframe{height:300px}}
+<Layout title="Join us" active="Join us" description="Explore PhD and postdoctoral openings, MSc thesis projects and research collaborations with the EMI lab at TU Delft.">
+  <PageIntro eyebrow="Your next chapter" title="Join us" description="Interested in efficient AI, neuromorphic computing or algorithm–hardware co-design? Explore ways to work with the EMI lab." />
+  <div class="wrap opportunities">
+    <section class="opportunity jobs-highlight" id="jobs" aria-labelledby="jobs-title">
+      <div class="opportunity-heading">
+        <p class="eyebrow">Job opportunities</p>
+        <h2 id="jobs-title">PhD &amp; Postdoc<br />Openings</h2>
+        <img class="opportunity-image" src={thumb(legacy.joinImages[0].src)} alt="Microchip illustration from the EMI opportunities page" width="800" height="450" loading="lazy" />
+      </div>
+      <div class="opportunity-content">
+        <p class="stay-tuned">Stay tuned.</p>
+        <p>Future PhD and postdoctoral openings at EMI will be posted here.</p>
+        <p>For enquiries about vacancies and potential research interests, contact Dr. Chang Gao.</p>
+        <a class="text-link" href={`mailto:${site.email}?subject=PhD%20and%20postdoc%20opportunities%20at%20EMI`}>Enquire about opportunities <Arrow diagonal /></a>
+      </div>
+    </section>
+    <section class="opportunity msc-highlight" id="msc-projects" aria-labelledby="msc-title">
+      <div class="opportunity-heading">
+        <p class="eyebrow">Master's students</p>
+        <h2 id="msc-title">MSc Projects</h2>
+        <span class="pill">{openProjects.length} open projects</span>
+      </div>
+      <div class="opportunity-content">
+        <h3>A thesis with something to build.</h3>
+        <p>Work on learning-based calibration, FPGA accelerators and efficient embedded intelligence. Each project includes a description, preferred skills and a contact person.</p>
+        <p>Send your CV and transcripts to <a href={`mailto:${site.email}`}>{site.email}</a> to schedule a conversation.</p>
+        <a class="button" href={href('/msc-projects/')}>Explore MSc Projects <Arrow /></a>
+      </div>
+    </section>
+  </div>
+<section class="section-soft section"><div class="wrap collaborate"><img src={thumb(gallery[10].image)} alt={gallery[10].caption} width="800" height="650" loading="lazy" /><div><p class="eyebrow">Academic & industry collaboration</p><h2>Different perspectives.<br /><em>Shared questions.</em></h2><p>Our research connects machine learning with circuits, hardware architectures and real-world sensing systems. If your work intersects with ours, we would be glad to hear from you.</p><a class="text-link" href={`mailto:${site.email}?subject=Research%20collaboration%20with%20EMI`}>Start a conversation <Arrow diagonal /></a><a class="text-link" href={href('/research/')}>Explore our research <Arrow /></a></div></div></section><section class="section wrap" id="contact"><div class="section-title"><div><p class="eyebrow">Find us</p><h2>At home in Delft.</h2></div></div><div class="contact-layout"><div><h3>Lab of Efficient Machine Intelligence</h3><p>Electronic Circuits and Architecture Group<br />Department of Microelectronics<br />Faculty of EEMCS, TU Delft</p><p>Mekelweg 4<br />2628 CD Delft<br />The Netherlands</p><a class="text-link" href={`mailto:${site.email}`}>{site.email} <Arrow diagonal size={15} /></a><a class="text-link" href="https://microelectronics.tudelft.nl/People/bio.php?id=840">TU Delft profile <Arrow diagonal size={15} /></a></div><iframe title="Map: TU Delft Faculty of EEMCS, Mekelweg 4" src={legacy.contactEmbeds[0]} loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></section>
+</Layout>
+
+<style>
+  .opportunities{display:grid;gap:28px;padding-bottom:75px}
+  .opportunity{display:grid;grid-template-columns:1fr 1.25fr;gap:55px;padding:42px 46px;border-radius:4px}
+  .opportunity .eyebrow{font-size:.875rem;letter-spacing:.08em;margin-bottom:18px}
+  .opportunity h2{font-size:2.3rem;line-height:1.2;margin-bottom:22px}
+  .opportunity h3{font-size:1.35rem;line-height:1.4;margin-bottom:18px}
+  .opportunity-content{align-self:center}
+  .opportunity-content>p:not(.stay-tuned){font-size:1rem;line-height:1.85;margin-bottom:17px}
+  .opportunity .text-link{font-size:.875rem}
+  .jobs-highlight{background:var(--ink);color:white;border-top:3px solid var(--cyan)}
+  .jobs-highlight .eyebrow,.jobs-highlight .stay-tuned{color:#83d4ef}
+  .jobs-highlight .opportunity-content>p:not(.stay-tuned){color:#d0dde7}
+  .jobs-highlight .text-link{border-color:#627b8e;color:#d8f1fb;margin-top:5px}
+  .jobs-highlight .text-link:hover{color:#83d4ef;border-color:#83d4ef}
+  .stay-tuned{font-family:var(--serif);font-size:2.8rem;line-height:1.15;margin-bottom:20px}
+  .opportunity-image{width:100%;max-width:350px;height:115px;object-fit:cover;object-position:50% 55%;margin-top:28px;border-radius:3px}
+  .msc-highlight{background:var(--pale);border:1px solid #c8dfe9}
+  .msc-highlight .eyebrow,.msc-highlight .pill{color:var(--blue)}
+  .msc-highlight .pill{font-size:.875rem;background:white}
+  .msc-highlight .opportunity-content>p{color:var(--muted)}
+  .msc-highlight p a{color:var(--blue);text-decoration:underline}
+  .msc-highlight .button{margin-top:8px}
+.collaborate{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.collaborate img{width:100%;height:380px;object-fit:cover;border-radius:3px}.collaborate h2{font-size:2.45rem;line-height:1.2}.collaborate h2 em{font-family:var(--serif);font-weight:400;color:var(--blue)}.collaborate p:not(.eyebrow){font-size:.92rem;color:var(--muted);line-height:1.85}.collaborate .text-link{font-size:.81rem;display:flex;justify-content:space-between;max-width:260px;margin-top:10px}.contact-layout{display:grid;grid-template-columns:1fr 1.35fr;gap:75px}.contact-layout h3{font-size:1.13rem;line-height:1.5}.contact-layout p{font-size:.9rem;line-height:1.9;color:var(--muted)}.contact-layout .text-link{display:flex;justify-content:space-between;max-width:280px;font-size:.8rem;margin-top:5px}.contact-layout iframe{width:100%;height:350px;border:0;border-radius:3px;background:var(--pale)}
+  @media(max-width:850px){.opportunity{gap:30px;padding:32px}.opportunity h2{font-size:2rem}.collaborate{gap:35px}.collaborate h2{font-size:2rem}.contact-layout{gap:40px}}
+  @media(max-width:650px){.opportunities{gap:22px;padding-bottom:50px}.opportunity{grid-template-columns:1fr;gap:26px;padding:28px 24px}.opportunity h2{font-size:1.9rem;margin-bottom:16px}.opportunity h2 br{display:none}.opportunity-image{height:100px;margin-top:20px}.stay-tuned{font-size:2.4rem}.opportunity-content>p:not(.stay-tuned){font-size:.95rem}.collaborate{grid-template-columns:1fr}.collaborate img{height:300px}.contact-layout{grid-template-columns:1fr;gap:30px}.contact-layout iframe{height:300px}}
 </style>
