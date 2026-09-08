@@ -6,9 +6,8 @@ if (carousel) {
   const toggle = carousel.querySelector<HTMLButtonElement>('[data-carousel-toggle]')!;
   const pauseIcon = toggle.querySelector<HTMLElement>('[data-pause-icon]')!;
   const playIcon = toggle.querySelector<HTMLElement>('[data-play-icon]')!;
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = reducedMotion.matches;
-  let hovered = carousel.matches(':hover');
+  // Start automatically; reduced-motion styles remove the crossfade animation.
+  let paused = false;
   let focused = carousel.contains(document.activeElement);
   let active = 0;
   let timer: number | undefined;
@@ -23,7 +22,7 @@ if (carousel) {
 
   function schedule() {
     window.clearTimeout(timer);
-    if (paused || hovered || focused || document.hidden || slides.length < 2) return;
+    if (paused || focused || document.hidden || slides.length < 2) return;
     timer = window.setTimeout(() => {
       // Keep the current image visible until another photo has loaded.
       for (let offset = 1; offset < slides.length; offset++) {
@@ -41,8 +40,6 @@ if (carousel) {
     }, 2000);
   }
 
-  carousel.addEventListener('mouseenter', () => { hovered = true; schedule(); });
-  carousel.addEventListener('mouseleave', () => { hovered = false; schedule(); });
   carousel.addEventListener('focusin', () => { focused = true; schedule(); });
   carousel.addEventListener('focusout', event => {
     focused = event.relatedTarget instanceof Node && carousel.contains(event.relatedTarget);
@@ -52,11 +49,6 @@ if (carousel) {
     paused = !paused;
     // An explicit Play action can resume after keyboard focus paused rotation.
     if (!paused) focused = false;
-    updateControl();
-    schedule();
-  });
-  reducedMotion.addEventListener('change', () => {
-    if (reducedMotion.matches) paused = true;
     updateControl();
     schedule();
   });
