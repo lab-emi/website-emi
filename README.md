@@ -39,6 +39,7 @@ npm run preview
 | Research directions and selected papers | `src/data/research.ts` |
 | Homepage slideshow photos, order and framing | `heroPhotos` in `src/pages/index.astro` (gallery photo IDs and object positions) |
 | Browser favicon | `public/favicon.png` |
+| Header logo | `public/images/emi-logo.svg` |
 | Shared contact details | `src/lib/site.ts` |
 | Colours, fonts and shared spacing | `src/styles/global.css` |
 | Shared header and footer | `src/layouts/Layout.astro` |
