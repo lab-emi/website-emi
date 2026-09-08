@@ -29,6 +29,7 @@ npm run preview
 | --- | --- |
 | News and announcements | `src/content/news/*.md` — one file per story |
 | MSc projects, descriptions and requirements | `src/content/projects/*.md` |
+| PhD & postdoc openings placeholder | `src/pages/open-positions.astro` |
 | Members, links and alumni | `src/data/people.json` |
 | Personal biographies and photo collections | `src/data/profiles.json` |
 | Publications, authors, venues and links | `src/data/publications.json` |
