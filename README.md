@@ -43,7 +43,7 @@ npm run preview
 | Colours, fonts and shared spacing | `src/styles/global.css` |
 | Shared header and footer | `src/layouts/Layout.astro` |
 
-The favicon is the supplied EMI logo centred on a white 2048 × 2048 canvas. The original 2048 × 1247 artwork is preserved without resizing or stretching. Update the version query in `src/layouts/Layout.astro` when replacing it so browsers fetch the new icon.
+The favicon is the supplied EMI logo centred on a transparent 2048 × 2048 canvas. The original 2048 × 1247 artwork and alpha channel are preserved without resizing or stretching. Update the version query in `src/layouts/Layout.astro` when replacing it so browsers fetch the new icon.
 
 Copy an existing Markdown file to add a news story or project. The block between `---` delimiters contains the metadata; the rest is the article body. Existing files use JSON syntax inside the frontmatter so field names and arrays are explicit. Keep news dates in `YYYY-MM-DD` format. News sorts automatically and enters the RSS feed. Content schemas catch invalid fields at build time.
 
