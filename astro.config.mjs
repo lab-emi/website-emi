@@ -3,7 +3,7 @@ import { unified } from '@astrojs/markdown-remark';
 import baseLinks from './scripts/remark-base-links.mjs';
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://lab-emi.github.io',
+  site: process.env.SITE_URL || 'https://www.tudemi.com',
   base: process.env.BASE_PATH || '/',
   output: 'static',
   trailingSlash: 'always',

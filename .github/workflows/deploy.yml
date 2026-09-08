@@ -1,14 +1,14 @@
 name: Publish to GitHub Pages
 
-# Publishing is manual while the new site is under review.
+# Publishing remains an explicit manual action.
 on:
   workflow_dispatch:
     inputs:
       use_custom_domain:
-        description: 'Publish for www.tudemi.com (only after domain setup is ready)'
+        description: 'Publish for the live www.tudemi.com domain (leave checked)'
         type: boolean
         required: true
-        default: false
+        default: true
 
 permissions:
   contents: read

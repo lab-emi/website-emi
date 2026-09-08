@@ -2,7 +2,7 @@
 
 The Lab of Efficient Machine Intelligence at TU Delft. A custom Astro website migrated from [tudemi.com](https://www.tudemi.com/) on 8 September 2026.
 
-GitHub Pages preview: [lab-emi.github.io/website-emi](https://lab-emi.github.io/website-emi/).
+Live site: [www.tudemi.com](https://www.tudemi.com/), hosted on GitHub Pages.
 
 The site builds to static HTML. It has no application server, database or paid service dependency. Local JavaScript handles publication search, citation copying, category filters, the mobile menu and the image viewer.
 
@@ -41,6 +41,8 @@ npm run preview
 | Colours, fonts and shared spacing | `src/styles/global.css` |
 | Shared header and footer | `src/layouts/Layout.astro` |
 
+The favicon is the supplied EMI logo centred on a white 2048 × 2048 canvas. The original 2048 × 1247 artwork is preserved without resizing or stretching. Update the version query in `src/layouts/Layout.astro` when replacing it so browsers fetch the new icon.
+
 Copy an existing Markdown file to add a news story or project. The block between `---` delimiters contains the metadata; the rest is the article body. Existing files use JSON syntax inside the frontmatter so field names and arrays are explicit. Keep news dates in `YYYY-MM-DD` format. News sorts automatically and enters the RSS feed. Content schemas catch invalid fields at build time.
 
 Upload an image to `public/images/` and a smaller version with the same filename to `public/images/thumbs/`. Use a root-relative path such as `/images/example.webp` in content. Internal links are automatically adjusted for GitHub Pages. Keep image captions and descriptive alt text meaningful.
@@ -55,22 +57,22 @@ The importer and migration archive are a historical snapshot, not a CMS. **Do no
 
 ## GitHub Pages
 
-The check workflow validates both the root URL and `/website-emi/` on pushes and pull requests. Publishing uses a separate **manual** workflow, so pushing content while the design is being reviewed does not publish the site.
+The check workflow validates both the root URL and `/website-emi/` on pushes and pull requests. Publishing uses a separate **manual** workflow, so pushing content does not publish the site automatically.
 
-To publish a GitHub Pages preview after review:
+To publish an update to the live site:
 
 1. In this repository, choose **Settings → Pages → Source → GitHub Actions**.
-2. Run **Actions → Publish to GitHub Pages**, leaving `use_custom_domain` unchecked.
-3. The site will use `https://lab-emi.github.io/website-emi/`.
+2. Run **Actions → Publish to GitHub Pages**, leaving `use_custom_domain` checked.
+3. The site uses `https://www.tudemi.com/`, with `/` as the base path and a `CNAME` file in the deployment.
 
-To reproduce this path locally:
+The project-path build is retained for validation or a future preview after removing the custom domain. To reproduce it locally:
 
 ```sh
 SITE_URL=https://lab-emi.github.io BASE_PATH=/website-emi npm run build
 SITE_URL=https://lab-emi.github.io BASE_PATH=/website-emi npm run validate
 ```
 
-When the approved site is ready for the existing domain, configure `www.tudemi.com` in GitHub Pages, update the domain's DNS and rerun the manual publishing workflow with `use_custom_domain` checked. It builds with `/` as the base and includes `CNAME`. No domain or DNS settings were changed during this migration. Follow GitHub's current [custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) and [workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+The production domain uses `www.tudemi.com` in GitHub Pages. Squarespace DNS points `www` to `lab-emi.github.io` with a CNAME, and the apex `@` uses GitHub's four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`. GitHub redirects the apex to `www`. Keep `use_custom_domain` checked while this domain is configured. Follow GitHub's current [custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) and [workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Migration and verification
 

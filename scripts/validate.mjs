@@ -4,7 +4,7 @@ import { parse } from 'parse5';
 
 const root = resolve('dist');
 const base = (process.env.BASE_PATH || '/').replace(/\/$/, '');
-const site = process.env.SITE_URL || 'https://lab-emi.github.io';
+const site = process.env.SITE_URL || 'https://www.tudemi.com';
 const errors = [];
 function walk(dir) { return readdirSync(dir, { withFileTypes: true }).flatMap(e=>e.isDirectory()?walk(join(dir,e.name)):[join(dir,e.name)]); }
 const files = walk(root);
