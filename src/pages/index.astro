@@ -10,7 +10,20 @@ import funding from '../data/funding.json';
 import publications from '../data/publications.json';
 import people from '../data/people.json';
 const news = (await getCollection('news')).sort((a,b)=>b.data.date.getTime()-a.data.date.getTime());
-const heroPhotos = ['photo-10','photo-11','photo-8','photo-16','photo-9','photo-2'].map(id=>gallery.find(photo=>photo.id===id)!);
+// Keep the two requested Chris photos first. Other featured people appear once;
+// Yizhuo has three photos. Position wide conference shots around the presenter.
+const heroPhotos = [
+  { id:'photo-9', position:'50% 50%' }, // Chang and Chris
+  { id:'photo-10', position:'50% 50%' }, // Yizhuo and Chris
+  { id:'photo-3', position:'15% 50%' }, // Ang Li
+  { id:'photo-4', position:'75% 50%' }, // Sjoerd Groot
+  { id:'photo-5', position:'95% 50%' }, // Manno Versluis
+  { id:'photo-6', position:'100% 50%' }, // Tao Han
+  { id:'photo-7', position:'65% 50%' }, // Siddharth Patil
+  { id:'photo-8', position:'45% 50%' }, // Arne de Beer
+  { id:'photo-1', position:'50% 50%' }, // Yizhuo at IMS 2024
+  { id:'photo-2', position:'50% 50%' }, // Yizhuo at IMS 2025
+].map(({id,position})=>({...gallery.find(photo=>photo.id===id)!,position}));
 const selected = ['OpenDPDv2:', 'BitFair:', 'Exploiting neuro-inspired'].map(prefix=>publications.find(p=>p.title.startsWith(prefix))!);
 ---
 <Layout>
@@ -24,7 +37,7 @@ const selected = ['OpenDPDv2:', 'BitFair:', 'Exploiting neuro-inspired'].map(pre
       <div class="hero-foot"><span class="location-mark">Delft, the Netherlands</span><span>Algorithms ↔ Hardware</span></div>
     </div>
     <figure class="hero-photo" data-hero-carousel role="group" aria-roledescription="carousel" aria-label="Life at EMI">
-      {heroPhotos.map((photo,index)=><img class:list={['hero-slide',{'is-active':index===0}]} src={href(photo.image)} alt={photo.caption} data-caption={photo.caption} width={photo.width} height={photo.height} loading={index===0?'eager':'lazy'} fetchpriority={index===0?'high':'low'} aria-hidden={index!==0} />)}
+      {heroPhotos.map((photo,index)=><img class:list={['hero-slide',{'is-active':index===0}]} src={href(photo.image)} alt={photo.caption} data-caption={photo.caption} style={{objectPosition:photo.position}} width={photo.width} height={photo.height} loading={index===0?'eager':'lazy'} fetchpriority={index===0?'high':'low'} aria-hidden={index!==0} />)}
       <div class="photo-tag"><span class="tag-dot"></span>Inside EMI</div>
       <button type="button" class="hero-pause" data-carousel-toggle aria-label="Pause slideshow" title="Pause slideshow" hidden>
         <span data-pause-icon><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z" /></svg></span>

@@ -2,6 +2,8 @@
 
 The Lab of Efficient Machine Intelligence at TU Delft. A custom Astro website migrated from [tudemi.com](https://www.tudemi.com/) on 8 September 2026.
 
+GitHub Pages preview: [lab-emi.github.io/website-emi](https://lab-emi.github.io/website-emi/).
+
 The site builds to static HTML. It has no application server, database or paid service dependency. Local JavaScript handles publication search, citation copying, category filters, the mobile menu and the image viewer.
 
 ## Run locally
@@ -33,7 +35,8 @@ npm run preview
 | Grants, awards and sponsors | `src/data/funding.json` |
 | Gallery photos, captions and original caption links | `src/data/gallery.json` |
 | Research directions and selected papers | `src/data/research.ts` |
-| Homepage slideshow photos and order | `heroPhotos` in `src/pages/index.astro` (gallery photo IDs) |
+| Homepage slideshow photos, order and framing | `heroPhotos` in `src/pages/index.astro` (gallery photo IDs and object positions) |
+| Browser favicon | `public/favicon.png` |
 | Shared contact details | `src/lib/site.ts` |
 | Colours, fonts and shared spacing | `src/styles/global.css` |
 | Shared header and footer | `src/layouts/Layout.astro` |
@@ -42,7 +45,7 @@ Copy an existing Markdown file to add a news story or project. The block between
 
 Upload an image to `public/images/` and a smaller version with the same filename to `public/images/thumbs/`. Use a root-relative path such as `/images/example.webp` in content. Internal links are automatically adjusted for GitHub Pages. Keep image captions and descriptive alt text meaningful.
 
-The homepage rotates through six lab photos every two seconds, with a short crossfade and matching captions. Hovering or keyboard focus pauses rotation; leaving resumes after a full two seconds. A pause/play button is available on touch screens too. Background tabs pause, and the slideshow starts paused when the visitor prefers reduced motion.
+The homepage rotates through ten lab photos every two seconds, with a short crossfade and matching captions. It starts with Chang and Chris, Yizhuo and Chris, and Ang at ISCAS 2025. Other featured people appear once; Yizhuo appears in three photos. Hovering or keyboard focus pauses rotation; leaving resumes after a full two seconds. A pause/play button is available on touch screens too. Background tabs pause, and the slideshow starts paused when the visitor prefers reduced motion.
 
 Publication records contain the original citation in `citation` and `sourceVersions`. The site does not invent missing DOIs or BibTeX metadata. Add a record with a unique `id`, its real title/authors/venue/year, an existing research topic, article URL and optional code URL. Search, year groups and research-area filters update automatically. Adjust the author-name matcher in `src/components/Publication.astro` when the lab adds an author whose abbreviated name is not yet recognised.
 
