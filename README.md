@@ -39,6 +39,7 @@ npm run preview
 | Gallery photos, captions and original caption links | `src/data/gallery.json` |
 | Research directions and selected papers | `src/data/research.ts` |
 | Homepage slideshow photos, order and framing | `heroPhotos` in `src/pages/index.astro` (gallery photo IDs and object positions) |
+| Homepage research illustrations | `public/images/research/` — image paths and alt text in `src/data/research.ts` |
 | Browser favicon | `public/favicon.png` |
 | Shared contact details | `src/lib/site.ts` |
 | Colours, fonts and shared spacing | `src/styles/global.css` |
