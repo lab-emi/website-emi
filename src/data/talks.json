@@ -1,0 +1,44 @@
+[
+  {
+    "id": "isscc-2026-open-source-ai-analog-correction",
+    "title": "Open-Source AI for Analog Correction: From RF Power Amplifiers to Energy-Efficient Silicon",
+    "date": "2026-02-19",
+    "updated": "2026-09-08",
+    "type": "Presentation",
+    "authors": [
+      {
+        "name": "Chang Gao",
+        "citationName": "Gao, Chang",
+        "affiliation": "Delft University of Technology",
+        "orcid": "https://orcid.org/0000-0002-3284-4078"
+      }
+    ],
+    "event": "IEEE International Solid-State Circuits Conference (ISSCC 2026)",
+    "forum": "Forum 5: Analog for AI and AI for Analog: What the Analog/RF People Can Do and Leverage in the AI Era",
+    "session": "F5.4",
+    "summary": "Chang Gao's ISSCC 2026 forum presentation on OpenDPD, efficient AI models and hardware for analog/RF correction, with extensions to ADCs and PLLs.",
+    "abstract": [
+      "Slides for the talk F5.4, \"Open-Source AI for Analog Correction: From RF Power Amplifiers to Energy-Efficient Silicon\", presented by Chang Gao at ISSCC 2026 Forum 5, \"Analog for AI and AI for Analog: What the Analog/RF People Can Do and Leverage in the AI Era\", on February 19, 2026.",
+      "AI offers a new paradigm for correcting analog/RF non-idealities, but challenges in design, benchmarking, and deployment hinder its adoption. This talk argues for an open-source approach to bridge these gaps. It introduces OpenDPD, a framework for PA linearization that has enabled co-design of optimized mixed-precision and sparse AI models and AI-DPD hardware accelerators, and discusses the path from algorithm to silicon with extensions to circuits such as ADCs and PLLs."
+    ],
+    "pdf": "/files/talks/chang-gao-isscc-2026-open-source-ai-analog-correction.pdf",
+    "bibtex": "/citations/gao-isscc-2026.bib",
+    "pages": 40,
+    "bytes": 4661958,
+    "doi": "10.5281/zenodo.20402931",
+    "zenodo": "https://zenodo.org/records/20402931",
+    "publisher": "Zenodo",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "licenseLabel": "Creative Commons Attribution 4.0 International",
+    "copyright": "Copyright © 2026 Chang Gao, Yizhuo Wu, and Ang Li.",
+    "keywords": ["ISSCC 2026", "OpenDPD", "digital predistortion", "artificial intelligence", "analog circuits", "radio frequency", "RF circuits", "power amplifier"],
+    "researchId": "rf-mixed-signal",
+    "news": "/news/2026-02-23-dr-chang-gao-speaks-at-isscc-2026-forum-5/",
+    "resources": [
+      { "title": "OpenDPD project", "url": "https://opendpd.com" },
+      { "title": "OpenDPD code and datasets", "url": "https://github.com/lab-emi/OpenDPD" },
+      { "title": "OpenDPD: ISCAS 2024 paper", "url": "https://doi.org/10.1109/ISCAS58744.2024.10558162" },
+      { "title": "OpenDPDv2 preprint", "url": "https://doi.org/10.48550/arXiv.2507.06849" }
+    ]
+  }
+]

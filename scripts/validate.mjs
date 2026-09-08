@@ -86,6 +86,27 @@ assert(gallery.length>=30&&funding.grants.length>=7&&funding.awards.length>=10,'
 assert(inventory.length===9,'Expected all nine source pages in the migration archive.');
 assert(readFileSync(join(root,'feed.xml'),'utf8').match(/<item>/g)?.length>=21,'RSS must include all 21 migrated news stories.');
 
+// Academic-resource checks: a discoverable HTML abstract must lead to a public,
+// searchable PDF through an absolute citation_pdf_url, including on project URLs.
+const sitemap = readFileSync(join(root, 'sitemap.xml'), 'utf8');
+for (const talk of json('src/data/talks.json')) {
+  const route = `/talks/${talk.id}/`;
+  const page = pages.get(join(root, route, 'index.html'));
+  const metadata = page?.elements.filter(n => n.tagName === 'meta').map(attrs) || [];
+  const meta = name => metadata.find(a => a.name === name)?.content;
+  const url = path => new URL(base + path, site).href;
+  assert(meta('citation_title') === talk.title && meta('citation_author') && meta('citation_publication_date'), `Missing academic citation metadata: ${route}`);
+  assert(meta('citation_pdf_url') === url(talk.pdf), `Incorrect absolute citation PDF URL: ${route}`);
+  assert(!metadata.some(a => /^(robots|googlebot|bingbot|baiduspider)$/i.test(a.name || '') && /noindex|nofollow|none/i.test(a.content || '')), `Talk must remain indexable: ${route}`);
+  assert(talk.abstract.every(paragraph => page?.text.includes(normalize(paragraph))), `Author-written abstract must appear in the static HTML: ${route}`);
+  const pdf = readFileSync(join(root, talk.pdf));
+  assert(talk.pdf.endsWith('.pdf') && pdf.subarray(0, 5).toString() === '%PDF-' && pdf.length < 5_000_000, `Talk must link to a PDF under Scholar's 5 MB limit: ${route}`);
+  assert(pdf.length === talk.bytes, `Update the displayed PDF size after replacing the file: ${route}`);
+  assert(sitemap.includes(`<loc>${url(route)}</loc>`) && sitemap.includes(`<loc>${url(talk.pdf)}</loc>`), `Talk and PDF missing from sitemap: ${route}`);
+  const publicationLinks = pages.get(join(root, 'publications/index.html'))?.elements.filter(n => n.tagName === 'a').map(attrs) || [];
+  assert(publicationLinks.some(a => a.href === base + route) && publicationLinks.some(a => a.href === base + talk.pdf), `Talk and PDF need plain HTML links on Publications: ${route}`);
+}
+
 if(errors.length) { console.error(errors.join('\n')); console.error(`\n${errors.length} validation failure(s).`); process.exit(1); }
 console.log(`Validated ${pages.size} HTML pages, ${checkedLinks} local links/assets, ${migratedAssets.size} migrated images and all source record counts.`);
 console.log(`Base path: ${base || '/'} · ${outbound.size} external URLs preserved (network availability not asserted).`);

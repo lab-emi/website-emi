@@ -32,6 +32,8 @@ npm run preview
 | Members, links and alumni | `src/data/people.json` |
 | Personal biographies and photo collections | `src/data/profiles.json` |
 | Publications, authors, venues and links | `src/data/publications.json` |
+| Talks, author-written abstracts, DOI and PDF metadata | `src/data/talks.json` |
+| Talk PDFs and downloadable citations | `public/files/talks/` and `public/citations/` |
 | Grants, awards and sponsors | `src/data/funding.json` |
 | Gallery photos, captions and original caption links | `src/data/gallery.json` |
 | Research directions and selected papers | `src/data/research.ts` |
@@ -54,6 +56,16 @@ Publication records contain the original citation in `citation` and `sourceVersi
 When a student leaves, move their record to the alumni list instead of removing their history. Set a project's `status` to `Filled` or `Archived` when its availability changes. Historical PhD announcements retain their original deadlines and are labelled as archived.
 
 The importer and migration archive are a historical snapshot, not a CMS. **Do not rerun the importer after editorial updates** unless you intend to replace the imported data and Markdown files. Normal builds never fetch the old website.
+
+## Talks and search discovery
+
+The ISSCC 2026 talk has a dedicated `/talks/isscc-2026-open-source-ai-analog-correction/` page with the full abstract, author, event date, DOI, citation and direct PDF link. Its bibliographic details and author-written abstract come from the Zenodo DOI registration, cross-checked through [DataCite](https://api.datacite.org/dois/10.5281/zenodo.20402931). The PDF is an unchanged copy of the supplied 40-slide file (4,661,958 bytes). Publications and the related ISSCC news story link to both the HTML page and the PDF.
+
+Talk pages render full text in static HTML and include Highwire `citation_*` metadata, Dublin Core fields, a self-canonical URL, and JSON-LD that identifies the resource as a presentation. Both the landing page and PDF are listed in the sitemap; `robots.txt` permits crawling. Use `updated` for an actual resource-page or PDF update date. Do not relabel slides as a journal or conference paper to influence indexing.
+
+These settings support discovery by Google, Bing and Baidu. Search engines decide whether and when to index a resource. Google Scholar additionally requires eligible scholarly content; presentation slides are not guaranteed inclusion even when their PDF and metadata satisfy its technical rules. See the [Scholar inclusion guidelines](https://scholar.google.com/intl/en/scholar/inclusion.html). Search-console submissions and HTTPS availability must be checked separately from the local validator.
+
+`public/indexnow-key.txt` is the public site-verification file for IndexNow submissions to Bing and participating search engines. It is not an account credential. Keep the file available after a submission so the service can verify ownership. Google Search Console and Baidu's search-resource platform use their own submission flows; an IndexNow acknowledgement is not proof of indexing.
 
 ## GitHub Pages
 

@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Arrow from '../../components/Arrow.astro';
+import { href, dateLabel } from '../../lib/site';
+import talks from '../../data/talks.json';
+
+export function getStaticPaths() {
+  return talks.map(talk => ({ params: { id: talk.id }, props: { talk } }));
+}
+const { talk } = Astro.props;
+const pageUrl = new URL(href(`/talks/${talk.id}/`), Astro.site).href;
+const pdfUrl = new URL(href(talk.pdf), Astro.site).href;
+const citation = `${talk.authors.map(a => a.citationName).join('; ')} (${talk.date.slice(0, 4)}). ${talk.title} [Presentation]. ${talk.event}, ${talk.session}, ${dateLabel(talk.date)}. ${talk.publisher}. https://doi.org/${talk.doi}`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  '@id': `${pageUrl}#presentation`,
+  name: talk.title,
+  headline: talk.title,
+  url: pageUrl,
+  genre: talk.type,
+  learningResourceType: talk.type,
+  description: talk.abstract.join(' '),
+  author: talk.authors.map(author => ({
+    '@type': 'Person', name: author.name, sameAs: author.orcid,
+    affiliation: { '@type': 'Organization', name: author.affiliation },
+  })),
+  datePublished: talk.date,
+  inLanguage: 'en',
+  isAccessibleForFree: true,
+  identifier: { '@type': 'PropertyValue', propertyID: 'DOI', value: talk.doi },
+  sameAs: [talk.zenodo, `https://doi.org/${talk.doi}`],
+  publisher: { '@type': 'Organization', name: talk.publisher },
+  license: talk.license,
+  copyrightNotice: talk.copyright,
+  keywords: talk.keywords,
+  encoding: {
+    '@type': 'MediaObject', name: talk.title, contentUrl: pdfUrl,
+    encodingFormat: 'application/pdf', contentSize: `${talk.bytes} bytes`,
+  },
+};
+---
+<Layout title={talk.title} description={talk.summary} active="Publications">
+  <Fragment slot="head">
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="citation_title" content={talk.title} />
+    {talk.authors.map(author => <Fragment>
+      <meta name="citation_author" content={author.citationName} />
+      <meta name="citation_author_institution" content={author.affiliation} />
+    </Fragment>)}
+    <meta name="citation_publication_date" content={talk.date.replaceAll('-', '/')} />
+    <meta name="citation_conference_title" content={`${talk.event}, ${talk.forum}, ${talk.session}`} />
+    <meta name="citation_publisher" content={talk.publisher} />
+    <meta name="citation_doi" content={talk.doi} />
+    <meta name="citation_pdf_url" content={pdfUrl} />
+    <meta name="citation_language" content="en" />
+    <meta name="DC.title" content={talk.title} />
+    {talk.authors.map(author => <meta name="DC.creator" content={author.citationName} />)}
+    <meta name="DC.date" content={talk.date} />
+    <meta name="DC.type" content={talk.type} />
+    <meta name="DC.identifier" content={`doi:${talk.doi}`} />
+    <meta name="DC.rights" content={talk.licenseLabel} />
+    <link rel="alternate" type="application/pdf" href={pdfUrl} title={talk.title} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\u003c')} />
+  </Fragment>
+
+  <div class="wrap breadcrumb"><a href={href('/publications/')}>Publications</a><span>/</span><a href={href('/publications/#talks')}>Talks</a><span>/</span><span>ISSCC 2026</span></div>
+  <article class="wrap talk-page">
+    <header>
+      <p class="eyebrow">ISSCC 2026 · Forum {talk.session.replace('F', '')} · Presentation</p>
+      <h1 class="citation_title">{talk.title}</h1>
+      <p class="talk-author citation_author">{talk.authors.map(author => <a href={author.orcid}>{author.name}</a>)}<span> · Delft University of Technology</span></p>
+      <p class="talk-date"><time datetime={talk.date}>{dateLabel(talk.date)}</time> <span>·</span> {talk.pages} slides <span>·</span> PDF · {(talk.bytes / 1_000_000).toFixed(2)} MB</p>
+    </header>
+
+    <section class="talk-abstract" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      {talk.abstract.map(paragraph => <p>{paragraph}</p>)}
+    </section>
+
+    <div class="download-links">
+      <a class="button" href={href(talk.pdf)}>View presentation PDF <Arrow diagonal size={16} /></a>
+      <a class="button button-light" href={talk.zenodo}>View on Zenodo <Arrow diagonal size={16} /></a>
+      <a class="text-link" href={href(talk.pdf)} download>Download PDF <Arrow size={16} /></a>
+    </div>
+    <p class="doi-line">DOI: <a href={`https://doi.org/${talk.doi}`}>{talk.doi}</a></p>
+
+    <div class="talk-details">
+      <section aria-labelledby="citation-title">
+        <h2 id="citation-title">Cite this presentation</h2>
+        <p class="citation-text">{citation}</p>
+        <a class="text-link" href={href(talk.bibtex)} download>Download BibTeX <Arrow size={15} /></a>
+        <p class="license">{talk.copyright}<br />Available under <a href={talk.license}>{talk.licenseLabel}</a>, as listed in the <a href={talk.zenodo}>Zenodo record</a>.</p>
+      </section>
+      <section aria-labelledby="resources-title">
+        <h2 id="resources-title">Related resources</h2>
+        <ul class="resource-links">
+          {talk.resources.map(resource => <li><a href={resource.url}>{resource.title} <Arrow diagonal size={14} /></a></li>)}
+          <li><a href={href(`/research/${talk.researchId}/`)}>AI for RF &amp; mixed-signal systems <Arrow size={14} /></a></li>
+          <li><a href={href(talk.news)}>Read the ISSCC news story <Arrow size={14} /></a></li>
+        </ul>
+      </section>
+    </div>
+  </article>
+</Layout>
+<style>
+  .talk-page{max-width:1020px;padding-top:30px;padding-bottom:85px}
+  .talk-page .eyebrow{font-size:.7rem;margin-bottom:14px;letter-spacing:.09em}
+  .talk-page h1{font-size:clamp(1.8rem,3.2vw,2.8rem);line-height:1.2;letter-spacing:-.035em;margin-bottom:18px}
+  .talk-author{font-size:1.03rem;font-weight:650;margin-bottom:5px}
+  .talk-author a:hover{color:var(--blue)}
+  .talk-author span{font-size:.9rem;font-weight:400;color:var(--muted)}
+  .talk-date{font-size:.8rem;color:var(--muted);margin-bottom:22px}
+  .talk-date span{margin-inline:8px}
+  .talk-page h2{font-size:1.1rem;letter-spacing:-.015em;margin-bottom:12px}
+  .talk-abstract{font-size:.96rem;line-height:1.75}
+  .talk-abstract p{margin-bottom:13px}
+  .download-links{display:flex;gap:14px 22px;align-items:center;flex-wrap:wrap;margin-top:25px}
+  .download-links .button{font-size:.8rem;padding:12px 19px}
+  .download-links .text-link{font-size:.8rem}
+  .doi-line{font-size:.85rem;margin:19px 0 36px;color:var(--muted)}
+  .doi-line a,.license a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+  .talk-details{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;border-top:1px solid var(--line);padding-top:32px}
+  .citation-text{font-size:.85rem;line-height:1.8;overflow-wrap:anywhere}
+  .talk-details .text-link{font-size:.8rem}
+  .license{font-size:.75rem;color:var(--muted);line-height:1.8;margin:22px 0 0}
+  .resource-links{list-style:none;padding:0;margin:0}
+  .resource-links a{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.8rem}
+  .resource-links a:hover{color:var(--blue)}
+  @media(max-width:650px){.talk-page{padding-top:24px;padding-bottom:55px}.talk-author span{display:block;margin-top:4px}.talk-details{grid-template-columns:1fr;gap:30px}.download-links{gap:12px}.talk-abstract{font-size:.9rem}.talk-date{margin-bottom:18px}}
+</style>

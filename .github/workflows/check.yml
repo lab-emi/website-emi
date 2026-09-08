@@ -15,7 +15,7 @@ jobs:
         base: ['/', '/website-emi']
     env:
       BASE_PATH: ${{ matrix.base }}
-      SITE_URL: https://lab-emi.github.io
+      SITE_URL: ${{ matrix.base == '/' && 'https://www.tudemi.com' || 'https://lab-emi.github.io' }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7

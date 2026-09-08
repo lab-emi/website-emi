@@ -1,0 +1,33 @@
+---
+import Arrow from './Arrow.astro';
+import { href, dateLabel } from '../lib/site';
+import talks from '../data/talks.json';
+interface Props { talk: typeof talks[number]; }
+const { talk } = Astro.props;
+---
+<article class="talk-card">
+  <div>
+    <p class="eyebrow">ISSCC 2026 · Forum {talk.session.replace('F', '')} · Presentation</p>
+    <h3><a href={href(`/talks/${talk.id}/`)}>{talk.title}</a></h3>
+    <p class="talk-description">{talk.summary}</p>
+    <p class="talk-meta">{talk.authors.map(a => a.name).join(', ')} <span>·</span> <time datetime={talk.date}>{dateLabel(talk.date)}</time> <span>·</span> {talk.pages} slides</p>
+  </div>
+  <div class="talk-links">
+    <a class="button" href={href(talk.pdf)}>View PDF <Arrow diagonal size={15} /></a>
+    <a class="text-link" href={href(`/talks/${talk.id}/`)}>Abstract &amp; citation <Arrow size={15} /></a>
+    <a class="text-link" href={talk.zenodo}>Zenodo record <Arrow diagonal size={15} /></a>
+  </div>
+</article>
+<style>
+  .talk-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center;padding:28px 32px;background:var(--pale);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:3px}
+  .talk-card .eyebrow{font-size:.7rem;letter-spacing:.08em;margin-bottom:12px}
+  .talk-card h3{font-size:1.25rem;line-height:1.4;letter-spacing:-.025em;margin-bottom:12px;max-width:850px}
+  .talk-card h3 a:hover{color:var(--blue)}
+  .talk-description{font-size:.88rem;color:var(--muted);max-width:850px;margin-bottom:12px}
+  .talk-meta{font-size:.76rem;margin:0;color:var(--muted)}
+  .talk-meta span{margin-inline:7px}
+  .talk-links{display:flex;flex-direction:column;align-items:start;gap:6px}
+  .talk-links .button{font-size:.8rem;padding:11px 18px;margin-bottom:3px}
+  .talk-links .text-link{font-size:.77rem}
+  @media(max-width:700px){.talk-card{grid-template-columns:1fr;gap:20px;padding:23px}.talk-links{flex-direction:row;align-items:center;flex-wrap:wrap;gap:12px 22px}.talk-card h3{font-size:1.15rem}}
+</style>
