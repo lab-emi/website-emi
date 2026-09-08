@@ -1,0 +1,70 @@
+const carousel = document.querySelector<HTMLElement>('[data-hero-carousel]');
+
+if (carousel) {
+  const slides = [...carousel.querySelectorAll<HTMLImageElement>('.hero-slide')];
+  const caption = carousel.querySelector<HTMLElement>('[data-carousel-caption]')!;
+  const toggle = carousel.querySelector<HTMLButtonElement>('[data-carousel-toggle]')!;
+  const pauseIcon = toggle.querySelector<HTMLElement>('[data-pause-icon]')!;
+  const playIcon = toggle.querySelector<HTMLElement>('[data-play-icon]')!;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = reducedMotion.matches;
+  let hovered = carousel.matches(':hover');
+  let focused = carousel.contains(document.activeElement);
+  let active = 0;
+  let timer: number | undefined;
+
+  function updateControl() {
+    const label = paused ? 'Play slideshow' : 'Pause slideshow';
+    toggle.setAttribute('aria-label', label);
+    toggle.title = label;
+    pauseIcon.toggleAttribute('hidden', paused);
+    playIcon.toggleAttribute('hidden', !paused);
+  }
+
+  function schedule() {
+    window.clearTimeout(timer);
+    if (paused || hovered || focused || document.hidden || slides.length < 2) return;
+    timer = window.setTimeout(() => {
+      // Keep the current image visible until another photo has loaded.
+      for (let offset = 1; offset < slides.length; offset++) {
+        const next = (active + offset) % slides.length;
+        if (!slides[next].complete || !slides[next].naturalWidth) continue;
+        slides[active].classList.remove('is-active');
+        slides[active].setAttribute('aria-hidden', 'true');
+        slides[next].classList.add('is-active');
+        slides[next].setAttribute('aria-hidden', 'false');
+        caption.textContent = slides[next].dataset.caption || '';
+        active = next;
+        break;
+      }
+      schedule();
+    }, 2000);
+  }
+
+  carousel.addEventListener('mouseenter', () => { hovered = true; schedule(); });
+  carousel.addEventListener('mouseleave', () => { hovered = false; schedule(); });
+  carousel.addEventListener('focusin', () => { focused = true; schedule(); });
+  carousel.addEventListener('focusout', event => {
+    focused = event.relatedTarget instanceof Node && carousel.contains(event.relatedTarget);
+    schedule();
+  });
+  toggle.addEventListener('click', () => {
+    paused = !paused;
+    // An explicit Play action can resume after keyboard focus paused rotation.
+    if (!paused) focused = false;
+    updateControl();
+    schedule();
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) paused = true;
+    updateControl();
+    schedule();
+  });
+  document.addEventListener('visibilitychange', schedule);
+  window.addEventListener('pagehide', () => window.clearTimeout(timer));
+  window.addEventListener('pageshow', schedule);
+
+  toggle.hidden = slides.length < 2;
+  updateControl();
+  schedule();
+}

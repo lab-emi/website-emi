@@ -33,6 +33,7 @@ npm run preview
 | Grants, awards and sponsors | `src/data/funding.json` |
 | Gallery photos, captions and original caption links | `src/data/gallery.json` |
 | Research directions and selected papers | `src/data/research.ts` |
+| Homepage slideshow photos and order | `heroPhotos` in `src/pages/index.astro` (gallery photo IDs) |
 | Shared contact details | `src/lib/site.ts` |
 | Colours, fonts and shared spacing | `src/styles/global.css` |
 | Shared header and footer | `src/layouts/Layout.astro` |
@@ -40,6 +41,8 @@ npm run preview
 Copy an existing Markdown file to add a news story or project. The block between `---` delimiters contains the metadata; the rest is the article body. Existing files use JSON syntax inside the frontmatter so field names and arrays are explicit. Keep news dates in `YYYY-MM-DD` format. News sorts automatically and enters the RSS feed. Content schemas catch invalid fields at build time.
 
 Upload an image to `public/images/` and a smaller version with the same filename to `public/images/thumbs/`. Use a root-relative path such as `/images/example.webp` in content. Internal links are automatically adjusted for GitHub Pages. Keep image captions and descriptive alt text meaningful.
+
+The homepage rotates through six lab photos every two seconds, with a short crossfade and matching captions. Hovering or keyboard focus pauses rotation; leaving resumes after a full two seconds. A pause/play button is available on touch screens too. Background tabs pause, and the slideshow starts paused when the visitor prefers reduced motion.
 
 Publication records contain the original citation in `citation` and `sourceVersions`. The site does not invent missing DOIs or BibTeX metadata. Add a record with a unique `id`, its real title/authors/venue/year, an existing research topic, article URL and optional code URL. Search, year groups and research-area filters update automatically. Adjust the author-name matcher in `src/components/Publication.astro` when the lab adds an author whose abbreviated name is not yet recognised.
 
