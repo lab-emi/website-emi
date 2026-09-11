@@ -72,6 +72,14 @@ These settings support discovery by Google, Bing and Baidu. Search engines decid
 
 ## GitHub Pages
 
+### Website analytics
+
+The shared layout connects the live site to the existing Google Analytics 4 property **changgao - GA4** (property `326174462`, web stream `3883300841`, measurement ID `G-MVRCJ9G874`). It preserves the site's existing reporting history. The Google tag loads only on `www.tudemi.com` and `tudemi.com`, so localhost, development previews and the GitHub project host do not send visits to this property. Google signals and advertising personalization signals are disabled in the tag configuration; the stream's existing enhanced measurement settings are retained.
+
+After publishing, use the stream's **View tag instructions → Install manually → Test** and the property's **Realtime** report to verify collection. Regular reports can take 24–48 hours to update. The measurement ID is a public website identifier, not a secret or API key.
+
+### Publishing
+
 The check workflow validates both the root URL and `/website-emi/` on pushes and pull requests. Publishing uses a separate **manual** workflow, so pushing content does not publish the site automatically.
 
 To publish an update to the live site:
