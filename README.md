@@ -38,6 +38,7 @@ npm run preview
 | Grants, awards and sponsors | `src/data/funding.json` |
 | Gallery photos, captions and original caption links | `src/data/gallery.json` |
 | Research directions and selected papers | `src/data/research.ts` |
+| Open-source project cards and research-area repository links | `src/data/open-source.ts` |
 | Homepage slideshow photos, order and framing | `heroPhotos` in `src/pages/index.astro` (direct photos or gallery photo IDs, fit and object positions) |
 | Homepage research photographs | `public/images/research/` — paths, alt text and source credits in `src/data/research.ts`; provenance in [migration/RESEARCH_IMAGES.md](migration/RESEARCH_IMAGES.md) |
 | Browser favicon | `public/favicon.png` |
@@ -55,6 +56,8 @@ Upload an image to `public/images/` and a smaller version with the same filename
 The homepage automatically rotates through eleven lab photos every three seconds, with a short crossfade and matching captions. It starts with the supplied group photo titled “Chang's Visit to Prof. Anding Zhu's Lab”, fitted without cropping, followed by Chang and Chris, Yizhuo and Chris, and Ang at ISCAS 2025. The rest of the existing photo order is preserved. Hovering over the photo frame or focusing its controls pauses rotation; leaving resumes after a full three seconds unless another pause condition still applies. A manual pause remains in effect when the pointer leaves, and touch interactions do not create a hover pause. A pause/play button is available on touch screens too. Background tabs pause. Reduced-motion preferences remove the crossfade animation while retaining automatic playback.
 
 Publication records contain the original citation in `citation` and `sourceVersions`. The site does not invent missing DOIs or BibTeX metadata. Add a record with a unique `id`, its real title/authors/venue/year, an existing research topic, article URL and optional code URL. Search, year groups and research-area filters update automatically. Adjust the author-name matcher in `src/components/Publication.astro` when the lab adds an author whose abbreviated name is not yet recognised.
+
+The homepage links to the EMI GitHub organization immediately below the four research directions. Research's `#open-source` section features OpenDPD, CleanUMamba and AIRHAR, with descriptions checked against their official repository READMEs. The same project records supply links on the relevant research-area pages. A publication's `code` field adds its repository link in both Publications and the research-area paper list; CleanUMamba links to its official implementation. Update these curated entries when adding projects. The site does not fetch GitHub data or star counts at runtime.
 
 When a student leaves, move their record to the alumni list instead of removing their history. Set a project's `status` to `Filled` or `Archived` when its availability changes. Historical PhD announcements retain their original deadlines and are labelled as archived.
 

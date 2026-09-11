@@ -359,7 +359,7 @@
     "type": "Publication",
     "topic": "Speech & sensing",
     "url": "https://arxiv.org/abs/2410.11062",
-    "code": null,
+    "code": "https://github.com/lab-emi/CleanUMamba",
     "links": [
       {
         "label": "CleanUMamba: A Compact Mamba Network for Speech Denoising using Channel Pruning",
