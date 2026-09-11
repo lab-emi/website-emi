@@ -1,6 +1,6 @@
 export const site = {
   name: 'EMI Lab', fullName: 'Lab of Efficient Machine Intelligence',
-  description: 'The Efficient Machine Intelligence lab at TU Delft develops algorithms and hardware for energy-efficient edge intelligence, from intelligent radio systems to neuromorphic sensing.',
+  description: 'Led by Dr. Chang Gao, the Efficient Machine Intelligence lab at TU Delft develops algorithms and hardware for energy-efficient edge AI, intelligent radio systems and neuromorphic sensing.',
   email: 'chang.gao@tudelft.nl',
   github: 'https://github.com/lab-emi',
   scholar: 'https://scholar.google.com/citations?user=sQ9N7dsAAAAJ&hl=en',

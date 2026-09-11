@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Arrow from '../../components/Arrow.astro';
 import { href, dateLabel } from '../../lib/site';
 import talks from '../../data/talks.json';
+import { changGao } from '../../lib/identity';
 
 export function getStaticPaths() {
   return talks.map(talk => ({ params: { id: talk.id }, props: { talk } }));
@@ -22,7 +23,7 @@ const structuredData = {
   learningResourceType: talk.type,
   description: talk.abstract.join(' '),
   author: talk.authors.map(author => ({
-    '@type': 'Person', name: author.name, sameAs: author.orcid,
+    '@type': 'Person', ...(author.orcid === changGao.orcid ? { '@id': changGao.id, url: changGao.url } : {}), name: author.name, sameAs: author.orcid,
     affiliation: { '@type': 'Organization', name: author.affiliation },
   })),
   datePublished: talk.date,

@@ -4,13 +4,25 @@ import PageIntro from '../components/PageIntro.astro';
 import Arrow from '../components/Arrow.astro';
 import { href, thumb, localizeHtml, site } from '../lib/site';
 import people from '../data/people.json';
+import { changGao, labSchema, personSchema, jsonLd } from '../lib/identity';
 const leader = people.members[0];
 const groups = [['PhD researcher','PhD researchers','phd'],['MSc student','MSc students','msc'],['Visitor','Visiting researchers','visitors']];
 ---
-<Layout title="People" active="People" description="Meet the researchers, students and alumni of the Efficient Machine Intelligence lab at TU Delft.">
+<Layout title="People" active="People" description="Meet Dr. Chang Gao and the researchers, students and alumni of the Efficient Machine Intelligence lab at TU Delft.">
+  <Fragment slot="head">
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <script is:inline type="application/ld+json" set:html={jsonLd({
+      '@context': 'https://schema.org',
+      '@graph': [
+        { '@type': 'CollectionPage', '@id': 'https://www.tudemi.com/people/#webpage', url: 'https://www.tudemi.com/people/', name: 'People at EMI Lab', about: { '@id': labSchema['@id'] }, mentions: { '@id': changGao.id } },
+        labSchema,
+        personSchema,
+      ],
+    })} />
+  </Fragment>
   <PageIntro eyebrow="The people behind EMI" title="A shared curiosity." description="Researchers, engineers and students working together at the intersection of machine learning and microelectronics." />
   <div class="wrap"><nav class="anchor-nav" aria-label="People sections"><a href="#leader">Group leader</a><a href="#phd">PhD researchers</a><a href="#msc">MSc students</a><a href="#visitors">Visitors</a><a href="#alumni">Alumni</a></nav></div>
-  <section id="leader" class="wrap leader-section"><a href={leader.url} class="leader-photo"><img src={thumb(leader.image)} alt="Chang Gao" width="800" height="850" /></a><div class="leader-copy"><p class="eyebrow">Group leader</p><h2>Dr. Chang Gao <a href={leader.url} aria-label="Chang Gao's personal website"><Arrow diagonal size={25} /></a></h2><p class="leader-role">Assistant Professor of Edge AI</p><p>Department of Microelectronics<br />Faculty of Electrical Engineering, Mathematics and Computer Science<br />Delft University of Technology</p><p>Leading the EMI lab’s research in neuromorphic algorithm–hardware co-design for energy-efficient edge intelligence.</p><div class="profile-links"><a href={leader.url}>Personal website <Arrow diagonal size={14} /></a><a href={site.scholar}>Google Scholar <Arrow diagonal size={14} /></a><a href="https://www.linkedin.com/in/gaochangw">LinkedIn <Arrow diagonal size={14} /></a><a href={`mailto:${site.email}`}>Email <Arrow diagonal size={14} /></a></div></div></section>
+  <section id="leader" class="wrap leader-section"><a href={changGao.url} class="leader-photo"><img src={thumb(leader.image)} alt="Chang Gao" width="1280" height="1280" /></a><div class="leader-copy"><p class="eyebrow">Group leader</p><h2>Dr. Chang Gao <a href={changGao.url} aria-label="Chang Gao's personal website"><Arrow diagonal size={25} /></a></h2><p class="leader-role">{changGao.role} · Edge AI</p><p>Department of Microelectronics<br />Faculty of Electrical Engineering, Mathematics and Computer Science<br />Delft University of Technology</p><p>Leading the EMI lab’s research in neuromorphic algorithm–hardware co-design for energy-efficient edge intelligence.</p><div class="profile-links"><a href={changGao.url}>Personal website <Arrow diagonal size={14} /></a><a href={site.scholar}>Google Scholar <Arrow diagonal size={14} /></a><a href={changGao.linkedin}>LinkedIn <Arrow diagonal size={14} /></a><a href={changGao.orcid}>ORCID <Arrow diagonal size={14} /></a><a href={changGao.universityProfile}>TU Delft profile <Arrow diagonal size={14} /></a><a href={`mailto:${site.email}`}>Email <Arrow diagonal size={14} /></a></div></div></section>
   {groups.map(([role,label,id]) => <section class="wrap people-section" id={id}><div class="section-title"><h2>{label}<span class="count">{people.members.filter(p=>p.role===role).length}</span></h2>{id==='phd' && <a class="text-link" href={href('/join-us/')}>Research opportunities <Arrow /></a>}</div><div class="people-grid">{people.members.filter(p=>p.role===role).map(p=><article class="person" id={p.id}><a class="person-image" href={href(p.url)} aria-label={`View ${p.name}'s profile`}><img src={thumb(p.image)} alt={p.name} loading="lazy" width="800" height="900" /><span><Arrow diagonal /></span></a><h3><a href={href(p.url)}>{p.name}</a></h3><p class="person-role">{p.role}</p>{p.detail && <p class="person-detail">{p.detail}</p>}{p.links.length>1 && <div class="person-links">{p.links.slice(1).filter(l=>!l.label.match(/^\)$/)).map(l=><a href={href(l.url)}>{l.label.replace(/[()]/g,'')} <Arrow diagonal size={12} /></a>)}</div>}</article>)}</div></section>)}
   <section id="alumni" class="section-soft section"><div class="wrap"><div class="section-title"><div><p class="eyebrow">Where the journey continues</p><h2>MSc alumni<span class="count">{people.alumni.length}</span></h2></div></div><div class="alumni-layout"><div class="alumni-list">{people.alumni.map(a=><div class="alumni-row prose" set:html={localizeHtml(a.html.replace(/^<li>|<\/li>$/g,''))} />)}</div><figure><img src={thumb(people.alumniImage)} alt="MSc alumni of the EMI lab" width="800" height="600" loading="lazy" /><figcaption>Part of the EMI community, wherever life takes you.</figcaption></figure></div></div></section>
 </Layout>
