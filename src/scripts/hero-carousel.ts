@@ -38,7 +38,7 @@ if (carousel) {
         break;
       }
       schedule();
-    }, 2000);
+    }, 3000);
   }
 
   carousel.addEventListener('pointerenter', event => {
