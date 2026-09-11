@@ -310,6 +310,21 @@
       "sourceText": "Dong, Yuting (2027)"
     },
     {
+      "id": "murats-seidovs",
+      "name": "Murats Seidovs",
+      "role": "MSc student",
+      "detail": "",
+      "image": "/images/murats-seidovs.webp",
+      "url": "https://elca.tudelft.nl/Education/bio.php?id=2128",
+      "links": [
+        {
+          "label": "Seidovs, Murats",
+          "url": "https://elca.tudelft.nl/Education/bio.php?id=2128"
+        }
+      ],
+      "sourceText": "Seidovs, Murats"
+    },
+    {
       "id": "guorui-lu",
       "name": "Guorui Lu",
       "role": "Visitor",
