@@ -38,7 +38,7 @@ npm run preview
 | Grants, awards and sponsors | `src/data/funding.json` |
 | Gallery photos, captions and original caption links | `src/data/gallery.json` |
 | Research directions and selected papers | `src/data/research.ts` |
-| Homepage slideshow photos, order and framing | `heroPhotos` in `src/pages/index.astro` (gallery photo IDs and object positions) |
+| Homepage slideshow photos, order and framing | `heroPhotos` in `src/pages/index.astro` (direct photos or gallery photo IDs, fit and object positions) |
 | Homepage research photographs | `public/images/research/` — paths, alt text and source credits in `src/data/research.ts`; provenance in [migration/RESEARCH_IMAGES.md](migration/RESEARCH_IMAGES.md) |
 | Browser favicon | `public/favicon.png` |
 | Header logo | `public/images/emi-logo.svg` |
@@ -52,7 +52,7 @@ Copy an existing Markdown file to add a news story or project. The block between
 
 Upload an image to `public/images/` and a smaller version with the same filename to `public/images/thumbs/`. Use a root-relative path such as `/images/example.webp` in content. Internal links are automatically adjusted for GitHub Pages. Keep image captions and descriptive alt text meaningful.
 
-The homepage automatically rotates through ten lab photos every two seconds, with a short crossfade and matching captions. It starts with Chang and Chris, Yizhuo and Chris, and Ang at ISCAS 2025. Other featured people appear once; Yizhuo appears in three photos. Hovering does not interrupt playback. Keyboard focus pauses rotation; leaving resumes after a full two seconds. A pause/play button is available on touch screens too. Background tabs pause. Reduced-motion preferences remove the crossfade animation while retaining automatic playback.
+The homepage automatically rotates through eleven lab photos every two seconds, with a short crossfade and matching captions. It starts with the supplied group photo titled “Chang's Visit to Prof. Anding Zhu's Lab”, fitted without cropping, followed by Chang and Chris, Yizhuo and Chris, and Ang at ISCAS 2025. The rest of the existing photo order is preserved. Hovering over the photo frame or focusing its controls pauses rotation; leaving resumes after a full two seconds unless another pause condition still applies. A manual pause remains in effect when the pointer leaves, and touch interactions do not create a hover pause. A pause/play button is available on touch screens too. Background tabs pause. Reduced-motion preferences remove the crossfade animation while retaining automatic playback.
 
 Publication records contain the original citation in `citation` and `sourceVersions`. The site does not invent missing DOIs or BibTeX metadata. Add a record with a unique `id`, its real title/authors/venue/year, an existing research topic, article URL and optional code URL. Search, year groups and research-area filters update automatically. Adjust the author-name matcher in `src/components/Publication.astro` when the lab adds an author whose abbreviated name is not yet recognised.
 

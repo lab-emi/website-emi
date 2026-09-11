@@ -9,6 +9,7 @@ if (carousel) {
   // Start automatically; reduced-motion styles remove the crossfade animation.
   let paused = false;
   let focused = carousel.contains(document.activeElement);
+  let hovered = window.matchMedia('(any-hover: hover)').matches && carousel.matches(':hover');
   let active = 0;
   let timer: number | undefined;
 
@@ -22,7 +23,7 @@ if (carousel) {
 
   function schedule() {
     window.clearTimeout(timer);
-    if (paused || focused || document.hidden || slides.length < 2) return;
+    if (paused || focused || hovered || document.hidden || slides.length < 2) return;
     timer = window.setTimeout(() => {
       // Keep the current image visible until another photo has loaded.
       for (let offset = 1; offset < slides.length; offset++) {
@@ -40,6 +41,16 @@ if (carousel) {
     }, 2000);
   }
 
+  carousel.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'touch') return;
+    hovered = true;
+    schedule();
+  });
+  carousel.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'touch') return;
+    hovered = false;
+    schedule();
+  });
   carousel.addEventListener('focusin', () => { focused = true; schedule(); });
   carousel.addEventListener('focusout', event => {
     focused = event.relatedTarget instanceof Node && carousel.contains(event.relatedTarget);
