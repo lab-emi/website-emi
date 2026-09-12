@@ -1,0 +1,64 @@
+---
+import world from '../data/world-map.json';
+import config from '../data/visitor-config.json';
+import { href } from '../lib/site';
+---
+<section id="visitors" class="visitor-section section" data-visitors data-endpoint={config.endpoint} aria-labelledby="visitor-heading">
+  <div class="wrap">
+    <div class="visitor-heading">
+      <div><p class="eyebrow">Around the world</p><h2 id="visitor-heading">Our global visitors.</h2></div>
+      <div class="visitor-modes" role="group" aria-label="Visitor reporting period">
+        <button type="button" data-visitor-mode="history" aria-pressed="true">All recorded history</button>
+        <button type="button" data-visitor-mode="realtime" aria-pressed="false"><span class="live-dot" aria-hidden="true"></span>Last 30 minutes</button>
+      </div>
+    </div>
+    <div class="visitor-summary" aria-live="polite" aria-atomic="true">
+      <div><strong data-visitor-total>—</strong><span data-visitor-total-label>recorded visitors</span></div>
+      <div><strong data-visitor-country-total>—</strong><span>countries & territories</span></div>
+      <p data-visitor-period>Loading visitor statistics…</p>
+    </div>
+    <div class="visitor-layout">
+      <div class="visitor-map-panel">
+        <svg class="visitor-world" viewBox={world.viewBox} aria-hidden="true" focusable="false">
+          {world.locations.map(country => <path d={country.path} data-country={country.id.toUpperCase()} data-country-name={country.name}><title>{country.name}</title></path>)}
+          {world.locations.filter(country => 'marker' in country).map(country => <circle cx={country.marker?.[0]} cy={country.marker?.[1]} r="2.4" data-country={country.id.toUpperCase()} data-country-name={country.name} class="visitor-island"><title>{country.name}</title></circle>)}
+        </svg>
+        <div class="visitor-map-caption" data-visitor-selection aria-live="polite">Select a country on the map or in the list.</div>
+        <div class="visitor-legend" data-visitor-legend aria-label="Map colour scale" hidden></div>
+      </div>
+      <div class="visitor-countries">
+        <label for="visitor-country">Find a country or territory</label>
+        <select id="visitor-country" data-visitor-select disabled><option value="">Choose a country</option></select>
+        <div class="visitor-table-scroll" tabindex="0" role="region" aria-label="Visitor counts by country">
+          <table>
+            <thead><tr><th scope="col">Country / territory</th><th scope="col" data-visitor-column>Visitors</th></tr></thead>
+            <tbody data-visitor-rows></tbody>
+          </table>
+          <p class="visitor-state" data-visitor-state role="status">Loading country data…</p>
+        </div>
+        <button class="visitor-retry" type="button" data-visitor-retry hidden>Refresh statistics</button>
+      </div>
+    </div>
+    <div class="visitor-footnote">
+      <p data-visitor-updated>Source: Google Analytics</p>
+      <details><summary>About these numbers</summary><p>Historical visitors are distinct users recorded by Google Analytics through yesterday. A person can appear in more than one country, so country counts may not add up to the total. The recent view shows users active within the last 30 minutes and refreshes every minute while this section is visible. Locations are approximate; unreported or unavailable data is not counted as zero. Analytics may omit visits or withhold some data.</p></details>
+      <p class="visitor-credit">Map adapted from <a href="https://mapsvg.com/maps/world">MapSVG</a> / <a href="https://github.com/VictorCazanave/svg-maps/tree/master/packages/world">SVG Maps</a> · <a href={href('/licenses/world-map.txt')}>CC BY 4.0</a></p>
+    </div>
+    <noscript><p>Enable JavaScript to load the visitor map and country counts.</p></noscript>
+  </div>
+</section>
+<script>
+  import '../scripts/visitors';
+</script>
+<style>
+  .visitor-section{background:#f7fafc;border-top:1px solid var(--line)}
+  .visitor-heading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:30px}.visitor-heading h2{margin:0;font-size:clamp(2rem,3.2vw,2.9rem)}.visitor-heading .eyebrow{margin-bottom:12px}
+  .visitor-modes{display:flex;flex-wrap:wrap;gap:5px;padding:5px;border:1px solid var(--line);border-radius:4px;background:#fff}.visitor-modes button{display:flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:2px;background:transparent;padding:10px 14px;font-size:.875rem;line-height:1.5;color:var(--muted)}.visitor-modes button[aria-pressed=true]{background:var(--ink);color:white}.visitor-modes button:hover:not([aria-pressed=true]){background:var(--pale)}.live-dot{width:6px;height:6px;border-radius:50%;background:currentColor}.visitor-section[data-live-fresh=true] .live-dot{background:#29ba92}
+  .visitor-summary{display:flex;align-items:center;gap:40px;border-block:1px solid var(--line);padding:24px 0}.visitor-summary>div{display:flex;align-items:baseline;gap:12px}.visitor-summary strong{font-size:2.3rem;font-weight:600;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1.2}.visitor-summary span,.visitor-summary>p{font-size:.875rem;color:var(--muted)}.visitor-summary>p{margin:0 0 0 auto;max-width:280px;text-align:right}
+  .visitor-layout{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(240px,1fr);gap:42px;align-items:center;margin-top:26px}.visitor-map-panel{min-width:0}.visitor-world{display:block;width:100%;height:auto;max-height:430px;overflow:visible}.visitor-world path,.visitor-world circle{fill:var(--country-fill,#dce6eb);stroke:#f7fafc;stroke-width:.7;vector-effect:non-scaling-stroke;cursor:pointer;transition:fill .2s}.visitor-world [data-selected=true]{stroke:var(--ink);stroke-width:1.4;filter:brightness(.9)}.visitor-world [data-has-visitors=true]:hover{filter:brightness(.8)}.visitor-world .visitor-island{stroke-width:.5}.visitor-world .visitor-island:not([data-has-visitors=true]){display:none}
+  .visitor-map-caption{min-height:2em;text-align:center;font-size:.875rem;color:var(--muted);margin:6px 0 15px}.visitor-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 18px;font-size:.8125rem;color:var(--muted)}.visitor-legend :global(span){display:inline-flex;align-items:center;gap:7px}.visitor-legend :global(i){display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--swatch)}
+  .visitor-countries{min-width:0}.visitor-countries label{display:block;font-size:.875rem;font-weight:600;margin-bottom:9px}.visitor-countries select{max-width:100%;width:100%;font-size:.875rem;padding:10px 12px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:3px}.visitor-table-scroll{margin-top:16px;max-height:284px;min-height:200px;overflow:auto;scrollbar-width:thin}.visitor-table-scroll:focus-visible{outline:2px solid var(--blue);outline-offset:4px}.visitor-countries table{border-collapse:collapse;width:100%;font-size:.875rem}.visitor-countries th{position:sticky;top:0;background:#f7fafc;font-size:.75rem;font-weight:600;color:var(--muted);text-align:left;padding:8px 4px;border-bottom:1px solid var(--line)}.visitor-countries th:last-child{text-align:right}.visitor-countries :global(td){padding:9px 4px;border-bottom:1px solid #e4ebef}.visitor-countries :global(td:last-child){text-align:right;font-variant-numeric:tabular-nums}.visitor-countries :global(td button){display:block;border:0;padding:0;background:none;color:var(--ink);text-align:left;font:inherit;line-height:1.6}.visitor-countries :global(td button:hover){color:var(--blue)}.visitor-countries :global(tr[data-selected=true] td){background:#e1f1f8}.visitor-state{font-size:.875rem;color:var(--muted);padding:20px 4px;margin:0;line-height:1.8}.visitor-retry{border:0;border-bottom:1px solid var(--line);padding:6px 0;background:none;color:var(--blue);font-size:.875rem;margin-top:8px}
+  .visitor-footnote{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;display:grid;grid-template-columns:1fr auto;gap:8px 28px;color:var(--muted);font-size:.8125rem;line-height:1.7}.visitor-footnote p{margin:0}.visitor-footnote details{grid-column:1;max-width:760px}.visitor-footnote summary{cursor:pointer;width:fit-content;text-decoration:underline;text-decoration-color:#bdcdd6;text-underline-offset:3px}.visitor-footnote details p{margin-top:10px}.visitor-footnote .visitor-credit{grid-column:2;grid-row:1/3;text-align:right;font-size:.75rem}.visitor-credit a{text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:1050px){.visitor-heading{align-items:start;flex-direction:column}.visitor-summary{flex-wrap:wrap;gap:18px 32px}.visitor-summary>p{margin-left:0;max-width:none;text-align:left;flex-basis:100%}.visitor-layout{gap:25px;grid-template-columns:minmax(0,1.6fr) minmax(220px,1fr)}.visitor-summary strong{font-size:2rem}}
+  @media(max-width:720px){.visitor-layout{grid-template-columns:1fr;gap:28px}.visitor-world{max-height:none}.visitor-summary{gap:20px}.visitor-summary>div{flex:1;min-width:125px;align-items:start;flex-direction:column;gap:5px}.visitor-modes{width:100%}.visitor-modes button{flex:1;min-width:140px}.visitor-table-scroll{max-height:250px}.visitor-footnote{display:block}.visitor-footnote details{margin:8px 0}.visitor-footnote .visitor-credit{text-align:left;margin-top:12px}}
+</style>

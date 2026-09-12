@@ -4,7 +4,7 @@ The Lab of Efficient Machine Intelligence at TU Delft. A custom Astro website mi
 
 Live site: [www.tudemi.com](https://www.tudemi.com/), hosted on GitHub Pages.
 
-The site builds to static HTML. It has no application server, database or paid service dependency. Local JavaScript handles publication search, citation copying, category filters, the mobile menu and the image viewer.
+The site builds to static HTML and is hosted on GitHub Pages. Local JavaScript handles publication search, citation copying, category filters, the mobile menu and the image viewer. The homepage visitor map reads country aggregates from a dedicated Google Apps Script endpoint; the rest of the site works independently of that service.
 
 ## Run locally
 
@@ -82,6 +82,8 @@ These settings support discovery by Google, Bing and Baidu. Search engines decid
 The shared layout connects the live site to the existing Google Analytics 4 property **changgao - GA4** (property `326174462`, web stream `3883300841`, measurement ID `G-MVRCJ9G874`). It preserves the site's existing reporting history. The Google tag loads only on `www.tudemi.com` and `tudemi.com`, so localhost, development previews and the GitHub project host do not send visits to this property. Google signals and advertising personalization signals are disabled in the tag configuration; the stream's existing enhanced measurement settings are retained.
 
 After publishing, use the stream's **View tag instructions → Install manually → Test** and the property's **Realtime** report to verify collection. Regular reports can take 24–48 hours to update. The measurement ID is a public website identifier, not a secret or API key.
+
+The homepage visitor section has historical and last-30-minute country views. Its fixed, read-only reporting endpoint and setup are documented in [scripts/visitor-analytics/README.md](scripts/visitor-analytics/README.md). Configure the public endpoint in `src/data/visitor-config.json` after Google authorization and unauthenticated verification; an empty endpoint displays an unavailable state and is not a completed data connection. No visitor counts are fabricated or stored in the website source.
 
 ### Publishing
 

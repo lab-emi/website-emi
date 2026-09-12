@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Arrow from '../components/Arrow.astro';
 import NewsCard from '../components/NewsCard.astro';
+import VisitorMap from '../components/VisitorMap.astro';
 import { href, site, thumb } from '../lib/site';
 import { changGao, labSchema, personSchema, jsonLd } from '../lib/identity';
 import { research } from '../data/research';
@@ -87,6 +88,7 @@ const selected = ['OpenDPDv2:', 'BitFair:', 'Exploiting neuro-inspired'].map(pre
   </section>
   <section class="support-section wrap"><p class="eyebrow">Supported by</p><div class="sponsors">{funding.sponsors.map(s=><img src={thumb(s.image)} alt={s.name} loading="lazy" width="170" height="70" />)}</div><a class="support-link" href={href('/grants-awards/')}>Our grants, collaborations & awards <Arrow diagonal size={15} /></a></section>
   <section class="join-strip"><div class="wrap"><div><p class="eyebrow">Build with us</p><h2>Curious about what comes next?</h2><p>Explore MSc projects, research opportunities and collaborations.</p></div><a class="button" href={href('/join-us/')}>Find your place at EMI <Arrow diagonal /></a></div></section>
+  <VisitorMap />
 </Layout>
 <script>
   import '../scripts/hero-carousel';

@@ -24,7 +24,7 @@ for(const file of files.filter(f=>f.endsWith('.html'))) {
   const ids = elements.map(n=>attrs(n).id).filter(Boolean);
   assert(ids.length===new Set(ids).size,`Duplicate element id: ${relative(root,file)}`);
   const redirect = elements.some(n=>n.tagName==='meta'&&attrs(n)['http-equiv']==='refresh');
-  assert(elements.filter(n=>n.tagName==='title').length===1,`Missing/duplicate title: ${relative(root,file)}`);
+  assert(elements.filter(n=>n.tagName==='title' && n.namespaceURI==='http://www.w3.org/1999/xhtml').length===1,`Missing/duplicate title: ${relative(root,file)}`);
   if(!redirect) {
     assert(elements.filter(n=>n.tagName==='h1').length===1,`Expected one H1: ${relative(root,file)}`);
     assert(elements.some(n=>n.tagName==='meta'&&attrs(n).name==='description'&&attrs(n).content),`Missing description: ${relative(root,file)}`);
