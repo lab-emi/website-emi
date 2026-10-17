@@ -6,10 +6,14 @@ document.querySelectorAll<HTMLElement>('[data-agentic-build]').forEach(root => {
   let visible = false;
   let timer: number | undefined;
   let startedAt = 0;
-  let disposed = false;
 
   function motionAllowed() {
     return !preference.matches && document.documentElement.dataset.motion !== 'off';
+  }
+  function onScreen() {
+    if (!root.isConnected || root.closest('[hidden]')) return false;
+    const bounds = root.getBoundingClientRect();
+    return bounds.width > 0 && bounds.height > 0 && bounds.bottom > 0 && bounds.top < innerHeight && bounds.right > 0 && bounds.left < innerWidth;
   }
   function stop() {
     window.clearTimeout(timer);
@@ -38,7 +42,8 @@ document.querySelectorAll<HTMLElement>('[data-agentic-build]').forEach(root => {
   }
   function tick() {
     timer = undefined;
-    if (disposed || !visible || document.hidden || root.closest('[hidden]')) { showComplete(); return; }
+    visible = onScreen();
+    if (!visible || document.hidden) { showComplete(); return; }
     if (!motionAllowed()) { showComplete(); return; }
     const elapsed = performance.now() - startedAt;
     if (elapsed >= 7800) startedAt = performance.now();
@@ -46,8 +51,9 @@ document.querySelectorAll<HTMLElement>('[data-agentic-build]').forEach(root => {
     timer = window.setTimeout(tick, 90);
   }
   function start(restart = false) {
+    visible = onScreen();
     replay.hidden = !motionAllowed();
-    if (disposed || !visible || document.hidden || root.closest('[hidden]') || !motionAllowed()) { showComplete(); return; }
+    if (!visible || document.hidden || !motionAllowed()) { showComplete(); return; }
     if (timer !== undefined && !restart) return;
     stop();
     startedAt = performance.now();
@@ -55,9 +61,10 @@ document.querySelectorAll<HTMLElement>('[data-agentic-build]').forEach(root => {
     render(0);
     timer = window.setTimeout(tick, 90);
   }
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver(() => {
     const wasVisible = visible;
-    visible = entries[0].isIntersecting;
+    // Fragment jumps can batch hidden and visible entries; use the current layout.
+    visible = onScreen();
     if (!visible) showComplete();
     else start(!wasVisible);
   }, { threshold: .1 });
@@ -66,10 +73,11 @@ document.querySelectorAll<HTMLElement>('[data-agentic-build]').forEach(root => {
   preference.addEventListener('change', () => start(true));
   window.addEventListener('emi:motion', () => start(true));
   document.addEventListener('visibilitychange', () => start(true));
-  window.addEventListener('pagehide', event => {
+  window.addEventListener('pagehide', () => {
     stop();
-    if (!event.persisted) { disposed = true; observer.disconnect(); }
+    observer.disconnect();
   });
-  window.addEventListener('pageshow', () => start(true));
+  window.addEventListener('pageshow', () => { observer.observe(root); start(true); });
   showComplete();
+  requestAnimationFrame(() => start(true));
 });
