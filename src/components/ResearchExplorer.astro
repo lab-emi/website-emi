@@ -3,6 +3,7 @@ import { research } from '../data/research';
 import publications from '../data/publications.json';
 import { href } from '../lib/site';
 import Arrow from './Arrow.astro';
+import AgenticChipDesign from './AgenticChipDesign.astro';
 interface Props { compact?: boolean; }
 const { compact = false } = Astro.props;
 const labels = ['Signals', 'Sparsity', 'Vision', 'Speech & sensing'];
@@ -23,8 +24,12 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
       <svg width="40" height="36" viewBox="0 0 40 36" fill="none" aria-hidden="true"><path d={paths[i]} stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
       <span class="module-name">{labels[i]}</span><span class="module-type">{['RF · MIXED SIGNAL', 'NEURAL COMPUTING', 'EVENT PERCEPTION', 'EMBEDDED AI'][i]}</span><Arrow diagonal size={17} />
     </button>)}
+          <button class="research-tab research-tab--core" type="button" data-research-tab="ai-native-chip-design" id="tab-ai-native-chip-design" aria-label="AI-Native Chip Design" aria-controls="panel-ai-native-chip-design" aria-pressed="false">
+            <span class="research-tab-index">05 /</span>
+            <svg class="ai-core-mark" width="24" height="20" viewBox="0 0 24 20" fill="none" aria-hidden="true"><path d="M2 3h7v6H2zm13 0h7v6h-7zM8 13h8v6H8zM9 6h6M5 9v7h3m11-7v7h-3" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" /></svg>
+            <span class="module-name">AI-Native<br />Chip Design</span><span class="module-type">AGENTIC AI · CHIPJEV</span><Arrow diagonal size={14} />
+          </button>
         </div>
-        <span class="engine-centre" aria-hidden="true">e</span>
       </div>
     </div>
     <div class="engine-bottomline"><span>ALGORITHMS ↔ HARDWARE</span><span>SELECT A MODULE <span aria-hidden="true">↗</span></span></div>
@@ -48,21 +53,31 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
       <div class="research-evidence"><span class="evidence-label">Ideas, in practice <span>↳</span></span>{papers.map(p=><a href={href(p!.url)}><span>{p!.year}</span><strong>{p!.title}</strong><Arrow diagonal size={16} /></a>)}</div>
     </section>;
   })}
+  <section class="research-panel research-panel--ai" id="panel-ai-native-chip-design" data-research-panel="ai-native-chip-design" aria-labelledby="research-title-ai-native-chip-design" tabindex="0">
+    <div class="research-panel-copy"><p class="eyebrow"><span class="status-light"></span> Research direction 05</p><h3 id="research-title-ai-native-chip-design">AI-Native Chip Design</h3><p>AI agents compose, connect and refine circuit building blocks — from transistors to systems.</p></div>
+    <AgenticChipDesign />
+    <a class="ai-project-link" href="https://chipjev.com/"><span><strong>ChipJev</strong><small>Explore our analog circuit design demo</small></span><Arrow diagonal size={20} /></a>
+  </section>
 </div>
 <script>
   document.querySelectorAll<HTMLElement>('[data-research-explorer]').forEach(explorer => {
     const buttons = [...explorer.querySelectorAll<HTMLButtonElement>('[data-research-tab]')];
     const panels = [...explorer.querySelectorAll<HTMLElement>('[data-research-panel]')];
-    function select(button: HTMLButtonElement, focus = false) {
+    function select(button: HTMLButtonElement, focus = false, reveal = false) {
       buttons.forEach(b => { const active = b === button; b.setAttribute('aria-selected', String(active)); b.removeAttribute('aria-pressed'); b.tabIndex = active ? 0 : -1; });
       panels.forEach(panel => { panel.hidden = panel.dataset.researchPanel !== button.dataset.researchTab; });
       explorer.dataset.activeModule = button.dataset.researchTab;
       if (focus) button.focus();
+      if (reveal && button.dataset.researchTab === 'ai-native-chip-design') {
+        const target = matchMedia('(max-width: 900px)').matches ? panels.find(panel => !panel.hidden)! : explorer;
+        const bounds = target.getBoundingClientRect();
+        if (bounds.top < 95 || bounds.bottom > innerHeight - 15) requestAnimationFrame(() => target.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.dataset.motion === 'off' ? 'auto' : 'smooth'}));
+      }
     }
     explorer.querySelector('.research-tabs')!.setAttribute('role', 'tablist');
     buttons.forEach((button,index) => {
       button.setAttribute('role', 'tab');
-      button.addEventListener('click', () => select(button));
+      button.addEventListener('click', () => select(button, false, true));
       button.addEventListener('keydown', event => {
         let next = index;
         if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
@@ -74,7 +89,12 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
       });
     });
     panels.forEach(panel => { panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-labelledby', `tab-${panel.dataset.researchPanel}`); });
-    select(buttons[0]);
+    const linked = buttons.find(button => location.hash === `#${button.getAttribute('aria-controls')}`);
+    select(linked || buttons[0], false, Boolean(linked));
+    window.addEventListener('hashchange', () => {
+      const target = buttons.find(button => location.hash === `#${button.getAttribute('aria-controls')}`);
+      if (target) select(target, false, true);
+    });
     explorer.dataset.enhanced = 'true';
   });
 </script>

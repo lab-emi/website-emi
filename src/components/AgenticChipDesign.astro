@@ -1,0 +1,60 @@
+---
+// A schematic concept illustration, not a ChipJev run or a simulated netlist.
+const transistors = [
+  {x:85,y:105,type:'pmos',label:'M3',at:420},
+  {x:160,y:105,type:'pmos',label:'M4',at:520},
+  {x:85,y:165,type:'nmos',label:'M1',at:650},
+  {x:160,y:165,type:'nmos',label:'M2',at:750},
+  {x:122,y:226,type:'nmos',label:'M5',at:880},
+  {x:242,y:105,type:'pmos',label:'M6',at:1000},
+  {x:242,y:165,type:'nmos',label:'M7',at:1120},
+];
+const gates = Array.from({length:16},(_,i)=>({
+  x:356+(i%4)*61, y:104+Math.floor(i/4)*43,
+  type:['and','or','inv','ff'][(i+Math.floor(i/4))%4], at:1450+i*85,
+}));
+---
+<figure class="agentic-build" data-agentic-build data-phase="ready">
+  <div class="agentic-build-top"><span><span class="agentic-agent-dot"></span> Agentic AI · chip design</span><button type="button" data-build-replay hidden aria-label="Replay the chip assembly animation"><span aria-hidden="true">↻</span> Replay</button></div>
+  <svg class="agentic-diagram" viewBox="0 0 640 318" role="img" aria-labelledby="agentic-diagram-title agentic-diagram-desc">
+    <title id="agentic-diagram-title">AI agents compose an analog and digital circuit</title>
+    <desc id="agentic-diagram-desc">Transistors assemble into a differential amplifier alongside a grid of digital logic gates. Interconnects join the pieces into one system as the agent plans, composes, connects and refines the design. This is a concept illustration.</desc>
+    <defs>
+      <pattern id="agentic-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".65" fill="#668cab" opacity=".2" /></pattern>
+      <symbol id="agentic-nmos" viewBox="0 0 28 36"><path d="M18 0V8M18 28V36M18 8V28M11 9V27M0 18H11M18 11H24M18 25H24M24 22 20 25 24 28" /></symbol>
+      <symbol id="agentic-pmos" viewBox="0 0 28 36"><path d="M18 0V8M18 28V36M18 8V28M11 9V27M0 18H5M18 11H24M18 25H24M20 8 24 11 20 14" /><circle cx="8" cy="18" r="3" /></symbol>
+      <symbol id="agentic-and" viewBox="0 0 44 28"><path d="M0 8H8M0 20H8M8 3H21A11 11 0 0 1 21 25H8ZM32 14H44" /></symbol>
+      <symbol id="agentic-or" viewBox="0 0 44 28"><path d="M0 8H10M0 20H10M7 3Q24 0 34 14Q24 28 7 25Q17 14 7 3ZM34 14H44" /></symbol>
+      <symbol id="agentic-inv" viewBox="0 0 44 28"><path d="M0 14H9M9 3 29 14 9 25ZM35 14H44" /><circle cx="32" cy="14" r="3" /></symbol>
+      <symbol id="agentic-ff" viewBox="0 0 44 28"><path d="M0 8H8M0 21H8M8 2H34V26H8ZM8 17 13 21 8 25M34 8H44" /><text x="15" y="17" stroke="none" fill="currentColor" font-size="10">D</text></symbol>
+    </defs>
+    <rect x="8" y="2" width="624" height="310" rx="12" fill="url(#agentic-grid)" />
+    <g class="agentic-planner"><rect x="259" y="8" width="122" height="32" rx="16" /><circle cx="276" cy="24" r="3" /><text x="292" y="28">AI design agent</text></g>
+    <path class="agentic-agent-path" d="M320 40V57H161V77M320 57H477V77" />
+    <rect class="agentic-system-frame" x="26" y="76" width="588" height="220" rx="10" />
+    <path class="agentic-divider" d="M324 92V278" />
+    <text class="agentic-area-label" x="46" y="93">TRANSISTOR AMPLIFIER</text>
+    <text class="agentic-area-label" x="350" y="93">DIGITAL LOGIC</text>
+    <g class="agentic-analog" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g class="agentic-wire" data-wire-at="1300"><path pathLength="1" d="M103 105V99H178V105M178 99H260V105M103 141V165M178 141V165M85 123H72V153H103M160 123H148V153H103M242 123H224M103 201V217H178V201M140 217V226M140 262V275H260V201M260 141V165M178 153H200V183H242M260 153H297M67 183H85M142 183H160M54 244H122M54 244V260" /></g>
+      {transistors.map((t,i)=><g transform={`translate(${t.x} ${t.y})`}><g class="agentic-piece agentic-transistor" data-piece-at={t.at} style={`--piece-x:${i%2===0?-48:48}px;--piece-y:${i<4?-36:35}px;--piece-rotate:${i%2===0?-12:12}deg`}><use href={`#agentic-${t.type}`} width="28" height="36" /><text x="29" y="20">{t.label}</text></g></g>)}
+      <g transform="translate(212 153)"><g class="agentic-piece" data-piece-at="1220" style="--piece-x:-12px;--piece-y:-45px;--piece-rotate:20deg"><path d="M0-9V9M6-9V9M-12 0H0M6 0H17" /><text x="-3" y="-15">Cc</text></g></g>
+      <g class="agentic-wire" data-wire-at="1380"><path pathLength="1" d="M178 153V136H200V153M229 153H260M54 275H140M46 279H62M49 283H59M52 287H56" /></g>
+      <g class="agentic-piece" data-piece-at="340" style="--piece-x:-35px;--piece-y:30px;--piece-rotate:-8deg"><circle cx="54" cy="267" r="7" /><path d="M51 265H57M54 262V268M51 271H57M54 274V275" /></g>
+      <text class="agentic-port-label" x="203" y="120">VBP</text><text class="agentic-port-label" x="65" y="239">VBN</text>
+      <text class="agentic-port-label" x="48" y="180">IN+</text><text class="agentic-port-label" x="123" y="180">IN−</text><text class="agentic-port-label" x="270" y="146">OUT</text>
+    </g>
+    <g class="agentic-digital" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      {gates.map((g,i)=><g transform={`translate(${g.x} ${g.y})`}><g class="agentic-piece agentic-gate" data-piece-at={g.at} style={`--piece-x:${i%2===0?36:-28}px;--piece-y:${i%3===0?-50:42}px;--piece-rotate:${i%2===0?16:-16}deg`}><rect x="-4" y="-2" width="52" height="34" rx="5" /><use href={`#agentic-${g.type}`} x="1" y="2" width="42" height="27" /></g></g>)}
+      {[0,1,2,3].map(row=><g class="agentic-wire agentic-digital-wire" data-wire-at={2950+row*130}><path pathLength="1" d={`M342 ${119+row*43}H356M400 ${119+row*43}H417M461 ${119+row*43}H478M522 ${119+row*43}H539M583 ${119+row*43}H597`} /></g>)}
+      <g class="agentic-wire agentic-digital-wire" data-wire-at="3500"><path pathLength="1" d="M597 119H605V162H597M342 162H334V205H342M597 205H605V248H597M334 119V248M583 248H605" /></g>
+    </g>
+    <g class="agentic-wire agentic-system-wire" data-wire-at="3700"><path pathLength="1" d="M297 153H312V119H342M312 153V248H334" /><circle cx="312" cy="153" r="3" /><circle cx="312" cy="248" r="3" /></g>
+    <g class="agentic-ready-marker"><circle cx="600" cy="286" r="3" /><text x="46" y="287">COMPOSE → CONNECT → REFINE</text></g>
+  </svg>
+  <div class="agentic-build-steps" aria-label="Agentic design cycle"><span data-build-step="plan">Plan</span><i aria-hidden="true">→</i><span data-build-step="compose">Compose</span><i aria-hidden="true">→</i><span data-build-step="connect">Connect</span><i aria-hidden="true">→</i><span data-build-step="refine">Refine</span></div>
+  <figcaption>Concept animation · analog + digital building blocks</figcaption>
+</figure>
+<script>
+  import '../scripts/agentic-chip-design';
+</script>
