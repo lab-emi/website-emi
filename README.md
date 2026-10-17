@@ -23,6 +23,17 @@ npm run validate
 npm run preview
 ```
 
+## Interactive design
+
+The site uses a shared visual system in `src/styles/experience.css`. The original content collections, metadata, URLs and analytics configuration are retained.
+
+- `ResearchExplorer.astro` connects four clickable modules to the real research directions, experiment photographs and selected publications. The compact homepage version puts the chip in the first screen; the Research overview includes the experimental photographs as well. Arrow keys, Home and End navigate the modules; content remains available without JavaScript.
+- `src/scripts/site-motion.ts` handles scroll reveals, reading progress and the header animation pause control. The control affects the interactive chip, ambient effects and lab-photo slideshow. Its preference is stored only for the current browser session. System reduced-motion preferences suppress ambient animation and automatic slideshow playback; manual photo navigation remains available.
+- “The way we think” is a compact text-and-diagram strip immediately after the research explorer.
+- The eleven existing lab photos are shown in the homepage's people section, retaining their order and framing. The first photo remains fully visible. Previous/next buttons supplement the automatic rotation.
+
+For a clean local preview without development controls, run `npm run build`, `npm run validate`, then `npm run preview -- --port 4322` and open <http://localhost:4322>.
+
 ## Update the content
 
 | Content | Edit here |
@@ -53,13 +64,13 @@ Copy an existing Markdown file to add a news story or project. The block between
 
 Upload an image to `public/images/` and a smaller version with the same filename to `public/images/thumbs/`. Use a root-relative path such as `/images/example.webp` in content. Internal links are automatically adjusted for GitHub Pages. Keep image captions and descriptive alt text meaningful.
 
-The homepage automatically rotates through eleven lab photos every three seconds, with a short crossfade and matching captions. It starts with the supplied group photo titled “Chang's Visit to Prof. Anding Zhu's Lab”, fitted without cropping, followed by Chang and Chris, Yizhuo and Chris, and Ang at ISCAS 2025. The rest of the existing photo order is preserved. Hovering over the photo frame or focusing its controls pauses rotation; leaving resumes after a full three seconds unless another pause condition still applies. A manual pause remains in effect when the pointer leaves, and touch interactions do not create a hover pause. A pause/play button is available on touch screens too. Background tabs pause. Reduced-motion preferences remove the crossfade animation while retaining automatic playback.
+The homepage people section automatically rotates through eleven lab photos every three seconds, with a short crossfade and matching captions. It starts with the supplied group photo titled “Chang's Visit to Prof. Anding Zhu's Lab”, fitted without cropping, followed by Chang and Chris, Yizhuo and Chris, and Ang at ISCAS 2025. The rest of the existing photo order is preserved. Hovering over the photo frame or focusing its controls pauses rotation; leaving resumes after a full three seconds unless another pause condition still applies. A manual pause remains in effect when the pointer leaves, and touch interactions do not create a hover pause. A pause/play button is available on touch screens too. Background tabs pause. Reduced-motion preferences disable automatic playback and crossfades; previous/next photo controls remain available.
 
 Publication records contain the original citation in `citation` and `sourceVersions`. The site does not invent missing DOIs or BibTeX metadata. Add a record with a unique `id`, its real title/authors/venue/year, an existing research topic, article URL and optional code URL. Search, year groups and research-area filters update automatically. Adjust the author-name matcher in `src/components/Publication.astro` when the lab adds an author whose abbreviated name is not yet recognised.
 
 The homepage and People page publish linked Organization and Person records from `src/lib/identity.ts`. Chang Gao's stable identity is `https://gaochangw.github.io/#person`, shared with his personal homepage and presentation authorship. The team page remains a CollectionPage, not a single-person ProfilePage. The role and affiliation are grounded in the [TU Delft department profile](https://microelectronics.tudelft.nl/People/bio.php?id=840); keep those facts and the external profile links aligned when updating either site. Structured data helps search engines understand the pages but does not guarantee a Google knowledge panel.
 
-The homepage links to the EMI GitHub organization immediately below the four research directions. The Research overview starts with the `#open-source` section below its introduction, featuring OpenDPD, CleanUMamba and AIRHAR with descriptions checked against their official repository READMEs. Demonstrations and research support follow; the four research directions remain accessible from the homepage. The same project records supply links on the relevant research-area pages. A publication's `code` field adds its repository link in both Publications and the research-area paper list; CleanUMamba links to its official implementation. Update these curated entries when adding projects. The site does not fetch GitHub data or star counts at runtime.
+The homepage links to the EMI GitHub organization immediately below the four research directions. The Research overview begins with the interactive `#directions` section, followed by `#open-source`, featuring OpenDPD, CleanUMamba and AIRHAR with descriptions checked against their official repository READMEs. Demonstrations and research support follow; the four research directions are available through the interactive engine on both the homepage and Research overview. The same project records supply links on the relevant research-area pages. A publication's `code` field adds its repository link in both Publications and the research-area paper list; CleanUMamba links to its official implementation. Update these curated entries when adding projects. The site does not fetch GitHub data or star counts at runtime.
 
 When a student leaves, move their record to the alumni list instead of removing their history. Set a project's `status` to `Filled` or `Archived` when its availability changes. Historical PhD announcements retain their original deadlines and are labelled as archived.
 

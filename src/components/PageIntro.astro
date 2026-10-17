@@ -3,6 +3,7 @@ interface Props { eyebrow?: string; title: string; description?: string; }
 const { eyebrow, title, description } = Astro.props;
 ---
 <section class="page-intro wrap">
+  <div class="intro-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
   {eyebrow && <p class="eyebrow"><span class="little-square"></span>{eyebrow}</p>}
   <div class="intro-line"><h1>{title}</h1><slot /></div>
   {description && <p class="intro-description">{description}</p>}

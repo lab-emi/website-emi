@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/experience.css';
 import { site, href } from '../lib/site';
 import Arrow from '../components/Arrow.astro';
 interface Props { title?: string; description?: string; active?: string; }
@@ -31,14 +32,14 @@ const joinLink = ['Join us','/join-us/'];
     </script>
     <title>{pageTitle}</title><meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="theme-color" content="#101f31" />
+    <meta name="theme-color" content="#fafbfc" />
     <meta property="og:title" content={pageTitle} /><meta property="og:description" content={description} />
     <meta property="og:type" content="website" /><meta property="og:url" content={canonical} />
     <link rel="icon" href={href('/favicon.png?v=20260908-transparent')} type="image/png" sizes="2048x2048" />
     <link rel="alternate" type="application/rss+xml" title="EMI Lab news" href={href('/feed.xml')} />
     <slot name="head" />
   </head>
-  <body>
+  <body class="emi-site">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner wrap">
@@ -47,14 +48,19 @@ const joinLink = ['Join us','/join-us/'];
           {navigation.map(([label,path]) => <a href={href(path)} aria-current={active === label ? 'page' : undefined}>{label}</a>)}
           <a class="nav-join" href={href(joinLink[1])} aria-current={active === joinLink[0] ? 'page' : undefined}>{joinLink[0]} <Arrow diagonal size={15} /></a>
         </nav>
-        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+        <div class="header-tools">
+          <button class="motion-toggle" data-motion-toggle type="button" aria-pressed="false" aria-label="Pause animations" title="Pause animations" hidden><svg class="motion-pause" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M3 2h2v8H3zm4 0h2v8H7z" /></svg><svg class="motion-play" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m3 1 8 5-8 5z" /></svg></button>
+          <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+        </div>
       </div>
       <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden>
         {[...navigation,joinLink,['Grants & awards','/grants-awards/']].map(([label,path]) => <a href={href(path)} aria-current={active === label ? 'page' : undefined}>{label}<Arrow /></a>)}
       </nav>
+      <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
     </header>
     <main id="main"><slot /></main>
     <footer class="site-footer">
+      <div class="footer-signature wrap"><p>Less energy.<br /><em>More possibility.</em></p><a href={href('/join-us/')} aria-label="Start a conversation with EMI"><Arrow diagonal size={29} /></a></div>
       <div class="wrap footer-top">
         <div class="footer-about"><a class="footer-logo" href={href('/')}>EMI<span>.</span></a><p>Lab of Efficient Machine Intelligence<br />Delft University of Technology</p><p class="footer-address">Department of Microelectronics · EEMCS<br />Mekelweg 4, 2628 CD Delft<br />The Netherlands</p></div>
         <div><p class="footer-label">Explore</p><a href={href('/research/')}>Research</a><a href={href('/publications/')}>Publications</a><a href={href('/people/')}>Our people</a><a href={href('/grants-awards/')}>Grants & awards</a></div>
@@ -64,6 +70,7 @@ const joinLink = ['Join us','/join-us/'];
       <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} EMI Lab · Chang Gao</span><a href="mailto:gaochangw@outlook.com">Website contact: gaochangw@outlook.com</a><a href={href('/feed.xml')}>RSS feed <Arrow diagonal size={13} /></a></div>
     </footer>
     <script>
+      import '../scripts/site-motion';
       const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
       const menu = document.querySelector<HTMLElement>('#mobile-nav');
       function closeMenu() { if (!toggle || !menu) return; toggle.setAttribute('aria-expanded','false'); toggle.setAttribute('aria-label','Open navigation'); menu.hidden = true; }

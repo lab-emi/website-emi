@@ -6,35 +6,44 @@ if (carousel) {
   const toggle = carousel.querySelector<HTMLButtonElement>('[data-carousel-toggle]')!;
   const pauseIcon = toggle.querySelector<HTMLElement>('[data-pause-icon]')!;
   const playIcon = toggle.querySelector<HTMLElement>('[data-play-icon]')!;
-  // Start automatically; reduced-motion styles remove the crossfade animation.
+  // Autoplay only while visible and while the site's motion controls allow it.
   let paused = false;
   let focused = carousel.contains(document.activeElement);
   let hovered = window.matchMedia('(any-hover: hover)').matches && carousel.matches(':hover');
   let active = 0;
   let timer: number | undefined;
+  let inView = true;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const sitePaused = () => reduced.matches || document.documentElement.dataset.motion === 'off';
 
   function updateControl() {
-    const label = paused ? 'Play slideshow' : 'Pause slideshow';
+    const effectivePause = paused || sitePaused();
+    const label = sitePaused() ? 'Slideshow paused with site animations' : paused ? 'Play slideshow' : 'Pause slideshow';
     toggle.setAttribute('aria-label', label);
     toggle.title = label;
-    pauseIcon.toggleAttribute('hidden', paused);
-    playIcon.toggleAttribute('hidden', !paused);
+    toggle.disabled = sitePaused();
+    pauseIcon.toggleAttribute('hidden', effectivePause);
+    playIcon.toggleAttribute('hidden', !effectivePause);
+  }
+
+  function showSlide(next: number) {
+    slides[active].classList.remove('is-active');
+    slides[active].setAttribute('aria-hidden', 'true');
+    slides[next].classList.add('is-active');
+    slides[next].setAttribute('aria-hidden', 'false');
+    caption.textContent = slides[next].dataset.caption || '';
+    active = next;
   }
 
   function schedule() {
     window.clearTimeout(timer);
-    if (paused || focused || hovered || document.hidden || slides.length < 2) return;
+    if (paused || sitePaused() || !inView || focused || hovered || document.hidden || slides.length < 2) return;
     timer = window.setTimeout(() => {
       // Keep the current image visible until another photo has loaded.
       for (let offset = 1; offset < slides.length; offset++) {
         const next = (active + offset) % slides.length;
         if (!slides[next].complete || !slides[next].naturalWidth) continue;
-        slides[active].classList.remove('is-active');
-        slides[active].setAttribute('aria-hidden', 'true');
-        slides[next].classList.add('is-active');
-        slides[next].setAttribute('aria-hidden', 'false');
-        caption.textContent = slides[next].dataset.caption || '';
-        active = next;
+        showSlide(next);
         break;
       }
       schedule();
@@ -64,6 +73,16 @@ if (carousel) {
     schedule();
   });
   document.addEventListener('visibilitychange', schedule);
+  window.addEventListener('emi:motion', () => { updateControl(); schedule(); });
+  reduced.addEventListener('change', () => { updateControl(); schedule(); });
+  const observer = new IntersectionObserver(entries => { inView = entries[0].isIntersecting; schedule(); });
+  observer.observe(carousel);
+  for (const [selector, direction] of [['[data-carousel-previous]', -1], ['[data-carousel-next]', 1]] as const) {
+    const button = carousel.querySelector<HTMLButtonElement>(selector);
+    if (!button) continue;
+    button.hidden = slides.length < 2;
+    button.addEventListener('click', () => { showSlide((active + direction + slides.length) % slides.length); schedule(); });
+  }
   window.addEventListener('pagehide', () => window.clearTimeout(timer));
   window.addEventListener('pageshow', schedule);
 

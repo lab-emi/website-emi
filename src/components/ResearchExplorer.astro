@@ -1,0 +1,80 @@
+---
+import { research } from '../data/research';
+import publications from '../data/publications.json';
+import { href } from '../lib/site';
+import Arrow from './Arrow.astro';
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+const labels = ['Signals', 'Sparsity', 'Vision', 'Speech & sensing'];
+const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21 29 8 38 13M12 18 17 7M21 21 25 32', 'M2 18Q20 -3 38 18Q20 39 2 18ZM26 18A6 6 0 1 1 14 18A6 6 0 1 1 26 18', 'M4 15V21M10 8V28M16 3V33M22 11V25M28 6V30M34 14V22'];
+---
+<div class:list={['research-explorer', { 'research-explorer--compact': compact }]} data-research-explorer>
+  <div class="engine-visual">
+    <div class="engine-topline"><span><span class="status-light"></span> THE EMI CO-DESIGN ENGINE</span><span>EXPLORE THE LAYERS ↘</span></div>
+    <div class="engine-stage">
+      <div class="engine-orbit engine-orbit-one"></div><div class="engine-orbit engine-orbit-two"></div>
+      <div class="engine-platform">
+        <div class="engine-layer engine-layer-bottom"><span>HARDWARE</span></div>
+        <div class="engine-layer engine-layer-middle"><span>ALGORITHMS</span></div>
+        <svg class="engine-traces" viewBox="0 0 400 400" fill="none" aria-hidden="true"><path d="M0 100H90L130 140H200V0M400 95H315L270 140H200M0 300H85L125 260H200V400M400 300H310L270 260H200M0 200H400M100 0V65L145 110M300 0V65L255 110M100 400V335L145 290M300 400V335L255 290" /><circle cx="200" cy="200" r="25" /><circle cx="200" cy="200" r="36" /></svg>
+        <div class="research-tabs" aria-label="Research directions">
+    {research.map((area,i)=><button class="research-tab" type="button" data-research-tab={area.id} id={`tab-${area.id}`} aria-controls={`panel-${area.id}`} aria-pressed={i===0}>
+      <span class="research-tab-index">{area.number} /</span>
+      <svg width="40" height="36" viewBox="0 0 40 36" fill="none" aria-hidden="true"><path d={paths[i]} stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      <span class="module-name">{labels[i]}</span><span class="module-type">{['RF · MIXED SIGNAL', 'NEURAL COMPUTING', 'EVENT PERCEPTION', 'EMBEDDED AI'][i]}</span><Arrow diagonal size={17} />
+    </button>)}
+        </div>
+        <span class="engine-centre" aria-hidden="true">e</span>
+      </div>
+    </div>
+    <div class="engine-bottomline"><span>ALGORITHMS ↔ HARDWARE</span><span>SELECT A MODULE <span aria-hidden="true">↗</span></span></div>
+  </div>
+  {research.map((area,i)=>{
+    const papers = area.papers.map(prefix=>publications.find(p=>p.title.startsWith(prefix))).filter(Boolean).slice(0,2);
+    return <section class="research-panel" id={`panel-${area.id}`} data-research-panel={area.id} aria-labelledby={`research-title-${area.id}`} tabindex="0">
+      <div class="research-panel-main">
+        <div class="research-panel-copy">
+          <p class="eyebrow"><span class="status-light"></span> Research direction {area.number}</p>
+          <h3 id={`research-title-${area.id}`}>{area.short}</h3>
+          <p>{area.description}</p>
+          <div class="research-keywords">{area.keywords.map(keyword=><span>{keyword}</span>)}</div>
+          <a class="text-link" href={href(`/research/${area.id}/`)}>Explore {labels[i].toLowerCase()} <Arrow diagonal size={18} /></a>
+        </div>
+        {!compact && <figure class="research-panel-image">
+          <img src={href(area.image)} alt={area.imageAlt} width={area.imageWidth} height={area.imageHeight} loading="lazy" decoding="async" />
+          <figcaption><span>{area.title}</span><a href={area.imageSource}>{area.imageCredit} <Arrow diagonal size={12} /></a></figcaption>
+        </figure>}
+      </div>
+      <div class="research-evidence"><span class="evidence-label">Ideas, in practice <span>↳</span></span>{papers.map(p=><a href={href(p!.url)}><span>{p!.year}</span><strong>{p!.title}</strong><Arrow diagonal size={16} /></a>)}</div>
+    </section>;
+  })}
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-research-explorer]').forEach(explorer => {
+    const buttons = [...explorer.querySelectorAll<HTMLButtonElement>('[data-research-tab]')];
+    const panels = [...explorer.querySelectorAll<HTMLElement>('[data-research-panel]')];
+    function select(button: HTMLButtonElement, focus = false) {
+      buttons.forEach(b => { const active = b === button; b.setAttribute('aria-selected', String(active)); b.removeAttribute('aria-pressed'); b.tabIndex = active ? 0 : -1; });
+      panels.forEach(panel => { panel.hidden = panel.dataset.researchPanel !== button.dataset.researchTab; });
+      explorer.dataset.activeModule = button.dataset.researchTab;
+      if (focus) button.focus();
+    }
+    explorer.querySelector('.research-tabs')!.setAttribute('role', 'tablist');
+    buttons.forEach((button,index) => {
+      button.setAttribute('role', 'tab');
+      button.addEventListener('click', () => select(button));
+      button.addEventListener('keydown', event => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
+        else if (event.key === 'ArrowLeft') next = (index + buttons.length - 1) % buttons.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = buttons.length - 1;
+        else return;
+        event.preventDefault(); select(buttons[next], true);
+      });
+    });
+    panels.forEach(panel => { panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-labelledby', `tab-${panel.dataset.researchPanel}`); });
+    select(buttons[0]);
+    explorer.dataset.enhanced = 'true';
+  });
+</script>
