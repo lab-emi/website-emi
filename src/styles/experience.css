@@ -480,7 +480,7 @@ html[data-motion=off] .research-panel { animation: none !important; }
 .research-tabs>.research-tab:not(.research-tab--core)>svg:last-child { display: none; }
 .research-tabs>.research-tab:nth-child(2), .research-tabs>.research-tab:nth-child(4) { align-items: flex-end; text-align: right; }
 .research-tabs>.research-tab:not(.research-tab--core)>.research-tab-index { font-size: 7px; }
-.research-tabs .research-tab--core { position: absolute; left: 50%; top: calc(50% + 12px); width: 108px; height: 102px; z-index: 3; padding: 11px 12px; border-radius: 10px; background: linear-gradient(145deg,#4b77b8,#2d4e83); border-color: #a6c4e8; color: #f2f7ff; box-shadow: 0 6px 0 #182f50,1px 9px 0 #85acd0,0 20px 30px #041324a0; transform: translate(-50%,-50%) translateZ(24px); }
+.research-tabs .research-tab--core { position: absolute; left: 50%; top: calc(50% + 12px); width: 108px; height: 102px; z-index: 3; padding: 11px 12px; border-radius: 10px; line-height: 1.2; background: linear-gradient(145deg,#4b77b8,#2d4e83); border-color: #a6c4e8; color: #f2f7ff; box-shadow: 0 6px 0 #182f50,1px 9px 0 #85acd0,0 20px 30px #041324a0; transform: translate(-50%,-50%) translateZ(24px); }
 .research-tabs .research-tab--core:is(:hover,[aria-selected=true],[aria-pressed=true]) { transform: translate(-50%,-50%) translateZ(34px); background: linear-gradient(145deg,#bd694b,#944b37); border-color: #efbd98; box-shadow: 0 6px 0 #743b30,1px 9px 0 #d99776,0 25px 30px #041324a0; }
 .research-tabs .research-tab--core>.research-tab-index { font-size: 6px; color: #c4d9f4; }
 .research-tabs .research-tab--core>.ai-core-mark { width: 22px; height: 18px; color: #d8e9fc; margin: 5px 0 6px; }
@@ -555,7 +555,7 @@ html[data-motion=off] .research-panel { animation: none !important; }
   .research-tabs .research-tab--core:is(:hover,[aria-selected=true],[aria-pressed=true]) { transform: translate(-50%,-50%) translateZ(26px); }
   .research-tabs .research-tab--core>.research-tab-index { font-size: 4.5px; }
   .research-tabs .research-tab--core>.ai-core-mark { width: 16px; height: 13px; margin: 3px 0 4px; }
-  .research-tabs .research-tab--core>.module-name { font-size: 9px; }
+  .research-tabs .research-tab--core>.module-name { font-size: 10px; }
   .research-tabs .research-tab--core>.module-type { font-size: 3px; margin-top: 4px; }
   .research-tabs .research-tab--core>svg:last-child { top: 7px; right: 6px; width: 7px; }
   .research-panel--ai .agentic-build { padding-inline: 8px; }
@@ -583,21 +583,22 @@ html[data-motion=off] .research-panel { animation: none !important; }
   .research-explorer--compact .engine-stage { min-height: 290px; }
   .research-explorer--compact .engine-platform { width: 225px; height: 225px; }
   .research-explorer--compact .engine-topline, .research-explorer--compact .engine-bottomline { padding-block: 17px; }
-  .research-explorer--compact .research-tab { padding: 12px; }
-  .research-explorer--compact .research-tab>svg:not(:last-child) { width: 26px; height: 24px; margin: 8px 0 6px; }
-  .research-explorer--compact .research-tab>.module-name { font-size: 10px; }
+  /* The central module keeps its own compact sizing so its two-line label fits. */
+  .research-explorer--compact .research-tab:not(.research-tab--core) { padding: 12px; }
+  .research-explorer--compact .research-tab:not(.research-tab--core)>svg:not(:last-child) { width: 26px; height: 24px; margin: 8px 0 6px; }
+  .research-explorer--compact .research-tab:not(.research-tab--core)>.module-name { font-size: 10px; }
   .research-explorer--compact .research-tab:nth-child(4)>.module-name { font-size: 9px; }
-  .research-explorer--compact .module-type { font-size: 4px; }
+  .research-explorer--compact .research-tab:not(.research-tab--core)>.module-type { font-size: 4px; }
   .research-first .research-footnote { gap: 6px; align-items: start; }
 }
 @media (max-width: 360px) {
   .research-explorer--compact .engine-platform { width: 190px; height: 190px; }
   .research-explorer--compact .engine-stage { min-height: 260px; }
-  .research-explorer--compact .research-tab { padding: 9px; }
-  .research-explorer--compact .research-tab>.module-name { font-size: 8px; }
+  .research-explorer--compact .research-tab:not(.research-tab--core) { padding: 9px; }
+  .research-explorer--compact .research-tab:not(.research-tab--core)>.module-name { font-size: 8px; }
   .research-explorer--compact .research-tab:nth-child(4)>.module-name { font-size: 7.5px; }
-  .research-explorer--compact .research-tab>svg:not(:last-child) { width: 21px; height: 19px; margin-block: 5px; }
-  .research-explorer--compact .module-type { font-size: 3px; }
+  .research-explorer--compact .research-tab:not(.research-tab--core)>svg:not(:last-child) { width: 21px; height: 19px; margin-block: 5px; }
+  .research-explorer--compact .research-tab:not(.research-tab--core)>.module-type { font-size: 3px; }
 }
 
 /* Spell out EMI before introducing the research, with a clear university affiliation. */
