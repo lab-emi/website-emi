@@ -1,0 +1,15 @@
+---
+const chapters = [
+  ['research', 'Research'],
+  ['principal-investigator', 'Principal investigator'],
+  ['open-source', 'Open source'],
+  ['news', 'News'],
+  ['selected-publications', 'Publications'],
+  ['team', 'The team'],
+  ['connect', 'Connect'],
+  ['visitors', 'Visitors'],
+];
+---
+<nav class="chapter-nav" data-chapter-nav aria-label="Homepage chapters">
+  {chapters.map(([id,label],i)=><a href={`#${id}`} data-chapter-link={id} aria-label={label} aria-current={i === 0 ? 'location' : undefined}><span class="chapter-dot" aria-hidden="true"></span><span class="chapter-label" aria-hidden="true">{label}</span></a>)}
+</nav>

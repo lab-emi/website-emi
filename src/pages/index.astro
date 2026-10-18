@@ -6,6 +6,8 @@ import NewsCard from '../components/NewsCard.astro';
 import VisitorMap from '../components/VisitorMap.astro';
 import ResearchExplorer from '../components/ResearchExplorer.astro';
 import PrincipalInvestigator from '../components/PrincipalInvestigator.astro';
+import HomeChapterNav from '../components/HomeChapterNav.astro';
+import '../styles/home-story.css';
 import { href, site, thumb } from '../lib/site';
 import { changGao, labSchema, personSchema, jsonLd } from '../lib/identity';
 import gallery from '../data/gallery.json';
@@ -36,7 +38,7 @@ const heroPhotos = [
 ];
 const selected = ['OpenDPDv2:', 'BitFair:', 'Exploiting neuro-inspired'].map(prefix=>publications.find(p=>p.title.startsWith(prefix))!);
 ---
-<Layout>
+<Layout home>
   <Fragment slot="head">
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <script is:inline type="application/ld+json" set:html={jsonLd({
@@ -47,7 +49,8 @@ const selected = ['OpenDPDv2:', 'BitFair:', 'Exploiting neuro-inspired'].map(pre
       ],
     })} />
   </Fragment>
-  <section id="research" class="research-first" aria-labelledby="hero-heading">
+  <HomeChapterNav />
+  <section id="research" class="research-first" data-story-section="Research" aria-labelledby="hero-heading">
     <div class="wrap">
       <div class="research-first-intro">
         <div><p class="lab-name">{site.fullName}</p><h1 id="hero-heading">Energy-Efficient Real-Time <span>Artificial Intelligence</span></h1></div>
@@ -59,7 +62,7 @@ const selected = ['OpenDPDv2:', 'BitFair:', 'Exploiting neuro-inspired'].map(pre
     </div>
   </section>
   <PrincipalInvestigator />
-  <section class="section open-lab-section" aria-labelledby="open-heading">
+  <section id="open-source" class="section open-lab-section" data-story-section="Open source" aria-labelledby="open-heading">
     <div class="wrap open-lab-layout">
       <div data-reveal><p class="eyebrow"><span class="section-index">03 /</span> Open by design</p><h2 id="open-heading">Built to be<br /><em>built upon.</em></h2><p>Ideas go further when we share them. Explore our code, datasets and pretrained models, and make the next connection.</p><a class="button button-light" href={site.github}>Explore EMI on GitHub <Arrow diagonal /></a></div>
       <div class="open-project-stack">
@@ -69,31 +72,40 @@ const selected = ['OpenDPDv2:', 'BitFair:', 'Exploiting neuro-inspired'].map(pre
       </div>
     </div>
   </section>
-  <section class="section wrap news-section" aria-labelledby="news-heading">
+  <section id="news" class="section wrap news-section" data-story-section="News" aria-labelledby="news-heading">
     <div class="section-title" data-reveal><div><p class="eyebrow"><span class="section-index">04 /</span> Fresh from the lab</p><h2 id="news-heading">Always in motion.</h2></div><a class="text-link" href={href('/news/')}>All news <Arrow /></a></div>
     <div class="home-news">{news.slice(0,3).map(entry=><div data-reveal><NewsCard entry={entry} /></div>)}</div>
     <div class="news-ticker">{news.slice(3,6).map(entry=><a href={href(`/news/${entry.id}/`)}><span>{entry.data.date.getUTCFullYear()}</span><strong>{entry.data.title}</strong><Arrow diagonal size={17} /></a>)}</div>
   </section>
-  <section class="section selected-section" aria-labelledby="selected-heading">
+  <section id="selected-publications" class="section selected-section" data-story-section="Publications" aria-labelledby="selected-heading">
     <div class="wrap selected-layout">
       <div data-reveal><p class="eyebrow"><span class="section-index">05 /</span> Selected publications</p><h2 id="selected-heading">An idea.<br />An experiment.<br /><em>A step forward.</em></h2><p>Research in efficient AI, circuits, systems and sensing.</p><a class="text-link" href={href('/publications/')}>Browse all publications <Arrow /></a></div>
       <div class="selected-list">{selected.map((p,i)=><a href={href(p.url)} class="selected-paper" data-reveal><div class="selected-meta"><span>0{i+1} /</span><span>{p.year} · {p.topic}</span><Arrow diagonal size={20} /></div><h3>{p.title}</h3><p>{p.authors}</p><span class="selected-venue">{i===0?'GLOBECOM · Accepted':i===1?'IEEE JETCAS':'Nature Communications'}</span></a>)}</div>
     </div>
   </section>
-  <section class="section wrap home-people" aria-labelledby="people-heading">
-    <figure class="hero-photo" data-hero-carousel role="group" aria-roledescription="carousel" aria-label="Life at EMI" data-reveal>
+  <section id="team" class="section home-team-section" data-story-section="The team" data-team-section aria-labelledby="people-heading">
+    <div class="wrap home-people">
+    <div class="team-collage">
+      <figure class="team-photo team-photo-side team-photo-left"><img src={href(heroPhotos[1].image)} alt={heroPhotos[1].caption} width={heroPhotos[1].width} height={heroPhotos[1].height} loading="lazy" /></figure>
+      <figure class="team-photo team-photo-side team-photo-right"><img src={href(heroPhotos[3].image)} alt={heroPhotos[3].caption} width={heroPhotos[3].width} height={heroPhotos[3].height} loading="lazy" /></figure>
+    <figure class="hero-photo team-photo team-photo-main" data-hero-carousel role="group" aria-roledescription="carousel" aria-label="Life at EMI">
       {heroPhotos.map((photo,index)=><img class:list={['hero-slide',{'is-active':index===0}]} src={href(photo.image)} alt={photo.caption} data-caption={photo.caption} style={{objectPosition:photo.position,objectFit:photo.fit}} width={photo.width} height={photo.height} loading="lazy" aria-hidden={index!==0} />)}
       <div class="photo-tag"><span class="status-light"></span> LIFE, IN GOOD COMPANY</div>
       <button type="button" class="hero-pause" data-carousel-toggle aria-label="Pause slideshow" title="Pause slideshow" hidden><span data-pause-icon>Ⅱ</span><span data-play-icon hidden>▷</span></button>
       <div class="photo-controls"><button type="button" data-carousel-previous aria-label="Previous photo" hidden>←</button><button type="button" data-carousel-next aria-label="Next photo" hidden>→</button></div>
       <figcaption><span data-carousel-caption>{heroPhotos[0].caption}</span><a href={href('/gallery/')} aria-label="Explore life at EMI"><Arrow diagonal /></a></figcaption>
     </figure>
-    <div class="people-copy" data-reveal><p class="eyebrow"><span class="section-index">06 /</span> The human side</p><h2 id="people-heading">Good science.<br /><em>Great company.</em></h2><p>We are researchers, makers and curious minds at TU Delft. Led by <a href={changGao.url}>Dr. Chang Gao</a>, we work across machine learning, microelectronics and embedded systems.</p><div class="face-stack">{people.members.slice(0,5).map(p=><img src={thumb(p.image)} alt={p.name} width="48" height="48" loading="lazy" />)}<a href={href('/people/')} aria-label="Meet all members"><Arrow /></a></div><a class="text-link" href={href('/people/')}>Get to know us <Arrow /></a></div>
+    </div>
+    <div class="people-copy team-copy"><p class="eyebrow"><span class="section-index">06 /</span> Meet the team</p><h2 id="people-heading">Good science.<br /><em>Great company.</em></h2><p>We are researchers, makers and curious minds at TU Delft. Led by <a href={changGao.url}>Dr. Chang Gao</a>, we work across machine learning, microelectronics and embedded systems.</p><div class="face-stack">{people.members.slice(0,5).map((p,i)=><img src={thumb(p.image)} alt={p.name} width="48" height="48" loading="lazy" style={`--face-index:${i}`} />)}<a href={href('/people/')} aria-label="Meet all members"><Arrow /></a></div><a class="text-link" href={href('/people/')}>Get to know us <Arrow /></a></div>
+    </div>
   </section>
+  <section id="connect" class="home-connect" data-story-section="Connect" aria-label="Work with EMI">
   <section class="support-section wrap" aria-label="Research supporters"><p class="eyebrow">Shared ambition. Real support.</p><div class="sponsors">{funding.sponsors.map(s=><img src={thumb(s.image)} alt={s.name} loading="lazy" width="170" height="70" />)}</div><a class="support-link" href={href('/grants-awards/')}>Grants, collaborations & awards <Arrow diagonal size={15} /></a></section>
   <section class="join-strip"><div class="wrap"><div data-reveal><p class="eyebrow">Make your next connection</p><h2>What will <em>you</em> bring?</h2><p>Fresh questions. Different perspectives. Your next big idea.</p></div><a class="button" href={href('/join-us/')}>Find your place at EMI <Arrow diagonal /></a><svg class="join-orbit" viewBox="0 0 330 220" fill="none" aria-hidden="true"><ellipse cx="165" cy="110" rx="145" ry="55" transform="rotate(-28 165 110)" /><ellipse cx="165" cy="110" rx="145" ry="55" transform="rotate(28 165 110)" /><ellipse cx="165" cy="110" rx="145" ry="55" transform="rotate(90 165 110)" /></svg></div></section>
+  </section>
   <VisitorMap />
 </Layout>
 <script>
   import '../scripts/hero-carousel';
+  import '../scripts/home-story';
 </script>

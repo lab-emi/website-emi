@@ -4,7 +4,7 @@ interface Props { direction: string; }
 const { direction } = Astro.props;
 const concepts = {
   'rf-mixed-signal': { name: 'With and without AI-DPD', kind: 'signals', steps: ['Same input', 'Same PA', 'Compare outputs'], caption: 'Same signal, same PA. AI-DPD pre-shapes the input to counteract distortion.', description: 'Two synchronized paths compare the same radio signal and power amplifier. Without AI-DPD, the PA produces a compressed, distorted waveform. With AI-DPD before the PA, pre-correction restores a clean output. Both outputs remain visible together.' },
-  'sparse-computing': { name: 'Compute only the changes', kind: 'sparsity', steps: ['Observe', 'Find changes', 'Skip idle work'], caption: 'Changing activity travels forward. Unchanged values stay quiet.', description: 'A few neurons light up in an otherwise quiet network. A delta gate passes their changes to a sparse set of compute units.' },
+  'sparse-computing': { name: 'Dense vs. change-driven', kind: 'sparsity', steps: ['Same changes', 'Compare', 'Skip repeats'], caption: 'Illustrative update: 4 of 18 values change. Dense computes all 18; change-driven computes 4 and skips 14.', description: 'Two matching networks receive the same four changed values, marked by orange rings. Dense computing activates all eighteen neurons. Change-driven computing activates only the four changed neurons, leaving fourteen crossed-out computations idle. Counts refer to this illustration, not measured performance.' },
   'event-based-vision': { name: 'Seeing through events', kind: 'vision', steps: ['Motion', 'Events', 'Gaze'], caption: 'Eye motion becomes sparse events, then a continuously updated gaze estimate.', description: 'An eye looks from side to side. The moving edges produce event pixels, which guide a moving gaze marker.' },
   'speech-sensing': { name: 'Intelligence at the sensor', kind: 'sensing', steps: ['Listen & sense', 'Edge AI', 'Respond'], caption: 'Speech and radar signals become useful information on a compact edge device.', description: 'A microphone waveform and radar echoes flow into an edge AI chip. Its outputs identify voice and motion activity.' },
 };
@@ -24,7 +24,6 @@ const rfWave = (kind: 'clean' | 'distorted' | 'predistorted' = 'clean') => Array
   return `${i ? 'L' : 'M'}${x.toFixed(1)} ${(46 - value * 28).toFixed(1)}`;
 }).join(' ');
 const neurons = Array.from({ length: 18 }, (_, i) => ({ x: 47 + (i % 6) * 27, y: 91 + Math.floor(i / 6) * 43, hot: [1, 7, 10, 16].includes(i) }));
-const tiles = Array.from({ length: 16 }, (_, i) => ({ x: 464 + (i % 4) * 32, y: 79 + Math.floor(i / 4) * 32, hot: [1, 5, 10, 14].includes(i) }));
 const pixels = Array.from({ length: 99 }, (_, i) => {
   const col = i % 11, row = Math.floor(i / 11);
   const radius = ((col - 5) / 4) ** 2 + ((row - 4) / 3) ** 2;
@@ -54,17 +53,22 @@ const pixels = Array.from({ length: 99 }, (_, i) => {
         <rect class="rf-output-frame" x="450" y="202" width="155" height="58" rx="9" /><svg x="461" y="208" width="133" height="46" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-clean-output" d={rfWave()} /></svg>
       </g>
     </g>}
-    {concept.kind === 'sparsity' && <g class="concept-scene">
-      <text class="concept-label" x="117" y="47" text-anchor="middle">Neural activity</text><text class="concept-label" x="320" y="47" text-anchor="middle">Changes only</text><text class="concept-label" x="523" y="47" text-anchor="middle">Sparse compute</text>
-      <rect class="concept-frame" x="23" y="65" width="188" height="151" rx="14" />
-      {[0,1,2].map(row=><path class="concept-guide" d={`M47 ${91 + row * 43}H182`} />)}
-      {[0,1,2,3,4,5].map(col=><path class="concept-guide" d={`M${47 + col * 27} 91V177`} />)}
-      {neurons.map((p,i)=><circle class:list={['sparse-neuron', { 'sparse-event': p.hot }]} cx={p.x} cy={p.y} r="7" style={`--event-delay:${i * -.21}s`} />)}
-      <path class="concept-link" d="M211 134H276M364 134H438" /><circle class="concept-packet sparse-packet" cx="217" cy="134" r="4" />
-      <circle class="sparse-gate" cx="320" cy="134" r="40" /><text class="concept-symbol sparse-delta" x="320" y="149" text-anchor="middle">Δ</text>
-      <rect class="concept-frame" x="439" y="65" width="177" height="151" rx="14" />
-      {tiles.map((p,i)=><rect class:list={['sparse-cell', { 'sparse-cell--active': p.hot }]} x={p.x} y={p.y} width="24" height="24" rx="5" style={`--event-delay:${i * -.21}s`} />)}
-      <text class="concept-note" x="117" y="253" text-anchor="middle">Most values stay quiet</text><text class="concept-note" x="523" y="253" text-anchor="middle">Wake only what is needed</text>
+    {concept.kind === 'sparsity' && <g class="concept-scene sparsity-comparison">
+      <text class="concept-note" x="320" y="25" text-anchor="middle">Same update · 4 changed values</text>
+      {[0,1].map(lane=><g class={lane === 0 ? 'dense-lane' : 'change-lane'}>
+        <rect class="concept-frame" x={18+lane*314} y="43" width="290" height="220" rx="14" />
+        <text class="sparsity-case-label" x={163+lane*314} y="70" text-anchor="middle">{lane === 0 ? 'Dense computing' : 'Change-driven'}</text>
+        {[0,1,2].map(row=><path class={lane === 0 ? 'dense-trace' : 'sparse-idle-trace'} d={`M58 ${102+row*46}H253`} transform={`translate(${lane*314} 0)`} />)}
+        {[0,1,2,3,4,5].map(col=><path class={lane === 0 ? 'dense-trace' : 'sparse-idle-trace'} d={`M${58+col*39} 102V194`} transform={`translate(${lane*314} 0)`} />)}
+        {lane === 1 && <path class="sparse-active-trace" d="M411 102V148H528V194" />}
+        {neurons.map((p,i)=><g transform={`translate(${58+(i%6)*39+lane*314} ${102+Math.floor(i/6)*46})`}>
+          <circle class={lane === 0 ? 'dense-node' : p.hot ? 'change-node' : 'skipped-node'} r="9" style={`--event-delay:${i*-.15}s`} />
+          {p.hot && <circle class="sparsity-change-ring" r="13" />}
+          {lane === 1 && !p.hot && <path class="sparse-skip-mark" d="m-3-3 6 6m-6 0 6-6" />}
+        </g>)}
+        <text class="sparsity-count" x={163+lane*314} y="242" text-anchor="middle">{lane === 0 ? '18 computations' : '4 compute · 14 skipped'}</text>
+      </g>)}
+      <text class="concept-note" x="320" y="287" text-anchor="middle">Orange rings mark changes · × marks skipped work</text>
     </g>}
     {concept.kind === 'vision' && <g class="concept-scene">
       <text class="concept-label" x="123" y="47" text-anchor="middle">Eye motion</text><text class="concept-label" x="333" y="47" text-anchor="middle">Event stream</text><text class="concept-label" x="535" y="47" text-anchor="middle">Gaze estimate</text>
@@ -111,13 +115,20 @@ const pixels = Array.from({ length: 99 }, (_, i) => {
         <text class="rf-result-label" x="270" y="348" text-anchor="middle">Clean</text>
       </g>
     </g>}
-    {concept.kind === 'sparsity' && <g class="concept-scene">
-      <text class="concept-label" x="180" y="28" text-anchor="middle">Neural activity</text><rect class="concept-frame" x="27" y="42" width="306" height="96" rx="13" />
-      {[0,1,2].map(row=><path class="concept-guide" d={`M61 ${64+row*27}H291`} />)}
-      {neurons.map((p,i)=><circle class:list={['sparse-neuron', { 'sparse-event': p.hot }]} cx={61+(i%6)*46} cy={64+Math.floor(i/6)*27} r="6" style={`--event-delay:${i * -.21}s`} />)}
-      <path class="concept-link" d="M180 139V155M180 215V236" /><circle class="sparse-gate" cx="180" cy="185" r="30" /><text class="concept-symbol" x="180" y="197" text-anchor="middle">Δ</text><text class="concept-note" x="226" y="190">Changes only</text>
-      <rect class="concept-frame" x="100" y="237" width="160" height="76" rx="12" />{tiles.slice(0,8).map((_,i)=><rect class:list={['sparse-cell', { 'sparse-cell--active': [1,5].includes(i) }]} x={120+(i%4)*32} y={248+Math.floor(i/4)*32} width="24" height="24" rx="5" style={`--event-delay:${i * -.21}s`} />)}
-      <text class="concept-label" x="180" y="344" text-anchor="middle">Wake only the active compute</text>
+    {concept.kind === 'sparsity' && <g class="concept-scene sparsity-comparison">
+      {[0,1].map(lane=><g class={lane === 0 ? 'dense-lane' : 'change-lane'} transform={`translate(0 ${lane*180})`}>
+        <rect class="concept-frame" x="14" y="13" width="332" height="154" rx="13" />
+        <text class="sparsity-case-label" x="28" y="37">{lane === 0 ? 'Dense computing' : 'Change-driven'}</text>
+        <text class="sparsity-count" x="333" y="37" text-anchor="end">{lane === 0 ? '18 compute' : '4 compute · 14 skip'}</text>
+        {[0,1,2].map(row=><path class={lane === 0 ? 'dense-trace' : 'sparse-idle-trace'} d={`M40 ${67+row*36}H320`} />)}
+        {[0,1,2,3,4,5].map(col=><path class={lane === 0 ? 'dense-trace' : 'sparse-idle-trace'} d={`M${40+col*56} 67V139`} />)}
+        {lane === 1 && <path class="sparse-active-trace" d="M96 67V103H264V139" />}
+        {neurons.map((p,i)=><g transform={`translate(${40+(i%6)*56} ${67+Math.floor(i/6)*36})`}>
+          <circle class={lane === 0 ? 'dense-node' : p.hot ? 'change-node' : 'skipped-node'} r="8" style={`--event-delay:${i*-.15}s`} />
+          {p.hot && <circle class="sparsity-change-ring" r="12" />}
+          {lane === 1 && !p.hot && <path class="sparse-skip-mark" d="m-3-3 6 6m-6 0 6-6" />}
+        </g>)}
+      </g>)}
     </g>}
     {concept.kind === 'vision' && <g class="concept-scene">
       <text class="concept-label" x="180" y="28" text-anchor="middle">Eye motion</text><path class="vision-eye" d="M76 97Q180 16 284 97Q180 178 76 97Z" />

@@ -1,0 +1,96 @@
+/* The first chapter budgets the introduction and the research display together. */
+.home-story { --site-header-size: 71px; scroll-padding-top: calc(var(--site-header-size) + 10px); scroll-snap-type: y proximity; }
+.home-page .header-inner { height: 70px; }
+.home-page .brand-caption { line-height: 1.3; }
+[data-story-section] { scroll-snap-align: start; scroll-margin-top: 0; }
+.home-page .research-first { padding-block: 12px 10px; }
+.home-page .research-first-intro { gap: 24px; margin-bottom: 9px; grid-template-columns: minmax(0,1fr) 270px; }
+.home-page .research-first-intro .lab-name { font-size: clamp(1.1rem,1.6vw,1.35rem); margin-bottom: 6px; line-height: 1.2; }
+.home-page .research-first-intro h1 { font-size: clamp(1.3rem,1.9vw,1.8rem); line-height: 1.14; letter-spacing: -.045em; }
+.home-page .research-first-intro h1 span { display: inline; }
+.home-page .lab-affiliation strong { font-size: 1.06rem; }
+.home-page .lab-affiliation span { font-size: .66rem; margin-top: 3px; }
+.home-page .lab-affiliation .text-link { font-size: .65rem; margin-top: 2px; padding-block: 3px; }
+.home-page .research-first-heading { margin-bottom: 9px; }
+.home-page .research-first-heading h2 { font-size: .6rem; }
+.home-page .research-first-heading>p { font-size: .59rem; }
+.home-page .research-footnote { margin-top: 7px; min-height: 24px; }
+.home-page .research-footnote .text-link { font-size: .64rem; padding-block: 3px; }
+.research-panel-details--compact summary { cursor: pointer; color: var(--muted); font-size: .65rem; line-height: 1.5; padding-block: 3px; }
+.research-panel-details--compact summary:hover { color: var(--blue); }
+.research-panel-details--compact .research-related-content { padding-top: 12px; }
+@media (min-width: 901px) {
+  .home-page .research-first { height: calc(100svh - var(--site-header-size)); min-height: 0; }
+  .home-page .research-first>.wrap { display: grid; grid-template-rows: auto auto minmax(0,1fr) auto; height: 100%; min-height: 0; }
+  .home-page .research-first .research-explorer { height: 100%; min-height: 0; --panel-padding: clamp(14px,2svh,23px); }
+  .home-page .research-first .engine-visual { position: relative; top: 0; height: 100%; min-height: 0; }
+  .home-page .research-first .engine-stage { min-height: 0; }
+  .home-page .research-first .engine-platform { scale: var(--home-chip-scale,1); }
+  .home-page .research-first .engine-topline,.home-page .research-first .engine-bottomline { padding-block: 16px; }
+  .home-page .research-first .research-panel { height: 100%; min-height: 0; display: flex; flex-direction: column; gap: 7px; }
+  .home-page .research-first .research-panel-feature { height: auto; flex: 1 1 0; min-height: 0; gap: clamp(8px,1.3svh,14px); }
+  .home-page .research-first .research-panel-feature h3 { font-size: clamp(1.35rem,3.2svh,1.9rem); margin-bottom: 6px; }
+  .home-page .research-first .research-panel-feature .eyebrow { margin-bottom: 6px; font-size: .54rem; }
+  .home-page .research-first .research-panel-feature .research-panel-copy>p:not(.eyebrow) { font-size: .76rem; line-height: 1.5; }
+  .home-page .research-first .research-panel-feature>:is(.research-concept,.agentic-build) { padding: 10px 10px 8px; }
+  .home-page .research-first .research-panel-feature :is(.concept-diagram,.agentic-diagram) { margin-block: 4px; }
+  .home-page .research-first .research-panel-details--compact { flex: 0 0 auto; margin: 0; padding-top: 4px; }
+  .home-page .research-first .research-panel-details--compact[open] { max-height: 35%; overflow: auto; overscroll-behavior: contain; }
+}
+@media (max-width: 900px) {
+  .home-story { --site-header-size: 65px; }
+  .home-page .header-inner { height: 64px; }
+  .home-page .research-first-intro { grid-template-columns: 1fr; gap: 10px; }
+  .home-page .research-first-intro h1 { font-size: clamp(1.28rem,4.3vw,1.75rem); }
+  .home-page .research-first-intro .lab-name { font-size: 1.1rem; }
+  .home-page .research-first-heading { margin-bottom: 12px; }
+  .home-page .research-panel-details--compact { margin-top: 16px; }
+}
+
+/* Native scrolling keeps long chapters readable; the rail shows the current chapter. */
+.chapter-nav { position: fixed; z-index: 24; right: 13px; top: 50%; transform: translateY(-50%); display: grid; gap: 5px; }
+.chapter-nav a { position: relative; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; }
+.chapter-dot { width: 7px; height: 7px; border: 1px solid #6b8297; border-radius: 50%; background: #f6f9fcbb; transition: background .25s,transform .25s,border-color .25s; }
+.chapter-nav a[aria-current] .chapter-dot { background: var(--blue); border-color: var(--blue); transform: scale(1.45); box-shadow: 0 0 0 4px #2859c512; }
+.chapter-label { position: absolute; right: 32px; top: 50%; transform: translate(5px,-50%); background: #f8fbfff2; color: var(--ink); border: 1px solid var(--line); padding: 5px 10px; border-radius: 7px; font-size: .66rem; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity .2s,transform .2s; box-shadow: 0 4px 20px #1b38510c; }
+.chapter-nav a:is(:hover,:focus-visible) .chapter-label { opacity: 1; visibility: visible; transform: translate(0,-50%); }
+@media (max-width: 900px) { .chapter-nav { right: 2px; gap: 2px; } .chapter-nav a { width: 20px; height: 23px; } .chapter-dot { width: 5px; height: 5px; } .chapter-label { right: 24px; } }
+
+/* Real lab photographs arrive from different directions as the team enters view. */
+.home-team-section { overflow: clip; }
+.home-team-section .home-people { gap: clamp(40px,6vw,90px); }
+.team-collage { position: relative; padding: 30px 54px 38px 38px; min-width: 0; }
+.team-photo-main { z-index: 3; height: clamp(280px,31vw,400px); transform: rotate(-1deg); box-shadow: 0 18px 45px #18344a24; border: 5px solid #fff; }
+.team-photo-side { position: absolute; z-index: 1; width: clamp(130px,17vw,210px); height: clamp(100px,12vw,155px); margin: 0; border: 7px solid white; border-bottom-width: 17px; border-radius: 9px; background: #e4edf5; box-shadow: 0 12px 30px #1a395325; }
+.team-photo-side img { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; }
+.team-photo-left { left: 0; bottom: 5px; transform: rotate(-9deg); }
+.team-photo-right { right: 0; top: 0; transform: rotate(8deg); }
+.team-photo { transition: transform 1.15s cubic-bezier(.2,.8,.2,1),opacity .8s ease; transition-delay: var(--fly-delay,0ms); }
+.team-photo-main { --fly-x: -130px; --fly-y: 65px; --fly-angle: -12deg; --fly-delay: 70ms; }
+.team-photo-left { --fly-x: -230px; --fly-y: 110px; --fly-angle: -23deg; --fly-delay: 0ms; }
+.team-photo-right { --fly-x: 230px; --fly-y: -95px; --fly-angle: 21deg; --fly-delay: 180ms; }
+.team-copy { transition: opacity .8s ease,transform .95s var(--ease-out); transition-delay: 120ms; }
+.team-motion-ready[data-team-visible=false] .team-photo { opacity: 0; transform: translate3d(var(--fly-x),var(--fly-y),0) rotate(var(--fly-angle)) scale(.82); }
+.team-motion-ready[data-team-visible=false] .team-copy { opacity: 0; transform: translateX(36px); }
+.team-motion-ready .face-stack img { transition: transform .75s var(--ease-out),opacity .6s; transition-delay: calc(280ms + var(--face-index) * 65ms); }
+.team-motion-ready[data-team-visible=false] .face-stack img { opacity: 0; transform: translateY(22px) scale(.8); }
+@media (max-width: 760px) {
+  .home-team-section .home-people { grid-template-columns: 1fr; gap: 24px; }
+  .team-collage { padding: 23px 31px 25px 24px; }
+  .team-photo-main { height: clamp(220px,65vw,360px); }
+  .team-photo-side { width: 135px; height: 104px; border-width: 5px; border-bottom-width: 11px; }
+  .team-photo-left { bottom: 0; }
+  .team-copy h2 { font-size: clamp(2.5rem,9vw,3.2rem); }
+  .team-photo-main { --fly-x: -80px; --fly-y: 45px; }
+  .team-photo-left { --fly-x: -100px; --fly-y: 75px; }
+  .team-photo-right { --fly-x: 100px; --fly-y: -65px; }
+}
+html[data-motion=off] .team-photo,html[data-motion=off] .team-copy,html[data-motion=off] .face-stack img { transition: none; }
+@media (prefers-reduced-motion: reduce) { .home-story { scroll-snap-type: none; } .team-photo,.team-copy,.face-stack img { transition: none; } }
+
+/* Keep every research direction readable when scripting is unavailable. */
+html:not(.home-story) .home-page .research-first { height: auto; }
+html:not(.home-story) .home-page .research-first>.wrap { display: block; height: auto; }
+html:not(.home-story) .home-page .research-first .research-explorer { display: block; height: auto; }
+html:not(.home-story) .home-page .research-first .research-panel { display: block; height: auto; }
+html:not(.home-story) .home-page .research-first .research-panel-feature { height: var(--feature-room); }

@@ -36,12 +36,19 @@
 .rf-clean-output { fill: none; stroke: #b4dfff; stroke-width: 2.2; }
 .rf-pre-shaped { fill: none; stroke: #a0c8ed; stroke-width: 1.5; }
 .concept-diagram--portrait .rf-dpd-label, .concept-diagram--portrait .rf-pa-label { font-size: 15px; }
-.sparse-neuron { fill: #26465b; stroke: #5d8097; stroke-width: 1; }
-.sparse-event { fill: #edac80; stroke: #ffd3ab; }
-.sparse-gate { fill: #305574; stroke: #94badb; stroke-width: 1.4; }
-.sparse-delta { font-size: 41px; }
-.sparse-cell { fill: #234255; stroke: #476b85; stroke-width: .9; }
-.sparse-cell--active { fill: #84b6d9; stroke: #c0e0f4; }
+.sparsity-case-label { fill: #d4e5f4; font: 650 17px var(--sans); }
+.sparsity-count { fill: #a9cfe8; font: 600 16px var(--sans); }
+.change-lane .sparsity-count { fill: #efb78e; }
+.dense-node { fill: #a8d1f3; stroke: #d0e7f8; stroke-width: 1; }
+.change-node { fill: #efae7f; stroke: #ffdab9; stroke-width: 1; }
+.skipped-node { fill: #1d394d; stroke: #49667d; stroke-width: .9; }
+.sparsity-change-ring { fill: none; stroke: #ee9c6c; stroke-width: 1.2; }
+.sparse-skip-mark { fill: none; stroke: #7890a3; stroke-width: .8; }
+.dense-trace { fill: none; stroke: #689fc299; stroke-width: 1.2; }
+.sparse-idle-trace { fill: none; stroke: #47677e55; stroke-width: .8; stroke-dasharray: 2 5; }
+.sparse-active-trace { fill: none; stroke: #d99d76; stroke-width: 1.4; stroke-dasharray: 4 5; }
+.concept-diagram--portrait .sparsity-case-label { font-size: 17px; }
+.concept-diagram--portrait .sparsity-count { font-size: 14px; }
 .vision-eye { fill: #173950; stroke: #8bb5d5; stroke-width: 1.8; }
 .vision-iris-ring { fill: #325f7e; stroke: #aacfe7; stroke-width: 1.7; }
 .vision-pupil { fill: #0b2233; }
@@ -82,8 +89,8 @@
 /* The animation controller activates only the concept that is actually on screen. */
 .research-concept[data-running=true] .rf-wave, .research-concept[data-running=true] .sensing-wave { animation: concept-wave-flow 3s linear infinite; }
 .research-concept[data-running=true] .rf-packet-two { animation: rf-packet-two 2s ease-in-out .65s infinite; }
-.research-concept[data-running=true] .sparse-event, .research-concept[data-running=true] .sparse-cell--active { animation: concept-node-fire 3s ease-in-out var(--event-delay) infinite; }
-.research-concept[data-running=true] .sparse-packet { animation: sparse-packet 3s ease-in-out infinite; }
+.research-concept[data-running=true] .dense-node, .research-concept[data-running=true] .change-node { animation: dense-computation 2.4s ease-in-out var(--event-delay) infinite; }
+.research-concept[data-running=true] .dense-trace, .research-concept[data-running=true] .sparse-active-trace { animation: concept-trace-flow 6s linear infinite; }
 .research-concept[data-running=true] .vision-iris, .research-concept[data-running=true] .vision-gaze { animation: vision-look 6s ease-in-out infinite; }
 .research-concept[data-running=true] .vision-event { animation: vision-event-flash 1.8s ease-in-out var(--event-delay) infinite; }
 .research-concept[data-running=true] .sensing-radar-ring { animation: radar-echo 2.4s ease-in-out infinite; }
@@ -99,7 +106,7 @@
 @keyframes concept-trace-flow { to { stroke-dashoffset: -90; } }
 @keyframes concept-node-fire { 0%,100% { opacity: .45; } 35%,65% { opacity: 1; filter: drop-shadow(0 0 4px #9fc9eb99); } }
 @keyframes rf-packet-two { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(37px); opacity: 0; } }
-@keyframes sparse-packet { 0%,15% { transform: translateX(0); opacity: 0; } 25% { opacity: 1; } 70% { opacity: 1; } 100% { transform: translateX(214px); opacity: 0; } }
+@keyframes dense-computation { 0%,100% { opacity: .65; } 40%,65% { opacity: 1; filter: drop-shadow(0 0 3px #aad5f399); } }
 @keyframes vision-look { 0%,100% { transform: translateX(-17px); } 25% { transform: translateX(3px); } 55% { transform: translateX(17px); } 78% { transform: translateX(-6px); } }
 @keyframes vision-event-flash { 0%,100% { opacity: .2; } 35%,60% { opacity: 1; } }
 @keyframes radar-echo { 0%,100% { opacity: .15; } 45% { opacity: 1; } }

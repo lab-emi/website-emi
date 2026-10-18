@@ -44,6 +44,7 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
   </section>
   {research.map((area,i)=>{
     const papers = area.papers.map(prefix=>publications.find(p=>p.title.startsWith(prefix))).filter(Boolean).slice(0,2);
+    const DetailsTag = compact ? 'details' : 'div';
     return <section class="research-panel" id={`panel-${area.id}`} data-research-panel={area.id} aria-labelledby={`research-title-${area.id}`} tabindex="0">
       <div class="research-panel-feature">
         <div class="research-panel-copy">
@@ -54,14 +55,17 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
         <ResearchConcept direction={area.id} />
         <a class="text-link research-panel-action" href={href(`/research/${area.id}/`)}>Explore {labels[i].toLowerCase()} <Arrow diagonal size={18} /></a>
       </div>
-      <div class="research-panel-details">
+      <DetailsTag class:list={['research-panel-details', { 'research-panel-details--compact': compact }]}>
+        {compact && <summary>Keywords & selected papers</summary>}
+        <div class="research-related-content">
         <div class="research-keywords">{area.keywords.map(keyword=><span>{keyword}</span>)}</div>
         {!compact && <figure class="research-panel-image">
           <img src={href(area.image)} alt={area.imageAlt} width={area.imageWidth} height={area.imageHeight} loading="lazy" decoding="async" />
           <figcaption><span>{area.title}</span><a href={area.imageSource}>{area.imageCredit} <Arrow diagonal size={12} /></a></figcaption>
         </figure>}
         <div class="research-evidence"><span class="evidence-label">Ideas, in practice <span>↳</span></span>{papers.map(p=><a href={href(p!.url)}><span>{p!.year}</span><strong>{p!.title}</strong><Arrow diagonal size={16} /></a>)}</div>
-      </div>
+        </div>
+      </DetailsTag>
     </section>;
   })}
 </div>
@@ -77,6 +81,10 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
       explorer.dataset.activeModule = button.dataset.researchTab;
       if (focus) button.focus();
       if (reveal) {
+        const home = explorer.closest<HTMLElement>('.research-first');
+        const bounds = home?.getBoundingClientRect();
+        const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom || 0;
+        if (bounds && matchMedia('(min-width: 901px)').matches && bounds.top >= headerBottom - 2 && bounds.bottom <= innerHeight + 2) return;
         const target = panels.find(panel => !panel.hidden);
         // Wait for the selected panel to enter layout, then respect the sticky-header inset.
         revealFrame = requestAnimationFrame(() => target?.scrollIntoView({
