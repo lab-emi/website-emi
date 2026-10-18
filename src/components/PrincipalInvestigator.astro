@@ -1,0 +1,91 @@
+---
+import people from '../data/people.json';
+import { changGao } from '../lib/identity';
+import { href, site, thumb } from '../lib/site';
+import Arrow from './Arrow.astro';
+const leader = people.members.find(person => person.id === 'chang-gao')!;
+const neurons = [[55,80],[77,63],[102,88],[45,120],[84,117],[110,149],[58,163],[96,192],[74,205],[117,179],[153,78],[181,68],[206,106],[164,126],[216,144],[190,173],[145,183],[174,204],[207,192],[160,151]];
+---
+<section class="home-pi" id="principal-investigator" data-home-pi aria-labelledby="pi-heading">
+  <svg class="pi-background" viewBox="0 0 460 280" fill="none" aria-hidden="true" focusable="false">
+    <g class="pi-brain">
+      <path class="pi-brain-outline" d="M104 52C88 35 67 45 63 61C43 58 28 76 31 93C13 104 17 129 28 141C18 160 29 184 49 187C47 206 63 224 84 217C96 233 119 225 124 207V66C123 56 114 50 104 52ZM136 66C151 47 172 45 185 63C207 58 224 73 221 94C242 100 248 125 232 141C241 160 231 182 213 183C216 203 194 220 179 215C162 234 138 217 136 202Z" />
+      <path class="pi-neural-links" d="M55 80 77 63 102 88 84 117 45 120 58 163 96 192 74 205M84 117 110 149 117 179 96 192M55 80 45 120M58 163 110 149M153 78 181 68 206 106 164 126 160 151 190 173 207 192 174 204 145 183 160 151M164 126 216 144 190 173M153 78 164 126M206 106 216 144M110 149 160 151M102 88 153 78M117 179 145 183" />
+      {neurons.map(([x,y],i)=><circle class:list={['pi-neuron',{'pi-neuron-warm':i%5===0}]} cx={x} cy={y} r={i%5===0?3.4:2.5} style={`--neuron-delay:${i*.23}s`} />)}
+    </g>
+    <g class="pi-bridge">
+      <path d="M206 106C250 106 249 98 304 98M232 141H274V138H306M213 183H264V178H309" />
+      <path class="pi-flow" d="M206 106C250 106 249 98 304 98M232 141H274V138H306M213 183H264V178H309" />
+    </g>
+    <g transform="translate(357 139) rotate(-8)">
+      <g class="pi-chip">
+        <rect class="pi-chip-body" x="-48" y="-48" width="96" height="96" rx="11" />
+        <rect class="pi-chip-die" x="-33" y="-33" width="66" height="66" rx="5" />
+        {[-30,-10,10,30].map(p=><path class="pi-chip-pins" d={`M-61 ${p}H-49M49 ${p}H61M${p} -61V-49M${p} 49V61`} />)}
+        {Array.from({length:16},(_,i)=><rect class:list={['pi-chip-cell',{'pi-chip-cell-warm':i===5||i===10}]} x={-25+(i%4)*14} y={-25+Math.floor(i/4)*14} width="8" height="8" rx="1.5" />)}
+      </g>
+    </g>
+    <text class="pi-visual-label" x="275" y="243">BRAIN ↔ SILICON</text>
+  </svg>
+  <div class="wrap pi-layout">
+    <a class="pi-photo" href={changGao.url} aria-label="Visit Chang Gao's personal website"><img src={thumb(leader.image)} alt="Dr. Chang Gao, principal investigator of EMI Lab" width="320" height="320" loading="lazy" /></a>
+    <div class="pi-copy">
+      <p class="eyebrow"><span class="section-index">02 /</span> Principal investigator</p>
+      <h2 id="pi-heading"><a href={changGao.url}>Dr. {changGao.name} <Arrow diagonal size={22} /></a></h2>
+      <p class="pi-role">{changGao.role} · Edge AI</p>
+      <p class="pi-summary">Leads EMI’s research in neuromorphic algorithm–hardware co-design for energy-efficient edge intelligence.</p>
+      <div class="pi-links"><a href={href('/people/#leader')}>Full profile <Arrow size={15} /></a><a href={site.scholar}>Google Scholar <Arrow diagonal size={14} /></a></div>
+    </div>
+  </div>
+</section>
+<script>
+  const section = document.querySelector<HTMLElement>('[data-home-pi]');
+  if (section && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => section.dataset.inView = String(entry.isIntersecting));
+    });
+    observer.observe(section);
+    window.addEventListener('pagehide', () => observer.disconnect());
+    window.addEventListener('pageshow', () => observer.observe(section));
+  }
+</script>
+<style>
+  .home-pi{position:relative;isolation:isolate;overflow:hidden;background:#f8fbff;border-bottom:1px solid var(--line);padding:48px 0}
+  .pi-layout{position:relative;z-index:1;display:grid;grid-template-columns:164px minmax(0,640px);gap:40px;align-items:center;padding-right:310px}
+  .pi-photo{display:block;overflow:hidden;border-radius:13px;box-shadow:0 8px 30px #153a6310;border:5px solid white}
+  .pi-photo img{width:100%;height:190px;object-fit:cover;object-position:50% 38%;transition:transform .6s var(--ease-out)}
+  .pi-photo:hover img{transform:scale(1.035)}
+  .pi-copy .eyebrow{font-size:.59rem;letter-spacing:.11em;margin-bottom:14px}
+  .pi-copy h2{font-size:2.25rem;letter-spacing:-.05em;line-height:1.12;margin-bottom:11px}
+  .pi-copy h2 a{display:inline-flex;align-items:center;gap:18px}
+  .pi-copy h2 svg{color:#7893ad;transition:transform .25s,color .25s}
+  .pi-copy h2 a:hover svg{transform:translate(2px,-2px);color:var(--blue)}
+  .pi-role{font-size:.83rem;color:var(--blue);font-weight:600;margin-bottom:13px}
+  .pi-summary{max-width:590px;font-size:.86rem;line-height:1.85;color:var(--muted);margin-bottom:19px}
+  .pi-links{display:flex;flex-wrap:wrap;gap:14px 26px}
+  .pi-links a{display:inline-flex;align-items:center;gap:12px;font-size:.73rem;font-weight:600;padding-bottom:5px;border-bottom:1px solid #cad8e7}
+  .pi-links a:hover{color:var(--blue);border-color:var(--blue)}
+  .pi-background{position:absolute;z-index:0;pointer-events:none;right:max(24px,calc((100% - var(--wrap))/2));top:50%;width:390px;height:280px;transform:translateY(-50%);opacity:.68;mask-image:linear-gradient(90deg,transparent,#000 16%,#000)}
+  .pi-brain-outline{fill:#eaf1fd65;stroke:#7d9cce;stroke-width:1.3}
+  .pi-neural-links{stroke:#8da9ce;stroke-width:1;stroke-linejoin:round}
+  .pi-neuron{fill:#547fc3;opacity:.45;transform-box:fill-box;transform-origin:center;animation:neural-pulse 5.5s ease-in-out infinite;animation-delay:var(--neuron-delay);animation-play-state:paused}
+  .pi-neuron-warm{fill:var(--orange)}
+  .pi-bridge>path{stroke:#a4b9d4;stroke-width:1}
+  .pi-bridge>.pi-flow{stroke:#bd7757;stroke-width:1.4;stroke-dasharray:4 11;animation:neural-flow 9s linear infinite;animation-play-state:paused}
+  .pi-chip{animation:neural-chip 8s ease-in-out infinite;animation-play-state:paused}
+  .pi-chip-body{fill:#eff5fe;stroke:#7599c5;stroke-width:1.4}
+  .pi-chip-die{fill:#e0ebfa;stroke:#94b0d5;stroke-width:1}
+  .pi-chip-pins{stroke:#7599c5;stroke-width:1.5;stroke-linecap:round}
+  .pi-chip-cell{fill:#8eadd5;opacity:.7}
+  .pi-chip-cell-warm{fill:#ce8e6b}
+  .pi-visual-label{font-family:var(--sans);fill:#8b9eb6;font-size:8px;letter-spacing:1.6px}
+  .home-pi[data-in-view=true] .pi-neuron,.home-pi[data-in-view=true] .pi-flow,.home-pi[data-in-view=true] .pi-chip{animation-play-state:running}
+  @keyframes neural-pulse{0%,60%,100%{opacity:.35;transform:scale(1)}72%{opacity:.95;transform:scale(1.55)}}
+  @keyframes neural-flow{to{stroke-dashoffset:-120}}
+  @keyframes neural-chip{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  @media(max-width:1250px){.pi-layout{grid-template-columns:145px minmax(0,1fr);gap:30px;padding-right:290px}.pi-photo img{height:176px}.pi-background{width:350px;right:25px;opacity:.48}.pi-copy h2{font-size:2rem}}
+  @media(max-width:1050px){.pi-layout{padding-right:0;grid-template-columns:140px minmax(0,640px)}.pi-background{right:-80px;width:370px;opacity:.16}.pi-summary{max-width:580px}}
+  @media(max-width:650px){.home-pi{padding:32px 0}.pi-layout{grid-template-columns:92px minmax(0,1fr);gap:23px;align-items:start}.pi-photo{margin-top:27px;border-width:3px;border-radius:10px}.pi-photo img{height:114px}.pi-copy .eyebrow{font-size:.52rem;letter-spacing:.08em;margin-bottom:12px;gap:5px}.pi-copy .section-index{margin-right:5px}.pi-copy h2{font-size:1.8rem;margin-bottom:10px}.pi-copy h2 a{gap:9px}.pi-copy h2 svg{width:15px}.pi-role{font-size:.74rem;line-height:1.7;margin-bottom:11px}.pi-summary{font-size:.77rem;line-height:1.8;margin-bottom:16px}.pi-links{gap:12px 17px}.pi-links a{font-size:.67rem;gap:6px}.pi-background{right:-115px;top:55%;opacity:.13}}
+  @media(max-width:380px){.pi-layout{grid-template-columns:76px minmax(0,1fr);gap:17px}.pi-photo img{height:96px}.pi-copy h2{font-size:1.56rem}.pi-copy h2 a{gap:6px}.pi-copy h2 svg{width:13px}.pi-copy .eyebrow{font-size:.48rem}.pi-role{font-size:.7rem}.pi-summary{font-size:.74rem}}
+  @media(prefers-reduced-motion:reduce){.pi-neuron,.pi-flow,.pi-chip{animation:none}.pi-photo img{transition:none}}
+</style>

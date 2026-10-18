@@ -434,12 +434,8 @@ html[data-motion=off] .research-panel { animation: none !important; }
 /* Research first: the chip is visible immediately, with the lab's premise in a short strip. */
 .research-first { padding: 25px 0 27px; background: #edf2f7; }
 .research-first-intro { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 32px; align-items: center; margin-bottom: 22px; }
-.research-first-intro .eyebrow { margin-bottom: 12px; font-size: .57rem; letter-spacing: .095em; }
-.research-first-intro h1 { font-size: clamp(2rem,3.05vw,2.8rem); line-height: 1.08; letter-spacing: -.055em; margin: 0; }
+.research-first-intro h1 { font-size: clamp(1.55rem,2.5vw,2.3rem); line-height: 1.08; letter-spacing: -.055em; margin: 0; }
 .research-first-intro h1 span { display: block; color: var(--blue); }
-.research-first-intro>p { color: var(--muted); font-size: .78rem; line-height: 1.75; margin: 0; }
-.research-first-intro>p>a { display: flex; width: fit-content; align-items: center; gap: 15px; color: var(--ink); font-size: .72rem; margin-top: 8px; }
-.research-first-intro>p>a:hover { color: var(--blue); }
 .research-first-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 14px; }
 .research-first-heading h2 { display: flex; align-items: center; font-size: .68rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; line-height: 1.6; margin: 0; }
 .research-first-heading .section-index { margin-right: 17px; }
@@ -460,40 +456,20 @@ html[data-motion=off] .research-panel { animation: none !important; }
 .research-explorer--compact .research-panel .text-link { margin-bottom: 7px; }
 .research-explorer--compact .research-evidence { margin-top: 14px; padding-top: 13px; }
 .research-explorer--compact .research-evidence>a { padding-block: 7px; }
-.thinking-strip { padding: 35px 0 38px; background: #fff; border-bottom: 1px solid var(--line); }
-.thinking-layout { display: flex; justify-content: space-between; align-items: center; gap: 35px; }
-.thinking-layout .eyebrow { font-size: .58rem; margin-bottom: 12px; }
-.thinking-layout h2 { font-size: clamp(1.5rem,2.3vw,2rem); letter-spacing: -.045em; margin-bottom: 8px; }
-.thinking-layout p:not(.eyebrow) { font-size: .79rem; color: var(--muted); margin: 0; }
-.thinking-diagram { flex-shrink: 0; text-align: center; padding-right: 7%; }
-.thinking-loop { display: flex; align-items: center; gap: 14px; }
-.thinking-loop>span { border: 1px solid #cfdae7; border-radius: 40px; padding: 12px 19px; font-size: .73rem; color: #426584; }
-.thinking-loop svg { width: 105px; height: 42px; color: #6b87aa; }
-.thinking-loop circle { fill: var(--orange); }
-.thinking-caption { display: block; margin-top: 9px; color: #8b9aa9; letter-spacing: .13em; font-size: .45rem; }
 @media (max-width: 1100px) {
   .research-first-intro { grid-template-columns: minmax(0,1fr) 235px; gap: 24px; }
-  .research-first-intro h1 { font-size: 3.05vw; }
   .research-explorer--compact .engine-platform { width: 270px; height: 270px; }
   .research-explorer--compact .research-panel { padding-inline: 23px; }
   .research-explorer--compact .research-panel h3 { font-size: 1.7rem; }
-  .thinking-diagram { padding-right: 0; }
-  .thinking-loop { gap: 10px; }
-  .thinking-loop svg { width: 80px; }
 }
 @media (max-width: 900px) {
   .research-first-intro { grid-template-columns: 1fr; gap: 14px; margin-bottom: 24px; }
-  .research-first-intro h1 { font-size: clamp(1.9rem,4.8vw,2.65rem); }
-  .research-first-intro>p { max-width: 570px; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
-  .research-first-intro>p>a { white-space: nowrap; margin: 0; }
+  .research-first-intro h1 { font-size: clamp(1.55rem,4.2vw,2.3rem); }
   .research-explorer--compact { grid-template-columns: 1fr; }
   .research-explorer--compact .engine-platform { width: 310px; height: 310px; }
   .research-explorer--compact .engine-stage { min-height: 340px; }
   .research-explorer--compact .research-panel { padding: 26px; }
   .research-explorer--compact .research-panel h3 { font-size: 1.9rem; }
-  .thinking-layout { gap: 25px; }
-  .thinking-loop>span { font-size: .65rem; padding: 10px 14px; }
-  .thinking-loop svg { width: 65px; }
 }
 
 /* The fifth module sits above the shared analogue/digital co-design plane. */
@@ -599,10 +575,7 @@ html[data-motion=off] .research-panel { animation: none !important; }
 @media (max-width: 600px) {
   .research-first { padding-top: 20px; }
   .research-first-intro { gap: 12px; margin-bottom: 22px; }
-  .research-first-intro h1 { font-size: clamp(1.7rem,7.6vw,2.5rem); }
-  .research-first-intro .eyebrow { font-size: .48rem; gap: 7px; letter-spacing: .07em; margin-bottom: 11px; }
-  .research-first-intro>p { display: block; font-size: .76rem; max-width: 420px; }
-  .research-first-intro>p>a { margin: 5px 0 0; display: flex; width: fit-content; }
+  .research-first-intro h1 { font-size: clamp(1.38rem,6.35vw,1.75rem); }
   .research-first-heading { display: block; margin-bottom: 13px; }
   .research-first-heading h2 { font-size: .65rem; }
   .research-first-heading>p { font-size: .61rem; margin: 5px 0 0; }
@@ -616,13 +589,6 @@ html[data-motion=off] .research-panel { animation: none !important; }
   .research-explorer--compact .research-tab:nth-child(4)>.module-name { font-size: 9px; }
   .research-explorer--compact .module-type { font-size: 4px; }
   .research-first .research-footnote { gap: 6px; align-items: start; }
-  .thinking-strip { padding-block: 29px; }
-  .thinking-layout { align-items: start; flex-direction: column; gap: 23px; }
-  .thinking-layout h2 { font-size: 1.65rem; }
-  .thinking-loop { gap: 12px; }
-  .thinking-loop>span { font-size: .72rem; padding: 10px 15px; }
-  .thinking-loop svg { width: 85px; }
-  .thinking-caption { font-size: .43rem; }
 }
 @media (max-width: 360px) {
   .research-explorer--compact .engine-platform { width: 190px; height: 190px; }
@@ -632,6 +598,24 @@ html[data-motion=off] .research-panel { animation: none !important; }
   .research-explorer--compact .research-tab:nth-child(4)>.module-name { font-size: 7.5px; }
   .research-explorer--compact .research-tab>svg:not(:last-child) { width: 21px; height: 19px; margin-block: 5px; }
   .research-explorer--compact .module-type { font-size: 3px; }
-  .thinking-loop { gap: 9px; }
-  .thinking-loop svg { width: 65px; }
+}
+
+/* Spell out EMI before introducing the research, with a clear university affiliation. */
+.research-first-intro .lab-name { font-size: clamp(1.25rem,2vw,1.7rem); font-weight: 650; letter-spacing: -.035em; line-height: 1.25; color: var(--ink); margin: 0 0 13px; text-wrap: balance; }
+.lab-affiliation>p { margin: 0; }
+.lab-affiliation strong { display: block; color: var(--blue); font-size: 1.3rem; line-height: 1.2; font-weight: 700; letter-spacing: -.035em; }
+.lab-affiliation span { display: block; color: var(--muted); font-size: .74rem; line-height: 1.65; margin-top: 7px; }
+.lab-affiliation .text-link { font-size: .72rem; gap: 15px; margin-top: 7px; padding-block: 6px; }
+@media (max-width: 900px) {
+  .lab-affiliation { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+  .lab-affiliation strong { font-size: 1.1rem; }
+  .lab-affiliation span { margin-top: 4px; }
+  .lab-affiliation .text-link { margin: 0; }
+}
+@media (max-width: 600px) {
+  .research-first-intro .lab-name { font-size: 1.22rem; line-height: 1.3; margin-bottom: 12px; }
+  .lab-affiliation { gap: 15px; }
+  .lab-affiliation strong { font-size: 1.05rem; }
+  .lab-affiliation span { font-size: .66rem; line-height: 1.6; }
+  .lab-affiliation .text-link { font-size: .67rem; gap: 9px; }
 }
