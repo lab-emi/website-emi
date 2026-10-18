@@ -3,7 +3,7 @@ import '../styles/research-concepts.css';
 interface Props { direction: string; }
 const { direction } = Astro.props;
 const concepts = {
-  'rf-mixed-signal': { name: 'Learning better signals', kind: 'signals', steps: ['Learn', 'Pre-correct', 'Transmit'], caption: 'AI pre-correction brings the amplifier output closer to the intended signal.', description: 'A radio signal passes through a learned predistorter and a power amplifier. The unwanted distortion fades, leaving a clean output waveform.' },
+  'rf-mixed-signal': { name: 'With and without AI-DPD', kind: 'signals', steps: ['Same input', 'Same PA', 'Compare outputs'], caption: 'Same signal, same PA. AI-DPD pre-shapes the input to counteract distortion.', description: 'Two synchronized paths compare the same radio signal and power amplifier. Without AI-DPD, the PA produces a compressed, distorted waveform. With AI-DPD before the PA, pre-correction restores a clean output. Both outputs remain visible together.' },
   'sparse-computing': { name: 'Compute only the changes', kind: 'sparsity', steps: ['Observe', 'Find changes', 'Skip idle work'], caption: 'Changing activity travels forward. Unchanged values stay quiet.', description: 'A few neurons light up in an otherwise quiet network. A delta gate passes their changes to a sparse set of compute units.' },
   'event-based-vision': { name: 'Seeing through events', kind: 'vision', steps: ['Motion', 'Events', 'Gaze'], caption: 'Eye motion becomes sparse events, then a continuously updated gaze estimate.', description: 'An eye looks from side to side. The moving edges produce event pixels, which guide a moving gaze marker.' },
   'speech-sensing': { name: 'Intelligence at the sensor', kind: 'sensing', steps: ['Listen & sense', 'Edge AI', 'Respond'], caption: 'Speech and radar signals become useful information on a compact edge device.', description: 'A microphone waveform and radar echoes flow into an edge AI chip. Its outputs identify voice and motion activity.' },
@@ -15,6 +15,13 @@ const wave = (distorted = false) => Array.from({ length: 97 }, (_, i) => {
   const phase = x * Math.PI / 30;
   const y = 46 - (Math.sin(phase) + (distorted ? .3 * Math.sin(phase * 3) : 0)) * 24;
   return `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`;
+}).join(' ');
+// A normalized soft-compressing PA and its inverse make the comparison explicit.
+const rfWave = (kind: 'clean' | 'distorted' | 'predistorted' = 'clean') => Array.from({ length: 97 }, (_, i) => {
+  const x = i * 2.5;
+  const input = Math.sin(x * Math.PI / 30);
+  const value = kind === 'distorted' ? Math.tanh(2 * input) / Math.tanh(2) : kind === 'predistorted' ? Math.atanh(Math.tanh(2) * input) / 2 : input;
+  return `${i ? 'L' : 'M'}${x.toFixed(1)} ${(46 - value * 28).toFixed(1)}`;
 }).join(' ');
 const neurons = Array.from({ length: 18 }, (_, i) => ({ x: 47 + (i % 6) * 27, y: 91 + Math.floor(i / 6) * 43, hot: [1, 7, 10, 16].includes(i) }));
 const tiles = Array.from({ length: 16 }, (_, i) => ({ x: 464 + (i % 4) * 32, y: 79 + Math.floor(i / 4) * 32, hot: [1, 5, 10, 14].includes(i) }));
@@ -30,19 +37,22 @@ const pixels = Array.from({ length: 99 }, (_, i) => {
     <title id={`${uid}-title`}>{concept.name}</title><desc id={`${uid}-description`}>{concept.description}</desc>
     <defs><pattern id={`${uid}-grid`} width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#89abc3" opacity=".18" /></pattern></defs>
     <rect x="7" y="8" width="626" height="284" rx="14" fill={`url(#${uid}-grid)`} />
-    {concept.kind === 'signals' && <g class="concept-scene">
-      <text class="concept-label" x="89" y="47" text-anchor="middle">RF input</text><text class="concept-label" x="268" y="47" text-anchor="middle">AI DPD</text><text class="concept-label" x="412" y="47" text-anchor="middle">Amplifier</text><text class="concept-label" x="551" y="47" text-anchor="middle">Clean output</text>
-      <rect class="concept-frame" x="22" y="67" width="134" height="151" rx="12" /><path class="concept-guide" d="M33 143H146" />
-      <svg x="31" y="94" width="116" height="92" viewBox="0 0 120 92" class="concept-wave-window"><path class="rf-wave concept-stroke" d={wave()} /></svg>
-      <path class="concept-link" d="M156 143H207M329 143H376M446 143H484" />
-      <circle class="concept-packet rf-packet-one" cx="161" cy="143" r="4" /><circle class="concept-packet rf-packet-two" cx="333" cy="143" r="4" />
-      <rect class="concept-processor" x="208" y="94" width="120" height="99" rx="16" />
-      <path class="rf-network concept-guide" d="M231 118 267 113 301 126M231 118 267 143 301 126M231 167 267 143 301 164M231 167 267 175 301 164M267 113 301 164" />
-      {[{x:231,y:118},{x:231,y:167},{x:267,y:113},{x:267,y:143},{x:267,y:175},{x:301,y:126},{x:301,y:164}].map((p,i)=><circle class="rf-neuron" cx={p.x} cy={p.y} r="5" style={`--event-delay:${i * -.3}s`} />)}
-      <path class="rf-amplifier" d="M378 100 446 143 378 186Z" /><text class="concept-symbol" x="405" y="152" text-anchor="middle">A</text>
-      <rect class="concept-frame" x="485" y="67" width="134" height="151" rx="12" /><path class="concept-guide" d="M496 143H608" />
-      <svg x="493" y="94" width="118" height="92" viewBox="0 0 120 92" class="concept-wave-window"><path class="rf-wave rf-error" d={wave(true)} /><path class="rf-wave rf-clean concept-stroke" d={wave()} /></svg>
-      <path class="rf-learning-loop" d="M551 219V246H268V207" /><path class="rf-learning-arrow" d="m260 215 8-8 8 8" /><text class="concept-note" x="411" y="269" text-anchor="middle">Learn from the output</text>
+    {concept.kind === 'signals' && <g class="concept-scene rf-comparison">
+      <g class="rf-lane rf-lane--without">
+        <rect class="rf-lane-frame" x="20" y="16" width="600" height="120" rx="14" /><text class="rf-case-label" x="35" y="39">Without AI-DPD</text><text class="rf-result-label" x="604" y="39" text-anchor="end">Distorted</text>
+        <rect class="concept-frame" x="35" y="59" width="108" height="58" rx="9" /><svg x="42" y="65" width="94" height="46" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave concept-stroke rf-input-wave" d={rfWave()} /></svg>
+        <path class="concept-link" d="M143 88H332M393 88H449" /><text class="concept-note" x="234" y="78" text-anchor="middle">Direct</text>
+        <path class="rf-amplifier" d="M332 59 393 88 332 117Z" /><text class="rf-pa-label" x="350" y="94">PA</text><circle class="concept-packet rf-packet-two" cx="398" cy="88" r="3.5" />
+        <rect class="rf-output-frame" x="450" y="59" width="155" height="58" rx="9" /><svg x="461" y="65" width="133" height="46" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-reference" d={rfWave()} /><path class="rf-wave rf-distorted-output" d={rfWave('distorted')} /></svg>
+      </g>
+      <g class="rf-lane rf-lane--with">
+        <rect class="rf-lane-frame" x="20" y="154" width="600" height="130" rx="14" /><text class="rf-case-label" x="35" y="179">With AI-DPD</text><text class="rf-result-label" x="604" y="179" text-anchor="end">Clean</text>
+        <rect class="concept-frame" x="35" y="202" width="108" height="58" rx="9" /><svg x="42" y="208" width="94" height="46" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave concept-stroke rf-input-wave" d={rfWave()} /></svg>
+        <path class="concept-link" d="M143 231H186M289 231H332M393 231H449" />
+        <rect class="concept-processor" x="187" y="196" width="101" height="70" rx="11" /><text class="rf-dpd-label" x="238" y="217" text-anchor="middle">AI-DPD</text><svg x="201" y="224" width="74" height="29" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-pre-shaped" d={rfWave('predistorted')} /></svg>
+        <path class="rf-amplifier" d="M332 202 393 231 332 260Z" /><text class="rf-pa-label" x="350" y="237">PA</text><circle class="concept-packet rf-packet-two" cx="398" cy="231" r="3.5" />
+        <rect class="rf-output-frame" x="450" y="202" width="155" height="58" rx="9" /><svg x="461" y="208" width="133" height="46" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-clean-output" d={rfWave()} /></svg>
+      </g>
     </g>}
     {concept.kind === 'sparsity' && <g class="concept-scene">
       <text class="concept-label" x="117" y="47" text-anchor="middle">Neural activity</text><text class="concept-label" x="320" y="47" text-anchor="middle">Changes only</text><text class="concept-label" x="523" y="47" text-anchor="middle">Sparse compute</text>
@@ -83,15 +93,23 @@ const pixels = Array.from({ length: 99 }, (_, i) => {
   </svg>
   <svg class="concept-diagram concept-diagram--portrait" viewBox="0 0 360 360" role="img" aria-labelledby={`${uid}-portrait-title ${uid}-portrait-description`}>
     <title id={`${uid}-portrait-title`}>{concept.name}</title><desc id={`${uid}-portrait-description`}>{concept.description}</desc>
-    {concept.kind === 'signals' && <g class="concept-scene">
-      <text class="concept-label" x="180" y="28" text-anchor="middle">RF input</text>
-      <rect class="concept-frame" x="31" y="42" width="298" height="65" rx="12" /><svg x="55" y="52" width="250" height="44" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave concept-stroke" d={wave()} /></svg>
-      <path class="concept-link" d="M180 107V126H104V143M158 177H220M291 176H315V238H180V256" />
-      <rect class="concept-processor" x="50" y="144" width="108" height="66" rx="13" /><text class="concept-label" x="104" y="169" text-anchor="middle">AI DPD</text>
-      <path class="concept-guide" d="m75 189 29-8 29 8M75 189h58" />{[75,104,133].map((x,i)=><circle class="rf-neuron" cx={x} cy={i === 1 ? 181 : 189} r="4" style={`--event-delay:${i * -.3}s`} />)}
-      <circle class="concept-packet rf-packet-two" cx="165" cy="177" r="4" /><path class="rf-amplifier" d="m221 141 70 35-70 35Z" /><text class="concept-symbol" x="246" y="185">A</text><text class="concept-label" x="252" y="233" text-anchor="middle">Amplifier</text>
-      <rect class="concept-frame" x="31" y="256" width="298" height="65" rx="12" /><svg x="55" y="267" width="250" height="44" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-error" d={wave(true)} /><path class="rf-wave rf-clean concept-stroke" d={wave()} /></svg>
-      <text class="concept-label" x="180" y="346" text-anchor="middle">Clean output</text>
+    {concept.kind === 'signals' && <g class="concept-scene rf-comparison">
+      <text class="concept-label" x="180" y="22" text-anchor="middle">Same RF input</text><rect class="concept-frame" x="132" y="33" width="96" height="50" rx="9" /><svg x="140" y="39" width="80" height="38" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave concept-stroke rf-input-wave" d={rfWave()} /></svg>
+      <path class="concept-link" d="M180 83V99H90V139M180 99H270V139" />
+      <g class="rf-lane rf-lane--without">
+        <rect class="rf-lane-frame" x="16" y="110" width="148" height="245" rx="13" /><text class="rf-case-label" x="90" y="131" text-anchor="middle">Without AI-DPD</text>
+        <path class="concept-link" d="M90 141V206M90 250V275" /><text class="concept-note" x="90" y="173" text-anchor="middle">Direct</text>
+        <path class="rf-amplifier" d="M65 206H115L90 250Z" /><text class="rf-pa-label" x="90" y="225" text-anchor="middle">PA</text>
+        <rect class="rf-output-frame" x="31" y="276" width="118" height="56" rx="9" /><svg x="40" y="282" width="100" height="44" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-reference" d={rfWave()} /><path class="rf-wave rf-distorted-output" d={rfWave('distorted')} /></svg>
+        <text class="rf-result-label" x="90" y="348" text-anchor="middle">Distorted</text>
+      </g>
+      <g class="rf-lane rf-lane--with">
+        <rect class="rf-lane-frame" x="196" y="110" width="148" height="245" rx="13" /><text class="rf-case-label" x="270" y="131" text-anchor="middle">With AI-DPD</text>
+        <rect class="concept-processor" x="230" y="143" width="80" height="47" rx="10" /><text class="rf-dpd-label" x="270" y="162" text-anchor="middle">AI-DPD</text><svg x="240" y="168" width="60" height="15" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-pre-shaped" d={rfWave('predistorted')} /></svg>
+        <path class="concept-link" d="M270 190V206M270 250V275" /><path class="rf-amplifier" d="M245 206H295L270 250Z" /><text class="rf-pa-label" x="270" y="225" text-anchor="middle">PA</text>
+        <rect class="rf-output-frame" x="211" y="276" width="118" height="56" rx="9" /><svg x="220" y="282" width="100" height="44" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-clean-output" d={rfWave()} /></svg>
+        <text class="rf-result-label" x="270" y="348" text-anchor="middle">Clean</text>
+      </g>
     </g>}
     {concept.kind === 'sparsity' && <g class="concept-scene">
       <text class="concept-label" x="180" y="28" text-anchor="middle">Neural activity</text><rect class="concept-frame" x="27" y="42" width="306" height="96" rx="13" />
