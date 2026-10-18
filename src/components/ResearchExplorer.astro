@@ -9,7 +9,7 @@ const { compact = false } = Astro.props;
 const labels = ['Signals', 'Sparsity', 'Vision', 'Speech & sensing'];
 const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21 29 8 38 13M12 18 17 7M21 21 25 32', 'M2 18Q20 -3 38 18Q20 39 2 18ZM26 18A6 6 0 1 1 14 18A6 6 0 1 1 26 18', 'M4 15V21M10 8V28M16 3V33M22 11V25M28 6V30M34 14V22'];
 ---
-<div class:list={['research-explorer', { 'research-explorer--compact': compact }]} data-research-explorer>
+<div class:list={['research-explorer', { 'research-explorer--compact': compact }]} data-research-explorer data-default-research="ai-native-chip-design">
   <div class="engine-visual">
     <div class="engine-topline"><span><span class="status-light"></span> THE EMI CO-DESIGN ENGINE</span><span>EXPLORE THE LAYERS ↘</span></div>
     <div class="engine-stage">
@@ -19,12 +19,12 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
         <div class="engine-layer engine-layer-middle"><span>ALGORITHMS</span></div>
         <svg class="engine-traces" viewBox="0 0 400 400" fill="none" aria-hidden="true"><path d="M0 100H90L130 140H200V0M400 95H315L270 140H200M0 300H85L125 260H200V400M400 300H310L270 260H200M0 200H400M100 0V65L145 110M300 0V65L255 110M100 400V335L145 290M300 400V335L255 290" /><circle cx="200" cy="200" r="25" /><circle cx="200" cy="200" r="36" /></svg>
         <div class="research-tabs" aria-label="Research directions">
-    {research.map((area,i)=><button class="research-tab" type="button" data-research-tab={area.id} id={`tab-${area.id}`} aria-controls={`panel-${area.id}`} aria-pressed={i===0}>
+    {research.map((area,i)=><button class="research-tab" type="button" data-research-tab={area.id} id={`tab-${area.id}`} aria-controls={`panel-${area.id}`} aria-pressed="false">
       <span class="research-tab-index">{area.number} /</span>
       <svg width="40" height="36" viewBox="0 0 40 36" fill="none" aria-hidden="true"><path d={paths[i]} stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
       <span class="module-name">{labels[i]}</span><span class="module-type">{['RF · MIXED SIGNAL', 'NEURAL COMPUTING', 'EVENT PERCEPTION', 'EMBEDDED AI'][i]}</span><Arrow diagonal size={17} />
     </button>)}
-          <button class="research-tab research-tab--core" type="button" data-research-tab="ai-native-chip-design" id="tab-ai-native-chip-design" aria-label="AI-Native Chip Design" aria-controls="panel-ai-native-chip-design" aria-pressed="false">
+          <button class="research-tab research-tab--core" type="button" data-research-tab="ai-native-chip-design" id="tab-ai-native-chip-design" aria-label="AI-Native Chip Design" aria-controls="panel-ai-native-chip-design" aria-pressed="true">
             <span class="research-tab-index">05 /</span>
             <svg class="ai-core-mark" width="24" height="20" viewBox="0 0 24 20" fill="none" aria-hidden="true"><path d="M2 3h7v6H2zm13 0h7v6h-7zM8 13h8v6H8zM9 6h6M5 9v7h3m11-7v7h-3" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" /></svg>
             <span class="module-name">AI-Native<br />Chip Design</span><span class="module-type">AGENTIC AI · CHIPJEV</span><Arrow diagonal size={14} />
@@ -34,6 +34,11 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
     </div>
     <div class="engine-bottomline"><span>ALGORITHMS ↔ HARDWARE</span><span>SELECT A MODULE <span aria-hidden="true">↗</span></span></div>
   </div>
+  <section class="research-panel research-panel--ai" id="panel-ai-native-chip-design" data-research-panel="ai-native-chip-design" aria-labelledby="research-title-ai-native-chip-design" tabindex="0">
+    <div class="research-panel-copy"><p class="eyebrow"><span class="status-light"></span> Research direction 05</p><h3 id="research-title-ai-native-chip-design">AI-Native Chip Design</h3><p>AI agents compose, connect and refine circuit building blocks — from transistors to systems.</p></div>
+    <AgenticChipDesign />
+    <a class="ai-project-link" href="https://chipjev.com/"><span><strong>ChipJev</strong><small>Explore our analog circuit design demo</small></span><Arrow diagonal size={20} /></a>
+  </section>
   {research.map((area,i)=>{
     const papers = area.papers.map(prefix=>publications.find(p=>p.title.startsWith(prefix))).filter(Boolean).slice(0,2);
     return <section class="research-panel" id={`panel-${area.id}`} data-research-panel={area.id} aria-labelledby={`research-title-${area.id}`} tabindex="0">
@@ -53,11 +58,6 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
       <div class="research-evidence"><span class="evidence-label">Ideas, in practice <span>↳</span></span>{papers.map(p=><a href={href(p!.url)}><span>{p!.year}</span><strong>{p!.title}</strong><Arrow diagonal size={16} /></a>)}</div>
     </section>;
   })}
-  <section class="research-panel research-panel--ai" id="panel-ai-native-chip-design" data-research-panel="ai-native-chip-design" aria-labelledby="research-title-ai-native-chip-design" tabindex="0">
-    <div class="research-panel-copy"><p class="eyebrow"><span class="status-light"></span> Research direction 05</p><h3 id="research-title-ai-native-chip-design">AI-Native Chip Design</h3><p>AI agents compose, connect and refine circuit building blocks — from transistors to systems.</p></div>
-    <AgenticChipDesign />
-    <a class="ai-project-link" href="https://chipjev.com/"><span><strong>ChipJev</strong><small>Explore our analog circuit design demo</small></span><Arrow diagonal size={20} /></a>
-  </section>
 </div>
 <script>
   document.querySelectorAll<HTMLElement>('[data-research-explorer]').forEach(explorer => {
@@ -90,7 +90,8 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
     });
     panels.forEach(panel => { panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-labelledby', `tab-${panel.dataset.researchPanel}`); });
     const linked = buttons.find(button => location.hash === `#${button.getAttribute('aria-controls')}`);
-    select(linked || buttons[0], false, Boolean(linked));
+    const defaultButton = buttons.find(button => button.dataset.researchTab === explorer.dataset.defaultResearch) || buttons[0];
+    select(linked || defaultButton, false, Boolean(linked));
     window.addEventListener('hashchange', () => {
       const target = buttons.find(button => location.hash === `#${button.getAttribute('aria-controls')}`);
       if (target) select(target, false, true);
