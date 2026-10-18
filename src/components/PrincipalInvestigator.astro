@@ -3,10 +3,13 @@ import people from '../data/people.json';
 import { changGao } from '../lib/identity';
 import { href, site, thumb } from '../lib/site';
 import Arrow from './Arrow.astro';
+interface Props { embedded?: boolean; }
+const { embedded = false } = Astro.props;
+const Container = embedded ? 'div' : 'section';
 const leader = people.members.find(person => person.id === 'chang-gao')!;
 const neurons = [[55,80],[77,63],[102,88],[45,120],[84,117],[110,149],[58,163],[96,192],[74,205],[117,179],[153,78],[181,68],[206,106],[164,126],[216,144],[190,173],[145,183],[174,204],[207,192],[160,151]];
 ---
-<section class="home-pi" id="principal-investigator" data-home-pi data-story-section="Principal investigator" aria-labelledby="pi-heading">
+<Container class:list={['home-pi', { 'home-pi--embedded': embedded }]} id="principal-investigator" data-home-pi data-story-section={embedded ? undefined : 'Principal investigator'} aria-labelledby="pi-heading">
   <svg class="pi-background" viewBox="0 0 460 280" fill="none" aria-hidden="true" focusable="false">
     <g class="pi-brain">
       <path class="pi-brain-outline" d="M104 52C88 35 67 45 63 61C43 58 28 76 31 93C13 104 17 129 28 141C18 160 29 184 49 187C47 206 63 224 84 217C96 233 119 225 124 207V66C123 56 114 50 104 52ZM136 66C151 47 172 45 185 63C207 58 224 73 221 94C242 100 248 125 232 141C241 160 231 182 213 183C216 203 194 220 179 215C162 234 138 217 136 202Z" />
@@ -30,14 +33,14 @@ const neurons = [[55,80],[77,63],[102,88],[45,120],[84,117],[110,149],[58,163],[
   <div class="wrap pi-layout">
     <a class="pi-photo" href={changGao.url} aria-label="Visit Chang Gao's personal website"><img src={thumb(leader.image)} alt="Dr. Chang Gao, principal investigator of EMI Lab" width="320" height="320" loading="lazy" /></a>
     <div class="pi-copy">
-      <p class="eyebrow"><span class="section-index">02 /</span> Principal investigator</p>
+      <p class="eyebrow">{!embedded && <span class="section-index">02 /</span>} Principal investigator</p>
       <h2 id="pi-heading"><a href={changGao.url}>Dr. {changGao.name} <Arrow diagonal size={22} /></a></h2>
       <p class="pi-role">{changGao.role} · Edge AI</p>
-      <p class="pi-summary">Leads EMI’s research in neuromorphic algorithm–hardware co-design for energy-efficient edge intelligence.</p>
+      <p class="pi-summary">{embedded ? 'Neuromorphic algorithm–hardware co-design for energy-efficient edge AI.' : 'Leads EMI’s research in neuromorphic algorithm–hardware co-design for energy-efficient edge intelligence.'}</p>
       <div class="pi-links"><a href={href('/people/#leader')}>Full profile <Arrow size={15} /></a><a href={site.scholar}>Google Scholar <Arrow diagonal size={14} /></a></div>
     </div>
   </div>
-</section>
+</Container>
 <script>
   const section = document.querySelector<HTMLElement>('[data-home-pi]');
   if (section && 'IntersectionObserver' in window) {
@@ -88,4 +91,19 @@ const neurons = [[55,80],[77,63],[102,88],[45,120],[84,117],[110,149],[58,163],[
   @media(max-width:650px){.home-pi{padding:32px 0}.pi-layout{grid-template-columns:92px minmax(0,1fr);gap:23px;align-items:start}.pi-photo{margin-top:27px;border-width:3px;border-radius:10px}.pi-photo img{height:114px}.pi-copy .eyebrow{font-size:.52rem;letter-spacing:.08em;margin-bottom:12px;gap:5px}.pi-copy .section-index{margin-right:5px}.pi-copy h2{font-size:1.8rem;margin-bottom:10px}.pi-copy h2 a{gap:9px}.pi-copy h2 svg{width:15px}.pi-role{font-size:.74rem;line-height:1.7;margin-bottom:11px}.pi-summary{font-size:.77rem;line-height:1.8;margin-bottom:16px}.pi-links{gap:12px 17px}.pi-links a{font-size:.67rem;gap:6px}.pi-background{right:-115px;top:55%;opacity:.13}}
   @media(max-width:380px){.pi-layout{grid-template-columns:76px minmax(0,1fr);gap:17px}.pi-photo img{height:96px}.pi-copy h2{font-size:1.56rem}.pi-copy h2 a{gap:6px}.pi-copy h2 svg{width:13px}.pi-copy .eyebrow{font-size:.48rem}.pi-role{font-size:.7rem}.pi-summary{font-size:.74rem}}
   @media(prefers-reduced-motion:reduce){.pi-neuron,.pi-flow,.pi-chip{animation:none}.pi-photo img{transition:none}}
+  .home-pi--embedded{padding:16px;border:1px solid #d9e4ef;border-radius:14px;background:#f8fbffb8}
+  .home-pi--embedded .pi-layout{width:100%;grid-template-columns:76px minmax(0,1fr);gap:16px;padding:0;align-items:center}
+  .home-pi--embedded .pi-photo{margin:0;border-width:3px;border-radius:10px}
+  .home-pi--embedded .pi-photo img{height:94px}
+  .home-pi--embedded .pi-copy .eyebrow{font-size:.53rem;margin-bottom:5px}
+  .home-pi--embedded .pi-copy h2{font-size:1.45rem;margin-bottom:5px}
+  .home-pi--embedded .pi-copy h2 a{gap:9px}
+  .home-pi--embedded .pi-copy h2 svg{width:14px}
+  .home-pi--embedded .pi-role{font-size:.68rem;line-height:1.4;margin-bottom:7px}
+  .home-pi--embedded .pi-summary{font-size:.7rem;line-height:1.5;margin-bottom:9px}
+  .home-pi--embedded .pi-links{gap:10px 18px}
+  .home-pi--embedded .pi-links a{font-size:.63rem;gap:7px;padding-bottom:3px}
+  .home-pi--embedded .pi-background{width:250px;right:-45px;opacity:.13}
+  @media(max-width:760px){.home-pi--embedded{padding:11px}.home-pi--embedded .pi-layout{grid-template-columns:62px minmax(0,1fr);gap:12px}.home-pi--embedded .pi-photo img{height:79px}.home-pi--embedded .pi-copy h2{font-size:1.22rem}.home-pi--embedded .pi-role{font-size:.61rem;margin-bottom:5px}.home-pi--embedded .pi-summary{font-size:.64rem;line-height:1.4;margin-bottom:6px}.home-pi--embedded .pi-links a{font-size:.59rem}.home-pi--embedded .pi-copy .eyebrow{font-size:.47rem}}
+  @media(max-height:650px){.home-pi--embedded{padding:9px}.home-pi--embedded .pi-layout{grid-template-columns:54px minmax(0,1fr);gap:10px}.home-pi--embedded .pi-photo img{height:70px}.home-pi--embedded .pi-copy h2{font-size:1.1rem}.home-pi--embedded .pi-role{font-size:.59rem;margin-bottom:4px}.home-pi--embedded .pi-summary{font-size:.61rem;margin-bottom:5px}.home-pi--embedded .pi-links a{font-size:.56rem}.home-pi--embedded .pi-copy .eyebrow{font-size:.45rem;margin-bottom:4px}}
 </style>

@@ -7,7 +7,7 @@ interface Props { title?: string; description?: string; active?: string; home?: 
 const { title, description = site.description, active = '', home = false } = Astro.props;
 const pageTitle = title ? `${title} — EMI Lab · TU Delft` : 'EMI Lab — Efficient Machine Intelligence at TU Delft';
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const navigation = [['Research','/research/'],['People','/people/'],['Publications','/publications/'],['News','/news/'],['Gallery','/gallery/'],['MSc Projects','/msc-projects/']];
+const navigation = [['News','/news/'],['Research','/research/'],['People','/people/'],['Publications','/publications/'],['Gallery','/gallery/'],['MSc Projects','/msc-projects/']];
 const joinLink = ['Join us','/join-us/'];
 ---
 <!doctype html>
@@ -44,7 +44,7 @@ const joinLink = ['Join us','/join-us/'];
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner wrap">
-        <a href={href('/')} class="wordmark" aria-label="EMI Lab home"><img class="emi-logo" src={href('/images/emi-logo.svg')} alt="EMI" width="146" height="48" /><span class="brand-divider"></span><span class="brand-caption">Efficient Machine<br />Intelligence <b>TU Delft</b></span></a>
+        <a href={href('/')} class="wordmark" aria-label="EMI Lab home"><img class="emi-logo" src={href('/images/emi-logo.svg')} alt="EMI" width="146" height="48" /><span class="brand-divider"></span><span class="brand-caption"><span class="brand-full-name">{site.fullName}</span><b>TU Delft</b></span></a>
         <nav class="desktop-nav" aria-label="Main navigation">
           {navigation.map(([label,path]) => <a href={href(path)} aria-current={active === label ? 'page' : undefined}>{label}</a>)}
           <a class="nav-join" href={href(joinLink[1])} aria-current={active === joinLink[0] ? 'page' : undefined}>{joinLink[0]} <Arrow diagonal size={15} /></a>
