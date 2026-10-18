@@ -4,6 +4,7 @@ import publications from '../data/publications.json';
 import { href } from '../lib/site';
 import Arrow from './Arrow.astro';
 import AgenticChipDesign from './AgenticChipDesign.astro';
+import ResearchConcept from './ResearchConcept.astro';
 interface Props { compact?: boolean; }
 const { compact = false } = Astro.props;
 const labels = ['Signals', 'Sparsity', 'Vision', 'Speech & sensing'];
@@ -35,27 +36,32 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
     <div class="engine-bottomline"><span>ALGORITHMS ↔ HARDWARE</span><span>SELECT A MODULE <span aria-hidden="true">↗</span></span></div>
   </div>
   <section class="research-panel research-panel--ai" id="panel-ai-native-chip-design" data-research-panel="ai-native-chip-design" aria-labelledby="research-title-ai-native-chip-design" tabindex="0">
-    <div class="research-panel-copy"><p class="eyebrow"><span class="status-light"></span> Research direction 05</p><h3 id="research-title-ai-native-chip-design">AI-Native Chip Design</h3><p>AI agents compose, connect and refine circuit building blocks — from transistors to systems.</p></div>
-    <AgenticChipDesign />
-    <a class="ai-project-link" href="https://chipjev.com/"><span><strong>ChipJev</strong><small>Explore our analog circuit design demo</small></span><Arrow diagonal size={20} /></a>
+    <div class="research-panel-feature">
+      <div class="research-panel-copy"><p class="eyebrow"><span class="status-light"></span> Research direction 05</p><h3 id="research-title-ai-native-chip-design">AI-Native Chip Design</h3><p>AI agents compose, connect and refine circuit building blocks — from transistors to systems.</p></div>
+      <AgenticChipDesign />
+      <a class="ai-project-link" href="https://chipjev.com/"><span><strong>ChipJev</strong><small>Explore our analog circuit design demo</small></span><Arrow diagonal size={20} /></a>
+    </div>
   </section>
   {research.map((area,i)=>{
     const papers = area.papers.map(prefix=>publications.find(p=>p.title.startsWith(prefix))).filter(Boolean).slice(0,2);
     return <section class="research-panel" id={`panel-${area.id}`} data-research-panel={area.id} aria-labelledby={`research-title-${area.id}`} tabindex="0">
-      <div class="research-panel-main">
+      <div class="research-panel-feature">
         <div class="research-panel-copy">
           <p class="eyebrow"><span class="status-light"></span> Research direction {area.number}</p>
           <h3 id={`research-title-${area.id}`}>{area.short}</h3>
           <p>{area.description}</p>
-          <div class="research-keywords">{area.keywords.map(keyword=><span>{keyword}</span>)}</div>
-          <a class="text-link" href={href(`/research/${area.id}/`)}>Explore {labels[i].toLowerCase()} <Arrow diagonal size={18} /></a>
         </div>
+        <ResearchConcept direction={area.id} />
+        <a class="text-link research-panel-action" href={href(`/research/${area.id}/`)}>Explore {labels[i].toLowerCase()} <Arrow diagonal size={18} /></a>
+      </div>
+      <div class="research-panel-details">
+        <div class="research-keywords">{area.keywords.map(keyword=><span>{keyword}</span>)}</div>
         {!compact && <figure class="research-panel-image">
           <img src={href(area.image)} alt={area.imageAlt} width={area.imageWidth} height={area.imageHeight} loading="lazy" decoding="async" />
           <figcaption><span>{area.title}</span><a href={area.imageSource}>{area.imageCredit} <Arrow diagonal size={12} /></a></figcaption>
         </figure>}
+        <div class="research-evidence"><span class="evidence-label">Ideas, in practice <span>↳</span></span>{papers.map(p=><a href={href(p!.url)}><span>{p!.year}</span><strong>{p!.title}</strong><Arrow diagonal size={16} /></a>)}</div>
       </div>
-      <div class="research-evidence"><span class="evidence-label">Ideas, in practice <span>↳</span></span>{papers.map(p=><a href={href(p!.url)}><span>{p!.year}</span><strong>{p!.title}</strong><Arrow diagonal size={16} /></a>)}</div>
     </section>;
   })}
 </div>

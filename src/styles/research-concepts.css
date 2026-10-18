@@ -1,0 +1,105 @@
+.research-concept { margin: 0; padding: 15px 14px 12px; border: 1px solid #31536d; border-radius: 13px; background: radial-gradient(ellipse at 50% 45%,#1c405a,#102b40 75%); color: #c9dbea; overflow: hidden; }
+.concept-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-inline: 4px; }
+.concept-topline>span { display: inline-flex; align-items: center; gap: 7px; font-size: .65rem; }
+.concept-topline i { width: 5px; height: 5px; flex: 0 0 5px; border-radius: 50%; background: #eda17a; }
+.concept-topline button { display: inline-flex; align-items: center; gap: 5px; padding: 0; border: 0; color: #bfd4e5; background: transparent; font-size: .63rem; }
+.concept-topline button:hover { color: #fff; }
+.concept-topline button:focus-visible { outline-color: #efb892; outline-offset: 4px; }
+.concept-diagram { display: block; width: 100%; height: auto; margin-block: 8px; }
+.concept-diagram--portrait { display: none; }
+.concept-diagram :is(path,rect,circle,line) { vector-effect: non-scaling-stroke; }
+.concept-scene { stroke-linecap: round; stroke-linejoin: round; }
+.concept-label { fill: #c3d9eb; font: 15px var(--sans); letter-spacing: -.2px; }
+.concept-note { fill: #829fb5; font: 13px var(--sans); }
+.concept-symbol { fill: #d9eaff; font: 27px var(--sans); }
+.concept-frame { fill: #17364e88; stroke: #527895; stroke-width: 1; }
+.concept-guide { fill: none; stroke: #5b80965e; stroke-width: 1; }
+.concept-link { fill: none; stroke: #658eae; stroke-width: 1.4; stroke-dasharray: 4 6; }
+.concept-processor { fill: #294e6e; stroke: #95b6da; stroke-width: 1.3; }
+.concept-packet { fill: #efaf87; }
+.concept-stroke { fill: none; stroke: #a7cff8; stroke-width: 2; }
+.concept-wave-window { overflow: hidden; }
+.rf-neuron { fill: #bfdafa; stroke: #83acd6; stroke-width: .7; }
+.rf-amplifier { fill: #244662; stroke: #8fb1d3; stroke-width: 1.3; }
+.rf-error { fill: none; stroke: #ed9d79; stroke-width: 1.4; stroke-dasharray: 3 4; opacity: .3; }
+.rf-learning-loop, .rf-learning-arrow { fill: none; stroke: #608a9d; stroke-width: 1; }
+.rf-learning-loop { stroke-dasharray: 3 6; }
+.sparse-neuron { fill: #26465b; stroke: #5d8097; stroke-width: 1; }
+.sparse-event { fill: #edac80; stroke: #ffd3ab; }
+.sparse-gate { fill: #305574; stroke: #94badb; stroke-width: 1.4; }
+.sparse-delta { font-size: 41px; }
+.sparse-cell { fill: #234255; stroke: #476b85; stroke-width: .9; }
+.sparse-cell--active { fill: #84b6d9; stroke: #c0e0f4; }
+.vision-eye { fill: #173950; stroke: #8bb5d5; stroke-width: 1.8; }
+.vision-iris-ring { fill: #325f7e; stroke: #aacfe7; stroke-width: 1.7; }
+.vision-pupil { fill: #0b2233; }
+.vision-pixel { fill: #305269; }
+.vision-event { fill: #eeb08a; }
+.vision-event:nth-child(3n) { fill: #a9d4f4; }
+.vision-target-ring { fill: #76b0cf15; stroke: #6b9dba; stroke-width: 1; stroke-dasharray: 3 5; }
+.vision-crosshair { fill: none; stroke: #b6d9ee; stroke-width: 1.3; }
+.sensing-mic { fill: none; stroke: #a7cce6; stroke-width: 1.6; }
+.sensing-radar-base, .sensing-radar-ring { fill: none; stroke: #86b5d6; stroke-width: 1.3; }
+.sensing-radar-base { opacity: .4; }
+.sensing-pin { fill: none; stroke: #6689a8; stroke-width: 1.7; }
+.sensing-circuit { fill: none; stroke: #afcceb; stroke-width: 1.6; }
+.sensing-chip-dot { fill: #edaf87; stroke: #f9d1af; stroke-width: 1; }
+.sensing-output { fill: #294a6377; stroke: #668fae; stroke-width: 1; }
+.sensing-output-icon { fill: none; stroke: #abcde5; stroke-width: 1.5; }
+.concept-steps { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: .66rem; }
+.concept-steps span { color: #8ca9c1; padding: 4px 6px; border-radius: 5px; white-space: nowrap; transition: color .3s,background .3s; }
+.concept-steps i { color: #62849e; font-size: .6rem; font-style: normal; }
+.research-concept[data-phase="0"] [data-concept-step="0"], .research-concept[data-phase="1"] [data-concept-step="1"], .research-concept[data-phase="2"] [data-concept-step="2"], .research-concept[data-phase=ready] [data-concept-step="2"] { color: #f1c7a8; background: #a063433d; }
+.research-concept figcaption { margin-top: 8px; color: #91adbf; text-align: center; font-size: .61rem; line-height: 1.5; }
+@media (max-width: 600px) {
+  .concept-diagram--wide { display: none; }
+  .concept-diagram--portrait { display: block; }
+}
+.concept-diagram--portrait .concept-label { font-size: 17px; }
+.concept-diagram--portrait .concept-note { font-size: 14px; }
+@supports (container-type: size) {
+  .research-concept { container: research-concept / size; }
+  .concept-diagram--wide { display: block; }
+  .concept-diagram--portrait { display: none; }
+  @container research-concept (max-aspect-ratio: 1 / 1) {
+    .concept-diagram--wide { display: none; }
+    .concept-diagram--portrait { display: block; }
+  }
+}
+
+/* The animation controller activates only the concept that is actually on screen. */
+.research-concept[data-running=true] .rf-wave, .research-concept[data-running=true] .sensing-wave { animation: concept-wave-flow 3s linear infinite; }
+.research-concept[data-running=true] .rf-error { animation: concept-wave-flow 3s linear infinite,rf-correction 6s ease-in-out infinite; }
+.research-concept[data-running=true] .rf-clean { animation: concept-wave-flow 3s linear infinite,rf-output 6s ease-in-out infinite; }
+.research-concept[data-running=true] .rf-neuron { animation: concept-node-fire 2s ease-in-out var(--event-delay) infinite; }
+.research-concept[data-running=true] .rf-packet-one { animation: rf-packet-one 2s ease-in-out infinite; }
+.research-concept[data-running=true] .rf-packet-two { animation: rf-packet-two 2s ease-in-out .65s infinite; }
+.research-concept[data-running=true] .rf-learning-loop { animation: concept-trace-flow 6s linear infinite; }
+.research-concept[data-running=true] .sparse-event, .research-concept[data-running=true] .sparse-cell--active { animation: concept-node-fire 3s ease-in-out var(--event-delay) infinite; }
+.research-concept[data-running=true] .sparse-packet { animation: sparse-packet 3s ease-in-out infinite; }
+.research-concept[data-running=true] .vision-iris, .research-concept[data-running=true] .vision-gaze { animation: vision-look 6s ease-in-out infinite; }
+.research-concept[data-running=true] .vision-event { animation: vision-event-flash 1.8s ease-in-out var(--event-delay) infinite; }
+.research-concept[data-running=true] .sensing-radar-ring { animation: radar-echo 2.4s ease-in-out infinite; }
+.research-concept[data-running=true] .radar-ring-two { animation-delay: .3s; }
+.research-concept[data-running=true] .radar-ring-three { animation-delay: .6s; }
+.research-concept[data-running=true] .sensing-radar-target { animation: radar-target 6s ease-in-out infinite; }
+.research-concept[data-running=true] .sensing-audio-packet { animation: sensing-audio-packet 2.2s ease-in-out infinite; }
+.research-concept[data-running=true] .sensing-data-packet { animation: sensing-data-packet 2.6s ease-in-out .7s infinite; }
+.research-concept[data-running=true] .sensing-chip-dot { animation: concept-node-fire 2s ease-in-out infinite; }
+.research-concept[data-running=true] .sensing-voice { animation: sensing-recognize 6s ease-in-out infinite; }
+.research-concept[data-running=true] .sensing-motion { animation: sensing-recognize 6s ease-in-out 3s infinite; }
+@keyframes concept-wave-flow { to { transform: translateX(-120px); } }
+@keyframes concept-trace-flow { to { stroke-dashoffset: -90; } }
+@keyframes concept-node-fire { 0%,100% { opacity: .45; } 35%,65% { opacity: 1; filter: drop-shadow(0 0 4px #9fc9eb99); } }
+@keyframes rf-correction { 0%,18% { opacity: .9; } 65%,100% { opacity: .06; } }
+@keyframes rf-output { 0%,18% { opacity: .3; } 65%,100% { opacity: 1; } }
+@keyframes rf-packet-one { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(41px); opacity: 0; } }
+@keyframes rf-packet-two { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(37px); opacity: 0; } }
+@keyframes sparse-packet { 0%,15% { transform: translateX(0); opacity: 0; } 25% { opacity: 1; } 70% { opacity: 1; } 100% { transform: translateX(214px); opacity: 0; } }
+@keyframes vision-look { 0%,100% { transform: translateX(-17px); } 25% { transform: translateX(3px); } 55% { transform: translateX(17px); } 78% { transform: translateX(-6px); } }
+@keyframes vision-event-flash { 0%,100% { opacity: .2; } 35%,60% { opacity: 1; } }
+@keyframes radar-echo { 0%,100% { opacity: .15; } 45% { opacity: 1; } }
+@keyframes radar-target { 0%,100% { transform: translateY(-8px); } 50% { transform: translateY(16px); } }
+@keyframes sensing-audio-packet { 0% { transform: translateX(0); opacity: 0; } 15%,80% { opacity: 1; } 100% { transform: translateX(37px); opacity: 0; } }
+@keyframes sensing-data-packet { 0% { transform: translateX(0); opacity: 0; } 15%,80% { opacity: 1; } 100% { transform: translateX(104px); opacity: 0; } }
+@keyframes sensing-recognize { 0%,15%,100% { fill: #294a6377; stroke: #668fae; } 30%,65% { fill: #446d8c99; stroke: #d6b293; } }

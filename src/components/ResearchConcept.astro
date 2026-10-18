@@ -1,0 +1,127 @@
+---
+import '../styles/research-concepts.css';
+interface Props { direction: string; }
+const { direction } = Astro.props;
+const concepts = {
+  'rf-mixed-signal': { name: 'Learning better signals', kind: 'signals', steps: ['Learn', 'Pre-correct', 'Transmit'], caption: 'AI pre-correction brings the amplifier output closer to the intended signal.', description: 'A radio signal passes through a learned predistorter and a power amplifier. The unwanted distortion fades, leaving a clean output waveform.' },
+  'sparse-computing': { name: 'Compute only the changes', kind: 'sparsity', steps: ['Observe', 'Find changes', 'Skip idle work'], caption: 'Changing activity travels forward. Unchanged values stay quiet.', description: 'A few neurons light up in an otherwise quiet network. A delta gate passes their changes to a sparse set of compute units.' },
+  'event-based-vision': { name: 'Seeing through events', kind: 'vision', steps: ['Motion', 'Events', 'Gaze'], caption: 'Eye motion becomes sparse events, then a continuously updated gaze estimate.', description: 'An eye looks from side to side. The moving edges produce event pixels, which guide a moving gaze marker.' },
+  'speech-sensing': { name: 'Intelligence at the sensor', kind: 'sensing', steps: ['Listen & sense', 'Edge AI', 'Respond'], caption: 'Speech and radar signals become useful information on a compact edge device.', description: 'A microphone waveform and radar echoes flow into an edge AI chip. Its outputs identify voice and motion activity.' },
+};
+const concept = concepts[direction as keyof typeof concepts];
+const uid = `concept-${direction}`;
+const wave = (distorted = false) => Array.from({ length: 97 }, (_, i) => {
+  const x = i * 2.5;
+  const phase = x * Math.PI / 30;
+  const y = 46 - (Math.sin(phase) + (distorted ? .3 * Math.sin(phase * 3) : 0)) * 24;
+  return `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`;
+}).join(' ');
+const neurons = Array.from({ length: 18 }, (_, i) => ({ x: 47 + (i % 6) * 27, y: 91 + Math.floor(i / 6) * 43, hot: [1, 7, 10, 16].includes(i) }));
+const tiles = Array.from({ length: 16 }, (_, i) => ({ x: 464 + (i % 4) * 32, y: 79 + Math.floor(i / 4) * 32, hot: [1, 5, 10, 14].includes(i) }));
+const pixels = Array.from({ length: 99 }, (_, i) => {
+  const col = i % 11, row = Math.floor(i / 11);
+  const radius = ((col - 5) / 4) ** 2 + ((row - 4) / 3) ** 2;
+  return { x: 278 + col * 11, y: 94 + row * 12, hot: radius > .68 && radius < 1.4, delay: (col + row) * -.09 };
+});
+---
+<figure class={`research-concept concept--${concept.kind}`} data-research-concept={direction} data-running="false" data-phase="ready">
+  <div class="concept-topline"><span><i aria-hidden="true"></i>{concept.name}</span><button type="button" data-concept-replay hidden aria-label={`Replay ${concept.name.toLowerCase()} animation`}><span aria-hidden="true">↻</span> Replay</button></div>
+  <svg class="concept-diagram concept-diagram--wide" viewBox="0 0 640 300" role="img" aria-labelledby={`${uid}-title ${uid}-description`}>
+    <title id={`${uid}-title`}>{concept.name}</title><desc id={`${uid}-description`}>{concept.description}</desc>
+    <defs><pattern id={`${uid}-grid`} width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#89abc3" opacity=".18" /></pattern></defs>
+    <rect x="7" y="8" width="626" height="284" rx="14" fill={`url(#${uid}-grid)`} />
+    {concept.kind === 'signals' && <g class="concept-scene">
+      <text class="concept-label" x="89" y="47" text-anchor="middle">RF input</text><text class="concept-label" x="268" y="47" text-anchor="middle">AI DPD</text><text class="concept-label" x="412" y="47" text-anchor="middle">Amplifier</text><text class="concept-label" x="551" y="47" text-anchor="middle">Clean output</text>
+      <rect class="concept-frame" x="22" y="67" width="134" height="151" rx="12" /><path class="concept-guide" d="M33 143H146" />
+      <svg x="31" y="94" width="116" height="92" viewBox="0 0 120 92" class="concept-wave-window"><path class="rf-wave concept-stroke" d={wave()} /></svg>
+      <path class="concept-link" d="M156 143H207M329 143H376M446 143H484" />
+      <circle class="concept-packet rf-packet-one" cx="161" cy="143" r="4" /><circle class="concept-packet rf-packet-two" cx="333" cy="143" r="4" />
+      <rect class="concept-processor" x="208" y="94" width="120" height="99" rx="16" />
+      <path class="rf-network concept-guide" d="M231 118 267 113 301 126M231 118 267 143 301 126M231 167 267 143 301 164M231 167 267 175 301 164M267 113 301 164" />
+      {[{x:231,y:118},{x:231,y:167},{x:267,y:113},{x:267,y:143},{x:267,y:175},{x:301,y:126},{x:301,y:164}].map((p,i)=><circle class="rf-neuron" cx={p.x} cy={p.y} r="5" style={`--event-delay:${i * -.3}s`} />)}
+      <path class="rf-amplifier" d="M378 100 446 143 378 186Z" /><text class="concept-symbol" x="405" y="152" text-anchor="middle">A</text>
+      <rect class="concept-frame" x="485" y="67" width="134" height="151" rx="12" /><path class="concept-guide" d="M496 143H608" />
+      <svg x="493" y="94" width="118" height="92" viewBox="0 0 120 92" class="concept-wave-window"><path class="rf-wave rf-error" d={wave(true)} /><path class="rf-wave rf-clean concept-stroke" d={wave()} /></svg>
+      <path class="rf-learning-loop" d="M551 219V246H268V207" /><path class="rf-learning-arrow" d="m260 215 8-8 8 8" /><text class="concept-note" x="411" y="269" text-anchor="middle">Learn from the output</text>
+    </g>}
+    {concept.kind === 'sparsity' && <g class="concept-scene">
+      <text class="concept-label" x="117" y="47" text-anchor="middle">Neural activity</text><text class="concept-label" x="320" y="47" text-anchor="middle">Changes only</text><text class="concept-label" x="523" y="47" text-anchor="middle">Sparse compute</text>
+      <rect class="concept-frame" x="23" y="65" width="188" height="151" rx="14" />
+      {[0,1,2].map(row=><path class="concept-guide" d={`M47 ${91 + row * 43}H182`} />)}
+      {[0,1,2,3,4,5].map(col=><path class="concept-guide" d={`M${47 + col * 27} 91V177`} />)}
+      {neurons.map((p,i)=><circle class:list={['sparse-neuron', { 'sparse-event': p.hot }]} cx={p.x} cy={p.y} r="7" style={`--event-delay:${i * -.21}s`} />)}
+      <path class="concept-link" d="M211 134H276M364 134H438" /><circle class="concept-packet sparse-packet" cx="217" cy="134" r="4" />
+      <circle class="sparse-gate" cx="320" cy="134" r="40" /><text class="concept-symbol sparse-delta" x="320" y="149" text-anchor="middle">Δ</text>
+      <rect class="concept-frame" x="439" y="65" width="177" height="151" rx="14" />
+      {tiles.map((p,i)=><rect class:list={['sparse-cell', { 'sparse-cell--active': p.hot }]} x={p.x} y={p.y} width="24" height="24" rx="5" style={`--event-delay:${i * -.21}s`} />)}
+      <text class="concept-note" x="117" y="253" text-anchor="middle">Most values stay quiet</text><text class="concept-note" x="523" y="253" text-anchor="middle">Wake only what is needed</text>
+    </g>}
+    {concept.kind === 'vision' && <g class="concept-scene">
+      <text class="concept-label" x="123" y="47" text-anchor="middle">Eye motion</text><text class="concept-label" x="333" y="47" text-anchor="middle">Event stream</text><text class="concept-label" x="535" y="47" text-anchor="middle">Gaze estimate</text>
+      <path class="vision-eye" d="M25 146Q122 53 220 146Q122 239 25 146Z" />
+      <g transform="translate(123 146)"><g class="vision-iris"><circle class="vision-iris-ring" r="29" /><circle class="vision-pupil" r="13" /><circle cx="-7" cy="-8" r="5" fill="#c9e0f4" /></g></g>
+      <path class="concept-link" d="M225 146H253M412 146H445" />
+      <rect class="concept-frame" x="259" y="70" width="148" height="149" rx="12" />
+      {pixels.map(p=><rect class:list={['vision-pixel', { 'vision-event': p.hot }]} x={p.x} y={p.y} width="5" height="5" rx="1" style={`--event-delay:${p.delay}s`} />)}
+      <rect class="concept-frame" x="451" y="70" width="170" height="149" rx="12" /><path class="concept-guide" d="M461 145H611M535 80V209" />
+      <g transform="translate(535 146)"><g class="vision-gaze"><circle class="vision-target-ring" r="25" /><path class="vision-crosshair" d="M-33 0H-12M12 0H33M0-33V-12M0 12V33" /><circle class="concept-packet" r="5" /></g></g>
+      <text class="concept-note" x="320" y="262" text-anchor="middle">Track the moving edges, without processing every pixel</text>
+    </g>}
+    {concept.kind === 'sensing' && <g class="concept-scene">
+      <text class="concept-label" x="92" y="45" text-anchor="middle">Speech</text><text class="concept-label" x="92" y="180" text-anchor="middle">Radar</text><text class="concept-label" x="370" y="45" text-anchor="middle">Edge AI</text>
+      <g class="sensing-mic" transform="translate(52 84)"><rect x="-10" y="-22" width="20" height="34" rx="10" /><path d="M-17 2V7a17 17 0 0 0 34 0V2M0 24V37M-12 37H12" /></g>
+      <svg x="82" y="61" width="139" height="66" viewBox="0 0 120 92" class="concept-wave-window"><path class="sensing-wave concept-stroke" d={wave(true)} /></svg>
+      <path class="concept-link" d="M225 94H270Q285 94 285 114V142H306M150 224H262Q285 224 285 200V162H306M435 143H465V115H483M465 143V218H483" />
+      <g transform="translate(89 232)"><path class="sensing-radar-base" d="M0 0 47-23M0 0 47 23M0 0H51" /><path class="sensing-radar-ring radar-ring-one" d="M19-12a23 23 0 0 1 0 24" /><path class="sensing-radar-ring radar-ring-two" d="M33-22a40 40 0 0 1 0 44" /><path class="sensing-radar-ring radar-ring-three" d="M48-31a57 57 0 0 1 0 62" /><circle class="concept-packet sensing-radar-target" cx="57" cy="-14" r="5" /></g>
+      <circle class="concept-packet sensing-audio-packet" cx="229" cy="94" r="4" /><circle class="concept-packet sensing-data-packet" cx="156" cy="224" r="4" />
+      {[0,1,2,3,4].map(i=><path class="sensing-pin" d={`M${324+i*23} 88V98M${324+i*23} 200V210`} />)}
+      {[0,1,2,3].map(i=><path class="sensing-pin" d={`M297 ${115+i*23}H307M434 ${115+i*23}H444`} />)}
+      <rect class="concept-processor sensing-chip" x="307" y="98" width="127" height="102" rx="15" /><path class="sensing-circuit" d="M329 128H349V149H392V172H411M329 172H349V149M392 126V149H411" /><circle class="sensing-chip-dot" cx="349" cy="149" r="7" /><circle class="sensing-chip-dot" cx="392" cy="149" r="7" />
+      <rect class="sensing-output sensing-voice" x="484" y="79" width="133" height="73" rx="12" /><path class="sensing-output-icon" d="M505 109v14m7-20v26m7-17v8m7-13v18" /><text class="concept-label" x="563" y="123" text-anchor="middle">Voice</text>
+      <rect class="sensing-output sensing-motion" x="484" y="183" width="133" height="73" rx="12" /><circle class="sensing-output-icon" cx="515" cy="205" r="5" /><path class="sensing-output-icon" d="m503 221 12-9 12 8m-12-8v18m0-3-11 14m11-14 11 14" /><text class="concept-label" x="567" y="225" text-anchor="middle">Motion</text>
+    </g>}
+  </svg>
+  <svg class="concept-diagram concept-diagram--portrait" viewBox="0 0 360 360" role="img" aria-labelledby={`${uid}-portrait-title ${uid}-portrait-description`}>
+    <title id={`${uid}-portrait-title`}>{concept.name}</title><desc id={`${uid}-portrait-description`}>{concept.description}</desc>
+    {concept.kind === 'signals' && <g class="concept-scene">
+      <text class="concept-label" x="180" y="28" text-anchor="middle">RF input</text>
+      <rect class="concept-frame" x="31" y="42" width="298" height="65" rx="12" /><svg x="55" y="52" width="250" height="44" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave concept-stroke" d={wave()} /></svg>
+      <path class="concept-link" d="M180 107V126H104V143M158 177H220M291 176H315V238H180V256" />
+      <rect class="concept-processor" x="50" y="144" width="108" height="66" rx="13" /><text class="concept-label" x="104" y="169" text-anchor="middle">AI DPD</text>
+      <path class="concept-guide" d="m75 189 29-8 29 8M75 189h58" />{[75,104,133].map((x,i)=><circle class="rf-neuron" cx={x} cy={i === 1 ? 181 : 189} r="4" style={`--event-delay:${i * -.3}s`} />)}
+      <circle class="concept-packet rf-packet-two" cx="165" cy="177" r="4" /><path class="rf-amplifier" d="m221 141 70 35-70 35Z" /><text class="concept-symbol" x="246" y="185">A</text><text class="concept-label" x="252" y="233" text-anchor="middle">Amplifier</text>
+      <rect class="concept-frame" x="31" y="256" width="298" height="65" rx="12" /><svg x="55" y="267" width="250" height="44" viewBox="0 0 120 92" preserveAspectRatio="none" class="concept-wave-window"><path class="rf-wave rf-error" d={wave(true)} /><path class="rf-wave rf-clean concept-stroke" d={wave()} /></svg>
+      <text class="concept-label" x="180" y="346" text-anchor="middle">Clean output</text>
+    </g>}
+    {concept.kind === 'sparsity' && <g class="concept-scene">
+      <text class="concept-label" x="180" y="28" text-anchor="middle">Neural activity</text><rect class="concept-frame" x="27" y="42" width="306" height="96" rx="13" />
+      {[0,1,2].map(row=><path class="concept-guide" d={`M61 ${64+row*27}H291`} />)}
+      {neurons.map((p,i)=><circle class:list={['sparse-neuron', { 'sparse-event': p.hot }]} cx={61+(i%6)*46} cy={64+Math.floor(i/6)*27} r="6" style={`--event-delay:${i * -.21}s`} />)}
+      <path class="concept-link" d="M180 139V155M180 215V236" /><circle class="sparse-gate" cx="180" cy="185" r="30" /><text class="concept-symbol" x="180" y="197" text-anchor="middle">Δ</text><text class="concept-note" x="226" y="190">Changes only</text>
+      <rect class="concept-frame" x="100" y="237" width="160" height="76" rx="12" />{tiles.slice(0,8).map((_,i)=><rect class:list={['sparse-cell', { 'sparse-cell--active': [1,5].includes(i) }]} x={120+(i%4)*32} y={248+Math.floor(i/4)*32} width="24" height="24" rx="5" style={`--event-delay:${i * -.21}s`} />)}
+      <text class="concept-label" x="180" y="344" text-anchor="middle">Wake only the active compute</text>
+    </g>}
+    {concept.kind === 'vision' && <g class="concept-scene">
+      <text class="concept-label" x="180" y="28" text-anchor="middle">Eye motion</text><path class="vision-eye" d="M76 97Q180 16 284 97Q180 178 76 97Z" />
+      <g transform="translate(180 97)"><g class="vision-iris"><circle class="vision-iris-ring" r="27" /><circle class="vision-pupil" r="12" /><circle cx="-7" cy="-8" r="4" fill="#c9e0f4" /></g></g>
+      <path class="concept-link" d="M180 139V149H94V181M166 248H197" /><text class="concept-label" x="94" y="170" text-anchor="middle">Events</text><text class="concept-label" x="268" y="170" text-anchor="middle">Gaze</text>
+      <rect class="concept-frame" x="22" y="185" width="144" height="130" rx="12" />{pixels.map((p,i)=><rect class:list={['vision-pixel', { 'vision-event': p.hot }]} x={40+(i%11)*10} y={203+Math.floor(i/11)*11} width="4.5" height="4.5" rx="1" style={`--event-delay:${p.delay}s`} />)}
+      <rect class="concept-frame" x="197" y="185" width="144" height="130" rx="12" /><path class="concept-guide" d="M207 249H331M268 195V305" /><g transform="translate(268 249)"><g class="vision-gaze"><circle class="vision-target-ring" r="25" /><path class="vision-crosshair" d="M-33 0H-12M12 0H33M0-33V-12M0 12V33" /><circle class="concept-packet" r="5" /></g></g>
+      <text class="concept-note" x="180" y="346" text-anchor="middle">Follow changes. Update the gaze.</text>
+    </g>}
+    {concept.kind === 'sensing' && <g class="concept-scene">
+      <text class="concept-label" x="93" y="28" text-anchor="middle">Speech</text><text class="concept-label" x="268" y="28" text-anchor="middle">Radar</text>
+      <rect class="concept-frame" x="22" y="42" width="143" height="91" rx="12" /><g class="sensing-mic" transform="translate(50 80)"><rect x="-8" y="-18" width="16" height="28" rx="8" /><path d="M-14 2V7a14 14 0 0 0 28 0V2M0 21V31M-10 31H10" /></g><svg x="72" y="55" width="79" height="63" viewBox="0 0 120 92" class="concept-wave-window"><path class="sensing-wave concept-stroke" d={wave(true)} /></svg>
+      <rect class="concept-frame" x="195" y="42" width="143" height="91" rx="12" /><g transform="translate(230 87)"><path class="sensing-radar-base" d="M0 0 54-28M0 0 54 28" /><path class="sensing-radar-ring radar-ring-one" d="M19-12a23 23 0 0 1 0 24" /><path class="sensing-radar-ring radar-ring-two" d="M33-22a40 40 0 0 1 0 44" /><path class="sensing-radar-ring radar-ring-three" d="M48-31a57 57 0 0 1 0 62" /><circle class="concept-packet sensing-radar-target" cx="68" cy="-10" r="4" /></g>
+      <path class="concept-link" d="M93 133V146H180V161M268 133V146H180M180 251V270H93V291M180 270H269V291" />
+      {[0,1,2,3].map(i=><path class="sensing-pin" d={`M${143+i*24} 152V162M${143+i*24} 250V260`} />)}
+      <rect class="concept-processor" x="124" y="162" width="112" height="88" rx="14" /><text class="concept-label" x="180" y="189" text-anchor="middle">Edge AI</text><path class="sensing-circuit" d="M144 215H164V232M164 215H195V232M195 215H215" /><circle class="sensing-chip-dot" cx="164" cy="215" r="5" /><circle class="sensing-chip-dot" cx="195" cy="215" r="5" />
+      <rect class="sensing-output sensing-voice" x="28" y="291" width="130" height="44" rx="12" /><text class="concept-label" x="93" y="319" text-anchor="middle">Voice</text><rect class="sensing-output sensing-motion" x="204" y="291" width="130" height="44" rx="12" /><text class="concept-label" x="269" y="319" text-anchor="middle">Motion</text>
+    </g>}
+  </svg>
+  <div class="concept-steps" aria-label="Research concept sequence">{concept.steps.map((step,i)=><><span data-concept-step={i}>{step}</span>{i < 2 && <i aria-hidden="true">→</i>}</>)}</div>
+  <figcaption>{concept.caption}</figcaption>
+</figure>
+<script>
+  import '../scripts/research-concepts';
+</script>
