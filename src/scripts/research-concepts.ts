@@ -1,53 +1,49 @@
+import { observeMotionScene } from './motion-scenes';
+
 document.querySelectorAll<HTMLElement>('[data-research-concept]').forEach(root => {
   const replay = root.querySelector<HTMLButtonElement>('[data-concept-replay]')!;
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
   let timer: number | undefined;
+  let elapsed = 0;
   let startedAt = 0;
-  let visible = false;
+  let active = false;
 
   const motionAllowed = () => !preference.matches && document.documentElement.dataset.motion !== 'off';
-  function onScreen() {
-    if (!root.isConnected || root.closest('[hidden]')) return false;
-    const bounds = root.getBoundingClientRect();
-    return bounds.width > 0 && bounds.height > 0 && bounds.bottom > 0 && bounds.top < innerHeight && bounds.right > 0 && bounds.left < innerWidth;
-  }
-  function stop() {
+  function pause() {
+    if (timer !== undefined) elapsed = (performance.now() - startedAt) % 6000;
     window.clearTimeout(timer);
     timer = undefined;
-    root.dataset.running = 'false';
-    root.dataset.phase = 'ready';
-    replay.hidden = !motionAllowed();
   }
   function tick() {
-    timer = undefined;
-    if (!onScreen() || document.hidden || !motionAllowed()) { stop(); return; }
-    root.dataset.phase = String(Math.floor((performance.now() - startedAt) % 6000 / 2000));
-    timer = window.setTimeout(tick, 160);
+    elapsed = (performance.now() - startedAt) % 6000;
+    const phase = Math.floor(elapsed / 2000);
+    if (root.dataset.phase !== String(phase)) root.dataset.phase = String(phase);
+    timer = window.setTimeout(tick, Math.max(16, (phase + 1) * 2000 - elapsed));
   }
-  function start(restart = false) {
-    replay.hidden = !motionAllowed();
-    if (!onScreen() || document.hidden || !motionAllowed()) { stop(); return; }
-    if (timer !== undefined && !restart) return;
-    window.clearTimeout(timer);
-    startedAt = performance.now();
+  function start() {
+    if (!active || timer !== undefined) return;
     root.dataset.running = 'true';
-    // Reset the CSS timelines together so Replay restarts the full visual sequence.
-    root.getAnimations({ subtree: true }).forEach(animation => { animation.currentTime = 0; });
+    startedAt = performance.now() - elapsed;
     tick();
   }
-  const observer = new IntersectionObserver(() => {
-    const inside = onScreen();
-    if (inside) start(!visible);
-    else stop();
-    visible = inside;
-  }, { threshold: .1 });
-  observer.observe(root);
-  replay.addEventListener('click', () => start(true));
-  preference.addEventListener('change', () => start(true));
-  window.addEventListener('emi:motion', () => start(true));
-  document.addEventListener('visibilitychange', () => start(true));
-  window.addEventListener('pagehide', () => { stop(); observer.disconnect(); });
-  window.addEventListener('pageshow', () => { observer.observe(root); start(true); });
-  stop();
-  requestAnimationFrame(() => start(true));
+  function sync(running: boolean) {
+    active = running;
+    replay.hidden = !motionAllowed();
+    if (!motionAllowed()) {
+      pause();
+      elapsed = 0;
+      root.dataset.running = 'false';
+      root.dataset.phase = 'ready';
+    } else if (active) start();
+    else pause();
+  }
+  replay.addEventListener('click', () => {
+    pause();
+    elapsed = 0;
+    root.getAnimations({ subtree: true }).forEach(animation => { animation.currentTime = 0; });
+    start();
+  });
+  root.dataset.running = 'false';
+  root.dataset.phase = 'ready';
+  observeMotionScene(root, sync);
 });

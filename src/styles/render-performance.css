@@ -1,0 +1,15 @@
+/* An opaque sticky header avoids re-blurring the page behind it on every scroll. */
+.emi-site .site-header,.emi-site .site-header.is-scrolled {
+  background: #fafbfc;
+  backdrop-filter: none;
+  transition: border-color .3s;
+}
+
+/* Keep SVG repaints local; promote only the visible 3D stage, not the whole page. */
+.engine-visual,.agentic-build,.research-concept { contain: layout paint; isolation: isolate; }
+.engine-visual[data-scene-visible=true] .engine-platform { will-change: transform; }
+[data-motion-scene][data-scene-active=false],
+[data-motion-scene][data-scene-active=false] * { animation-play-state: paused !important; }
+
+/* The timeline is assigned once in site-motion.ts, without per-frame writes. */
+@keyframes reading-progress-linear { from { transform: scaleX(0); } to { transform: scaleX(1); } }

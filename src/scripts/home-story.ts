@@ -24,14 +24,12 @@ function update() {
       const scale = Math.min(1, (stage.clientWidth - 28) / (chip.offsetWidth * 1.62), (stage.clientHeight - 24) / (chip.offsetHeight * 1.4));
       chip.style.setProperty('--home-chip-scale', String(Math.max(.15, scale)));
     } else chip?.style.removeProperty('--home-chip-scale');
+    scroller.refresh();
     layoutDirty = false;
   }
 
   const readingLine = headerHeight + Math.min(140, innerHeight * .2);
-  let current = sections[0];
-  for (const section of sections) {
-    if (section.getBoundingClientRect().top <= readingLine) current = section;
-  }
+  const current = scroller.currentAt(readingLine);
   if (currentId !== current?.id) {
     currentId = current?.id;
     links.forEach(link => {
@@ -51,6 +49,7 @@ window.visualViewport?.addEventListener('resize', scheduleLayout, { passive: tru
 const layoutObserver = new ResizeObserver(scheduleLayout);
 if (header) layoutObserver.observe(header);
 if (stage) layoutObserver.observe(stage);
+sections.forEach(section => layoutObserver.observe(section));
 
 links.forEach(link => link.addEventListener('click', event => {
   const target = document.getElementById(link.dataset.chapterLink!);
@@ -81,6 +80,7 @@ window.addEventListener('pagehide', () => { layoutObserver.disconnect(); teamObs
 window.addEventListener('pageshow', () => {
   if (header) layoutObserver.observe(header);
   if (stage) layoutObserver.observe(stage);
+  sections.forEach(section => layoutObserver.observe(section));
   if (collage) teamObserver.observe(collage);
   syncTeamMotion();
   scheduleLayout();

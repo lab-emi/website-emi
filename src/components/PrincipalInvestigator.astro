@@ -41,17 +41,6 @@ const neurons = [[55,80],[77,63],[102,88],[45,120],[84,117],[110,149],[58,163],[
     </div>
   </div>
 </Container>
-<script>
-  const section = document.querySelector<HTMLElement>('[data-home-pi]');
-  if (section && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => section.dataset.inView = String(entry.isIntersecting));
-    });
-    observer.observe(section);
-    window.addEventListener('pagehide', () => observer.disconnect());
-    window.addEventListener('pageshow', () => observer.observe(section));
-  }
-</script>
 <style>
   .home-pi{position:relative;isolation:isolate;overflow:hidden;background:#f8fbff;border-bottom:1px solid var(--line);padding:48px 0}
   .pi-layout{position:relative;z-index:1;display:grid;grid-template-columns:164px minmax(0,640px);gap:40px;align-items:center;padding-right:310px}
@@ -82,7 +71,7 @@ const neurons = [[55,80],[77,63],[102,88],[45,120],[84,117],[110,149],[58,163],[
   .pi-chip-cell{fill:#8eadd5;opacity:.7}
   .pi-chip-cell-warm{fill:#ce8e6b}
   .pi-visual-label{font-family:var(--sans);fill:#8b9eb6;font-size:8px;letter-spacing:1.6px}
-  .home-pi[data-in-view=true] .pi-neuron,.home-pi[data-in-view=true] .pi-flow,.home-pi[data-in-view=true] .pi-chip{animation-play-state:running}
+  .pi-background[data-scene-active=true] .pi-neuron,.pi-background[data-scene-active=true] .pi-flow,.pi-background[data-scene-active=true] .pi-chip{animation-play-state:running}
   @keyframes neural-pulse{0%,60%,100%{opacity:.35;transform:scale(1)}72%{opacity:.95;transform:scale(1.55)}}
   @keyframes neural-flow{to{stroke-dashoffset:-120}}
   @keyframes neural-chip{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}

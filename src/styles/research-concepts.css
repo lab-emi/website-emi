@@ -104,9 +104,9 @@
 .research-concept[data-running=true] .sensing-motion { animation: sensing-recognize 6s ease-in-out 3s infinite; }
 @keyframes concept-wave-flow { to { transform: translateX(-120px); } }
 @keyframes concept-trace-flow { to { stroke-dashoffset: -90; } }
-@keyframes concept-node-fire { 0%,100% { opacity: .45; } 35%,65% { opacity: 1; filter: drop-shadow(0 0 4px #9fc9eb99); } }
+@keyframes concept-node-fire { 0%,100% { opacity: .45; } 35%,65% { opacity: 1; } }
 @keyframes rf-packet-two { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(37px); opacity: 0; } }
-@keyframes dense-computation { 0%,100% { opacity: .65; } 40%,65% { opacity: 1; filter: drop-shadow(0 0 3px #aad5f399); } }
+@keyframes dense-computation { 0%,100% { opacity: .65; } 40%,65% { opacity: 1; } }
 @keyframes vision-look { 0%,100% { transform: translateX(-17px); } 25% { transform: translateX(3px); } 55% { transform: translateX(17px); } 78% { transform: translateX(-6px); } }
 @keyframes vision-event-flash { 0%,100% { opacity: .2; } 35%,60% { opacity: 1; } }
 @keyframes radar-echo { 0%,100% { opacity: .15; } 45% { opacity: 1; } }

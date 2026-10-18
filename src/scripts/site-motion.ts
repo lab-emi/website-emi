@@ -1,3 +1,5 @@
+import { observeMotionScene } from './motion-scenes';
+
 const html = document.documentElement;
 const preference = matchMedia('(prefers-reduced-motion: reduce)');
 const motionButton = document.querySelector<HTMLButtonElement>('[data-motion-toggle]');
@@ -19,6 +21,7 @@ motionButton?.addEventListener('click', () => {
 });
 preference.addEventListener('change', syncMotion);
 syncMotion();
+document.querySelectorAll<HTMLElement | SVGElement>('.engine-visual,.pi-background,.join-orbit,.intro-orbit').forEach(element => observeMotionScene(element));
 
 if ('IntersectionObserver' in window && !preference.matches) {
   const observer = new IntersectionObserver(entries => {
@@ -33,13 +36,28 @@ if ('IntersectionObserver' in window && !preference.matches) {
 const header = document.querySelector<HTMLElement>('.site-header');
 const progress = document.querySelector<HTMLElement>('[data-reading-progress]');
 let scheduled = false;
+let distance = 0;
+let wasScrolled = false;
+const nativeProgress = CSS.supports('animation-timeline: scroll()');
+if (progress && nativeProgress) {
+  // Assign the timeline separately: combining it into the animation shorthand
+  // during CSS minification would break browsers without that newer grammar.
+  progress.style.setProperty('animation', 'reading-progress-linear 1s linear both', 'important');
+  progress.style.setProperty('animation-timeline', 'scroll(root block)', 'important');
+  progress.style.setProperty('animation-play-state', 'running', 'important');
+}
 function updateScroll() {
-  const distance = html.scrollHeight - window.innerHeight;
-  const fraction = distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0;
-  if (progress) progress.style.transform = `scaleX(${fraction})`;
-  header?.classList.toggle('is-scrolled', window.scrollY > 15);
+  const y = window.scrollY;
+  if (progress && !nativeProgress) {
+    const fraction = distance > 0 ? Math.min(1, Math.max(0, y / distance)) : 0;
+    progress.style.transform = `scaleX(${fraction})`;
+  }
+  const scrolled = y > 15;
+  if (scrolled !== wasScrolled) { header?.classList.toggle('is-scrolled', scrolled); wasScrolled = scrolled; }
   scheduled = false;
 }
 window.addEventListener('scroll', () => { if (!scheduled) { scheduled = true; requestAnimationFrame(updateScroll); } }, { passive: true });
-window.addEventListener('resize', updateScroll, { passive: true });
-updateScroll();
+function measure() { distance = html.scrollHeight - innerHeight; updateScroll(); }
+window.addEventListener('resize', measure, { passive: true });
+new ResizeObserver(measure).observe(document.body);
+measure();

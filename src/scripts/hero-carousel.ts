@@ -1,3 +1,5 @@
+import { observeMotionScene } from './motion-scenes';
+
 const carousel = document.querySelector<HTMLElement>('[data-hero-carousel]');
 
 if (carousel) {
@@ -12,7 +14,7 @@ if (carousel) {
   let hovered = window.matchMedia('(any-hover: hover)').matches && carousel.matches(':hover');
   let active = 0;
   let timer: number | undefined;
-  let inView = true;
+  let inView = false;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const sitePaused = () => reduced.matches || document.documentElement.dataset.motion === 'off';
 
@@ -75,8 +77,7 @@ if (carousel) {
   document.addEventListener('visibilitychange', schedule);
   window.addEventListener('emi:motion', () => { updateControl(); schedule(); });
   reduced.addEventListener('change', () => { updateControl(); schedule(); });
-  const observer = new IntersectionObserver(entries => { inView = entries[0].isIntersecting; schedule(); });
-  observer.observe(carousel);
+  observeMotionScene(carousel, active => { inView = active; schedule(); });
   for (const [selector, direction] of [['[data-carousel-previous]', -1], ['[data-carousel-next]', 1]] as const) {
     const button = carousel.querySelector<HTMLButtonElement>(selector);
     if (!button) continue;

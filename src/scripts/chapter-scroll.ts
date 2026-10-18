@@ -1,3 +1,5 @@
+import { notePageMovement } from './motion-scenes';
+
 interface ChapterScrollOptions {
   sections: HTMLElement[];
   getInset: () => number;
@@ -8,6 +10,9 @@ type Bounds = { start: number; end: number };
 type Gesture = {
   mode: 'pending' | 'chapter' | 'content' | 'nested' | 'free';
   lastEvent: number;
+  lastMagnitude: number;
+  direction: number;
+  events: number;
   intent: number;
   index: number;
   bounds: Bounds;
@@ -18,57 +23,76 @@ export function createChapterScroller({ sections, getInset, reduced }: ChapterSc
   const root = document.documentElement;
   const desktop = matchMedia('(pointer: fine)');
   const quietPeriod = 320;
+  const tailMemory = 1400;
   let gesture: Gesture | undefined;
   let quietTimer: number | undefined;
-  let motionFrame: number | undefined;
+  let motionTimer: number | undefined;
   let contentFrame: number | undefined;
   let contentDelta = 0;
   let motionTarget: number | undefined;
+  let motionDeadline = 0;
+  let positions: Bounds[] = [];
+  let sectionTops: number[] = [];
+  let scrollLimit = 0;
 
-  function boundsFor(section: HTMLElement): Bounds {
-    const rect = section.getBoundingClientRect();
-    const limit = Math.max(0, root.scrollHeight - innerHeight);
-    const start = Math.min(limit, Math.max(0, scrollY + rect.top - getInset()));
-    const end = Math.min(limit, Math.max(start, scrollY + rect.bottom - innerHeight + 12));
-    return { start, end: end - start < 24 ? start : end };
+  function refresh() {
+    const y = scrollY;
+    const inset = getInset();
+    scrollLimit = Math.max(0, root.scrollHeight - innerHeight);
+    sectionTops = [];
+    positions = sections.map(section => {
+      const rect = section.getBoundingClientRect();
+      sectionTops.push(y + rect.top);
+      const start = Math.min(scrollLimit, Math.max(0, y + rect.top - inset));
+      const end = Math.min(scrollLimit, Math.max(start, y + rect.bottom - innerHeight + 12));
+      return { start, end: end - start < 24 ? start : end };
+    });
+  }
+  function currentAt(readingLine: number) {
+    const y = scrollY + readingLine;
+    let index = 0;
+    sectionTops.forEach((top, i) => { if (top <= y) index = i; });
+    return sections[index];
+  }
+  function finishMotion() {
+    window.clearTimeout(motionTimer);
+    motionTimer = undefined;
+    motionTarget = undefined;
+    root.classList.remove('chapter-transition');
   }
   function cancelMotion() {
-    if (motionFrame !== undefined) cancelAnimationFrame(motionFrame);
+    if (motionTarget !== undefined) window.scrollTo({ top: scrollY, behavior: 'instant' });
     if (contentFrame !== undefined) cancelAnimationFrame(contentFrame);
-    motionFrame = contentFrame = undefined;
-    motionTarget = undefined;
+    contentFrame = undefined;
     contentDelta = 0;
-    root.classList.remove('chapter-transition');
+    finishMotion();
+  }
+  function checkMotion() {
+    window.clearTimeout(motionTimer);
+    motionTimer = undefined;
+    if (motionTarget === undefined) return;
+    if (Math.abs(scrollY - motionTarget) < 2 || performance.now() > motionDeadline) finishMotion();
+    else motionTimer = window.setTimeout(checkMotion, 120);
   }
   function navigateTo(top: number) {
     cancelMotion();
-    const target = Math.max(0, Math.min(top, root.scrollHeight - innerHeight));
-    const from = scrollY;
-    if (reduced.matches || root.dataset.motion === 'off' || Math.abs(target - from) < 1) {
+    const target = Math.max(0, Math.min(top, scrollLimit));
+    if (reduced.matches || root.dataset.motion === 'off' || Math.abs(target - scrollY) < 1) {
       window.scrollTo({ top: target, behavior: 'instant' });
       return;
     }
-    const duration = Math.min(600, Math.max(320, Math.abs(target - from) * .55));
-    const began = performance.now();
+    notePageMovement();
     motionTarget = target;
+    motionDeadline = performance.now() + 2400;
     root.classList.add('chapter-transition');
-    const frame = (now: number) => {
-      const progress = Math.min(1, (now - began) / duration);
-      const eased = progress < .5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2;
-      window.scrollTo({ top: from + (target - from) * eased, behavior: 'instant' });
-      if (progress < 1) motionFrame = requestAnimationFrame(frame);
-      else {
-        motionFrame = undefined;
-        motionTarget = undefined;
-        root.classList.remove('chapter-transition');
-      }
-    };
-    motionFrame = requestAnimationFrame(frame);
+    // Native smooth scrolling does not depend on a JavaScript callback per frame.
+    window.scrollTo({ top: target, behavior: 'smooth' });
+    motionTimer = window.setTimeout(checkMotion, 120);
   }
   function navigate(section: HTMLElement) {
     gesture = undefined;
     window.clearTimeout(quietTimer);
-    navigateTo(boundsFor(section).start);
+    navigateTo(positions[sections.indexOf(section)].start);
   }
   function scrollableParent(target: EventTarget | null, delta: number) {
     if (!(target instanceof Element)) return;
@@ -81,7 +105,7 @@ export function createChapterScroller({ sections, getInset, reduced }: ChapterSc
     return delta > 0 ? element.scrollTop + element.clientHeight < element.scrollHeight - 2 : element.scrollTop > 2;
   }
   function scrollContent(delta: number, bounds: Bounds) {
-    if (motionFrame !== undefined) cancelMotion();
+    if (motionTarget !== undefined) cancelMotion();
     contentDelta += delta;
     if (contentFrame !== undefined) return;
     contentFrame = requestAnimationFrame(() => {
@@ -108,23 +132,29 @@ export function createChapterScroller({ sections, getInset, reduced }: ChapterSc
 
     const now = performance.now();
     const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? innerHeight : 1);
-    if (gesture && now - gesture.lastEvent > quietPeriod) resetGesture();
+    const magnitude = Math.abs(delta);
+    if (gesture && now - gesture.lastEvent > quietPeriod) {
+      const gap = now - gesture.lastEvent;
+      const renewed = magnitude >= 12 && (gap >= 650 || gesture.lastMagnitude < 12 || magnitude > gesture.lastMagnitude * 1.35 || Math.sign(delta) !== gesture.direction);
+      if (gap >= tailMemory || gesture.events < 3 || renewed) resetGesture();
+    }
     if (!gesture) {
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-      const positions = sections.map(boundsFor);
       let index = 0;
       positions.forEach((position, i) => { if (position.start <= scrollY + 16) index = i; });
-      const bounds = positions[index];
+      const bounds = positions[index] && { ...positions[index] };
       if (!bounds) return;
       if (index === sections.length - 1) bounds.end = Math.max(bounds.end, scrollY);
       const scroller = scrollableParent(event.target, delta);
       const insideContent = bounds.end > bounds.start && (delta > 0 ? scrollY < bounds.end - 16 : scrollY > bounds.start + 16);
-      gesture = { mode: scroller ? 'nested' : insideContent ? 'content' : 'pending', lastEvent: now, intent: 0, index, bounds, scroller };
+      gesture = { mode: scroller ? 'nested' : insideContent ? 'content' : 'pending', lastEvent: now, lastMagnitude: magnitude, direction: Math.sign(delta), events: 0, intent: 0, index, bounds, scroller };
     }
     // Even sub-pixel momentum events belong to this gesture and must extend it.
     gesture.lastEvent = now;
+    gesture.lastMagnitude = magnitude;
+    gesture.events++;
     window.clearTimeout(quietTimer);
-    quietTimer = window.setTimeout(resetGesture, quietPeriod);
+    quietTimer = window.setTimeout(resetGesture, tailMemory);
     if (gesture.mode === 'free') return;
     if (gesture.mode === 'nested') {
       // Keep the whole gesture in its original scroller, even at its edge.
@@ -145,7 +175,7 @@ export function createChapterScroller({ sections, getInset, reduced }: ChapterSc
     if (next < 0 || next >= sections.length) { gesture.mode = 'free'; return; }
     event.preventDefault();
     gesture.mode = 'chapter';
-    const destination = boundsFor(sections[next]);
+    const destination = positions[next];
     navigateTo(direction > 0 || next === index ? destination.start : destination.end);
     history.replaceState(null, '', `#${sections[next].id}`);
   }, { passive: false });
@@ -163,7 +193,9 @@ export function createChapterScroller({ sections, getInset, reduced }: ChapterSc
   window.addEventListener('pagehide', () => { cancelMotion(); resetGesture(); });
   window.addEventListener('popstate', () => { cancelMotion(); resetGesture(); });
   window.addEventListener('hashchange', () => { cancelMotion(); resetGesture(); });
+  document.addEventListener('scrollend', checkMotion);
   window.addEventListener('pageshow', syncMode);
+  refresh();
   syncMode();
-  return { navigate };
+  return { navigate, refresh, currentAt };
 }
