@@ -63,15 +63,20 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
   document.querySelectorAll<HTMLElement>('[data-research-explorer]').forEach(explorer => {
     const buttons = [...explorer.querySelectorAll<HTMLButtonElement>('[data-research-tab]')];
     const panels = [...explorer.querySelectorAll<HTMLElement>('[data-research-panel]')];
+    let revealFrame = 0;
     function select(button: HTMLButtonElement, focus = false, reveal = false) {
+      cancelAnimationFrame(revealFrame);
       buttons.forEach(b => { const active = b === button; b.setAttribute('aria-selected', String(active)); b.removeAttribute('aria-pressed'); b.tabIndex = active ? 0 : -1; });
       panels.forEach(panel => { panel.hidden = panel.dataset.researchPanel !== button.dataset.researchTab; });
       explorer.dataset.activeModule = button.dataset.researchTab;
       if (focus) button.focus();
-      if (reveal && button.dataset.researchTab === 'ai-native-chip-design') {
-        const target = matchMedia('(max-width: 900px)').matches ? panels.find(panel => !panel.hidden)! : explorer;
-        const bounds = target.getBoundingClientRect();
-        if (bounds.top < 95 || bounds.bottom > innerHeight - 15) requestAnimationFrame(() => target.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.dataset.motion === 'off' ? 'auto' : 'smooth'}));
+      if (reveal) {
+        const target = panels.find(panel => !panel.hidden);
+        // Wait for the selected panel to enter layout, then respect the sticky-header inset.
+        revealFrame = requestAnimationFrame(() => target?.scrollIntoView({
+          block: 'start',
+          behavior: matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.dataset.motion === 'off' ? 'instant' : 'smooth',
+        }));
       }
     }
     explorer.querySelector('.research-tabs')!.setAttribute('role', 'tablist');
