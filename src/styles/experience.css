@@ -676,16 +676,18 @@ html[data-motion=off] .research-panel { animation: none !important; }
 
 /* The complete lab identity lives next to the logo on every page. */
 .emi-site .wordmark { gap: 12px; }
-.emi-site .brand-caption { display: block; max-width: 190px; font-size: .72rem; line-height: 1.3; }
-.emi-site .brand-full-name { display: block; font-weight: 600; letter-spacing: -.015em; }
-.emi-site .brand-caption b { margin-top: 3px; font-size: .64rem; }
+.emi-site .brand-caption { display: block; max-width: 210px; font-size: .84rem; line-height: 1.3; }
+.emi-site .brand-full-name { display: block; font-weight: 750; letter-spacing: -.02em; }
+.emi-site .brand-caption b { margin-top: 2px; font-size: .58rem; line-height: 1.15; }
 .emi-site .brand-divider { display: block; height: 35px; }
+.emi-site .header-tools { flex-shrink: 0; }
 @media (max-width: 650px) {
   .emi-site .header-inner { gap: 8px; }
   .emi-site .wordmark { gap: 8px; }
-  .emi-site .emi-logo { width: 98px; height: 34px; }
-  .emi-site .brand-caption { max-width: 145px; font-size: .6rem; }
-  .emi-site .brand-caption b { font-size: .58rem; }
+  .emi-site .emi-logo { width: 92px; height: 34px; }
+  .emi-site .brand-divider { display: none; }
+  .emi-site .brand-caption { max-width: 158px; font-size: .7rem; }
+  .emi-site .brand-caption b { font-size: .52rem; }
   .emi-site .header-tools { gap: 3px; }
   .emi-site .motion-toggle { width: 29px; height: 29px; }
   .emi-site .menu-toggle { padding: 7px; }
@@ -693,9 +695,13 @@ html[data-motion=off] .research-panel { animation: none !important; }
 @media (max-width: 380px) {
   .emi-site .emi-logo { width: 78px; height: 29px; }
   .emi-site .brand-divider { display: none; }
-  .emi-site .brand-caption { max-width: 120px; font-size: .57rem; }
-  .emi-site .brand-caption b { font-size: .55rem; }
+  .emi-site .brand-caption { max-width: 145px; }
   .emi-site .menu-toggle { padding: 6px; }
+}
+@media (max-width: 359px) {
+  .emi-site .header-inner,.emi-site .wordmark { gap: 6px; }
+  .emi-site .emi-logo { width: 70px; }
+  .emi-site .brand-caption { max-width: 130px; font-size: .66rem; }
 }
 @media (max-width: 600px) {
   .research-first-intro .lab-name { font-size: 1.22rem; line-height: 1.3; margin-bottom: 12px; }

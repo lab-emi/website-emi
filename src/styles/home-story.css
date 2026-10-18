@@ -1,5 +1,6 @@
 /* The first chapter budgets the introduction and the research display together. */
 .home-story { --site-header-size: 71px; scroll-padding-top: calc(var(--site-header-size) + 10px); scroll-snap-type: y proximity; }
+.home-story.chapter-scroll-managed,.home-story.chapter-transition { scroll-snap-type: none; scroll-behavior: auto; }
 .home-page .header-inner { height: 70px; }
 .home-page .brand-caption { line-height: 1.3; }
 [data-story-section] { scroll-snap-align: start; scroll-margin-top: 0; }
@@ -52,7 +53,7 @@
   .home-page .research-panel-details--compact { margin-top: 16px; }
 }
 
-/* Native scrolling keeps long chapters readable; the rail shows the current chapter. */
+/* The rail follows the current chapter; touch scrolling stays native. */
 .chapter-nav { position: fixed; z-index: 24; right: 13px; top: 50%; transform: translateY(-50%); display: grid; gap: 5px; }
 .chapter-nav a { position: relative; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; }
 .chapter-dot { width: 7px; height: 7px; border: 1px solid #6b8297; border-radius: 50%; background: #f6f9fcbb; transition: background .25s,transform .25s,border-color .25s; }
