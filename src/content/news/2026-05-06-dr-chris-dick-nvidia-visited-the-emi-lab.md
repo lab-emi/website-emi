@@ -2,7 +2,7 @@
 {
   "title": "Dr. Chris Dick (NVIDIA) visited the EMI Lab",
   "date": "2026-05-06",
-  "summary": "We were honored to host Dr. Chris Dick at our EMI lab at Delft University of Technology to share and discuss our recent work in radio-frequency digital predistortion (DPD) and to hear an insightful talk that provided…",
+  "summary": "We were honored to host Dr. Chris Dick (NVIDIA) at the EMI Lab in Delft to demonstrate our RF digital predistortion research and attend his guest lecture on AI for 6G wireless networks.",
   "category": "Community",
   "image": "/images/df5dc4a29a30e4.webp",
   "images": [

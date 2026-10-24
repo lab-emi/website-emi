@@ -4,7 +4,7 @@
       "id": "chang-gao",
       "name": "Chang Gao",
       "role": "Group leader",
-      "detail": "Assistant Professor of Edge AI",
+      "detail": "Tenured Assistant Professor of Edge AI",
       "image": "/images/24f427b3eb9474.webp",
       "url": "https://gaochangw.github.io",
       "links": [
@@ -21,13 +21,13 @@
           "url": "https://gaochangw.github.io"
         }
       ],
-      "bioHtml": "<h1>Dr. Chang Gao</h1>\n<p><strong>Assistant Professor of Edge AI @  TU Delft</strong></p><p>Department of Microelectronics, Faculty of EEMCS</p><p><strong>Email:</strong> Chang.Gao@tudelft.nl</p><p><strong>Google Scholar: </strong><a href=\"https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&amp;hl=en\">https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&amp;hl=en</a></p><p><strong>LinkedIn:</strong> <a href=\"https://www.linkedin.com/in/gaochangw\">https://www.linkedin.com/in/gaochangw</a></p><p><strong>Personal Website: </strong><a href=\"https://gaochangw.github.io\">https://gaochangw.github.io</a></p>"
+      "bioHtml": "<h1>Dr. Chang Gao</h1>\n<p><strong>Tenured Assistant Professor of Edge AI @  TU Delft</strong></p><p>Department of Microelectronics, Faculty of EEMCS</p><p><strong>Email:</strong> Chang.Gao@tudelft.nl</p><p><strong>Google Scholar: </strong><a href=\"https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&amp;hl=en\">https://scholar.google.ch/citations?user=sQ9N7dsAAAAJ&amp;hl=en</a></p><p><strong>LinkedIn:</strong> <a href=\"https://www.linkedin.com/in/gaochangw\">https://www.linkedin.com/in/gaochangw</a></p><p><strong>Personal Website: </strong><a href=\"https://gaochangw.github.io\">https://gaochangw.github.io</a></p>"
     },
     {
       "id": "yizhuo-wu",
       "name": "Yizhuo Wu",
       "role": "PhD researcher",
-      "detail": "",
+      "detail": "RF & Digital Predistortion",
       "image": "/images/b5334890e6bfd8.webp",
       "url": "https://scholar.google.com/citations?user=ZIScikwAAAAJ&hl=nl&oi=ao",
       "links": [
@@ -42,7 +42,7 @@
       "id": "ang-li",
       "name": "Ang Li",
       "role": "PhD researcher",
-      "detail": "",
+      "detail": "Low-Power AI & XR Accelerators",
       "image": "/images/b722851b018e16.webp",
       "url": "https://angme.org",
       "links": [
@@ -57,7 +57,7 @@
       "id": "yi-zhu",
       "name": "Yi Zhu",
       "role": "PhD researcher",
-      "detail": "",
+      "detail": "Industrial PhD (Ampleon) · RF Power Amplifiers",
       "image": "/images/ab9dc1a1ae4620.webp",
       "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1050",
       "links": [
@@ -72,7 +72,7 @@
       "id": "zitao-liang",
       "name": "Zitao Liang",
       "role": "PhD researcher",
-      "detail": "",
+      "detail": "Efficient Speech & Generative Audio AI",
       "image": "/images/f1144439056158.webp",
       "url": "/zitao-liang/",
       "links": [
@@ -87,7 +87,7 @@
       "id": "pepijn-kremers",
       "name": "Pepijn Kremers",
       "role": "PhD researcher",
-      "detail": "",
+      "detail": "Industrial PhD (NXP) · Mixed-Signal Calibration",
       "image": "/images/7b854ed20bf534.webp",
       "url": "/pepijn-kremers/",
       "links": [
@@ -107,16 +107,12 @@
       "url": "https://ectm.tudelft.nl/People/bio.php?id=1072",
       "links": [
         {
-          "label": "Shen, Jiaqi (",
+          "label": "Shen, Jiaqi",
           "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
         },
         {
           "label": "Qinwen Fan",
           "url": "https://microelectronics.tudelft.nl/People/bio.php?id=856"
-        },
-        {
-          "label": ")",
-          "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
         }
       ],
       "sourceText": "Shen, Jiaqi (Co-supervised with Dr. Qinwen Fan)"
@@ -136,10 +132,6 @@
         {
           "label": "Marco Zuniga",
           "url": "https://www.tudelft.nl/en/staff/m.a.zunigazamalloa/"
-        },
-        {
-          "label": ")",
-          "url": "https://ectm.tudelft.nl/People/bio.php?id=1072"
         }
       ],
       "sourceText": "Rosi, Nicole (Co-supervised with Dr. Marco Zuniga)"
@@ -148,7 +140,7 @@
       "id": "yifan-liu",
       "name": "Yifan Liu",
       "role": "PhD researcher",
-      "detail": "Starting on Oct 1",
+      "detail": "Edge AI & Neuromorphic Computing",
       "image": "/images/38bafaa0ab0cbc.webp",
       "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1174",
       "links": [
@@ -157,7 +149,7 @@
           "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1174"
         }
       ],
-      "sourceText": "Liu, Yifan (Staring on Oct 1)"
+      "sourceText": "Liu, Yifan"
     },
     {
       "id": "casper-hamster",
@@ -334,10 +326,6 @@
       "links": [
         {
           "label": "Lu, Guorui",
-          "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1121"
-        },
-        {
-          "label": ")",
           "url": "https://microelectronics.tudelft.nl/People/bio.php?id=1121"
         }
       ],

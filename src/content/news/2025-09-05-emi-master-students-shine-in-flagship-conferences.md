@@ -2,7 +2,7 @@
 {
   "title": "EMI Master Students Shine in Flagship Conferences",
   "date": "2025-09-05",
-  "summary": "Proud moment for our Lab of Efficient Machine Intelligence (EMI) at TU Delft: three of our MSc students have their work accepted to flagship international conferences in circuits, systems, and computing:",
+  "summary": "Three EMI Lab MSc students—Manno Versluis, Tao Han, and Arne de Beer—have had their thesis research accepted to flagship international conferences including FPL, ASP-DAC, and ISCAS.",
   "category": "Lab news",
   "image": "/images/7a584c283358e5.webp",
   "images": [

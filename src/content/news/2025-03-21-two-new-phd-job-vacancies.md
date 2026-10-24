@@ -2,7 +2,7 @@
 {
   "title": "Two New PhD Job Vacancies",
   "date": "2025-03-21",
-  "summary": "1️⃣Full-Custom Digital ASIC Design for Edge AI Computing",
+  "summary": "Two fully funded PhD positions at the EMI Lab, TU Delft, in full-custom digital ASIC design for edge AI computing and machine-learning-calibrated mixed-signal systems.",
   "category": "Opportunity",
   "image": "/images/52e75389332dfc.webp",
   "images": [

@@ -2,7 +2,7 @@
 {
   "title": "PhD Student Ang Li Receives the 2025 IEEE Circuits and Systems Student Travel Grant",
   "date": "2025-04-30",
-  "summary": "Congratulations to our PhD student, Ang Li, who received the 2025 IEEE Circuits and Systems Student Travel Grant for his oral presentation: \"DPD-NeuralEngine: A 22-nm 6.6-TOPS/W/mm2 Recurrent Neural Network…",
+  "summary": "Congratulations to PhD student Ang Li on receiving the 2025 IEEE Circuits and Systems Student Travel Grant for his oral presentation on the 22 nm DPD-NeuralEngine accelerator at ISCAS 2025.",
   "category": "Award",
   "image": "/images/ada28ef5b5c271.webp",
   "images": [

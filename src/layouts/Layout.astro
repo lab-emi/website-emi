@@ -4,11 +4,12 @@ import '../styles/experience.css';
 import '../styles/render-performance.css';
 import { site, href } from '../lib/site';
 import Arrow from '../components/Arrow.astro';
-interface Props { title?: string; description?: string; active?: string; home?: boolean; }
-const { title, description = site.description, active = '', home = false } = Astro.props;
+interface Props { title?: string; description?: string; active?: string; home?: boolean; image?: string; }
+const { title, description = site.description, active = '', home = false, image = '/images/chang-visit-anding-zhu-lab.webp' } = Astro.props;
 const pageTitle = title ? `${title} — EMI Lab · TU Delft` : 'EMI Lab — Efficient Machine Intelligence at TU Delft';
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const navigation = [['News','/news/'],['Research','/research/'],['People','/people/'],['Publications','/publications/'],['Gallery','/gallery/'],['MSc Projects','/msc-projects/']];
+const ogImage = new URL(href(image), Astro.site).href;
+const navigation = [['News','/news/'],['Research','/research/'],['People','/people/'],['Publications','/publications/'],['Grants & awards','/grants-awards/'],['Gallery','/gallery/'],['MSc Projects','/msc-projects/']];
 const joinLink = ['Join us','/join-us/'];
 ---
 <!doctype html>
@@ -35,8 +36,13 @@ const joinLink = ['Join us','/join-us/'];
     <title>{pageTitle}</title><meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#fafbfc" />
+    <meta property="og:site_name" content={site.fullName} />
     <meta property="og:title" content={pageTitle} /><meta property="og:description" content={description} />
     <meta property="og:type" content="website" /><meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} /><meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="icon" href={href('/favicon.png?v=20260908-transparent')} type="image/png" sizes="2048x2048" />
     <link rel="alternate" type="application/rss+xml" title="EMI Lab news" href={href('/feed.xml')} />
     <slot name="head" />
@@ -56,7 +62,7 @@ const joinLink = ['Join us','/join-us/'];
         </div>
       </div>
       <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden>
-        {[...navigation,joinLink,['Grants & awards','/grants-awards/']].map(([label,path]) => <a href={href(path)} aria-current={active === label ? 'page' : undefined}>{label}<Arrow /></a>)}
+        {[...navigation,joinLink].map(([label,path]) => <a href={href(path)} aria-current={active === label ? 'page' : undefined}>{label}<Arrow /></a>)}
       </nav>
       <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
     </header>

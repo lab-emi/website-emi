@@ -2,7 +2,7 @@
 {
   "title": "IEEE NSATC Best Paper Honourable Mention",
   "date": "2024-05-29",
-  "summary": "Congratulations to Qinyu Chen (Assistant Prof. @ Leiden Univ.) and Chang Gao (Assistant Prof. @ TU Delft) for their paper at ISCAS 2024. The paper is titled \"Epilepsy Seizure Detection and Prediction using an…",
+  "summary": "Congratulations to Qinyu Chen and Chang Gao on winning the IEEE ISCAS NSATC Best Paper Honourable Mention Award for their work on epilepsy seizure detection and prediction using an approximate spiking convolutional transformer.",
   "category": "Publication",
   "image": "/images/2638a2f8c9288e.webp",
   "images": [

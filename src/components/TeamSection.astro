@@ -13,7 +13,7 @@ const { photos } = Astro.props;
       <figure class="team-photo team-photo-side team-photo-left"><img src={href(photos[1].image)} alt={photos[1].caption} width={photos[1].width} height={photos[1].height} loading="lazy" /></figure>
       <figure class="team-photo team-photo-side team-photo-right"><img src={href(photos[3].image)} alt={photos[3].caption} width={photos[3].width} height={photos[3].height} loading="lazy" /></figure>
       <figure class="hero-photo team-photo team-photo-main" data-hero-carousel role="group" aria-roledescription="carousel" aria-label="Life at EMI">
-        {photos.map((photo,index)=><img class:list={['hero-slide',{'is-active':index===0}]} src={href(photo.image)} alt={photo.caption} data-caption={photo.caption} style={{objectPosition:photo.position,objectFit:photo.fit}} width={photo.width} height={photo.height} loading="lazy" aria-hidden={index!==0} />)}
+        {photos.map((photo,index)=><img class:list={['hero-slide',{'is-active':index===0,'is-contain':photo.fit==='contain'}]} src={href(photo.image)} alt={photo.caption} data-caption={photo.caption} style={{objectPosition:photo.position,objectFit:photo.fit}} width={photo.width} height={photo.height} loading="lazy" aria-hidden={index!==0} />)}
         <div class="photo-tag"><span class="status-light"></span> LIFE, IN GOOD COMPANY</div>
         <button type="button" class="hero-pause" data-carousel-toggle aria-label="Pause slideshow" title="Pause slideshow" hidden><span data-pause-icon>Ⅱ</span><span data-play-icon hidden>▷</span></button>
         <div class="photo-controls"><button type="button" data-carousel-previous aria-label="Previous photo" hidden>←</button><button type="button" data-carousel-next aria-label="Next photo" hidden>→</button></div>

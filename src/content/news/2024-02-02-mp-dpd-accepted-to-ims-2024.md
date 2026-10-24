@@ -2,7 +2,7 @@
 {
   "title": "MP-DPD accepted to IMS 2024",
   "date": "2024-02-02",
-  "summary": "The premier International Microwave Symposium (IMS) has accepted our paper \"MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers,\" mainly…",
+  "summary": "Our paper \"MP-DPD: Low-Complexity Mixed-Precision Neural Networks for Energy-Efficient Digital Pre-distortion of Wideband Power Amplifiers\" by Yizhuo Wu and Ang Li has been accepted to IEEE IMS 2024 and ranked in the Top 50.",
   "category": "Publication",
   "image": "/images/346993622ddd7b.webp",
   "images": [

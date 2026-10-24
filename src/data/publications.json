@@ -1,5 +1,35 @@
 [
   {
+    "id": "grainspeech-less-context-more-detail-for-compact-speech-synthesis",
+    "title": "GrainSpeech: Less Context, More Detail for Compact Speech Synthesis",
+    "authors": "Z. Liang and C. Gao",
+    "venue": "arXiv preprint arXiv:2609.18856, 2026",
+    "year": 2026,
+    "sourceYear": 2026,
+    "type": "Publication",
+    "topic": "Speech & sensing",
+    "url": "https://arxiv.org/abs/2609.18856",
+    "code": "https://github.com/lab-emi/GrainSpeech",
+    "links": [
+      {
+        "label": "GrainSpeech: Less Context, More Detail for Compact Speech Synthesis",
+        "url": "https://arxiv.org/abs/2609.18856"
+      },
+      {
+        "label": "https://github.com/lab-emi/GrainSpeech",
+        "url": "https://github.com/lab-emi/GrainSpeech"
+      }
+    ],
+    "citation": "Z. Liang and C. Gao, \"GrainSpeech: Less Context, More Detail for Compact Speech Synthesis,\" arXiv preprint arXiv:2609.18856, 2026 (Code: https://github.com/lab-emi/GrainSpeech)",
+    "sourceVersions": [
+      {
+        "year": 2026,
+        "citation": "Z. Liang and C. Gao, \"GrainSpeech: Less Context, More Detail for Compact Speech Synthesis,\" arXiv preprint arXiv:2609.18856, 2026 (Code: https://github.com/lab-emi/GrainSpeech)",
+        "html": "<li><p><strong>Z. Liang</strong> and <strong>C. Gao</strong>, \"<a href=\"https://arxiv.org/abs/2609.18856\">GrainSpeech: Less Context, More Detail for Compact Speech Synthesis</a>,\" arXiv preprint arXiv:2609.18856, 2026 (<strong>Code: </strong><a href=\"https://github.com/lab-emi/GrainSpeech\"><strong>https://github.com/lab-emi/GrainSpeech</strong></a>)</p></li>"
+      }
+    ]
+  },
+  {
     "id": "opendpdv2-a-unified-learning-and-optimization-framework-for-neural-network-digital-predis",
     "title": "OpenDPDv2: A Unified Learning and Optimization Framework for Neural Network Digital Predistortion",
     "authors": "Y. Wu, A. Li, C. Gao",

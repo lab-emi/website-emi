@@ -2,7 +2,7 @@
 {
   "title": "Dr. Chang Gao speaks at ISSCC 2026 Forum 5",
   "date": "2026-02-23",
-  "summary": "On February 19, 2026, Chang Gao gave a featured talk at ISSCC titled \"Open-Source AI for Analog Correction: From RF Power Amplifiers to Energy-Efficient Silicon\". Speaking in the \"Analog for AI and AI for Analog\"…",
+  "summary": "On February 19, 2026, Dr. Chang Gao presented an invited talk at ISSCC 2026 Forum 5 titled \"Open-Source AI for Analog Correction: From RF Power Amplifiers to Energy-Efficient Silicon.\"",
   "category": "Community",
   "image": "/images/f3659b666ea997.webp",
   "images": [

@@ -1,8 +1,8 @@
 .research-concept { margin: 0; padding: 15px 14px 12px; border: 1px solid #31536d; border-radius: 13px; background: radial-gradient(ellipse at 50% 45%,#1c405a,#102b40 75%); color: #c9dbea; overflow: hidden; }
 .concept-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-inline: 4px; }
-.concept-topline>span { display: inline-flex; align-items: center; gap: 7px; font-size: .65rem; }
+.concept-topline>span { display: inline-flex; align-items: center; gap: 7px; font-size: .7rem; }
 .concept-topline i { width: 5px; height: 5px; flex: 0 0 5px; border-radius: 50%; background: #eda17a; }
-.concept-topline button { display: inline-flex; align-items: center; gap: 5px; padding: 0; border: 0; color: #bfd4e5; background: transparent; font-size: .63rem; }
+.concept-topline button { display: inline-flex; align-items: center; gap: 5px; padding: 0; border: 0; color: #bfd4e5; background: transparent; font-size: .68rem; }
 .concept-topline button:hover { color: #fff; }
 .concept-topline button:focus-visible { outline-color: #efb892; outline-offset: 4px; }
 .concept-diagram { display: block; width: 100%; height: auto; margin-block: 8px; }
@@ -65,11 +65,11 @@
 .sensing-chip-dot { fill: #edaf87; stroke: #f9d1af; stroke-width: 1; }
 .sensing-output { fill: #294a6377; stroke: #668fae; stroke-width: 1; }
 .sensing-output-icon { fill: none; stroke: #abcde5; stroke-width: 1.5; }
-.concept-steps { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: .66rem; }
+.concept-steps { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: .7rem; }
 .concept-steps span { color: #8ca9c1; padding: 4px 6px; border-radius: 5px; white-space: nowrap; transition: color .3s,background .3s; }
-.concept-steps i { color: #62849e; font-size: .6rem; font-style: normal; }
+.concept-steps i { color: #62849e; font-size: .64rem; font-style: normal; }
 .research-concept[data-phase="0"] [data-concept-step="0"], .research-concept[data-phase="1"] [data-concept-step="1"], .research-concept[data-phase="2"] [data-concept-step="2"], .research-concept[data-phase=ready] [data-concept-step="2"] { color: #f1c7a8; background: #a063433d; }
-.research-concept figcaption { margin-top: 8px; color: #91adbf; text-align: center; font-size: .61rem; line-height: 1.5; }
+.research-concept figcaption { margin-top: 8px; color: #9ab5c8; text-align: center; font-size: .66rem; line-height: 1.5; }
 @media (max-width: 600px) {
   .concept-diagram--wide { display: none; }
   .concept-diagram--portrait { display: block; }

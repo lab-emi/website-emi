@@ -1,5 +1,5 @@
 ---
-import { research } from '../data/research';
+import { research, aiNativeResearch } from '../data/research';
 import publications from '../data/publications.json';
 import { href } from '../lib/site';
 import Arrow from './Arrow.astro';
@@ -9,6 +9,8 @@ interface Props { compact?: boolean; }
 const { compact = false } = Astro.props;
 const labels = ['Signals', 'Sparsity', 'Vision', 'Speech & sensing'];
 const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21 29 8 38 13M12 18 17 7M21 21 25 32', 'M2 18Q20 -3 38 18Q20 39 2 18ZM26 18A6 6 0 1 1 14 18A6 6 0 1 1 26 18', 'M4 15V21M10 8V28M16 3V33M22 11V25M28 6V30M34 14V22'];
+const aiPapers = aiNativeResearch.papers.map(prefix=>publications.find(p=>p.title.startsWith(prefix))).filter(Boolean).slice(0,2);
+const AiDetailsTag = compact ? 'details' : 'div';
 ---
 <div class:list={['research-explorer', { 'research-explorer--compact': compact }]} data-research-explorer data-default-research="ai-native-chip-design">
   <div class="engine-visual">
@@ -39,8 +41,27 @@ const paths = ['M2 18C9 18 8 6 15 6S20 30 27 30 32 12 38 12', 'M3 26 12 18 21 21
     <div class="research-panel-feature">
       <div class="research-panel-copy"><p class="eyebrow"><span class="status-light"></span> Research direction 05</p><h3 id="research-title-ai-native-chip-design">AI-Native Chip Design</h3><p>AI agents compose, connect and refine circuit building blocks — from transistors to systems.</p></div>
       <AgenticChipDesign />
-      <a class="ai-project-link" href="https://chipjev.com/"><span><strong>ChipJev</strong><small>Explore our analog circuit design demo</small></span><Arrow diagonal size={20} /></a>
+      <div class="ai-project-grid">
+        <a class="ai-project-link" href="https://chipjev.com/"><span><strong>ChipJev</strong><small>Analog circuit design demo</small></span><Arrow diagonal size={18} /></a>
+        <a class="ai-project-link" href="https://github.com/lab-emi/RustSys"><span><strong>RustSys</strong><small>Fast RTL synthesis in Rust</small></span><Arrow diagonal size={18} /></a>
+      </div>
     </div>
+    <AiDetailsTag class:list={['research-panel-details', { 'research-panel-details--compact': compact }]}>
+      {compact && <summary>Keywords & selected work</summary>}
+      <div class="research-related-content">
+        <div class="research-keywords">{aiNativeResearch.keywords.map(keyword=><span>{keyword}</span>)}</div>
+        {!compact && <figure class="research-panel-image">
+          <img src={href(aiNativeResearch.image)} alt={aiNativeResearch.imageAlt} width={aiNativeResearch.imageWidth} height={aiNativeResearch.imageHeight} loading="lazy" decoding="async" />
+          <figcaption><span>{aiNativeResearch.title}</span><a href={aiNativeResearch.imageSource}>{aiNativeResearch.imageCredit} <Arrow diagonal size={12} /></a></figcaption>
+        </figure>}
+        <div class="research-evidence">
+          <span class="evidence-label">Tools & silicon, in practice <span>↳</span></span>
+          <a href={href('/news/2026-10-23-introducing-rustsys/')}><span>2026</span><strong>Introducing RustSys: fast, open-source RTL synthesis in Rust</strong><Arrow diagonal size={16} /></a>
+          {aiPapers.map(p=><a href={href(p!.url)}><span>{p!.year}</span><strong>{p!.title}</strong><Arrow diagonal size={16} /></a>)}
+        </div>
+        <a class="text-link research-panel-sublink" href={href('/research/ai-native-chip-design/')}>Explore AI-native chip design <Arrow diagonal size={16} /></a>
+      </div>
+    </AiDetailsTag>
   </section>
   {research.map((area,i)=>{
     const papers = area.papers.map(prefix=>publications.find(p=>p.title.startsWith(prefix))).filter(Boolean).slice(0,2);

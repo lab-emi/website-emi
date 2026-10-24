@@ -2,7 +2,7 @@
 {
   "title": "Exciting Visit and Guest Lecture by Dr. Shintaro Shiba",
   "date": "2026-03-13",
-  "summary": "We were honored to host Dr. Shintaro Shiba (Research Scientist and Technical Lead at Woven by Toyota) for an insightful talk titled \"Unlocking the potential of event cameras: From events to motion to 3D…",
+  "summary": "We were honored to host Dr. Shintaro Shiba (Woven by Toyota) at TU Delft for a guest lecture on unlocking the potential of event cameras for motion estimation and 3D perception.",
   "category": "Community",
   "image": "/images/ea41f09197e3af.webp",
   "images": [

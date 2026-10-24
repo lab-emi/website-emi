@@ -2,7 +2,7 @@
 {
   "title": "GlobalFoundries 12LP+ University Partnership Program",
   "date": "2024-04-17",
-  "summary": "We're thrilled to announce our collaboration with GlobalFoundries in the GF 12LP+ University Partnership Program to support our research on Low-Power AI Hardware Accelerators using the cutting-edge 12 nm technology…",
+  "summary": "We are thrilled to announce our collaboration with GlobalFoundries in the GF 12LP+ University Partnership Program to support our research on low-power 12 nm AI hardware accelerators for wireless communications and wearable systems.",
   "category": "Research",
   "image": "/images/c08578c042ce91.webp",
   "images": [

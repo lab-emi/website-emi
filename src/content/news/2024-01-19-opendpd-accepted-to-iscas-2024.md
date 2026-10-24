@@ -2,7 +2,7 @@
 {
   "title": "OpenDPD accepted to ISCAS 2024",
   "date": "2024-01-19",
-  "summary": "We are thrilled to release OpenDPD: An Open-Source PyTorch-based End-to-End Learning & Benchmarking Framework for Wideband Power Amplifier Modeling and Digital Pre-Distortion (DPD). Authored by Yizhuo Wu, Gagan Deep…",
+  "summary": "We are thrilled to release OpenDPD, an open-source PyTorch-based end-to-end learning and benchmarking framework for wideband power amplifier modeling and digital predistortion (DPD), accepted to IEEE ISCAS 2024.",
   "category": "Publication",
   "image": "/images/93e0128c73e688.webp",
   "images": [

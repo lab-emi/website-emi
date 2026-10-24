@@ -2,7 +2,7 @@
 {
   "title": "Collaboration with NXP to Advance Machine Learning in Analog-to-Digital Converters",
   "date": "2025-03-10",
-  "summary": "We are thrilled to announce our new collaboration with NXP Semiconductors to tackle the future of high-performance Analog-to-Digital Converters (ADCs) by harnessing machine learning to calibrate impairments and boost…",
+  "summary": "We are thrilled to announce our collaboration with NXP Semiconductors to advance high-performance analog-to-digital converters (ADCs) using machine-learning-based calibration.",
   "category": "Research",
   "image": "/images/59f66dbffb4dad.webp",
   "images": [

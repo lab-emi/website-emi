@@ -29,6 +29,26 @@ export const research = [
     description: 'Energy-efficient speech processing, keyword spotting and radar-based activity recognition for embedded systems.',
     detail: 'We co-design sensing algorithms and computing hardware for real-time edge applications. Research includes speech denoising and synthesis, low-power keyword spotting, radar-based human activity recognition, and neural control of a robotic prosthesis.',
     keywords: ['Speech processing', 'Radar sensing', 'Embedded intelligence'],
-    papers: ['RadMamba:', 'CleanUMamba:', 'SlimTTS:', 'DeltaKWS:', 'AS-ASR:', 'Recurrent Neural Network Control'],
+    papers: ['GrainSpeech:', 'RadMamba:', 'CleanUMamba:', 'SlimTTS:', 'DeltaKWS:', 'AS-ASR:', 'Recurrent Neural Network Control'],
   },
 ];
+
+export const aiNativeResearch = {
+  id: 'ai-native-chip-design',
+  number: '05',
+  title: 'AI-Native Chip Design',
+  short: 'AI-Native Chip Design',
+  topic: 'AI-native chip design',
+  image: '/images/rustsys-banner.webp',
+  imageAlt: 'RustSys RTL synthesis banner illustrating fast, open-source synthesis in Rust.',
+  imageWidth: 1280,
+  imageHeight: 640,
+  imageSource: 'https://github.com/lab-emi/RustSys',
+  imageCredit: 'Project: RustSys · RustEDA',
+  description: 'AI agents compose, connect and refine circuit building blocks — from transistors to systems.',
+  detail: 'We explore agentic workflows and modern, machine-readable EDA foundations that connect analog circuit topology exploration with high-performance digital RTL synthesis. Our tools and benchmarks are designed for command-line automation, continuous integration and AI coding agents.',
+  keywords: ['Agentic chip design', 'Analog circuit synthesis', 'Rust EDA & RTL synthesis'],
+  papers: ['DPD-NeuralEngine:', 'BitFair:', 'JaneEye:'],
+};
+
+export const allResearch = [...research, aiNativeResearch];

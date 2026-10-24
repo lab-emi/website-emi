@@ -2,7 +2,7 @@
 {
   "title": "AIRHAR: energy-efficient radar intelligence, from algorithms to hardware",
   "date": "2025-11-11",
-  "summary": "We are thrilled to announce the successful completion of the AIRHAR (An Energy-Efficient AI-Powered Portable Radar System for Human Activity Recognition) project in collaboration with Dr. Francesco Fioranelli and…",
+  "summary": "We are thrilled to announce the completion of the AIRHAR project on energy-efficient AI-powered portable radar human activity recognition, in collaboration with Dr. Francesco Fioranelli and Antmicro.",
   "category": "Research",
   "image": "/images/1092993b49f7f8.webp",
   "images": [

@@ -2,7 +2,7 @@
 {
   "title": "PhD Student Yi Zhu Published in IEEE JSTEAP",
   "date": "2026-07-03",
-  "summary": "Excited to share that our article by our industrial PhD student Yi Zhu, “Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers,” has been published in the IEEE Journal of Selected Topics in…",
+  "summary": "Industrial PhD student Yi Zhu has published \"Deep-Learning Based Hardware-Efficient Load Identification for Power Amplifiers\" in the IEEE Journal of Selected Topics in Electromagnetics, Antennas and Propagation (JSTEAP).",
   "category": "Publication",
   "image": "/images/074c36bee031d8.webp",
   "images": [

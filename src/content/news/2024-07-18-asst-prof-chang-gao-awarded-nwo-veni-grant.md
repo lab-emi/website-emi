@@ -2,7 +2,7 @@
 {
   "title": "Asst. Prof. Chang Gao Awarded NWO Veni Grant",
   "date": "2024-07-18",
-  "summary": "Dr. Chang Gao has been awarded a prestigious Veni grant of €320,000 from the Dutch Research Council (NWO) for the project \"Energy-Efficient Real-Time Edge Intelligence for Wearable Healthcare Devices.\" This…",
+  "summary": "Dr. Chang Gao has been awarded a prestigious €320,000 NWO Veni grant for the project \"Energy-Efficient Real-Time Edge Intelligence for Wearable Healthcare Devices.\"",
   "category": "Award",
   "image": "/images/d86586ab32648a.webp",
   "images": [
