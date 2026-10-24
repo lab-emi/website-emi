@@ -7,3 +7,6 @@ dist/
 !.env.example
 .venv/
 .local/
+
+.playwright-cli/
+/favicon.png
