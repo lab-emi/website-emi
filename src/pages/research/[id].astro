@@ -26,6 +26,7 @@ const isAiNative = area.id === 'ai-native-chip-design';
         <p class="eyebrow">Platforms &amp; open source</p>
         {isAiNative && <a class="button button-light" href="https://chipjev.com/"><span>ChipJev (Analog Demo)</span><Arrow diagonal size={15} /></a>}
         {projects.map(project=><a class="button" href={project.url} aria-label={`${project.name} on GitHub`}><span>{project.name}</span><Arrow diagonal size={15} /></a>)}
+        {isAiNative && <a class="text-link" href={href('/news/2026-10-23-introducing-rustsys/')}>RustSys announcement <Arrow /></a>}
       </div>}
       <a class="text-link" href={href('/msc-projects/')}>Related MSc opportunities <Arrow /></a>
       <a class="text-link" href={href('/research/')}>All research directions <Arrow /></a>

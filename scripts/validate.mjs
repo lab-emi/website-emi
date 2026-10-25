@@ -106,6 +106,17 @@ for (const talk of json('src/data/talks.json')) {
   const publicationLinks = pages.get(join(root, 'publications/index.html'))?.elements.filter(n => n.tagName === 'a').map(attrs) || [];
   assert(publicationLinks.some(a => a.href === base + route) && publicationLinks.some(a => a.href === base + talk.pdf), `Talk and PDF need plain HTML links on Publications: ${route}`);
 }
+for (const file of readdirSync('src/content/news').filter(f => f.endsWith('.md'))) {
+  const data = JSON.parse(readFileSync(`src/content/news/${file}`, 'utf8').split('---')[1]);
+  const route = `/news/${file.replace(/\.md$/, '')}/`;
+  const page = pages.get(join(root, route, 'index.html'));
+  const metadata = page?.elements.filter(n => n.tagName === 'meta').map(attrs) || [];
+  const ldJson = page?.elements.filter(n => n.tagName === 'script' && attrs(n).type === 'application/ld+json').map(n => (n.childNodes || []).map(c => c.value || '').join('')).join('') || '';
+  const url = new URL(base + route, site).href;
+  assert(!metadata.some(a => /^(robots|googlebot|bingbot|baiduspider)$/i.test(a.name || '') && /noindex|nofollow|none/i.test(a.content || '')), `News page must remain indexable: ${route}`);
+  assert(ldJson.includes('"@type":"NewsArticle"') && ldJson.includes(data.title), `News page missing NewsArticle JSON-LD: ${route}`);
+  assert(sitemap.includes(`<loc>${url}</loc><lastmod>${data.date}</lastmod>`), `News page or lastmod missing from sitemap: ${route}`);
+}
 
 if(errors.length) { console.error(errors.join('\n')); console.error(`\n${errors.length} validation failure(s).`); process.exit(1); }
 console.log(`Validated ${pages.size} HTML pages, ${checkedLinks} local links/assets, ${migratedAssets.size} migrated images and all source record counts.`);

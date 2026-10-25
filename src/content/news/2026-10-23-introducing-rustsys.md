@@ -22,6 +22,6 @@ The project's published benchmarks cover **five RISC-V designs across three proc
 
 RustSys is currently a **development preview**: version 0.1.0 is unreleased and must be built from source.
 
-Explore the [**GitHub repository**](https://github.com/lab-emi/RustSys) and [**documentation**](https://github.com/lab-emi/RustSys/tree/main/docs) to get started. Try it on your designs, share feedback or contribute to the project!
+Explore the [**GitHub repository**](https://github.com/lab-emi/RustSys), [**documentation**](https://github.com/lab-emi/RustSys/tree/main/docs) and our [**AI-Native Chip Design**](/research/ai-native-chip-design/) research direction to get started. Try it on your designs, share feedback or contribute to the project!
 
 *Banner: [RustSys contributors](https://github.com/lab-emi/RustSys/blob/main/docs/assets/rustsys-banner.svg), [Apache-2.0](/images/rustsys-banner.LICENSE.txt).*
