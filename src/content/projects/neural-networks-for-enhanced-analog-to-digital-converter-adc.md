@@ -8,7 +8,7 @@
     "Embedded systems"
   ],
   "image": "/images/c31ef1b376e92e.webp",
-  "status": "Open",
+  "status": "Archived",
   "source": "https://www.tudemi.com/msc-projects_1"
 }
 ---

@@ -8,7 +8,7 @@
     "Vivado"
   ],
   "image": "/images/efd2fefae77744.webp",
-  "status": "Open",
+  "status": "Archived",
   "source": "https://www.tudemi.com/msc-projects_1"
 }
 ---

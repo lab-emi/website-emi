@@ -18,6 +18,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(), summary: z.string(), skills: z.array(z.string()),
     image: z.string().nullable(), status: z.enum(['Open', 'Filled', 'Archived']),
+    order: z.number().int().positive().optional(),
     source: z.url().optional(),
   }),
 });

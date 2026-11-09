@@ -8,7 +8,7 @@
     "Vivado / Vitis"
   ],
   "image": null,
-  "status": "Open",
+  "status": "Archived",
   "source": "https://www.tudemi.com/msc-projects_1"
 }
 ---

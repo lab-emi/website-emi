@@ -73,6 +73,10 @@ for(const collection of ['news','projects'])for(const file of readdirSync(`src/c
   const source=readFileSync(`src/content/${collection}/${file}`,'utf8');
   const data=JSON.parse(source.split('---')[1]);
   const path=`${collection==='news'?'news':'msc-projects'}/${file.replace(/\.md$/,'')}`;
+  if (collection === 'projects' && data.status === 'Archived') {
+    assert(!pages.has(join(root, path, 'index.html')), `Archived project published: ${file}`);
+    continue;
+  }
   assert(pageText(path).includes(normalize(data.title)),`Content page omitted: ${file}`);
   for(const image of data.images || (data.image?[data.image]:[]))assert(imagePaths.has(image),`Content image omitted: ${file} ${image}`);
 }

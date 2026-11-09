@@ -9,13 +9,16 @@
     "Neural network quantization"
   ],
   "image": null,
-  "status": "Open"
+  "status": "Open",
+  "order": 1
 }
 ---
 
 ## Project overview
 
 Design and evaluate an ultra-low-power keyword spotting (KWS) accelerator for an on-chip RISC-V subsystem. The project combines AI hardware and hardware–algorithm co-design to enable always-on voice activation with low current draw and fast wake-up.
+
+To express interest, sign in with your TU Delft account and select **I am interested!**. [View on TU Delft Project Forum](https://projectforum.tudelft.nl/course_editions/133/thesis_projects/850)
 
 ## Technical scope
 

@@ -9,6 +9,7 @@
   ],
   "image": "/images/fa0be63d1300af.webp",
   "status": "Open",
+  "order": 2,
   "source": "https://www.tudemi.com/msc-projects_1"
 }
 ---
